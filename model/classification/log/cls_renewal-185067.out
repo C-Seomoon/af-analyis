@@ -1,0 +1,39 @@
+=============================================
+[INFO] Job Information
+---------------------------------------------
+[INFO] Job Name       : cls_framework
+[INFO] Job ID         : 185067
+[INFO] Submit Dir     : /home/cseomoon/appl/af_analysis-0.1.4/model/classification/scripts
+[INFO] Partition      : a5000_short
+[INFO] Node List      : gpu2
+[INFO] Nodes          : 1
+[INFO] CPUs per Task  : 32
+[INFO] Memory (MB)    : 
+[INFO] User           : cseomoon
+[INFO] Work Dir       : /home/cseomoon/appl/af_analysis-0.1.4/model/classification/scripts
+[INFO] Tasks per Node : 1
+[INFO] Dependency     : 
+[INFO] GPU(s)         : 
+=============================================
+
+[INFO] Job started at : Tue Apr 29 03:59:26 KST 2025
+[INFO] Job allocated on node(s): gpu2
+[INFO] Job running on: gpu2
+[INFO] Results will be saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_final_20250429_035926
+Using 32 CPU cores.
+Results will be saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_final_20250429_035926
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_final_20250429_035926/run_arguments.json
+
+--- Loading Data ---
+Original data shape: (3650, 81)
+Class distribution before NaN drop (DockQ >= 0.23): 0 (Negative) = 2529, 1 (Positive) = 1121
+Identified 63 potential feature columns.
+Checking for NaN values in potential feature columns...
+Dropped 3 rows containing NaN values in one or more feature columns.
+Processed Features (X) shape after NaN drop: (3647, 63)
+Processed Target (y) shape after NaN drop: (3647,)
+Processed Query IDs shape after NaN drop: (3647,)
+Class distribution after NaN drop (DockQ >= 0.23): 0 (Negative) = 2526, 1 (Positive) = 1121
+Error loading data: not enough values to unpack (expected 4, got 3)
+작업 완료
+[INFO] Job completed at: Tue Apr 29 03:59:53 KST 2025

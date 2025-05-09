@@ -1,0 +1,323 @@
+=============================================
+[INFO] Job Information
+---------------------------------------------
+[INFO] Job Name       : rg_framework_main
+[INFO] Job ID         : 182219
+[INFO] Submit Dir     : /home/cseomoon/appl/af_analysis-0.1.4/model/regression/scripts
+[INFO] Partition      : a5000_short
+[INFO] Node List      : gpu2
+[INFO] Nodes          : 1
+[INFO] CPUs per Task  : 32
+[INFO] Memory (MB)    : 
+[INFO] User           : cseomoon
+[INFO] Work Dir       : /home/cseomoon/appl/af_analysis-0.1.4/model/regression/scripts
+[INFO] Tasks per Node : 1
+[INFO] Dependency     : 
+[INFO] GPU(s)         : 
+=============================================
+
+[INFO] Job started at : Fri Apr 25 21:46:51 KST 2025
+[INFO] Job allocated on node(s): gpu2
+[INFO] Job running on: gpu2
+[INFO] Saving results to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651
+Successfully imported BaseModelRegressor using relative path '.' in linear_models.
+Successfully imported model classes using relative paths.
+Successfully imported utils using relative paths.
+Initialized Random Forest (rf) with params: {'bootstrap': True, 'ccp_alpha': 0.0, 'criterion': 'squared_error', 'max_depth': None, 'max_features': 1.0, 'max_leaf_nodes': None, 'max_samples': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 'n_estimators': 100, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Initialized LightGBM (lgbm) with params: {'boosting_type': 'gbdt', 'class_weight': None, 'colsample_bytree': 0.8, 'importance_type': 'split', 'learning_rate': 0.1, 'max_depth': -1, 'min_child_samples': 20, 'min_child_weight': 0.001, 'min_split_gain': 0.0, 'n_estimators': 100, 'n_jobs': -1, 'num_leaves': 31, 'objective': 'regression_l1', 'random_state': 42, 'reg_alpha': 0.0, 'reg_lambda': 0.0, 'subsample': 0.8, 'subsample_for_bin': 200000, 'subsample_freq': 0, 'metric': 'mae', 'verbose': -1}
+Initialized XGBoost (xgb) with params: {'objective': 'reg:squarederror', 'base_score': None, 'booster': None, 'callbacks': None, 'colsample_bylevel': None, 'colsample_bynode': None, 'colsample_bytree': 0.8, 'device': None, 'early_stopping_rounds': None, 'enable_categorical': False, 'eval_metric': 'rmse', 'feature_types': None, 'feature_weights': None, 'gamma': 0, 'grow_policy': None, 'importance_type': None, 'interaction_constraints': None, 'learning_rate': 0.1, 'max_bin': None, 'max_cat_threshold': None, 'max_cat_to_onehot': None, 'max_delta_step': None, 'max_depth': 3, 'max_leaves': None, 'min_child_weight': None, 'missing': nan, 'monotone_constraints': None, 'multi_strategy': None, 'n_estimators': 100, 'n_jobs': -1, 'num_parallel_tree': None, 'random_state': 42, 'reg_alpha': 0, 'reg_lambda': 1, 'sampling_method': None, 'scale_pos_weight': None, 'subsample': 0.8, 'tree_method': 'hist', 'validate_parameters': None, 'verbosity': None}
+Initialized Linear Regression pipeline (scale=True).
+Initialized Ridge Regression pipeline (scale=True, alpha=1.0).
+Initialized Lasso Regression pipeline (scale=True, alpha=1.0).
+Initialized Elastic Net pipeline (scale=True, alpha=1.0, l1_ratio=0.5).
+Using 32 CPU cores.
+Results will be saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/run_arguments.json
+
+--- Loading Data ---
+Original data shape: (3650, 81)
+Using 'DockQ' as the continuous target variable.
+Identified 63 potential feature columns.
+Checking for NaN values in potential feature columns...
+Dropped 3 rows containing NaN values in one or more feature columns.
+Generated 10 stratification bins from target for regression.
+Processed Features (X) shape after NaN drop: (3647, 63)
+Processed Target (y) shape after NaN drop: (3647,)
+Processed Query IDs shape after NaN drop: (3647,)
+Data Loading & Preprocessing Duration: 0.06 seconds
+
+--- Starting Model Training ---
+Initialized Random Forest (rf) with params: {'bootstrap': True, 'ccp_alpha': 0.0, 'criterion': 'squared_error', 'max_depth': None, 'max_features': 1.0, 'max_leaf_nodes': None, 'max_samples': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 'n_estimators': 100, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Initialized LightGBM (lgbm) with params: {'boosting_type': 'gbdt', 'class_weight': None, 'colsample_bytree': 0.8, 'importance_type': 'split', 'learning_rate': 0.1, 'max_depth': -1, 'min_child_samples': 20, 'min_child_weight': 0.001, 'min_split_gain': 0.0, 'n_estimators': 100, 'n_jobs': -1, 'num_leaves': 31, 'objective': 'regression_l1', 'random_state': 42, 'reg_alpha': 0.0, 'reg_lambda': 0.0, 'subsample': 0.8, 'subsample_for_bin': 200000, 'subsample_freq': 0, 'metric': 'mae', 'verbose': -1}
+Initialized XGBoost (xgb) with params: {'objective': 'reg:squarederror', 'base_score': None, 'booster': None, 'callbacks': None, 'colsample_bylevel': None, 'colsample_bynode': None, 'colsample_bytree': 0.8, 'device': None, 'early_stopping_rounds': None, 'enable_categorical': False, 'eval_metric': 'rmse', 'feature_types': None, 'feature_weights': None, 'gamma': 0, 'grow_policy': None, 'importance_type': None, 'interaction_constraints': None, 'learning_rate': 0.1, 'max_bin': None, 'max_cat_threshold': None, 'max_cat_to_onehot': None, 'max_delta_step': None, 'max_depth': 3, 'max_leaves': None, 'min_child_weight': None, 'missing': nan, 'monotone_constraints': None, 'multi_strategy': None, 'n_estimators': 100, 'n_jobs': -1, 'num_parallel_tree': None, 'random_state': 42, 'reg_alpha': 0, 'reg_lambda': 1, 'sampling_method': None, 'scale_pos_weight': None, 'subsample': 0.8, 'tree_method': 'hist', 'validate_parameters': None, 'verbosity': None}
+Initialized Linear Regression pipeline (scale=True).
+Initialized Ridge Regression pipeline (scale=True, alpha=1.0).
+Initialized Lasso Regression pipeline (scale=True, alpha=1.0).
+Initialized Elastic Net pipeline (scale=True, alpha=1.0, l1_ratio=0.5).
+
+--- Running Nested CV for Regression: Random Forest (rf) ---
+Output directory: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/rf
+Hyperparameter tuning scoring metric: neg_mean_squared_error
+Using GroupKFold for outer CV with 2 folds based on query IDs.
+
+-- Processing Outer Fold 1/2 --
+Train set size: (1799, 63), Test set size: (1848, 63)
+Test set indices range from 0 to 3646
+Using GroupKFold for inner CV with 2 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Fitting 2 folds for each of 10 candidates, totalling 20 fits
+Best Params found: {'bootstrap': False, 'max_depth': 30, 'max_features': 'log2', 'min_samples_leaf': 6, 'min_samples_split': 3, 'n_estimators': 291}
+Best Inner CV Score (neg_mean_squared_error): -0.0315
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/rf/fold_1/best_params.json
+Hyperparameter Tuning Duration: 7.20 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Calculated Metrics: R2=0.7165, RMSE=0.1605, MAE=0.1000
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/rf/fold_1/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/rf/fold_1/predictions.csv (shape: (1848, 2))
+Generating diagnostic plots...
+Diagnostic plots saved.
+Prediction & Evaluation Duration: 1.77 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values for Random Forest using SHAP Explainer...
+SHAP calculation took 62.20 seconds.
+--- Saving SHAP results for Fold 1 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/rf/fold_1/shap_values_fold_1.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/rf/fold_1/X_explain_fold_1.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/rf/fold_1/shap_expected_value_fold_1.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/rf/fold_1/shap_summary_dot_fold_1.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/rf/fold_1/shap_summary_bar_fold_1.png
+--- SHAP saving completed for Fold 1 ---
+SHAP Calculation & Saving Duration: 63.93 seconds
+-- Outer Fold 1 finished. Duration: 72.89 seconds --
+
+-- Processing Outer Fold 2/2 --
+Train set size: (1848, 63), Test set size: (1799, 63)
+Test set indices range from 50 to 3596
+Using GroupKFold for inner CV with 2 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Fitting 2 folds for each of 10 candidates, totalling 20 fits
+Best Params found: {'bootstrap': True, 'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 8, 'min_samples_split': 6, 'n_estimators': 202}
+Best Inner CV Score (neg_mean_squared_error): -0.0143
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/rf/fold_2/best_params.json
+Hyperparameter Tuning Duration: 7.67 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Calculated Metrics: R2=0.6946, RMSE=0.1691, MAE=0.0988
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/rf/fold_2/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/rf/fold_2/predictions.csv (shape: (1799, 2))
+Generating diagnostic plots...
+Diagnostic plots saved.
+Prediction & Evaluation Duration: 1.11 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values for Random Forest using SHAP Explainer...
+SHAP calculation took 16.43 seconds.
+--- Saving SHAP results for Fold 2 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/rf/fold_2/shap_values_fold_2.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/rf/fold_2/X_explain_fold_2.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/rf/fold_2/shap_expected_value_fold_2.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/rf/fold_2/shap_summary_dot_fold_2.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/rf/fold_2/shap_summary_bar_fold_2.png
+--- SHAP saving completed for Fold 2 ---
+SHAP Calculation & Saving Duration: 18.22 seconds
+-- Outer Fold 2 finished. Duration: 27.01 seconds --
+
+--- Aggregating results for: Random Forest (rf) ---
+Warning: Could not compute mean/std for metric 'scoring_metric_used'. Values: ['neg_mean_squared_error', 'neg_mean_squared_error']
+Average Metrics across folds:
+{
+    "r2_mean": 0.705595580981746,
+    "r2_std": 0.010949123487148826,
+    "mse_mean": 0.027183776321299147,
+    "mse_std": 0.0014192614261950894,
+    "rmse_mean": 0.16481880601542762,
+    "rmse_std": 0.00430552028772202,
+    "mae_mean": 0.09941640629148624,
+    "mae_std": 0.0006134328944783565,
+    "best_inner_cv_score_mean": -0.022863955890108416,
+    "best_inner_cv_score_std": 0.008592438527532296,
+    "scoring_metric_used_mean": "N/A",
+    "scoring_metric_used_std": "N/A"
+}
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/rf/metrics_summary.json
+Combined predictions saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/rf/all_folds_predictions.csv
+
+Running global SHAP analysis...
+
+--- Analyzing Global SHAP for Model: rf ---
+Loading data from fold_1...
+Loading data from fold_2...
+Loaded SHAP data from 2 folds.
+Combined SHAP values shape: (3647, 63)
+Combined X_explain shape: (3647, 63)
+Combined SHAP data saved to (CSV for X_explain): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/rf/combined_shap
+Global SHAP feature importance saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/rf/combined_shap/global_shap_feature_importance.csv
+
+Top 10 Features by Global Mean Absolute SHAP:
+              feature  mean_abs_shap
+0  interface_plddt_HL       0.016134
+1             pdockq2       0.015779
+2     avg_model_plddt       0.015736
+3   avg_interface_pae       0.014086
+4              iptm_A       0.013897
+5  chain_pair_iptm_AL       0.013829
+6  chain_pair_iptm_AH       0.012421
+7    interface_pae_AH       0.011880
+8              iptm_H       0.011335
+9          pdockq2_AH       0.009853
+Combined SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/rf/combined_shap/combined_shap_summary_dot.png
+Combined SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/rf/combined_shap/combined_shap_summary_bar.png
+--- Global SHAP analysis completed for: rf ---
+Global SHAP Analysis Duration: 2.95 seconds
+Result Aggregation & Global SHAP Duration: 3.10 seconds
+Average time per outer fold: 49.95 seconds
+--- Nested CV completed for: Random Forest (rf) ---
+Total execution time for model 'rf': 103.03 seconds
+
+--- Running Nested CV for Regression: Elastic Net (en) ---
+Output directory: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/en
+Hyperparameter tuning scoring metric: neg_mean_squared_error
+Using GroupKFold for outer CV with 2 folds based on query IDs.
+
+-- Processing Outer Fold 1/2 --
+Train set size: (1799, 63), Test set size: (1848, 63)
+Test set indices range from 0 to 3646
+Using GroupKFold for inner CV with 2 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Fitting 2 folds for each of 10 candidates, totalling 20 fits
+Best Params found: {'regressor__alpha': 0.01444525102276306, 'regressor__l1_ratio': 0.2912291401980419, 'regressor__max_iter': 5000}
+Best Inner CV Score (neg_mean_squared_error): -0.0460
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/en/fold_1/best_params.json
+Hyperparameter Tuning Duration: 0.22 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Calculated Metrics: R2=0.6939, RMSE=0.1668, MAE=0.1196
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/en/fold_1/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/en/fold_1/predictions.csv (shape: (1848, 2))
+Generating diagnostic plots...
+Diagnostic plots saved.
+Prediction & Evaluation Duration: 0.99 seconds
+Calculating and saving SHAP values...
+Sampling 100 instances from X_train for SHAP background data.
+Calculating SHAP values for Elastic Net using shap.Explainer (forcing LinearExplainer)...
+Scaling X_explain data...
+Scaling data for kmeans...
+Running kmeans with k=50 on SCALED data of shape (1799, 63) for SHAP background.
+Warning: shap.kmeans does not support 'random_state' in this version. Running without it.
+Initializing shap.Explainer with regressor and scaled background kmeans centers...
+Calculating SHAP values on scaled explanation data...
+SHAP calculation for Elastic Net took 0.31 seconds.
+--- Saving SHAP results for Fold 1 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/en/fold_1/shap_values_fold_1.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/en/fold_1/X_explain_fold_1.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/en/fold_1/shap_expected_value_fold_1.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/en/fold_1/shap_summary_dot_fold_1.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/en/fold_1/shap_summary_bar_fold_1.png
+--- SHAP saving completed for Fold 1 ---
+SHAP Calculation & Saving Duration: 1.92 seconds
+-- Outer Fold 1 finished. Duration: 3.14 seconds --
+
+-- Processing Outer Fold 2/2 --
+Train set size: (1848, 63), Test set size: (1799, 63)
+Test set indices range from 50 to 3596
+Using GroupKFold for inner CV with 2 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Fitting 2 folds for each of 10 candidates, totalling 20 fits
+Best Params found: {'regressor__alpha': 0.019069966103000432, 'regressor__l1_ratio': 0.7851759613930136, 'regressor__max_iter': 5000}
+Best Inner CV Score (neg_mean_squared_error): -0.0167
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/en/fold_2/best_params.json
+Hyperparameter Tuning Duration: 0.26 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Calculated Metrics: R2=0.7254, RMSE=0.1604, MAE=0.1052
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/en/fold_2/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/en/fold_2/predictions.csv (shape: (1799, 2))
+Generating diagnostic plots...
+Diagnostic plots saved.
+Prediction & Evaluation Duration: 1.00 seconds
+Calculating and saving SHAP values...
+Sampling 100 instances from X_train for SHAP background data.
+Calculating SHAP values for Elastic Net using shap.Explainer (forcing LinearExplainer)...
+Scaling X_explain data...
+Scaling data for kmeans...
+Running kmeans with k=50 on SCALED data of shape (1848, 63) for SHAP background.
+Warning: shap.kmeans does not support 'random_state' in this version. Running without it.
+Initializing shap.Explainer with regressor and scaled background kmeans centers...
+Calculating SHAP values on scaled explanation data...
+SHAP calculation for Elastic Net took 0.38 seconds.
+--- Saving SHAP results for Fold 2 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/en/fold_2/shap_values_fold_2.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/en/fold_2/X_explain_fold_2.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/en/fold_2/shap_expected_value_fold_2.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/en/fold_2/shap_summary_dot_fold_2.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/en/fold_2/shap_summary_bar_fold_2.png
+--- SHAP saving completed for Fold 2 ---
+SHAP Calculation & Saving Duration: 1.97 seconds
+-- Outer Fold 2 finished. Duration: 3.24 seconds --
+
+--- Aggregating results for: Elastic Net (en) ---
+Warning: Could not compute mean/std for metric 'scoring_metric_used'. Values: ['neg_mean_squared_error', 'neg_mean_squared_error']
+Average Metrics across folds:
+{
+    "r2_mean": 0.7096291666988319,
+    "r2_std": 0.01573897495851867,
+    "mse_mean": 0.026774482303646263,
+    "mse_std": 0.001049202202465507,
+    "rmse_mean": 0.1635976762530747,
+    "rmse_std": 0.0032066537450154975,
+    "mae_mean": 0.11244114857741272,
+    "mae_std": 0.007191607121534292,
+    "best_inner_cv_score_mean": -0.03135294710851752,
+    "best_inner_cv_score_std": 0.014616380578300985,
+    "scoring_metric_used_mean": "N/A",
+    "scoring_metric_used_std": "N/A"
+}
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/en/metrics_summary.json
+Combined predictions saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/en/all_folds_predictions.csv
+
+Running global SHAP analysis...
+
+--- Analyzing Global SHAP for Model: en ---
+Loading data from fold_1...
+Loading data from fold_2...
+Loaded SHAP data from 2 folds.
+Combined SHAP values shape: (3647, 63)
+Combined X_explain shape: (3647, 63)
+Combined SHAP data saved to (CSV for X_explain): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/en/combined_shap
+Global SHAP feature importance saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/en/combined_shap/global_shap_feature_importance.csv
+
+Top 10 Features by Global Mean Absolute SHAP:
+                 feature  mean_abs_shap
+0      scaled_query_RMSD       0.038204
+1     chain_pair_iptm_AL       0.028603
+2    fraction_disordered       0.023552
+3             pdockq2_AL       0.023019
+4        avg_model_plddt       0.022767
+5             pdockq2_AH       0.021400
+6                 iptm_A       0.019470
+7                 pdockq       0.018401
+8  chain_pair_pae_min_AH       0.017864
+9          chain_plddt_L       0.016769
+Combined SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/en/combined_shap/combined_shap_summary_dot.png
+Combined SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/en/combined_shap/combined_shap_summary_bar.png
+--- Global SHAP analysis completed for: en ---
+Global SHAP Analysis Duration: 2.33 seconds
+Result Aggregation & Global SHAP Duration: 2.42 seconds
+Average time per outer fold: 3.19 seconds
+--- Nested CV completed for: Elastic Net (en) ---
+Total execution time for model 'en': 8.80 seconds
+
+--- Overall Training Summary ---
+Model comparison summary saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pilot_20250425_214651/model_comparison_summary.csv
+Successful Model Summary:
+  model_name   r2_mean  ...  scoring_metric_used_mean  scoring_metric_used_std
+0         rf  0.705596  ...                       N/A                      N/A
+1         en  0.709629  ...                       N/A                      N/A
+
+[2 rows x 13 columns]
+Final Summary Saving Duration: 0.08 seconds
+
+--- Framework Execution Finished ---
+Total script execution time: 112.02 seconds
+작업 완료
+[INFO] Job completed at: Fri Apr 25 21:48:58 KST 2025

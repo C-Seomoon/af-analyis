@@ -1,0 +1,3 @@
+model_name,r2_mean,r2_std,mse_mean,mse_std,rmse_mean,rmse_std,mae_mean,mae_std,best_inner_cv_score_mean,best_inner_cv_score_std,scoring_metric_used_mean,scoring_metric_used_std
+en,0.7096,0.0157,0.0268,0.0010,0.1636,0.0032,0.1124,0.0072,-0.0314,0.0146,N/A,N/A
+rf,0.7056,0.0109,0.0272,0.0014,0.1648,0.0043,0.0994,0.0006,-0.0229,0.0086,N/A,N/A

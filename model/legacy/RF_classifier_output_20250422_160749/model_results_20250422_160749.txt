@@ -1,0 +1,37 @@
+실행 날짜/시각: 20250422_160749
+DockQ 임계값: 0.23 (이상: 1, 미만: 0)
+클래스 분포: 0=2529, 1=1121
+데이터 크기: (3647, 64)
+CPU 코어 수: 32
+훈련 세트: (2548, 61), 검증 세트: (550, 61), 테스트 세트: (549, 61)
+클래스 1의 비율: 훈련 세트 0.31, 검증 세트 0.42, 테스트 세트 0.17
+교차 검증 F1 점수: 0.9650 (±0.0073)
+최적 하이퍼파라미터: {'class_weight': None, 'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 100}
+검증 세트 성능: 정확도=0.8800, 정밀도=1.0000, 재현율=0.7130, F1=0.8325
+테스트 세트 성능: 정확도=0.9818, 정밀도=0.9474, 재현율=0.9474, F1=0.9474
+ROC-AUC: 0.9891
+PR-AUC: 0.9863
+MCC: 0.9364
+Log Loss: 0.1309
+
+분류 보고서:
+              precision    recall  f1-score   support
+
+           0       0.99      0.99      0.99       454
+           1       0.95      0.95      0.95        95
+
+    accuracy                           0.98       549
+   macro avg       0.97      0.97      0.97       549
+weighted avg       0.98      0.98      0.98       549
+
+상위 10개 특성:
+  chain_pair_iptm_AL: 0.1026
+  chain_pair_pae_min_AL: 0.0622
+  iptm_A: 0.0615
+  model_avg_RMSD: 0.0502
+  iptm_L: 0.0489
+  chain_pair_iptm_AH: 0.0458
+  avg_model_plddt: 0.0366
+  chain_pair_pae_min_AH: 0.0360
+  avg_interface_plddt: 0.0318
+  interface_pae_AH: 0.0311

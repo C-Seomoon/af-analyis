@@ -1,0 +1,8 @@
+{
+  "model__solver": "saga",
+  "model__penalty": "elasticnet",
+  "model__multi_class": "ovr",
+  "model__l1_ratio": 0.7,
+  "model__class_weight": null,
+  "model__C": 0.005994842503189409
+}

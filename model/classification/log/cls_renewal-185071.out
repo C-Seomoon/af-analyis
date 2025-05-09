@@ -1,0 +1,441 @@
+=============================================
+[INFO] Job Information
+---------------------------------------------
+[INFO] Job Name       : cls_framework
+[INFO] Job ID         : 185071
+[INFO] Submit Dir     : /home/cseomoon/appl/af_analysis-0.1.4/model/classification/scripts
+[INFO] Partition      : a5000_short
+[INFO] Node List      : gpu2
+[INFO] Nodes          : 1
+[INFO] CPUs per Task  : 32
+[INFO] Memory (MB)    : 
+[INFO] User           : cseomoon
+[INFO] Work Dir       : /home/cseomoon/appl/af_analysis-0.1.4/model/classification/scripts
+[INFO] Tasks per Node : 1
+[INFO] Dependency     : 
+[INFO] GPU(s)         : 
+=============================================
+
+[INFO] Job started at : Tue Apr 29 04:08:08 KST 2025
+[INFO] Job allocated on node(s): gpu2
+[INFO] Job running on: gpu2
+[INFO] Results will be saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808
+Using 32 CPU cores.
+Results will be saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/run_arguments.json
+
+--- Loading Data ---
+Original data shape: (3650, 81)
+Class distribution before NaN drop (DockQ >= 0.23): 0 (Negative) = 2529, 1 (Positive) = 1121
+Identified 63 potential feature columns.
+Checking for NaN values in potential feature columns...
+Dropped 3 rows containing NaN values in one or more feature columns.
+Processed Features (X) shape after NaN drop: (3647, 63)
+Processed Target (y) shape after NaN drop: (3647,)
+Processed Query IDs shape after NaN drop: (3647,)
+Class distribution after NaN drop (DockQ >= 0.23): 0 (Negative) = 2526, 1 (Positive) = 1121
+Data Loading & Preprocessing Duration: 0.06 seconds
+
+--- Starting Model Training ---
+
+--- Running Nested CV for: Random Forest (rf) ---
+Output directory: /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/rf
+Using StratifiedGroupKFold for outer CV with 2 folds based on query IDs and stratified by y.
+
+-- Processing Outer Fold 1/2 --
+Train set size: (1848, 63), Test set size: (1799, 63)
+Test set indices range from 100 to 3646
+Using StratifiedGroupKFold for inner CV with 2 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'n_estimators': 100, 'min_samples_split': 5, 'min_samples_leaf': 1, 'max_features': 'log2', 'max_depth': 20, 'class_weight': 'balanced_subsample'}
+Best Inner CV PR-AUC score: 0.8702
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/rf/fold_1/best_params.json
+CV metrics for best model: PR-AUC=0.8702, ROC-AUC=0.9301, F1=0.7958, Balanced Acc=0.8681
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/rf/fold_1/cv_metrics.json
+Hyperparameter Tuning Duration: 4.35 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/rf/fold_1/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/rf/fold_1/predictions.csv
+Default threshold (0.5): F1=0.8252
+Optimal threshold (0.2376): F1=0.8319
+Prediction & Evaluation Duration: 0.16 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values for RandomForest using TreeExplainer...
+Returning SHAP values for the positive class (from 3D array).
+SHAP values saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/rf/fold_1/shap_values_fold_1.csv (shape: (1799, 63))
+Test data corresponding to SHAP values saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/rf/fold_1/test_data_fold_1.csv (shape: (1799, 63))
+SHAP Calculation & Saving Duration: 2.59 seconds
+-- Outer Fold 1 finished. Duration: 7.11 seconds --
+
+-- Processing Outer Fold 2/2 --
+Train set size: (1799, 63), Test set size: (1848, 63)
+Test set indices range from 0 to 3596
+Using StratifiedGroupKFold for inner CV with 2 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'n_estimators': 700, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'log2', 'max_depth': 30, 'class_weight': 'balanced_subsample'}
+Best Inner CV PR-AUC score: 0.9233
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/rf/fold_2/best_params.json
+CV metrics for best model: PR-AUC=0.9233, ROC-AUC=0.9483, F1=0.8114, Balanced Acc=0.8561
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/rf/fold_2/cv_metrics.json
+Hyperparameter Tuning Duration: 7.08 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/rf/fold_2/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/rf/fold_2/predictions.csv
+Default threshold (0.5): F1=0.7530
+Optimal threshold (0.4375): F1=0.7678
+Prediction & Evaluation Duration: 0.52 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values for RandomForest using TreeExplainer...
+Returning SHAP values for the positive class (from 3D array).
+SHAP values saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/rf/fold_2/shap_values_fold_2.csv (shape: (1848, 63))
+Test data corresponding to SHAP values saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/rf/fold_2/test_data_fold_2.csv (shape: (1848, 63))
+SHAP Calculation & Saving Duration: 14.47 seconds
+-- Outer Fold 2 finished. Duration: 22.07 seconds --
+
+--- Aggregating results for: Random Forest (rf) ---
+Average Metrics across folds:
+{
+    "accuracy_mean": 0.880339666818266,
+    "accuracy_std": 0.008188471709872469,
+    "precision_mean": 0.8247417754382053,
+    "precision_std": 0.035797051820114834,
+    "recall_mean": 0.7564421080827697,
+    "recall_std": 0.036258621844237615,
+    "f1_mean": 0.7891127827221505,
+    "f1_std": 0.03611518080368531,
+    "roc_auc_mean": 0.9325864597250342,
+    "roc_auc_std": 0.002400894322325986,
+    "pr_auc_mean": 0.8811261430780775,
+    "pr_auc_std": 0.021091754319943035,
+    "balanced_accuracy_mean": 0.8435998792940282,
+    "balanced_accuracy_std": 0.01325317866768011,
+    "mcc_mean": 0.7043093656274048,
+    "mcc_std": 0.021915639822376987,
+    "best_inner_cv_pr_auc_mean": 0.8967790303853024,
+    "best_inner_cv_pr_auc_std": 0.026530493591934712,
+    "default_threshold_mean": 0.5,
+    "default_threshold_std": 0.0,
+    "optimal_threshold_mean": 0.3375659312055585,
+    "optimal_threshold_std": 0.09991982730945463,
+    "optimal_f1_mean": 0.7998526424787925,
+    "optimal_f1_std": 0.03208013063045123,
+    "threshold_improvement_mean": 0.01073985975664199,
+    "threshold_improvement_std": 0.004035050173234078,
+    "threshold_used_mean": 0.5,
+    "threshold_used_std": 0.0
+}
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/rf/metrics_summary.json
+Combined predictions saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/rf/all_predictions.csv
+
+Running global SHAP analysis...
+Combined SHAP values shape: (3647, 63)
+Combined test data shape: (3647, 63)
+Global SHAP analysis completed using data from all 2 folds
+Global SHAP Analysis Duration: 2.93 seconds
+Result Aggregation & Global SHAP Duration: 3.01 seconds
+Average time per outer fold: 14.59 seconds
+--- Nested CV completed for: Random Forest (rf) ---
+Total execution time for model 'rf': 32.24 seconds
+
+--- Running Nested CV for: XGBoost (xgb) ---
+Output directory: /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/xgb
+Using StratifiedGroupKFold for outer CV with 2 folds based on query IDs and stratified by y.
+
+-- Processing Outer Fold 1/2 --
+Train set size: (1848, 63), Test set size: (1799, 63)
+Test set indices range from 100 to 3646
+Using StratifiedGroupKFold for inner CV with 2 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'subsample': 1.0, 'scale_pos_weight': 5, 'n_estimators': 500, 'max_depth': 5, 'learning_rate': 0.01, 'gamma': 0.1, 'colsample_bytree': 0.6}
+Best Inner CV PR-AUC score: 0.8485
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/xgb/fold_1/best_params.json
+CV metrics for best model: PR-AUC=0.8485, ROC-AUC=0.9230, F1=0.7658, Balanced Acc=0.8474
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/xgb/fold_1/cv_metrics.json
+Hyperparameter Tuning Duration: 6.21 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/xgb/fold_1/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/xgb/fold_1/predictions.csv
+Default threshold (0.5): F1=0.7884
+Optimal threshold (0.2592): F1=0.8079
+Prediction & Evaluation Duration: 0.16 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values for XGBoost using TreeExplainer...
+Returning SHAP values (expected 2D array for positive class log-odds).
+SHAP values saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/xgb/fold_1/shap_values_fold_1.csv (shape: (1799, 63))
+Test data corresponding to SHAP values saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/xgb/fold_1/test_data_fold_1.csv (shape: (1799, 63))
+SHAP Calculation & Saving Duration: 0.87 seconds
+-- Outer Fold 1 finished. Duration: 7.29 seconds --
+
+-- Processing Outer Fold 2/2 --
+Train set size: (1799, 63), Test set size: (1848, 63)
+Test set indices range from 0 to 3596
+Using StratifiedGroupKFold for inner CV with 2 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'subsample': 1.0, 'scale_pos_weight': 5, 'n_estimators': 500, 'max_depth': 5, 'learning_rate': 0.01, 'gamma': 0.1, 'colsample_bytree': 0.6}
+Best Inner CV PR-AUC score: 0.9147
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/xgb/fold_2/best_params.json
+CV metrics for best model: PR-AUC=0.9147, ROC-AUC=0.9386, F1=0.8364, Balanced Acc=0.8781
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/xgb/fold_2/cv_metrics.json
+Hyperparameter Tuning Duration: 4.44 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/xgb/fold_2/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/xgb/fold_2/predictions.csv
+Default threshold (0.5): F1=0.7324
+Optimal threshold (0.6107): F1=0.7624
+Prediction & Evaluation Duration: 0.08 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values for XGBoost using TreeExplainer...
+Returning SHAP values (expected 2D array for positive class log-odds).
+SHAP values saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/xgb/fold_2/shap_values_fold_2.csv (shape: (1848, 63))
+Test data corresponding to SHAP values saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/xgb/fold_2/test_data_fold_2.csv (shape: (1848, 63))
+SHAP Calculation & Saving Duration: 0.61 seconds
+-- Outer Fold 2 finished. Duration: 5.16 seconds --
+
+--- Aggregating results for: XGBoost (xgb) ---
+Average Metrics across folds:
+
+CRITICAL ERROR during training/evaluation for model xgb: Object of type float32 is not JSON serializable
+Traceback (most recent call last):
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/classification/train_models.py", line 487, in main
+    model_avg_metrics = run_nested_cv(
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/classification/train_models.py", line 324, in run_nested_cv
+    print(json.dumps(avg_metrics, indent=4))
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/json/encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type float32 is not JSON serializable
+
+Total execution time for model 'xgb': 12.56 seconds
+
+--- Running Nested CV for: LightGBM (lgb) ---
+Output directory: /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/lgb
+Using StratifiedGroupKFold for outer CV with 2 folds based on query IDs and stratified by y.
+
+-- Processing Outer Fold 1/2 --
+Train set size: (1848, 63), Test set size: (1799, 63)
+Test set indices range from 100 to 3646
+Using StratifiedGroupKFold for inner CV with 2 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'subsample': 0.8, 'reg_lambda': 0, 'reg_alpha': 0.1, 'num_leaves': 20, 'n_estimators': 300, 'max_depth': 20, 'learning_rate': 0.05, 'colsample_bytree': 0.6, 'class_weight': 'balanced'}
+Best Inner CV PR-AUC score: 0.8517
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/lgb/fold_1/best_params.json
+CV metrics for best model: PR-AUC=0.8517, ROC-AUC=0.9250, F1=0.7784, Balanced Acc=0.8594
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/lgb/fold_1/cv_metrics.json
+Hyperparameter Tuning Duration: 10.52 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/lgb/fold_1/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/lgb/fold_1/predictions.csv
+Default threshold (0.5): F1=0.8153
+Optimal threshold (0.1544): F1=0.8251
+Prediction & Evaluation Duration: 0.28 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values for LightGBM using TreeExplainer...
+Warning: TreeExplainer returned a 2D array for LightGBM. Assuming it relates to the positive class.
+SHAP values saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/lgb/fold_1/shap_values_fold_1.csv (shape: (1799, 63))
+Test data corresponding to SHAP values saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/lgb/fold_1/test_data_fold_1.csv (shape: (1799, 63))
+SHAP Calculation & Saving Duration: 0.63 seconds
+-- Outer Fold 1 finished. Duration: 11.47 seconds --
+
+-- Processing Outer Fold 2/2 --
+Train set size: (1799, 63), Test set size: (1848, 63)
+Test set indices range from 0 to 3596
+Using StratifiedGroupKFold for inner CV with 2 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha': 0.5, 'num_leaves': 40, 'n_estimators': 500, 'max_depth': -1, 'learning_rate': 0.01, 'colsample_bytree': 0.6, 'class_weight': 'balanced'}
+Best Inner CV PR-AUC score: 0.9181
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/lgb/fold_2/best_params.json
+CV metrics for best model: PR-AUC=0.9181, ROC-AUC=0.9392, F1=0.8348, Balanced Acc=0.8743
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/lgb/fold_2/cv_metrics.json
+Hyperparameter Tuning Duration: 12.33 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/lgb/fold_2/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/lgb/fold_2/predictions.csv
+Default threshold (0.5): F1=0.7650
+Optimal threshold (0.9314): F1=0.7785
+Prediction & Evaluation Duration: 0.11 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values for LightGBM using TreeExplainer...
+Warning: TreeExplainer returned a 2D array for LightGBM. Assuming it relates to the positive class.
+SHAP values saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/lgb/fold_2/shap_values_fold_2.csv (shape: (1848, 63))
+Test data corresponding to SHAP values saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/lgb/fold_2/test_data_fold_2.csv (shape: (1848, 63))
+SHAP Calculation & Saving Duration: 0.95 seconds
+-- Outer Fold 2 finished. Duration: 13.44 seconds --
+
+--- Aggregating results for: LightGBM (lgb) ---
+Average Metrics across folds:
+{
+    "accuracy_mean": 0.8761559452220931,
+    "accuracy_std": 0.013454444388296516,
+    "precision_mean": 0.8022040445353329,
+    "precision_std": 0.03368552601681435,
+    "recall_mean": 0.7785441639322306,
+    "recall_std": 0.01707627402397377,
+    "f1_mean": 0.790117499457138,
+    "f1_std": 0.02514054093179241,
+    "roc_auc_mean": 0.9310389977445477,
+    "roc_auc_std": 0.0024342460114624154,
+    "pr_auc_mean": 0.8956058448911262,
+    "pr_auc_std": 0.020203241254207083,
+    "balanced_accuracy_mean": 0.8475541322048996,
+    "balanced_accuracy_std": 0.0022309521232923846,
+    "mcc_mean": 0.6997604312158219,
+    "mcc_std": 0.006904689628298766,
+    "best_inner_cv_pr_auc_mean": 0.8848976380237756,
+    "best_inner_cv_pr_auc_std": 0.03320971119896127,
+    "default_threshold_mean": 0.5,
+    "default_threshold_std": 0.0,
+    "optimal_threshold_mean": 0.5429109811433515,
+    "optimal_threshold_std": 0.3884736409277621,
+    "optimal_f1_mean": 0.8017893920346644,
+    "optimal_f1_std": 0.023283494262711646,
+    "threshold_improvement_mean": 0.011671892577526377,
+    "threshold_improvement_std": 0.001857046669080764,
+    "threshold_used_mean": 0.5,
+    "threshold_used_std": 0.0
+}
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/lgb/metrics_summary.json
+Combined predictions saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/lgb/all_predictions.csv
+
+Running global SHAP analysis...
+Combined SHAP values shape: (3647, 63)
+Combined test data shape: (3647, 63)
+Global SHAP analysis completed using data from all 2 folds
+Global SHAP Analysis Duration: 1.76 seconds
+Result Aggregation & Global SHAP Duration: 1.89 seconds
+Average time per outer fold: 12.46 seconds
+--- Nested CV completed for: LightGBM (lgb) ---
+Total execution time for model 'lgb': 26.84 seconds
+
+--- Running Nested CV for: Logistic Regression (logistic) ---
+Output directory: /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/logistic
+Using StratifiedGroupKFold for outer CV with 2 folds based on query IDs and stratified by y.
+
+-- Processing Outer Fold 1/2 --
+Train set size: (1848, 63), Test set size: (1799, 63)
+Test set indices range from 100 to 3646
+Using StratifiedGroupKFold for inner CV with 2 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'model__solver': 'saga', 'model__penalty': 'l1', 'model__max_iter': 2000, 'model__class_weight': None, 'model__C': 0.046415888336127774}
+Best Inner CV PR-AUC score: 0.8805
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/logistic/fold_1/best_params.json
+CV metrics for best model: PR-AUC=0.8805, ROC-AUC=0.9358, F1=0.8190, Balanced Acc=0.8671
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/logistic/fold_1/cv_metrics.json
+Hyperparameter Tuning Duration: 3.82 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/logistic/fold_1/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/logistic/fold_1/predictions.csv
+Default threshold (0.5): F1=0.8347
+Optimal threshold (0.8853): F1=0.8507
+Prediction & Evaluation Duration: 0.25 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values using shap.Explainer with predict_proba for Pipeline...
+Warning: Background data (X_background) not provided. Using 100 samples from X_test.
+Returning 2D SHAP values array from shap.Explainer (predict_proba).
+SHAP values saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/logistic/fold_1/shap_values_fold_1.csv (shape: (1799, 63))
+Test data corresponding to SHAP values saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/logistic/fold_1/test_data_fold_1.csv (shape: (1799, 63))
+SHAP Calculation & Saving Duration: 64.27 seconds
+-- Outer Fold 1 finished. Duration: 68.46 seconds --
+
+-- Processing Outer Fold 2/2 --
+Train set size: (1799, 63), Test set size: (1848, 63)
+Test set indices range from 0 to 3596
+Using StratifiedGroupKFold for inner CV with 2 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'model__solver': 'saga', 'model__penalty': 'l2', 'model__max_iter': 1000, 'model__class_weight': 'balanced', 'model__C': 0.0001}
+Best Inner CV PR-AUC score: 0.9446
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/logistic/fold_2/best_params.json
+CV metrics for best model: PR-AUC=0.9446, ROC-AUC=0.9549, F1=0.8290, Balanced Acc=0.8641
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/logistic/fold_2/cv_metrics.json
+Hyperparameter Tuning Duration: 2.67 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/logistic/fold_2/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/logistic/fold_2/predictions.csv
+Default threshold (0.5): F1=0.7471
+Optimal threshold (0.4015): F1=0.7836
+Prediction & Evaluation Duration: 0.16 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values using shap.Explainer with predict_proba for Pipeline...
+Warning: Background data (X_background) not provided. Using 100 samples from X_test.
+Returning 2D SHAP values array from shap.Explainer (predict_proba).
+SHAP values saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/logistic/fold_2/shap_values_fold_2.csv (shape: (1848, 63))
+Test data corresponding to SHAP values saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/logistic/fold_2/test_data_fold_2.csv (shape: (1848, 63))
+SHAP Calculation & Saving Duration: 47.51 seconds
+-- Outer Fold 2 finished. Duration: 50.35 seconds --
+
+--- Aggregating results for: Logistic Regression (logistic) ---
+Average Metrics across folds:
+{
+    "accuracy_mean": 0.885846724611316,
+    "accuracy_std": 0.006469292704701257,
+    "precision_mean": 0.8551091512874953,
+    "precision_std": 0.017502313680657633,
+    "recall_mean": 0.7371559633027522,
+    "recall_std": 0.06284403669724775,
+    "f1_mean": 0.7909353343701099,
+    "f1_std": 0.0437942924387249,
+    "roc_auc_mean": 0.941997670045875,
+    "roc_auc_std": 0.0018045026991485025,
+    "pr_auc_mean": 0.9070148529282578,
+    "pr_auc_std": 0.031033909881626076,
+    "balanced_accuracy_mean": 0.8405325922982552,
+    "balanced_accuracy_std": 0.023560764972839987,
+    "mcc_mean": 0.7139845489601382,
+    "mcc_std": 0.02779074255188685,
+    "best_inner_cv_pr_auc_mean": 0.9125620465855216,
+    "best_inner_cv_pr_auc_std": 0.03203959660572531,
+    "default_threshold_mean": 0.5,
+    "default_threshold_std": 0.0,
+    "optimal_threshold_mean": 0.6434304605975154,
+    "optimal_threshold_std": 0.2419150310671233,
+    "optimal_f1_mean": 0.81716800612323,
+    "optimal_f1_std": 0.03357826253348645,
+    "threshold_improvement_mean": 0.026232671753120107,
+    "threshold_improvement_std": 0.010216029905238455,
+    "threshold_used_mean": 0.5,
+    "threshold_used_std": 0.0
+}
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/logistic/metrics_summary.json
+Combined predictions saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/logistic/all_predictions.csv
+
+Running global SHAP analysis...
+Combined SHAP values shape: (3647, 63)
+Combined test data shape: (3647, 63)
+Global SHAP analysis completed using data from all 2 folds
+Global SHAP Analysis Duration: 1.50 seconds
+Result Aggregation & Global SHAP Duration: 1.58 seconds
+Average time per outer fold: 59.41 seconds
+--- Nested CV completed for: Logistic Regression (logistic) ---
+Total execution time for model 'logistic': 120.46 seconds
+
+--- Overall Training Summary ---
+Model comparison summary saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_renewal_20250429_040808/model_comparison_summary.csv
+  model_name  ...                                            error
+0         rf  ...                                              NaN
+1        xgb  ...  Object of type float32 is not JSON serializable
+2        lgb  ...                                              NaN
+3   logistic  ...                                              NaN
+
+[4 rows x 30 columns]
+Final Summary Saving Duration: 0.11 seconds
+
+--- Framework Execution Finished ---
+Total script execution time: 192.27 seconds
+작업 완료
+[INFO] Job completed at: Tue Apr 29 04:11:39 KST 2025

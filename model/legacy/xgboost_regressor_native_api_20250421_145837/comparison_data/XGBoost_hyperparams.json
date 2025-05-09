@@ -1,0 +1,1 @@
+{"max_depth": 3, "eta": 0.1, "subsample": 0.8, "colsample_bytree": 0.8, "min_child_weight": 3, "gamma": 0, "alpha": 0.1, "lambda": 1, "objective": "reg:squarederror", "eval_metric": "rmse", "nthread": 32}

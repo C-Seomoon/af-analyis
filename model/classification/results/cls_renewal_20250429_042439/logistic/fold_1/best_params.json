@@ -1,0 +1,7 @@
+{
+    "model__solver": "saga",
+    "model__penalty": "l1",
+    "model__max_iter": 2000,
+    "model__class_weight": null,
+    "model__C": 0.046415888336127774
+}

@@ -1,0 +1,53 @@
+실행 날짜/시각: 20250421_161112
+DockQ 이진 클래스 정의:
+  Class 0 (Incorrect): DockQ < 0.23
+  Class 1 (Acceptable+): DockQ >= 0.23
+
+클래스 분포:
+  Class 0 (Incorrect): 2529 샘플 (69.34%)
+  Class 1 (Acceptable+): 1121 샘플 (30.74%)
+
+데이터 크기: (3647, 64)
+CPU 코어 수: 32
+훈련 세트: (2548, 61), 검증 세트: (550, 61), 테스트 세트: (549, 61)
+
+클래스 비율:
+  Class 0 (Incorrect):
+    훈련 세트: 0.6876, 검증 세트: 0.5818, 테스트 세트: 0.8270
+  Class 1 (Acceptable+):
+    훈련 세트: 0.3124, 검증 세트: 0.4182, 테스트 세트: 0.1730
+
+최적 하이퍼파라미터: {'max_depth': 6, 'eta': 0.1, 'subsample': 0.8, 'colsample_bytree': 0.8, 'min_child_weight': 1, 'gamma': 0, 'scale_pos_weight': 5, 'objective': 'binary:logistic', 'eval_metric': 'auc', 'nthread': 16}
+테스트 세트 성능: Accuracy=0.9872, Precision=0.9490, Recall=0.9789, F1=0.9637, AUC=0.9938
+
+추가 성능 지표:
+  PR-AUC: 0.9894
+  MCC: 0.9562
+  Log Loss: 0.0560
+
+분류 보고서:
+              precision    recall  f1-score   support
+
+   Incorrect       1.00      0.99      0.99       454
+ Acceptable+       0.95      0.98      0.96        95
+
+    accuracy                           0.99       549
+   macro avg       0.97      0.98      0.98       549
+weighted avg       0.99      0.99      0.99       549
+
+상위 10개 특성:
+  chain_pair_iptm_AH: 198.3238
+  interface_pae_AH: 172.1305
+  chain_pair_iptm_AL: 102.8510
+  avg_interface_pae: 100.6047
+  iptm_A: 48.8763
+  LIS_AH: 25.5089
+  pdockq: 20.9048
+  iptm_L: 17.9168
+  ipTM: 15.3484
+  query_avg_RMSD: 14.8761
+
+조기 중단 정보:
+  최종 반복 횟수: 111
+  설정된 early_stopping_rounds: 50
+  최종 모델 점수(AUC): 0.954063

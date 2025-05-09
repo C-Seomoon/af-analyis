@@ -1,0 +1,504 @@
+=============================================
+[INFO] Job Information
+---------------------------------------------
+[INFO] Job Name       : cls_framework
+[INFO] Job ID         : 179776
+[INFO] Submit Dir     : /home/cseomoon/appl/af_analysis-0.1.4/model/classification/scripts
+[INFO] Partition      : g4090_short
+[INFO] Node List      : gpu10
+[INFO] Nodes          : 1
+[INFO] CPUs per Task  : 32
+[INFO] Memory (MB)    : 
+[INFO] User           : cseomoon
+[INFO] Work Dir       : /home/cseomoon/appl/af_analysis-0.1.4/model/classification/scripts
+[INFO] Tasks per Node : 1
+[INFO] Dependency     : 
+[INFO] GPU(s)         : 
+=============================================
+
+[INFO] Job started at : Wed Apr 23 19:22:08 KST 2025
+[INFO] Job allocated on node(s): gpu10
+[INFO] Job running on: gpu10
+Using 32 CPU cores.
+Results will be saved to: ../results/cls_test_2
+Results saved to ../results/cls_test_2/run_arguments.json
+
+--- Loading Data ---
+Original data shape: (3650, 81)
+Class distribution before NaN drop (DockQ >= 0.23): 0 (Negative) = 2529, 1 (Positive) = 1121
+Identified 63 potential feature columns.
+Checking for NaN values in potential feature columns...
+Dropped 3 rows containing NaN values in one or more feature columns.
+Processed Features (X) shape after NaN drop: (3647, 63)
+Processed Target (y) shape after NaN drop: (3647,)
+Processed Query IDs shape after NaN drop: (3647,)
+Class distribution after NaN drop (DockQ >= 0.23): 0 (Negative) = 2526, 1 (Positive) = 1121
+Data Loading & Preprocessing Duration: 0.05 seconds
+
+--- Starting Model Training ---
+
+--- Running Nested CV for: Random Forest (rf) ---
+Output directory: ../results/cls_test_2/rf
+Using GroupKFold for outer CV with 2 folds based on query IDs.
+
+-- Processing Outer Fold 1/2 --
+Train set size: (1799, 63), Test set size: (1848, 63)
+Test set indices range from 0 to 3646
+Using GroupKFold for inner CV with 2 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Fitting 2 folds for each of 20 candidates, totalling 40 fits
+Best Params found: {'n_estimators': 700, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'log2', 'max_depth': 30, 'class_weight': 'balanced_subsample'}
+Best Inner CV ROC AUC score: 0.9385
+Results saved to ../results/cls_test_2/rf/fold_1/best_params.json
+Hyperparameter Tuning Duration: 10.83 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to ../results/cls_test_2/rf/fold_1/metrics.json
+Predictions saved to ../results/cls_test_2/rf/fold_1/predictions.csv
+Prediction & Evaluation Duration: 0.43 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values using TreeExplainer for RandomForest...
+SHAP explainer returned a 3D ndarray. Returning values for the positive class (index 1).
+SHAP values saved to ../results/cls_test_2/rf/fold_1/shap_values_fold_1.csv (shape: (1848, 63))
+Test data corresponding to SHAP values saved to ../results/cls_test_2/rf/fold_1/test_data_fold_1.csv (shape: (1848, 63))
+SHAP Calculation & Saving Duration: 9.56 seconds
+-- Outer Fold 1 finished. Duration: 20.82 seconds --
+
+-- Processing Outer Fold 2/2 --
+Train set size: (1848, 63), Test set size: (1799, 63)
+Test set indices range from 150 to 3496
+Using GroupKFold for inner CV with 2 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Fitting 2 folds for each of 20 candidates, totalling 40 fits
+Best Params found: {'n_estimators': 500, 'min_samples_split': 5, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 30, 'class_weight': 'balanced_subsample'}
+Best Inner CV ROC AUC score: 0.9519
+Results saved to ../results/cls_test_2/rf/fold_2/best_params.json
+Hyperparameter Tuning Duration: 7.08 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to ../results/cls_test_2/rf/fold_2/metrics.json
+Predictions saved to ../results/cls_test_2/rf/fold_2/predictions.csv
+Prediction & Evaluation Duration: 0.46 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values using TreeExplainer for RandomForest...
+SHAP explainer returned a 3D ndarray. Returning values for the positive class (index 1).
+SHAP values saved to ../results/cls_test_2/rf/fold_2/shap_values_fold_2.csv (shape: (1799, 63))
+Test data corresponding to SHAP values saved to ../results/cls_test_2/rf/fold_2/test_data_fold_2.csv (shape: (1799, 63))
+SHAP Calculation & Saving Duration: 8.49 seconds
+-- Outer Fold 2 finished. Duration: 16.04 seconds --
+
+--- Aggregating results for: Random Forest (rf) ---
+Average Metrics across folds:
+{
+    "accuracy_mean": 0.892167576262907,
+    "accuracy_std": 0.015003074098404845,
+    "precision_mean": 0.8389379147413404,
+    "precision_std": 0.06012750581940729,
+    "recall_mean": 0.8163451401030719,
+    "recall_std": 0.08087113398686391,
+    "f1_mean": 0.8214570545087849,
+    "f1_std": 0.01237379126235938,
+    "roc_auc_mean": 0.9410410208499603,
+    "roc_auc_std": 0.002935611028170415,
+    "pr_auc_mean": 0.9062020852436223,
+    "pr_auc_std": 0.00860697195366461,
+    "balanced_accuracy_mean": 0.8745312025533845,
+    "balanced_accuracy_std": 0.029407264821913692,
+    "mcc_mean": 0.7506705397949676,
+    "mcc_std": 0.02291275110989588,
+    "best_inner_cv_roc_auc_mean": 0.9452325345358301,
+    "best_inner_cv_roc_auc_std": 0.0066870853924950735
+}
+Results saved to ../results/cls_test_2/rf/metrics_summary.json
+
+Running global SHAP analysis...
+
+--- Starting Global SHAP Analysis in: ../results/cls_test_2/rf ---
+Searching for 'shap_values_fold_*.csv' in subdirectories of ../results/cls_test_2/rf...
+Found 2 SHAP files: ['shap_values_fold_1.csv', 'shap_values_fold_2.csv']
+Searching for 'test_data_fold_*.csv' in subdirectories of ../results/cls_test_2/rf...
+Found 2 test data files: ['test_data_fold_1.csv', 'test_data_fold_2.csv']
+Found matching SHAP and test data for folds: [1, 2]
+
+Loading Fold 1:
+  SHAP file: ../results/cls_test_2/rf/fold_1/shap_values_fold_1.csv
+  Test data file: ../results/cls_test_2/rf/fold_1/test_data_fold_1.csv
+  Loaded SHAP shape: (1848, 63)
+  Loaded Test Data shape: (1848, 63)
+  Established feature names from Fold 1 (63 features).
+
+Loading Fold 2:
+  SHAP file: ../results/cls_test_2/rf/fold_2/shap_values_fold_2.csv
+  Test data file: ../results/cls_test_2/rf/fold_2/test_data_fold_2.csv
+  Loaded SHAP shape: (1799, 63)
+  Loaded Test Data shape: (1799, 63)
+
+Combining data from 2 folds...
+Successfully combined data from 2 folds.
+Combined SHAP values shape: (3647, 63)
+Combined test data shape: (3647, 63)
+
+Generating global SHAP plots in: ../results/cls_test_2/rf/global_shap_analysis
+Global SHAP bar plot saved to: ../results/cls_test_2/rf/global_shap_analysis/rf_global_shap_bar.png
+Global SHAP dot plot saved to: ../results/cls_test_2/rf/global_shap_analysis/rf_global_shap_beeswarm.png
+--- Global SHAP Analysis Finished for: rf ---
+Global SHAP Analysis Duration: 3.40 seconds
+Result Aggregation & Global SHAP Duration: 3.47 seconds
+Average time per outer fold: 18.43 seconds
+--- Nested CV completed for: Random Forest (rf) ---
+Total execution time for model 'rf': 40.33 seconds
+
+--- Running Nested CV for: XGBoost (xgb) ---
+Output directory: ../results/cls_test_2/xgb
+Using GroupKFold for outer CV with 2 folds based on query IDs.
+
+-- Processing Outer Fold 1/2 --
+Train set size: (1799, 63), Test set size: (1848, 63)
+Test set indices range from 0 to 3646
+Using GroupKFold for inner CV with 2 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Fitting 2 folds for each of 20 candidates, totalling 40 fits
+Best Params found: {'subsample': 0.8, 'scale_pos_weight': 1, 'n_estimators': 500, 'max_depth': 3, 'learning_rate': 0.01, 'gamma': 0.1, 'colsample_bytree': 1.0}
+Best Inner CV ROC AUC score: 0.9375
+Results saved to ../results/cls_test_2/xgb/fold_1/best_params.json
+Hyperparameter Tuning Duration: 4.76 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to ../results/cls_test_2/xgb/fold_1/metrics.json
+Predictions saved to ../results/cls_test_2/xgb/fold_1/predictions.csv
+Prediction & Evaluation Duration: 0.15 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values using TreeExplainer for XGBoost...
+Returning SHAP values (expected for positive class log-odds).
+SHAP values saved to ../results/cls_test_2/xgb/fold_1/shap_values_fold_1.csv (shape: (1848, 63))
+Test data corresponding to SHAP values saved to ../results/cls_test_2/xgb/fold_1/test_data_fold_1.csv (shape: (1848, 63))
+SHAP Calculation & Saving Duration: 0.55 seconds
+-- Outer Fold 1 finished. Duration: 5.49 seconds --
+
+-- Processing Outer Fold 2/2 --
+Train set size: (1848, 63), Test set size: (1799, 63)
+Test set indices range from 150 to 3496
+Using GroupKFold for inner CV with 2 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Fitting 2 folds for each of 20 candidates, totalling 40 fits
+Best Params found: {'subsample': 0.8, 'scale_pos_weight': 7, 'n_estimators': 200, 'max_depth': 10, 'learning_rate': 0.05, 'gamma': 1, 'colsample_bytree': 0.8}
+Best Inner CV ROC AUC score: 0.9461
+Results saved to ../results/cls_test_2/xgb/fold_2/best_params.json
+Hyperparameter Tuning Duration: 2.21 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to ../results/cls_test_2/xgb/fold_2/metrics.json
+Predictions saved to ../results/cls_test_2/xgb/fold_2/predictions.csv
+Prediction & Evaluation Duration: 0.18 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values using TreeExplainer for XGBoost...
+Returning SHAP values (expected for positive class log-odds).
+SHAP values saved to ../results/cls_test_2/xgb/fold_2/shap_values_fold_2.csv (shape: (1799, 63))
+Test data corresponding to SHAP values saved to ../results/cls_test_2/xgb/fold_2/test_data_fold_2.csv (shape: (1799, 63))
+SHAP Calculation & Saving Duration: 0.64 seconds
+-- Outer Fold 2 finished. Duration: 3.05 seconds --
+
+--- Aggregating results for: XGBoost (xgb) ---
+Average Metrics across folds:
+{
+    "accuracy_mean": 0.8592652483703067,
+    "accuracy_std": 0.015109404214462607,
+    "precision_mean": 0.821191541904615,
+    "precision_std": 0.11660750115758606,
+    "recall_mean": 0.7440196714011618,
+    "recall_std": 0.14463129219626875,
+    "f1_mean": 0.758664066033469,
+    "f1_std": 0.027320782451379477,
+    "roc_auc_mean": 0.9401214438096217,
+    "roc_auc_std": 0.0019276716870311739,
+    "pr_auc_mean": 0.8974846596947763,
+    "pr_auc_std": 0.010402930308759883,
+    "balanced_accuracy_mean": 0.8339082919457708,
+    "balanced_accuracy_std": 0.04510187453762915,
+    "mcc_mean": 0.6841850009659568,
+    "mcc_std": 0.02399078847133862,
+    "best_inner_cv_roc_auc_mean": 0.9417815250034285,
+    "best_inner_cv_roc_auc_std": 0.004301748939949723
+}
+Results saved to ../results/cls_test_2/xgb/metrics_summary.json
+
+Running global SHAP analysis...
+
+--- Starting Global SHAP Analysis in: ../results/cls_test_2/xgb ---
+Searching for 'shap_values_fold_*.csv' in subdirectories of ../results/cls_test_2/xgb...
+Found 2 SHAP files: ['shap_values_fold_1.csv', 'shap_values_fold_2.csv']
+Searching for 'test_data_fold_*.csv' in subdirectories of ../results/cls_test_2/xgb...
+Found 2 test data files: ['test_data_fold_1.csv', 'test_data_fold_2.csv']
+Found matching SHAP and test data for folds: [1, 2]
+
+Loading Fold 1:
+  SHAP file: ../results/cls_test_2/xgb/fold_1/shap_values_fold_1.csv
+  Test data file: ../results/cls_test_2/xgb/fold_1/test_data_fold_1.csv
+  Loaded SHAP shape: (1848, 63)
+  Loaded Test Data shape: (1848, 63)
+  Established feature names from Fold 1 (63 features).
+
+Loading Fold 2:
+  SHAP file: ../results/cls_test_2/xgb/fold_2/shap_values_fold_2.csv
+  Test data file: ../results/cls_test_2/xgb/fold_2/test_data_fold_2.csv
+  Loaded SHAP shape: (1799, 63)
+  Loaded Test Data shape: (1799, 63)
+
+Combining data from 2 folds...
+Successfully combined data from 2 folds.
+Combined SHAP values shape: (3647, 63)
+Combined test data shape: (3647, 63)
+
+Generating global SHAP plots in: ../results/cls_test_2/xgb/global_shap_analysis
+Global SHAP bar plot saved to: ../results/cls_test_2/xgb/global_shap_analysis/xgb_global_shap_bar.png
+Global SHAP dot plot saved to: ../results/cls_test_2/xgb/global_shap_analysis/xgb_global_shap_beeswarm.png
+--- Global SHAP Analysis Finished for: xgb ---
+Global SHAP Analysis Duration: 3.57 seconds
+Result Aggregation & Global SHAP Duration: 3.71 seconds
+Average time per outer fold: 4.27 seconds
+--- Nested CV completed for: XGBoost (xgb) ---
+Total execution time for model 'xgb': 12.27 seconds
+
+--- Running Nested CV for: LightGBM (lgb) ---
+Output directory: ../results/cls_test_2/lgb
+Using GroupKFold for outer CV with 2 folds based on query IDs.
+
+-- Processing Outer Fold 1/2 --
+Train set size: (1799, 63), Test set size: (1848, 63)
+Test set indices range from 0 to 3646
+Using GroupKFold for inner CV with 2 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Fitting 2 folds for each of 20 candidates, totalling 40 fits
+Best Params found: {'subsample': 1.0, 'reg_lambda': 5, 'reg_alpha': 0.01, 'num_leaves': 60, 'n_estimators': 100, 'max_depth': 20, 'learning_rate': 0.2, 'colsample_bytree': 0.6, 'class_weight': None}
+Best Inner CV ROC AUC score: 0.9437
+Results saved to ../results/cls_test_2/lgb/fold_1/best_params.json
+Hyperparameter Tuning Duration: 59.79 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to ../results/cls_test_2/lgb/fold_1/metrics.json
+Predictions saved to ../results/cls_test_2/lgb/fold_1/predictions.csv
+Prediction & Evaluation Duration: 0.11 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values using TreeExplainer for LightGBM...
+SHAP explainer returned a single array. Returning as is.
+SHAP values saved to ../results/cls_test_2/lgb/fold_1/shap_values_fold_1.csv (shape: (1848, 63))
+Test data corresponding to SHAP values saved to ../results/cls_test_2/lgb/fold_1/test_data_fold_1.csv (shape: (1848, 63))
+SHAP Calculation & Saving Duration: 0.53 seconds
+-- Outer Fold 1 finished. Duration: 60.47 seconds --
+
+-- Processing Outer Fold 2/2 --
+Train set size: (1848, 63), Test set size: (1799, 63)
+Test set indices range from 150 to 3496
+Using GroupKFold for inner CV with 2 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Fitting 2 folds for each of 20 candidates, totalling 40 fits
+Best Params found: {'subsample': 0.8, 'reg_lambda': 0, 'reg_alpha': 0, 'num_leaves': 31, 'n_estimators': 500, 'max_depth': 20, 'learning_rate': 0.05, 'colsample_bytree': 0.8, 'class_weight': None}
+Best Inner CV ROC AUC score: 0.9465
+Results saved to ../results/cls_test_2/lgb/fold_2/best_params.json
+Hyperparameter Tuning Duration: 58.29 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to ../results/cls_test_2/lgb/fold_2/metrics.json
+Predictions saved to ../results/cls_test_2/lgb/fold_2/predictions.csv
+Prediction & Evaluation Duration: 0.23 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values using TreeExplainer for LightGBM...
+SHAP explainer returned a single array. Returning as is.
+SHAP values saved to ../results/cls_test_2/lgb/fold_2/shap_values_fold_2.csv (shape: (1799, 63))
+Test data corresponding to SHAP values saved to ../results/cls_test_2/lgb/fold_2/test_data_fold_2.csv (shape: (1799, 63))
+SHAP Calculation & Saving Duration: 0.98 seconds
+-- Outer Fold 2 finished. Duration: 59.49 seconds --
+
+--- Aggregating results for: LightGBM (lgb) ---
+Average Metrics across folds:
+{
+    "accuracy_mean": 0.8777593191503696,
+    "accuracy_std": 0.003841570232620828,
+    "precision_mean": 0.8459589407306065,
+    "precision_std": 0.12078163576606754,
+    "recall_mean": 0.7712348322626694,
+    "recall_std": 0.10456816559600285,
+    "f1_mean": 0.7912723665904473,
+    "f1_std": 0.0021320950972346098,
+    "roc_auc_mean": 0.9295707100501508,
+    "roc_auc_std": 0.013192181320877516,
+    "pr_auc_mean": 0.9000291906554978,
+    "pr_auc_std": 0.002022055220978536,
+    "balanced_accuracy_mean": 0.8533851210221552,
+    "balanced_accuracy_std": 0.026333194723997755,
+    "mcc_mean": 0.7229390287931617,
+    "mcc_std": 0.0052619706277954315,
+    "best_inner_cv_roc_auc_mean": 0.9451093532800161,
+    "best_inner_cv_roc_auc_std": 0.0013916587488993493
+}
+Results saved to ../results/cls_test_2/lgb/metrics_summary.json
+
+Running global SHAP analysis...
+
+--- Starting Global SHAP Analysis in: ../results/cls_test_2/lgb ---
+Searching for 'shap_values_fold_*.csv' in subdirectories of ../results/cls_test_2/lgb...
+Found 2 SHAP files: ['shap_values_fold_1.csv', 'shap_values_fold_2.csv']
+Searching for 'test_data_fold_*.csv' in subdirectories of ../results/cls_test_2/lgb...
+Found 2 test data files: ['test_data_fold_1.csv', 'test_data_fold_2.csv']
+Found matching SHAP and test data for folds: [1, 2]
+
+Loading Fold 1:
+  SHAP file: ../results/cls_test_2/lgb/fold_1/shap_values_fold_1.csv
+  Test data file: ../results/cls_test_2/lgb/fold_1/test_data_fold_1.csv
+  Loaded SHAP shape: (1848, 63)
+  Loaded Test Data shape: (1848, 63)
+  Established feature names from Fold 1 (63 features).
+
+Loading Fold 2:
+  SHAP file: ../results/cls_test_2/lgb/fold_2/shap_values_fold_2.csv
+  Test data file: ../results/cls_test_2/lgb/fold_2/test_data_fold_2.csv
+  Loaded SHAP shape: (1799, 63)
+  Loaded Test Data shape: (1799, 63)
+
+Combining data from 2 folds...
+Successfully combined data from 2 folds.
+Combined SHAP values shape: (3647, 63)
+Combined test data shape: (3647, 63)
+
+Generating global SHAP plots in: ../results/cls_test_2/lgb/global_shap_analysis
+Global SHAP bar plot saved to: ../results/cls_test_2/lgb/global_shap_analysis/lgb_global_shap_bar.png
+Global SHAP dot plot saved to: ../results/cls_test_2/lgb/global_shap_analysis/lgb_global_shap_beeswarm.png
+--- Global SHAP Analysis Finished for: lgb ---
+Global SHAP Analysis Duration: 3.23 seconds
+Result Aggregation & Global SHAP Duration: 3.27 seconds
+Average time per outer fold: 59.98 seconds
+--- Nested CV completed for: LightGBM (lgb) ---
+Total execution time for model 'lgb': 123.25 seconds
+
+--- Running Nested CV for: Logistic Regression (logistic) ---
+Output directory: ../results/cls_test_2/logistic
+Using GroupKFold for outer CV with 2 folds based on query IDs.
+
+-- Processing Outer Fold 1/2 --
+Train set size: (1799, 63), Test set size: (1848, 63)
+Test set indices range from 0 to 3646
+Using GroupKFold for inner CV with 2 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Fitting 2 folds for each of 20 candidates, totalling 40 fits
+Best Params found: {'model__solver': 'saga', 'model__penalty': 'elasticnet', 'model__l1_ratio': 0.2, 'model__C': 0.005994842503189409}
+Best Inner CV ROC AUC score: 0.9439
+Results saved to ../results/cls_test_2/logistic/fold_1/best_params.json
+Hyperparameter Tuning Duration: 2.35 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to ../results/cls_test_2/logistic/fold_1/metrics.json
+Predictions saved to ../results/cls_test_2/logistic/fold_1/predictions.csv
+Prediction & Evaluation Duration: 0.83 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values using LinearExplainer for Logistic Regression...
+Scaling X_test data using the pipeline's scaler...
+Initializing SHAP LinearExplainer...
+Calculating SHAP values...
+Returning SHAP values.
+SHAP values saved to ../results/cls_test_2/logistic/fold_1/shap_values_fold_1.csv (shape: (1848, 63))
+Test data corresponding to SHAP values saved to ../results/cls_test_2/logistic/fold_1/test_data_fold_1.csv (shape: (1848, 63))
+SHAP Calculation & Saving Duration: 9.35 seconds
+-- Outer Fold 1 finished. Duration: 12.53 seconds --
+
+-- Processing Outer Fold 2/2 --
+Train set size: (1848, 63), Test set size: (1799, 63)
+Test set indices range from 150 to 3496
+Using GroupKFold for inner CV with 2 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Fitting 2 folds for each of 20 candidates, totalling 40 fits
+Best Params found: {'model__solver': 'saga', 'model__penalty': 'elasticnet', 'model__l1_ratio': 0.2, 'model__C': 0.005994842503189409}
+Best Inner CV ROC AUC score: 0.9616
+Results saved to ../results/cls_test_2/logistic/fold_2/best_params.json
+Hyperparameter Tuning Duration: 0.85 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to ../results/cls_test_2/logistic/fold_2/metrics.json
+Predictions saved to ../results/cls_test_2/logistic/fold_2/predictions.csv
+Prediction & Evaluation Duration: 0.15 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values using LinearExplainer for Logistic Regression...
+Scaling X_test data using the pipeline's scaler...
+Initializing SHAP LinearExplainer...
+Calculating SHAP values...
+Returning SHAP values.
+SHAP values saved to ../results/cls_test_2/logistic/fold_2/shap_values_fold_2.csv (shape: (1799, 63))
+Test data corresponding to SHAP values saved to ../results/cls_test_2/logistic/fold_2/test_data_fold_2.csv (shape: (1799, 63))
+SHAP Calculation & Saving Duration: 9.12 seconds
+-- Outer Fold 2 finished. Duration: 10.14 seconds --
+
+--- Aggregating results for: Logistic Regression (logistic) ---
+Average Metrics across folds:
+{
+    "accuracy_mean": 0.8934319571479105,
+    "accuracy_std": 0.007068320784274107,
+    "precision_mean": 0.8291233766233767,
+    "precision_std": 0.06730519480519481,
+    "recall_mean": 0.8324001859746315,
+    "recall_std": 0.06481608811530426,
+    "f1_mean": 0.8255051278188424,
+    "f1_std": 0.0015129940921954077,
+    "roc_auc_mean": 0.9256592257381422,
+    "roc_auc_std": 0.006483838096570382,
+    "pr_auc_mean": 0.9048722937183509,
+    "pr_auc_std": 0.00969044631736754,
+    "balanced_accuracy_mean": 0.8794689522988887,
+    "balanced_accuracy_std": 0.01996501057190503,
+    "mcc_mean": 0.7541569930165968,
+    "mcc_std": 0.006034444373660464,
+    "best_inner_cv_roc_auc_mean": 0.9527663981388573,
+    "best_inner_cv_roc_auc_std": 0.008852035426494487
+}
+Results saved to ../results/cls_test_2/logistic/metrics_summary.json
+
+Running global SHAP analysis...
+
+--- Starting Global SHAP Analysis in: ../results/cls_test_2/logistic ---
+Searching for 'shap_values_fold_*.csv' in subdirectories of ../results/cls_test_2/logistic...
+Found 2 SHAP files: ['shap_values_fold_1.csv', 'shap_values_fold_2.csv']
+Searching for 'test_data_fold_*.csv' in subdirectories of ../results/cls_test_2/logistic...
+Found 2 test data files: ['test_data_fold_1.csv', 'test_data_fold_2.csv']
+Found matching SHAP and test data for folds: [1, 2]
+
+Loading Fold 1:
+  SHAP file: ../results/cls_test_2/logistic/fold_1/shap_values_fold_1.csv
+  Test data file: ../results/cls_test_2/logistic/fold_1/test_data_fold_1.csv
+  Loaded SHAP shape: (1848, 63)
+  Loaded Test Data shape: (1848, 63)
+  Established feature names from Fold 1 (63 features).
+
+Loading Fold 2:
+  SHAP file: ../results/cls_test_2/logistic/fold_2/shap_values_fold_2.csv
+  Test data file: ../results/cls_test_2/logistic/fold_2/test_data_fold_2.csv
+  Loaded SHAP shape: (1799, 63)
+  Loaded Test Data shape: (1799, 63)
+
+Combining data from 2 folds...
+Successfully combined data from 2 folds.
+Combined SHAP values shape: (3647, 63)
+Combined test data shape: (3647, 63)
+
+Generating global SHAP plots in: ../results/cls_test_2/logistic/global_shap_analysis
+Global SHAP bar plot saved to: ../results/cls_test_2/logistic/global_shap_analysis/logistic_global_shap_bar.png
+Global SHAP dot plot saved to: ../results/cls_test_2/logistic/global_shap_analysis/logistic_global_shap_beeswarm.png
+--- Global SHAP Analysis Finished for: logistic ---
+Global SHAP Analysis Duration: 3.37 seconds
+Result Aggregation & Global SHAP Duration: 3.49 seconds
+Average time per outer fold: 11.34 seconds
+--- Nested CV completed for: Logistic Regression (logistic) ---
+Total execution time for model 'logistic': 26.17 seconds
+
+--- Overall Training Summary ---
+Model comparison summary saved to: ../results/cls_test_2/model_comparison_summary.csv
+  model_name  ...  best_inner_cv_roc_auc_std
+0         rf  ...                   0.006687
+1        xgb  ...                   0.004302
+2        lgb  ...                   0.001392
+3   logistic  ...                   0.008852
+
+[4 rows x 19 columns]
+Final Summary Saving Duration: 0.15 seconds
+
+--- Framework Execution Finished ---
+Total script execution time: 202.24 seconds
+작업 완료
+[INFO] Job completed at: Wed Apr 23 19:25:47 KST 2025

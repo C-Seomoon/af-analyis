@@ -1,0 +1,23 @@
+실행 날짜/시각: 20250421_145837
+데이터 크기: (3647, 63)
+CPU 코어 수: 32
+훈련 세트: (2548, 61), 검증 세트: (550, 61), 테스트 세트: (549, 61)
+최적 하이퍼파라미터: {'max_depth': 3, 'eta': 0.1, 'subsample': 0.8, 'colsample_bytree': 0.8, 'min_child_weight': 3, 'gamma': 0, 'alpha': 0.1, 'lambda': 1, 'objective': 'reg:squarederror', 'eval_metric': 'rmse', 'nthread': 32}
+최적 모델 점수(RMSE): 0.171514
+테스트 세트 MSE: 0.015383, R²: 0.706705, MAE: 0.066022
+
+상위 10개 특성:
+  iptm_L: 31.405855
+  chain_pair_iptm_AL: 30.188540
+  avg_interface_plddt: 3.029751
+  interface_pae_AH: 2.199940
+  interface_plddt_AH: 2.097849
+  mpdockq_HL: 1.227707
+  total_contacts: 0.942908
+  query_avg_RMSD: 0.817198
+  chain_pair_pae_min_AH: 0.798657
+  pdockq: 0.786663
+
+조기 중단 정보:
+  최종 반복 횟수: 58
+  설정된 early_stopping_rounds: 50

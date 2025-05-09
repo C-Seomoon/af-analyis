@@ -1,0 +1,12 @@
+biopandas>=0.4.1
+scipy>=1.6.0
+pandas>=1.2.0
+numpy>=1.19.0
+biopython>=1.78
+python-Levenshtein>=0.12.2
+tqdm>=4.60.0
+seaborn>=0.11.0
+torch>=1.8.0
+# abnumber는 별도로 설치해야 할 수 있습니다
+# pyrosetta는 학술 라이센스가 필요하며 별도로 설치해야 합니다
+# 설치 방법: https://www.pyrosetta.org/downloads 

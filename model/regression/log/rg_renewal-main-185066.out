@@ -1,0 +1,619 @@
+=============================================
+[INFO] Job Information
+---------------------------------------------
+[INFO] Job Name       : rg_renewal
+[INFO] Job ID         : 185066
+[INFO] Submit Dir     : /home/cseomoon/appl/af_analysis-0.1.4/model/regression/scripts
+[INFO] Partition      : g4090_short
+[INFO] Node List      : gpu10
+[INFO] Nodes          : 1
+[INFO] CPUs per Task  : 40
+[INFO] Memory (MB)    : 
+[INFO] User           : cseomoon
+[INFO] Work Dir       : /home/cseomoon/appl/af_analysis-0.1.4/model/regression/scripts
+[INFO] Tasks per Node : 1
+[INFO] Dependency     : 
+[INFO] GPU(s)         : 
+=============================================
+
+[INFO] Job started at : Tue Apr 29 03:39:39 KST 2025
+[INFO] Job allocated on node(s): gpu10
+[INFO] Job running on: gpu10
+[INFO] Saving results to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939
+Initialized Random Forest (rf) with params: {'bootstrap': True, 'ccp_alpha': 0.0, 'criterion': 'squared_error', 'max_depth': None, 'max_features': 1.0, 'max_leaf_nodes': None, 'max_samples': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 'n_estimators': 100, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Initialized LightGBM (lgbm) with params: {'boosting_type': 'gbdt', 'class_weight': None, 'colsample_bytree': 0.8, 'importance_type': 'split', 'learning_rate': 0.1, 'max_depth': -1, 'min_child_samples': 20, 'min_child_weight': 0.001, 'min_split_gain': 0.0, 'n_estimators': 100, 'n_jobs': -1, 'num_leaves': 31, 'objective': 'regression_l1', 'random_state': 42, 'reg_alpha': 0.0, 'reg_lambda': 0.0, 'subsample': 0.8, 'subsample_for_bin': 200000, 'subsample_freq': 0, 'metric': 'mae', 'verbose': -1}
+Initialized XGBoost (xgb) with params: {'objective': 'reg:squarederror', 'base_score': None, 'booster': None, 'callbacks': None, 'colsample_bylevel': None, 'colsample_bynode': None, 'colsample_bytree': 0.8, 'device': None, 'early_stopping_rounds': None, 'enable_categorical': False, 'eval_metric': 'rmse', 'feature_types': None, 'feature_weights': None, 'gamma': 0, 'grow_policy': None, 'importance_type': None, 'interaction_constraints': None, 'learning_rate': 0.1, 'max_bin': None, 'max_cat_threshold': None, 'max_cat_to_onehot': None, 'max_delta_step': None, 'max_depth': 3, 'max_leaves': None, 'min_child_weight': None, 'missing': nan, 'monotone_constraints': None, 'multi_strategy': None, 'n_estimators': 100, 'n_jobs': -1, 'num_parallel_tree': None, 'random_state': 42, 'reg_alpha': 0, 'reg_lambda': 1, 'sampling_method': None, 'scale_pos_weight': None, 'subsample': 0.8, 'tree_method': 'hist', 'validate_parameters': None, 'verbosity': None}
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/run_arguments.json
+Original data shape: (3650, 81)
+Using 'DockQ' as the continuous target variable.
+Identified 63 potential feature columns.
+Checking for NaN values in potential feature columns...
+Dropped 3 rows containing NaN values in one or more feature columns.
+Generated 10 stratification bins from target for regression.
+Processed Features (X) shape after NaN drop: (3647, 63)
+Processed Target (y) shape after NaN drop: (3647,)
+Processed Query IDs shape after NaN drop: (3647,)
+Initialized Random Forest (rf) with params: {'bootstrap': True, 'ccp_alpha': 0.0, 'criterion': 'squared_error', 'max_depth': None, 'max_features': 1.0, 'max_leaf_nodes': None, 'max_samples': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 'n_estimators': 100, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Initialized LightGBM (lgbm) with params: {'boosting_type': 'gbdt', 'class_weight': None, 'colsample_bytree': 0.8, 'importance_type': 'split', 'learning_rate': 0.1, 'max_depth': -1, 'min_child_samples': 20, 'min_child_weight': 0.001, 'min_split_gain': 0.0, 'n_estimators': 100, 'n_jobs': -1, 'num_leaves': 31, 'objective': 'regression_l1', 'random_state': 42, 'reg_alpha': 0.0, 'reg_lambda': 0.0, 'subsample': 0.8, 'subsample_for_bin': 200000, 'subsample_freq': 0, 'metric': 'mae', 'verbose': -1}
+Initialized XGBoost (xgb) with params: {'objective': 'reg:squarederror', 'base_score': None, 'booster': None, 'callbacks': None, 'colsample_bylevel': None, 'colsample_bynode': None, 'colsample_bytree': 0.8, 'device': None, 'early_stopping_rounds': None, 'enable_categorical': False, 'eval_metric': 'rmse', 'feature_types': None, 'feature_weights': None, 'gamma': 0, 'grow_policy': None, 'importance_type': None, 'interaction_constraints': None, 'learning_rate': 0.1, 'max_bin': None, 'max_cat_threshold': None, 'max_cat_to_onehot': None, 'max_delta_step': None, 'max_depth': 3, 'max_leaves': None, 'min_child_weight': None, 'missing': nan, 'monotone_constraints': None, 'multi_strategy': None, 'n_estimators': 100, 'n_jobs': -1, 'num_parallel_tree': None, 'random_state': 42, 'reg_alpha': 0, 'reg_lambda': 1, 'sampling_method': None, 'scale_pos_weight': None, 'subsample': 0.8, 'tree_method': 'hist', 'validate_parameters': None, 'verbosity': None}
+Fitting 3 folds for each of 100 candidates, totalling 300 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_1/best_params.json
+Calculated Metrics: R2=0.8203, RMSE=0.1120, MAE=0.0648
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_1/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_1/predictions.csv (shape: (749, 2))
+Calculating SHAP values for Random Forest using SHAP Explainer...
+SHAP calculation took 6.18 seconds.
+--- Saving SHAP results for Fold 1 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_1/shap_values_fold_1.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_1/X_explain_fold_1.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_1/shap_expected_value_fold_1.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_1/shap_summary_dot_fold_1.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_1/shap_summary_bar_fold_1.png
+--- SHAP saving completed for Fold 1 ---
+Fitting 3 folds for each of 100 candidates, totalling 300 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_2/best_params.json
+Calculated Metrics: R2=0.7626, RMSE=0.1303, MAE=0.0849
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_2/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_2/predictions.csv (shape: (749, 2))
+Calculating SHAP values for Random Forest using SHAP Explainer...
+SHAP calculation took 12.52 seconds.
+--- Saving SHAP results for Fold 2 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_2/shap_values_fold_2.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_2/X_explain_fold_2.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_2/shap_expected_value_fold_2.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_2/shap_summary_dot_fold_2.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_2/shap_summary_bar_fold_2.png
+--- SHAP saving completed for Fold 2 ---
+Fitting 3 folds for each of 100 candidates, totalling 300 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_3/best_params.json
+Calculated Metrics: R2=0.6892, RMSE=0.1926, MAE=0.1282
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_3/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_3/predictions.csv (shape: (749, 2))
+Calculating SHAP values for Random Forest using SHAP Explainer...
+SHAP calculation took 10.38 seconds.
+--- Saving SHAP results for Fold 3 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_3/shap_values_fold_3.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_3/X_explain_fold_3.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_3/shap_expected_value_fold_3.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_3/shap_summary_dot_fold_3.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_3/shap_summary_bar_fold_3.png
+--- SHAP saving completed for Fold 3 ---
+Fitting 3 folds for each of 100 candidates, totalling 300 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_4/best_params.json
+Calculated Metrics: R2=0.2642, RMSE=0.2092, MAE=0.1353
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_4/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_4/predictions.csv (shape: (700, 2))
+Calculating SHAP values for Random Forest using SHAP Explainer...
+SHAP calculation took 7.07 seconds.
+--- Saving SHAP results for Fold 4 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_4/shap_values_fold_4.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_4/X_explain_fold_4.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_4/shap_expected_value_fold_4.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_4/shap_summary_dot_fold_4.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_4/shap_summary_bar_fold_4.png
+--- SHAP saving completed for Fold 4 ---
+Fitting 3 folds for each of 100 candidates, totalling 300 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_5/best_params.json
+Calculated Metrics: R2=0.8697, RMSE=0.1239, MAE=0.0710
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_5/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_5/predictions.csv (shape: (700, 2))
+Calculating SHAP values for Random Forest using SHAP Explainer...
+SHAP calculation took 12.11 seconds.
+--- Saving SHAP results for Fold 5 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_5/shap_values_fold_5.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_5/X_explain_fold_5.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_5/shap_expected_value_fold_5.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_5/shap_summary_dot_fold_5.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/fold_5/shap_summary_bar_fold_5.png
+--- SHAP saving completed for Fold 5 ---
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/metrics_summary.json
+
+--- Analyzing Global SHAP for Model: rf ---
+Loading data from fold_1...
+Loading data from fold_2...
+Loading data from fold_3...
+Loading data from fold_4...
+Loading data from fold_5...
+Loaded SHAP data from 5 folds.
+Combined SHAP values shape: (3647, 63)
+Combined X_explain shape: (3647, 63)
+Combined SHAP data saved to (CSV for X_explain): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/combined_shap
+Global SHAP feature importance saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/combined_shap/global_shap_feature_importance.csv
+
+Top 10 Features by Global Mean Absolute SHAP:
+                 feature  mean_abs_shap
+0     chain_pair_iptm_AL       0.018499
+1                 iptm_A       0.018198
+2                 iptm_L       0.015651
+3     chain_pair_iptm_AH       0.014328
+4                 iptm_H       0.013672
+5  chain_pair_pae_min_AH       0.013408
+6        avg_model_plddt       0.012839
+7     interface_plddt_AH       0.012445
+8      avg_interface_pae       0.011533
+9       interface_pae_AH       0.009186
+Combined SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/combined_shap/combined_shap_summary_dot.png
+Combined SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/rf/combined_shap/combined_shap_summary_bar.png
+--- Global SHAP analysis completed for: rf ---
+Fitting 3 folds for each of 100 candidates, totalling 300 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_1/best_params.json
+Calculated Metrics: R2=0.8288, RMSE=0.1093, MAE=0.0563
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_1/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_1/predictions.csv (shape: (749, 2))
+Calculating SHAP values for LightGBM using SHAP Explainer...
+SHAP calculation took 0.19 seconds.
+--- Saving SHAP results for Fold 1 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_1/shap_values_fold_1.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_1/X_explain_fold_1.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_1/shap_expected_value_fold_1.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_1/shap_summary_dot_fold_1.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_1/shap_summary_bar_fold_1.png
+--- SHAP saving completed for Fold 1 ---
+Fitting 3 folds for each of 100 candidates, totalling 300 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_2/best_params.json
+Calculated Metrics: R2=0.7443, RMSE=0.1352, MAE=0.0848
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_2/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_2/predictions.csv (shape: (749, 2))
+Calculating SHAP values for LightGBM using SHAP Explainer...
+SHAP calculation took 0.57 seconds.
+--- Saving SHAP results for Fold 2 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_2/shap_values_fold_2.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_2/X_explain_fold_2.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_2/shap_expected_value_fold_2.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_2/shap_summary_dot_fold_2.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_2/shap_summary_bar_fold_2.png
+--- SHAP saving completed for Fold 2 ---
+Fitting 3 folds for each of 100 candidates, totalling 300 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_3/best_params.json
+Calculated Metrics: R2=0.7087, RMSE=0.1864, MAE=0.1207
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_3/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_3/predictions.csv (shape: (749, 2))
+Calculating SHAP values for LightGBM using SHAP Explainer...
+SHAP calculation took 0.87 seconds.
+--- Saving SHAP results for Fold 3 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_3/shap_values_fold_3.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_3/X_explain_fold_3.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_3/shap_expected_value_fold_3.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_3/shap_summary_dot_fold_3.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_3/shap_summary_bar_fold_3.png
+--- SHAP saving completed for Fold 3 ---
+Fitting 3 folds for each of 100 candidates, totalling 300 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_4/best_params.json
+Calculated Metrics: R2=0.2313, RMSE=0.2138, MAE=0.1345
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_4/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_4/predictions.csv (shape: (700, 2))
+Calculating SHAP values for LightGBM using SHAP Explainer...
+SHAP calculation took 0.12 seconds.
+--- Saving SHAP results for Fold 4 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_4/shap_values_fold_4.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_4/X_explain_fold_4.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_4/shap_expected_value_fold_4.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_4/shap_summary_dot_fold_4.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_4/shap_summary_bar_fold_4.png
+--- SHAP saving completed for Fold 4 ---
+Fitting 3 folds for each of 100 candidates, totalling 300 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_5/best_params.json
+Calculated Metrics: R2=0.7886, RMSE=0.1578, MAE=0.0923
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_5/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_5/predictions.csv (shape: (700, 2))
+Calculating SHAP values for LightGBM using SHAP Explainer...
+SHAP calculation took 0.48 seconds.
+--- Saving SHAP results for Fold 5 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_5/shap_values_fold_5.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_5/X_explain_fold_5.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_5/shap_expected_value_fold_5.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_5/shap_summary_dot_fold_5.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/fold_5/shap_summary_bar_fold_5.png
+--- SHAP saving completed for Fold 5 ---
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/metrics_summary.json
+
+--- Analyzing Global SHAP for Model: lgbm ---
+Loading data from fold_1...
+Loading data from fold_2...
+Loading data from fold_3...
+Loading data from fold_4...
+Loading data from fold_5...
+Loaded SHAP data from 5 folds.
+Combined SHAP values shape: (3647, 63)
+Combined X_explain shape: (3647, 63)
+Combined SHAP data saved to (CSV for X_explain): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/combined_shap
+Global SHAP feature importance saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/combined_shap/global_shap_feature_importance.csv
+
+Top 10 Features by Global Mean Absolute SHAP:
+               feature  mean_abs_shap
+0   chain_pair_iptm_AL       0.067411
+1       query_avg_RMSD       0.033966
+2               iptm_L       0.030343
+3               iptm_A       0.017130
+4       model_avg_RMSD       0.015488
+5  avg_interface_plddt       0.014372
+6    scaled_model_RMSD       0.012961
+7        chain_plddt_A       0.010346
+8   chain_pair_iptm_AH       0.009910
+9        chain_plddt_H       0.009070
+Combined SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/combined_shap/combined_shap_summary_dot.png
+Combined SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lgbm/combined_shap/combined_shap_summary_bar.png
+--- Global SHAP analysis completed for: lgbm ---
+Fitting 3 folds for each of 100 candidates, totalling 300 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_1/best_params.json
+Calculated Metrics: R2=0.8170, RMSE=0.1131, MAE=0.0671
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_1/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_1/predictions.csv (shape: (749, 2))
+Calculating SHAP values for XGBoost using SHAP Explainer...
+SHAP calculation took 0.06 seconds.
+--- Saving SHAP results for Fold 1 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_1/shap_values_fold_1.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_1/X_explain_fold_1.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_1/shap_expected_value_fold_1.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_1/shap_summary_dot_fold_1.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_1/shap_summary_bar_fold_1.png
+--- SHAP saving completed for Fold 1 ---
+Fitting 3 folds for each of 100 candidates, totalling 300 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_2/best_params.json
+Calculated Metrics: R2=0.7365, RMSE=0.1373, MAE=0.0886
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_2/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_2/predictions.csv (shape: (749, 2))
+Calculating SHAP values for XGBoost using SHAP Explainer...
+SHAP calculation took 0.13 seconds.
+--- Saving SHAP results for Fold 2 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_2/shap_values_fold_2.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_2/X_explain_fold_2.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_2/shap_expected_value_fold_2.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_2/shap_summary_dot_fold_2.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_2/shap_summary_bar_fold_2.png
+--- SHAP saving completed for Fold 2 ---
+Fitting 3 folds for each of 100 candidates, totalling 300 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_3/best_params.json
+Calculated Metrics: R2=0.6951, RMSE=0.1907, MAE=0.1272
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_3/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_3/predictions.csv (shape: (749, 2))
+Calculating SHAP values for XGBoost using SHAP Explainer...
+SHAP calculation took 0.05 seconds.
+--- Saving SHAP results for Fold 3 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_3/shap_values_fold_3.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_3/X_explain_fold_3.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_3/shap_expected_value_fold_3.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_3/shap_summary_dot_fold_3.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_3/shap_summary_bar_fold_3.png
+--- SHAP saving completed for Fold 3 ---
+Fitting 3 folds for each of 100 candidates, totalling 300 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_4/best_params.json
+Calculated Metrics: R2=0.1805, RMSE=0.2207, MAE=0.1364
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_4/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_4/predictions.csv (shape: (700, 2))
+Calculating SHAP values for XGBoost using SHAP Explainer...
+SHAP calculation took 0.01 seconds.
+--- Saving SHAP results for Fold 4 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_4/shap_values_fold_4.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_4/X_explain_fold_4.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_4/shap_expected_value_fold_4.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_4/shap_summary_dot_fold_4.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_4/shap_summary_bar_fold_4.png
+--- SHAP saving completed for Fold 4 ---
+Fitting 3 folds for each of 100 candidates, totalling 300 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_5/best_params.json
+Calculated Metrics: R2=0.8136, RMSE=0.1482, MAE=0.0926
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_5/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_5/predictions.csv (shape: (700, 2))
+Calculating SHAP values for XGBoost using SHAP Explainer...
+SHAP calculation took 0.04 seconds.
+--- Saving SHAP results for Fold 5 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_5/shap_values_fold_5.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_5/X_explain_fold_5.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_5/shap_expected_value_fold_5.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_5/shap_summary_dot_fold_5.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/fold_5/shap_summary_bar_fold_5.png
+--- SHAP saving completed for Fold 5 ---
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/metrics_summary.json
+
+--- Analyzing Global SHAP for Model: xgb ---
+Loading data from fold_1...
+Loading data from fold_2...
+Loading data from fold_3...
+Loading data from fold_4...
+Loading data from fold_5...
+Loaded SHAP data from 5 folds.
+Combined SHAP values shape: (3647, 63)
+Combined X_explain shape: (3647, 63)
+Combined SHAP data saved to (CSV for X_explain): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/combined_shap
+Global SHAP feature importance saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/combined_shap/global_shap_feature_importance.csv
+
+Top 10 Features by Global Mean Absolute SHAP:
+                 feature  mean_abs_shap
+0     chain_pair_iptm_AL       0.054625
+1     interface_plddt_AH       0.028366
+2                 iptm_L       0.027631
+3        avg_model_plddt       0.024951
+4         query_avg_RMSD       0.015959
+5  chain_pair_pae_min_AH       0.015276
+6         model_avg_RMSD       0.011459
+7          chain_plddt_A       0.009795
+8       interface_pae_AH       0.009746
+9                 iptm_H       0.009537
+Combined SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/combined_shap/combined_shap_summary_dot.png
+Combined SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/xgb/combined_shap/combined_shap_summary_bar.png
+--- Global SHAP analysis completed for: xgb ---
+Fitting 3 folds for each of 2 candidates, totalling 6 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_1/best_params.json
+Calculated Metrics: R2=-0.0596, RMSE=0.2720, MAE=0.2373
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_1/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_1/predictions.csv (shape: (749, 2))
+--- Saving SHAP results for Fold 1 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_1/shap_values_fold_1.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_1/X_explain_fold_1.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_1/shap_expected_value_fold_1.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_1/shap_summary_dot_fold_1.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_1/shap_summary_bar_fold_1.png
+--- SHAP saving completed for Fold 1 ---
+Fitting 3 folds for each of 2 candidates, totalling 6 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_2/best_params.json
+Calculated Metrics: R2=-6893009.2406, RMSE=702.0298, MAE=25.8184
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_2/metrics.json
+Fitting 3 folds for each of 2 candidates, totalling 6 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_3/best_params.json
+Calculated Metrics: R2=0.2255, RMSE=0.3040, MAE=0.2672
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_3/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_3/predictions.csv (shape: (749, 2))
+--- Saving SHAP results for Fold 3 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_3/shap_values_fold_3.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_3/X_explain_fold_3.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_3/shap_expected_value_fold_3.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_3/shap_summary_dot_fold_3.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_3/shap_summary_bar_fold_3.png
+--- SHAP saving completed for Fold 3 ---
+Fitting 3 folds for each of 2 candidates, totalling 6 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_4/best_params.json
+Calculated Metrics: R2=0.0021, RMSE=0.2436, MAE=0.2052
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_4/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_4/predictions.csv (shape: (700, 2))
+--- Saving SHAP results for Fold 4 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_4/shap_values_fold_4.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_4/X_explain_fold_4.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_4/shap_expected_value_fold_4.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_4/shap_summary_dot_fold_4.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_4/shap_summary_bar_fold_4.png
+--- SHAP saving completed for Fold 4 ---
+Fitting 3 folds for each of 2 candidates, totalling 6 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_5/best_params.json
+Calculated Metrics: R2=0.5916, RMSE=0.2193, MAE=0.1516
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_5/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_5/predictions.csv (shape: (700, 2))
+--- Saving SHAP results for Fold 5 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_5/shap_values_fold_5.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_5/X_explain_fold_5.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_5/shap_expected_value_fold_5.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_5/shap_summary_dot_fold_5.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lr/fold_5/shap_summary_bar_fold_5.png
+--- SHAP saving completed for Fold 5 ---
+Fitting 3 folds for each of 100 candidates, totalling 300 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_1/best_params.json
+Calculated Metrics: R2=-0.0711, RMSE=0.2735, MAE=0.2401
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_1/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_1/predictions.csv (shape: (749, 2))
+--- Saving SHAP results for Fold 1 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_1/shap_values_fold_1.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_1/X_explain_fold_1.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_1/shap_expected_value_fold_1.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_1/shap_summary_dot_fold_1.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_1/shap_summary_bar_fold_1.png
+--- SHAP saving completed for Fold 1 ---
+Fitting 3 folds for each of 100 candidates, totalling 300 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_2/best_params.json
+Calculated Metrics: R2=-16151224.2096, RMSE=1074.6173, MAE=39.3745
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_2/metrics.json
+Fitting 3 folds for each of 100 candidates, totalling 300 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_3/best_params.json
+Calculated Metrics: R2=0.7487, RMSE=0.1732, MAE=0.1146
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_3/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_3/predictions.csv (shape: (749, 2))
+--- Saving SHAP results for Fold 3 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_3/shap_values_fold_3.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_3/X_explain_fold_3.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_3/shap_expected_value_fold_3.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_3/shap_summary_dot_fold_3.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_3/shap_summary_bar_fold_3.png
+--- SHAP saving completed for Fold 3 ---
+Fitting 3 folds for each of 100 candidates, totalling 300 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_4/best_params.json
+Calculated Metrics: R2=0.3052, RMSE=0.2032, MAE=0.1434
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_4/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_4/predictions.csv (shape: (700, 2))
+--- Saving SHAP results for Fold 4 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_4/shap_values_fold_4.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_4/X_explain_fold_4.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_4/shap_expected_value_fold_4.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_4/shap_summary_dot_fold_4.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_4/shap_summary_bar_fold_4.png
+--- SHAP saving completed for Fold 4 ---
+Fitting 3 folds for each of 100 candidates, totalling 300 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_5/best_params.json
+Calculated Metrics: R2=0.7998, RMSE=0.1535, MAE=0.1033
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_5/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_5/predictions.csv (shape: (700, 2))
+--- Saving SHAP results for Fold 5 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_5/shap_values_fold_5.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_5/X_explain_fold_5.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_5/shap_expected_value_fold_5.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_5/shap_summary_dot_fold_5.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/ridge/fold_5/shap_summary_bar_fold_5.png
+--- SHAP saving completed for Fold 5 ---
+Fitting 3 folds for each of 40 candidates, totalling 120 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_1/best_params.json
+Calculated Metrics: R2=0.7965, RMSE=0.1192, MAE=0.0819
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_1/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_1/predictions.csv (shape: (749, 2))
+--- Saving SHAP results for Fold 1 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_1/shap_values_fold_1.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_1/X_explain_fold_1.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_1/shap_expected_value_fold_1.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_1/shap_summary_dot_fold_1.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_1/shap_summary_bar_fold_1.png
+--- SHAP saving completed for Fold 1 ---
+Fitting 3 folds for each of 40 candidates, totalling 120 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_2/best_params.json
+Calculated Metrics: R2=0.7871, RMSE=0.1234, MAE=0.0913
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_2/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_2/predictions.csv (shape: (749, 2))
+--- Saving SHAP results for Fold 2 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_2/shap_values_fold_2.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_2/X_explain_fold_2.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_2/shap_expected_value_fold_2.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_2/shap_summary_dot_fold_2.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_2/shap_summary_bar_fold_2.png
+--- SHAP saving completed for Fold 2 ---
+Fitting 3 folds for each of 40 candidates, totalling 120 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_3/best_params.json
+Calculated Metrics: R2=0.7347, RMSE=0.1779, MAE=0.1260
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_3/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_3/predictions.csv (shape: (749, 2))
+--- Saving SHAP results for Fold 3 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_3/shap_values_fold_3.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_3/X_explain_fold_3.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_3/shap_expected_value_fold_3.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_3/shap_summary_dot_fold_3.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_3/shap_summary_bar_fold_3.png
+--- SHAP saving completed for Fold 3 ---
+Fitting 3 folds for each of 40 candidates, totalling 120 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_4/best_params.json
+Calculated Metrics: R2=0.4475, RMSE=0.1813, MAE=0.1239
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_4/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_4/predictions.csv (shape: (700, 2))
+--- Saving SHAP results for Fold 4 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_4/shap_values_fold_4.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_4/X_explain_fold_4.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_4/shap_expected_value_fold_4.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_4/shap_summary_dot_fold_4.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_4/shap_summary_bar_fold_4.png
+--- SHAP saving completed for Fold 4 ---
+Fitting 3 folds for each of 40 candidates, totalling 120 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_5/best_params.json
+Calculated Metrics: R2=0.7175, RMSE=0.1824, MAE=0.1254
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_5/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_5/predictions.csv (shape: (700, 2))
+--- Saving SHAP results for Fold 5 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_5/shap_values_fold_5.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_5/X_explain_fold_5.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_5/shap_expected_value_fold_5.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_5/shap_summary_dot_fold_5.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/fold_5/shap_summary_bar_fold_5.png
+--- SHAP saving completed for Fold 5 ---
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/metrics_summary.json
+
+--- Analyzing Global SHAP for Model: lasso ---
+Loading data from fold_1...
+Loading data from fold_2...
+Loading data from fold_3...
+Loading data from fold_4...
+Loading data from fold_5...
+Loaded SHAP data from 5 folds.
+Combined SHAP values shape: (3647, 63)
+Combined X_explain shape: (3647, 63)
+Combined SHAP data saved to (CSV for X_explain): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/combined_shap
+Global SHAP feature importance saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/combined_shap/global_shap_feature_importance.csv
+
+Top 10 Features by Global Mean Absolute SHAP:
+               feature  mean_abs_shap
+0      avg_model_plddt       2.167050
+1  avg_interface_plddt       0.230154
+2    scaled_query_RMSD       0.059096
+3   chain_pair_iptm_AL       0.055628
+4   chain_pair_iptm_AH       0.034221
+5              pdockq2       0.013489
+6               iptm_L       0.010803
+7               LIS_AH       0.010112
+8              mpdockq       0.009655
+9           pdockq2_AH       0.009219
+Combined SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/combined_shap/combined_shap_summary_dot.png
+Combined SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/lasso/combined_shap/combined_shap_summary_bar.png
+--- Global SHAP analysis completed for: lasso ---
+Fitting 3 folds for each of 100 candidates, totalling 300 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_1/best_params.json
+Calculated Metrics: R2=0.8102, RMSE=0.1151, MAE=0.0753
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_1/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_1/predictions.csv (shape: (749, 2))
+--- Saving SHAP results for Fold 1 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_1/shap_values_fold_1.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_1/X_explain_fold_1.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_1/shap_expected_value_fold_1.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_1/shap_summary_dot_fold_1.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_1/shap_summary_bar_fold_1.png
+--- SHAP saving completed for Fold 1 ---
+Fitting 3 folds for each of 100 candidates, totalling 300 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_2/best_params.json
+Calculated Metrics: R2=0.7892, RMSE=0.1228, MAE=0.0900
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_2/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_2/predictions.csv (shape: (749, 2))
+--- Saving SHAP results for Fold 2 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_2/shap_values_fold_2.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_2/X_explain_fold_2.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_2/shap_expected_value_fold_2.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_2/shap_summary_dot_fold_2.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_2/shap_summary_bar_fold_2.png
+--- SHAP saving completed for Fold 2 ---
+Fitting 3 folds for each of 100 candidates, totalling 300 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_3/best_params.json
+Calculated Metrics: R2=0.7370, RMSE=0.1771, MAE=0.1238
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_3/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_3/predictions.csv (shape: (749, 2))
+--- Saving SHAP results for Fold 3 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_3/shap_values_fold_3.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_3/X_explain_fold_3.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_3/shap_expected_value_fold_3.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_3/shap_summary_dot_fold_3.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_3/shap_summary_bar_fold_3.png
+--- SHAP saving completed for Fold 3 ---
+Fitting 3 folds for each of 100 candidates, totalling 300 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_4/best_params.json
+Calculated Metrics: R2=0.4606, RMSE=0.1791, MAE=0.1249
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_4/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_4/predictions.csv (shape: (700, 2))
+--- Saving SHAP results for Fold 4 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_4/shap_values_fold_4.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_4/X_explain_fold_4.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_4/shap_expected_value_fold_4.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_4/shap_summary_dot_fold_4.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_4/shap_summary_bar_fold_4.png
+--- SHAP saving completed for Fold 4 ---
+Fitting 3 folds for each of 100 candidates, totalling 300 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_5/best_params.json
+Calculated Metrics: R2=0.7383, RMSE=0.1755, MAE=0.1206
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_5/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_5/predictions.csv (shape: (700, 2))
+--- Saving SHAP results for Fold 5 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_5/shap_values_fold_5.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_5/X_explain_fold_5.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_5/shap_expected_value_fold_5.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_5/shap_summary_dot_fold_5.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/fold_5/shap_summary_bar_fold_5.png
+--- SHAP saving completed for Fold 5 ---
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/metrics_summary.json
+
+--- Analyzing Global SHAP for Model: en ---
+Loading data from fold_1...
+Loading data from fold_2...
+Loading data from fold_3...
+Loading data from fold_4...
+Loading data from fold_5...
+Loaded SHAP data from 5 folds.
+Combined SHAP values shape: (3647, 63)
+Combined X_explain shape: (3647, 63)
+Combined SHAP data saved to (CSV for X_explain): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/combined_shap
+Global SHAP feature importance saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/combined_shap/global_shap_feature_importance.csv
+
+Top 10 Features by Global Mean Absolute SHAP:
+               feature  mean_abs_shap
+0      avg_model_plddt       1.960614
+1  avg_interface_plddt       0.362685
+2    scaled_query_RMSD       0.049666
+3        chain_plddt_A       0.044527
+4   interface_plddt_AL       0.041835
+5     interface_pae_AL       0.037640
+6   chain_pair_iptm_AL       0.030419
+7               iptm_L       0.025030
+8               iptm_A       0.022591
+9   chain_pair_iptm_AH       0.018600
+Combined SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/combined_shap/combined_shap_summary_dot.png
+Combined SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_renewal_test_20250429_033939/en/combined_shap/combined_shap_summary_bar.png
+--- Global SHAP analysis completed for: en ---
+작업 완료
+[INFO] Job completed at: Tue Apr 29 05:48:45 KST 2025

@@ -1,0 +1,14 @@
+{
+    "r2_mean": 0.654386362284988,
+    "r2_std": 0.012793525201549971,
+    "mse_mean": 0.03144805333738256,
+    "mse_std": 0.0019749668802832993,
+    "rmse_mean": 0.17724845631646638,
+    "rmse_std": 0.005571182173674666,
+    "mae_mean": 0.13055731752010552,
+    "mae_std": 0.004824951495232613,
+    "best_inner_cv_score_mean": -0.026521077163995682,
+    "best_inner_cv_score_std": 0.0009253302464187641,
+    "scoring_metric_used_mean": "N/A",
+    "scoring_metric_used_std": "N/A"
+}

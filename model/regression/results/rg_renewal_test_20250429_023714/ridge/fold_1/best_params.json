@@ -1,0 +1,5 @@
+{
+    "reg__alpha": 157.41890047456639,
+    "reg__fit_intercept": false,
+    "reg__solver": "cholesky"
+}

@@ -1,0 +1,15 @@
+{
+    "input_file": "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/data/final_data_with_rosetta_scaledRMSD_20250423.csv",
+    "output_dir": "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_main_20250425_155240",
+    "target_column": "DockQ",
+    "query_id_column": "query",
+    "drop_features": null,
+    "models": "rf,lgbm,xgb,lr,ridge,lasso,en",
+    "outer_folds": 5,
+    "inner_folds": 3,
+    "random_iter": 100,
+    "random_state": 42,
+    "scoring": "neg_mean_squared_error",
+    "n_jobs": 32,
+    "shap_background_samples": 100
+}

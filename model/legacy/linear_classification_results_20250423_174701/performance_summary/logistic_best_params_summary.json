@@ -1,0 +1,8 @@
+{
+    "model__solver": "saga (빈도: 2/2)",
+    "model__penalty": "elasticnet (빈도: 2/2)",
+    "model__multi_class": "ovr (빈도: 2/2)",
+    "model__l1_ratio": "평균: 0.400000, 표준편차: 0.300000",
+    "model__class_weight": "None (빈도: 2/2)",
+    "model__C": "평균: 0.003385, 표준편차: 0.002610"
+}

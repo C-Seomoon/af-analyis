@@ -1,0 +1,24 @@
+실행 날짜/시각: 20250420_204735
+데이터 크기: (3647, 63)
+CPU 코어 수: 32
+훈련 세트: (2548, 61), 검증 세트: (550, 61), 테스트 세트: (549, 61)
+교차 검증 MSE: 0.0028 (±0.0007)
+최적 하이퍼파라미터: {'max_depth': 20, 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 100}
+검증 세트 MSE: 0.0401, R²: 0.6396
+테스트 세트 MSE: 0.0116, RMSE: 0.1076, MAE: 0.0653, R²: 0.7794
+
+상위 10개 특성:
+  chain_pair_iptm_AL: 0.5030
+  iptm_L: 0.2179
+  interface_pae_AH: 0.0458
+  query_avg_RMSD: 0.0369
+  iptm_A: 0.0305
+  ipTM: 0.0116
+  total_contacts: 0.0111
+  model_avg_RMSD: 0.0107
+  pdockq2_AL: 0.0083
+  model_rmsd_scale: 0.0081
+
+SHAP 분석:
+  SHAP 분석은 모델의 예측에 대한 각 특성의 기여도를 시각화합니다.
+  저장된 SHAP 그래프를 통해 각 특성이 예측에 미치는 영향을 확인할 수 있습니다.

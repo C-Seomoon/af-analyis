@@ -1,0 +1,5 @@
+{
+    "regressor__alpha": 0.09046673956058787,
+    "regressor__l1_ratio": 0.27472179299006416,
+    "regressor__max_iter": 5000
+}
