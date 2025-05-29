@@ -64,7 +64,7 @@ def load_and_preprocess_data(file_path,
         default_features_to_drop = [
             'pdb', 'seed', 'sample', 'data_file', 'chain_iptm', 'chain_pair_iptm', 
             'chain_pair_pae_min', 'chain_ptm', 'format', 'model_path', 'native_path',
-            'Fnat', 'Fnonnat', 'rRMS', 'iRMS', 'LRMS'
+            'Fnat', 'Fnonnat', 'rRMS', 'iRMS', 'LRMS', 'LIS', 'mpdockq_AH', 'mpdockq_AL', 'mpdockq_HL', 'mpdockq'
         ]
         
     valid_default_drops = [col for col in default_features_to_drop if col in data.columns]
@@ -73,6 +73,12 @@ def load_and_preprocess_data(file_path,
     if user_features_to_drop:
         valid_user_drops = [col for col in user_features_to_drop if col in data.columns]
         cols_to_drop.update(valid_user_drops)
+
+    # LIS 컬럼 존재 여부 확인 및 로깅
+    if 'LIS' in data.columns:
+        print("Found 'LIS' column in the data. It will be dropped from features.")
+    else:
+        print("'LIS' column not found in the data.")
 
     # 최종 특성으로 사용될 컬럼 식별 (임시 타겟 컬럼 제외)
     potential_feature_cols = [col for col in data.columns if col not in cols_to_drop and col != target_temp_name]

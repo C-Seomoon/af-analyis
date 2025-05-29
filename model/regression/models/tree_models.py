@@ -1,4 +1,5 @@
 import os
+import sys
 import joblib
 import numpy as np
 import pandas as pd
@@ -15,11 +16,7 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from scipy.stats import randint, uniform # 하이퍼파라미터 튜닝용 분포
 
 # Import the evaluation helper from the utils directory
-try:
-    from ..utils.evaluation import calculate_regression_metrics
-except ImportError:
-    # Fallback for execution from different directories if needed
-    from model.regression.utils.evaluation import calculate_regression_metrics
+from ..utils.evaluation import calculate_regression_metrics
 
 
 class BaseModelRegressor(ABC):

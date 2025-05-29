@@ -1,0 +1,5 @@
+model_name,status,error
+rf,error,n_jobs == 0 in Parallel has no meaning
+xgb,error,n_jobs == 0 in Parallel has no meaning
+lgb,error,n_jobs == 0 in Parallel has no meaning
+logistic,error,n_jobs == 0 in Parallel has no meaning

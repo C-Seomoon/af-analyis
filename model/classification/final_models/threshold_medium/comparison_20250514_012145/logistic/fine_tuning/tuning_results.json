@@ -1,0 +1,17 @@
+{
+  "baseline_score": 0.9963473695391047,
+  "best_score": 0.9938182971867238,
+  "improvement": -0.002529072352380979,
+  "improvement_percent": -0.2538343984940603,
+  "best_params": {
+    "C": 0.05117311380520865,
+    "class_weight": "balanced",
+    "max_iter": 2000,
+    "penalty": "l2",
+    "random_state": 42,
+    "solver": "liblinear"
+  },
+  "scoring": "roc_auc",
+  "cv_splits": 3,
+  "n_iterations": 20
+}

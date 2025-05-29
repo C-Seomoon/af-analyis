@@ -1,0 +1,9 @@
+{
+  "class_weight": null,
+  "max_depth": 39,
+  "max_features": "sqrt",
+  "min_samples_leaf": 1,
+  "min_samples_split": 5,
+  "n_estimators": 198,
+  "random_state": 42
+}

@@ -1,0 +1,6 @@
+,n_estimators,min_samples_split,min_samples_leaf,max_features,max_depth,class_weight
+fold_1,700,10,4,log2,10.0,
+fold_2,200,5,1,log2,30.0,balanced_subsample
+fold_3,200,10,2,log2,20.0,
+fold_4,300,10,1,log2,,
+fold_5,500,2,2,log2,10.0,

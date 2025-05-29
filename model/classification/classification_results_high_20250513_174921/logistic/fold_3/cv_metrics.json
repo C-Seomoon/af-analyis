@@ -1,0 +1,13 @@
+{
+    "best_params": {
+        "model__solver": "saga",
+        "model__penalty": "l2",
+        "model__max_iter": 1000,
+        "model__class_weight": "balanced",
+        "model__C": 0.0001
+    },
+    "pr_auc": 0.5618515318245594,
+    "roc_auc": 0.9524656009469107,
+    "f1": 0.5110732185823409,
+    "balanced_acc": 0.9186545375909468
+}

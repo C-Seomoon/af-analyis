@@ -1,0 +1,5 @@
+{
+    "reg__alpha": 0.03334792728637585,
+    "reg__fit_intercept": true,
+    "reg__max_iter": 3000
+}

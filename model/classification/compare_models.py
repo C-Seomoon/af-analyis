@@ -331,23 +331,45 @@ def plot_overall_pr_curves(pr_data, output_dir):
     """Plot Precision-Recall curves based on overall combined predictions."""
     plt.figure(figsize=(8, 8))
     plot_occurred = False
+    
+    # Calculate baseline (random classifier) for each model
     for model_name, data in pr_data.items():
         if data.get('precision') is not None and data.get('recall') is not None and data.get('auc') is not None:
-            plt.plot(data['recall'], data['precision'], lw=2, label=f'{model_name} (AUC = {data["auc"]:.3f})')
+            # Plot model's PR curve
+            plt.plot(data['recall'], data['precision'], lw=2, 
+                    label=f'{model_name} (AUC = {data["auc"]:.3f})')
+            
+            # Add baseline (random classifier)
+            # The baseline is a horizontal line at the positive class ratio
+            # We can estimate this from the precision at recall = 0
+            baseline_precision = data['precision'][0]  # precision at recall = 0
+            plt.axhline(y=baseline_precision, color='gray', linestyle='--', alpha=0.5)
+            
             plot_occurred = True
         else: 
-             print(f"Skipping PR plot for {model_name} due to missing data.")
+            print(f"Skipping PR plot for {model_name} due to missing data.")
+    
+    # Add single baseline legend entry
+    if plot_occurred:
+        plt.axhline(y=0, color='gray', linestyle='--', alpha=0.5, 
+                   label='Random Classifier Baseline')
              
     if not plot_occurred:
         print("No data available to plot overall PR curves.")
         plt.close()
         return
 
-    plt.xlim([0.0, 1.0]); plt.ylim([0.0, 1.05])
-    plt.xlabel('Recall'); plt.ylabel('Precision')
-    plt.title('Precision-Recall Curves - Overall Data'); plt.legend(loc="lower left"); plt.grid(alpha=0.5)
+    plt.xlim([0.0, 1.0])
+    plt.ylim([0.0, 1.05])
+    plt.xlabel('Recall')
+    plt.ylabel('Precision')
+    plt.title('Precision-Recall Curves - Overall Data')
+    plt.legend(loc="lower left", bbox_to_anchor=(0, 0))
+    plt.grid(alpha=0.5)
+    
     plot_path = output_dir / "overall_pr_curves.png" 
-    plt.savefig(plot_path); plt.close()
+    plt.savefig(plot_path, bbox_inches='tight')
+    plt.close()
     print(f"Overall PR curve plot saved to: {plot_path}")
 
 def main():

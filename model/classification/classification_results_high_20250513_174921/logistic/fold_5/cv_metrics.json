@@ -1,0 +1,12 @@
+{
+    "best_params": {
+        "model__solver": "liblinear",
+        "model__penalty": "l2",
+        "model__class_weight": "balanced",
+        "model__C": 0.0001
+    },
+    "pr_auc": 0.3843964682958405,
+    "roc_auc": 0.9196975968512483,
+    "f1": 0.3935339694106439,
+    "balanced_acc": 0.8696432143525334
+}

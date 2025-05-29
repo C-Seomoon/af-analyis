@@ -1,0 +1,122 @@
+2025-05-27 13:29:10,212 [INFO] Successfully imported model classes using relative paths.
+2025-05-27 13:29:11,334 [INFO] Successfully imported utils using relative paths.
+2025-05-27 13:29:11,343 [INFO] Using 48 CPU cores (75% of available 64).
+2025-05-27 13:29:11,344 [INFO] Results will be saved to: comprehensive_regression_results_20250527_132911
+2025-05-27 13:29:11,384 [INFO] 
+--- Loading Data ---
+2025-05-27 13:29:11,474 [INFO] Loading separate test set from: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/data/test/pipeline_ABAG_native_data.csv
+2025-05-27 13:29:11,518 [INFO] Test set loaded: (1648, 71)
+2025-05-27 13:29:11,518 [INFO] Data Loading Duration: 0.13 seconds
+2025-05-27 13:29:11,518 [INFO] 
+--- Starting Comprehensive Model Evaluation ---
+2025-05-27 13:29:11,521 [INFO] 
+============================================================
+2025-05-27 13:29:11,521 [INFO] Processing model: Random Forest (rf)
+2025-05-27 13:29:11,521 [INFO] ============================================================
+2025-05-27 13:29:11,521 [INFO] === Step 1: Nested CV Performance Estimation ===
+2025-05-27 13:29:11,523 [INFO] 
+--- Running Nested CV Evaluation for: Random Forest (rf) ---
+2025-05-27 13:29:11,523 [INFO] Output directory: comprehensive_regression_results_20250527_132911/rf
+2025-05-27 13:29:11,523 [INFO] Hyperparameter tuning scoring metric: neg_mean_squared_error
+2025-05-27 13:29:11,523 [INFO] Using GroupKFold for outer CV with 5 folds based on query IDs.
+2025-05-27 13:29:11,525 [INFO] 
+-- Processing Outer Fold 1/5 --
+2025-05-27 13:29:11,527 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:29:11,527 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:29:11,527 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:30:01,301 [INFO] Best Params found: {'bootstrap': False, 'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 3, 'n_estimators': 297}
+2025-05-27 13:30:01,302 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0184
+2025-05-27 13:30:01,336 [INFO] Hyperparameter Tuning Duration: 49.81 seconds
+2025-05-27 13:30:01,336 [INFO] Predicting on outer test set...
+2025-05-27 13:30:01,473 [INFO] Calculating performance metrics...
+2025-05-27 13:30:01,583 [INFO] Generating diagnostic plots...
+2025-05-27 13:30:02,831 [INFO] Prediction & Evaluation Duration: 1.50 seconds
+2025-05-27 13:30:02,832 [INFO] -- Outer Fold 1 finished. Duration: 51.31 seconds --
+2025-05-27 13:30:02,832 [INFO] 
+-- Processing Outer Fold 2/5 --
+2025-05-27 13:30:02,836 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:30:02,837 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:30:02,837 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:30:46,389 [INFO] Best Params found: {'bootstrap': True, 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 10, 'min_samples_split': 3, 'n_estimators': 301}
+2025-05-27 13:30:46,390 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0200
+2025-05-27 13:30:46,426 [INFO] Hyperparameter Tuning Duration: 43.59 seconds
+2025-05-27 13:30:46,426 [INFO] Predicting on outer test set...
+2025-05-27 13:30:46,559 [INFO] Calculating performance metrics...
+2025-05-27 13:30:46,606 [INFO] Generating diagnostic plots...
+2025-05-27 13:30:47,299 [INFO] Prediction & Evaluation Duration: 0.87 seconds
+2025-05-27 13:30:47,299 [INFO] -- Outer Fold 2 finished. Duration: 44.47 seconds --
+2025-05-27 13:30:47,299 [INFO] 
+-- Processing Outer Fold 3/5 --
+2025-05-27 13:30:47,302 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:30:47,302 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:30:47,302 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:31:32,243 [INFO] Best Params found: {'bootstrap': False, 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 10, 'min_samples_split': 7, 'n_estimators': 352}
+2025-05-27 13:31:32,244 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0249
+2025-05-27 13:31:32,271 [INFO] Hyperparameter Tuning Duration: 44.97 seconds
+2025-05-27 13:31:32,271 [INFO] Predicting on outer test set...
+2025-05-27 13:31:32,428 [INFO] Calculating performance metrics...
+2025-05-27 13:31:32,484 [INFO] Generating diagnostic plots...
+2025-05-27 13:31:33,171 [INFO] Prediction & Evaluation Duration: 0.90 seconds
+2025-05-27 13:31:33,171 [INFO] -- Outer Fold 3 finished. Duration: 45.87 seconds --
+2025-05-27 13:31:33,171 [INFO] 
+-- Processing Outer Fold 4/5 --
+2025-05-27 13:31:33,175 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 13:31:33,175 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:31:33,175 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:32:18,000 [INFO] Best Params found: {'bootstrap': False, 'max_depth': 30, 'max_features': 'log2', 'min_samples_leaf': 6, 'min_samples_split': 3, 'n_estimators': 291}
+2025-05-27 13:32:18,001 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0246
+2025-05-27 13:32:18,059 [INFO] Hyperparameter Tuning Duration: 44.88 seconds
+2025-05-27 13:32:18,059 [INFO] Predicting on outer test set...
+2025-05-27 13:32:18,191 [INFO] Calculating performance metrics...
+2025-05-27 13:32:18,256 [INFO] Generating diagnostic plots...
+2025-05-27 13:32:19,014 [INFO] Prediction & Evaluation Duration: 0.96 seconds
+2025-05-27 13:32:19,014 [INFO] -- Outer Fold 4 finished. Duration: 45.84 seconds --
+2025-05-27 13:32:19,014 [INFO] 
+-- Processing Outer Fold 5/5 --
+2025-05-27 13:32:19,017 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 13:32:19,017 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:32:19,017 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:33:03,436 [INFO] Best Params found: {'bootstrap': True, 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 7, 'min_samples_split': 10, 'n_estimators': 127}
+2025-05-27 13:33:03,456 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0273
+2025-05-27 13:33:03,494 [INFO] Hyperparameter Tuning Duration: 44.48 seconds
+2025-05-27 13:33:03,494 [INFO] Predicting on outer test set...
+2025-05-27 13:33:03,565 [INFO] Calculating performance metrics...
+2025-05-27 13:33:03,626 [INFO] Generating diagnostic plots...
+2025-05-27 13:33:04,337 [INFO] Prediction & Evaluation Duration: 0.84 seconds
+2025-05-27 13:33:04,337 [INFO] -- Outer Fold 5 finished. Duration: 45.32 seconds --
+2025-05-27 13:33:04,337 [INFO] 
+--- Aggregating results for: Random Forest (rf) ---
+2025-05-27 13:33:04,337 [INFO] Average Metrics across folds:
+2025-05-27 13:33:04,337 [INFO] {
+    "r2_mean": 0.6690301920429099,
+    "r2_std": 0.18669991622489446,
+    "mse_mean": 0.02645047439861064,
+    "mse_std": 0.01101387960208877,
+    "rmse_mean": 0.15920929907218695,
+    "rmse_std": 0.033209539104804946,
+    "mae_mean": 0.0977144670729296,
+    "mae_std": 0.016329783546755634,
+    "best_inner_cv_score_mean": -0.023035140599502072,
+    "best_inner_cv_score_std": 0.0033032715313179605,
+    "scoring_metric_used": "neg_mean_squared_error"
+}
+2025-05-27 13:33:04,405 [INFO] Combined predictions saved to: comprehensive_regression_results_20250527_132911/rf/all_folds_predictions.csv
+2025-05-27 13:33:04,405 [INFO] Average time per outer fold: 46.56 seconds
+2025-05-27 13:33:04,405 [INFO] --- Nested CV completed for: Random Forest (rf) ---
+2025-05-27 13:33:04,406 [INFO] === Step 2: Hyperparameter Tuning ===
+2025-05-27 13:33:04,406 [INFO] Finding optimal hyperparameters using separate cross-validation...
+2025-05-27 13:33:57,536 [INFO] Best parameters: {'bootstrap': True, 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 10, 'min_samples_split': 3, 'n_estimators': 301}
+2025-05-27 13:33:57,550 [INFO] Best CV score: -0.0256
+2025-05-27 13:33:57,551 [INFO] === Step 3: Final Model Training ===
+2025-05-27 13:33:57,551 [INFO] 
+--- Training Final Regression Model: Random Forest ---
+2025-05-27 13:33:57,551 [INFO] Using parameters: {'bootstrap': True, 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 10, 'min_samples_split': 3, 'n_estimators': 301}
+2025-05-27 13:33:57,551 [INFO] Training final model on entire dataset...
+2025-05-27 13:33:58,113 [INFO] Final model training completed in 0.56 seconds
+2025-05-27 13:33:58,113 [INFO] Evaluating final model on training data...
+2025-05-27 13:33:58,274 [INFO] Final model R²: 0.9701, MSE: 0.0028
+2025-05-27 13:33:58,353 [INFO] Generating final model diagnostic plots...
+2025-05-27 13:33:59,523 [INFO] Final model diagnostic plots saved.
+2025-05-27 13:33:59,523 [INFO] Calculating SHAP values for final model...
+2025-05-27 13:33:59,523 [INFO] Sampling 100 instances from X for SHAP background data.
+slurmstepd-cpu5: error: *** JOB 205593 ON cpu5 CANCELLED AT 2025-05-27T13:34:14 ***

@@ -1,0 +1,786 @@
+=============================================
+[INFO] Job Information
+---------------------------------------------
+[INFO] Job Name       : cls_framework
+[INFO] Job ID         : 194441
+[INFO] Submit Dir     : /home/cseomoon/appl/af_analysis-0.1.4/model/classification/scripts
+[INFO] Partition      : milan_short
+[INFO] Node List      : cpu10
+[INFO] Nodes          : 1
+[INFO] CPUs per Task  : 64
+[INFO] Memory (MB)    : 
+[INFO] User           : cseomoon
+[INFO] Work Dir       : /home/cseomoon/appl/af_analysis-0.1.4/model/classification/scripts
+[INFO] Tasks per Node : 1
+[INFO] Dependency     : 
+[INFO] GPU(s)         : 
+=============================================
+
+[INFO] Job started at : Tue May 13 17:49:14 KST 2025
+[INFO] Job allocated on node(s): cpu10
+[INFO] Job running on: cpu10
+[INFO] Results will be saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/threshold_high_20250513_174914
+Using 64 CPU cores.
+Results will be saved to: classification_results_20250513_174921
+Results saved to classification_results_20250513_174921/run_arguments.json
+
+--- Loading Data ---
+Original data shape: (3650, 81)
+Class distribution before NaN drop (DockQ >= 0.8): 0 (Negative) = 3342, 1 (Positive) = 308
+'LIS' column not found in the data.
+Identified 63 potential feature columns.
+Checking for NaN values in potential feature columns...
+Dropped 3 rows containing NaN values in one or more feature columns.
+Processed Features (X) shape after NaN drop: (3647, 63)
+Processed Target (y) shape after NaN drop: (3647,)
+Processed Query IDs shape after NaN drop: (3647,)
+Class distribution after NaN drop (DockQ >= 0.8): 0 (Negative) = 3339, 1 (Positive) = 308
+Data Loading & Preprocessing Duration: 0.06 seconds
+
+--- Starting Model Training ---
+
+--- Running Nested CV for: Random Forest (rf) ---
+Output directory: classification_results_20250513_174921/rf
+Using StratifiedGroupKFold for outer CV with 5 folds based on query IDs and stratified by y.
+
+-- Processing Outer Fold 1/5 --
+Train set size: (2897, 63), Test set size: (750, 63)
+Test set indices range from 400 to 3546
+Using StratifiedGroupKFold for inner CV with 3 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'n_estimators': 200, 'min_samples_split': 10, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 20, 'class_weight': 'balanced_subsample'}
+Best Inner CV PR-AUC score: 0.3645
+Results saved to classification_results_20250513_174921/rf/fold_1/best_params.json
+CV metrics for best model: PR-AUC=0.3645, ROC-AUC=0.8635, F1=0.0462, Balanced Acc=0.5030
+Results saved to classification_results_20250513_174921/rf/fold_1/cv_metrics.json
+Hyperparameter Tuning Duration: 21.09 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to classification_results_20250513_174921/rf/fold_1/metrics.json
+Predictions saved to classification_results_20250513_174921/rf/fold_1/predictions.csv
+Default threshold (0.5): F1=0.0734
+Optimal threshold (0.0952): F1=0.6082
+Using optimal threshold (0.0952) for better F1 score
+Prediction & Evaluation Duration: 0.14 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values for RandomForest using TreeExplainer...
+Returning SHAP values for the positive class (from 3D array).
+SHAP values saved to classification_results_20250513_174921/rf/fold_1/shap_values_fold_1.csv (shape: (750, 63))
+Test data corresponding to SHAP values saved to classification_results_20250513_174921/rf/fold_1/test_data_fold_1.csv (shape: (750, 63))
+SHAP Calculation & Saving Duration: 1.66 seconds
+-- Outer Fold 1 finished. Duration: 22.90 seconds --
+
+-- Processing Outer Fold 2/5 --
+Train set size: (2897, 63), Test set size: (750, 63)
+Test set indices range from 0 to 3596
+Using StratifiedGroupKFold for inner CV with 3 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'n_estimators': 100, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_features': 'log2', 'max_depth': 30, 'class_weight': None}
+Best Inner CV PR-AUC score: 0.5067
+Results saved to classification_results_20250513_174921/rf/fold_2/best_params.json
+CV metrics for best model: PR-AUC=0.5067, ROC-AUC=0.9300, F1=0.2117, Balanced Acc=0.5897
+Results saved to classification_results_20250513_174921/rf/fold_2/cv_metrics.json
+Hyperparameter Tuning Duration: 16.11 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to classification_results_20250513_174921/rf/fold_2/metrics.json
+Predictions saved to classification_results_20250513_174921/rf/fold_2/predictions.csv
+Default threshold (0.5): F1=0.2485
+Optimal threshold (0.0755): F1=0.3707
+Using optimal threshold (0.0755) for better F1 score
+Prediction & Evaluation Duration: 0.15 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values for RandomForest using TreeExplainer...
+Returning SHAP values for the positive class (from 3D array).
+SHAP values saved to classification_results_20250513_174921/rf/fold_2/shap_values_fold_2.csv (shape: (750, 63))
+Test data corresponding to SHAP values saved to classification_results_20250513_174921/rf/fold_2/test_data_fold_2.csv (shape: (750, 63))
+SHAP Calculation & Saving Duration: 0.48 seconds
+-- Outer Fold 2 finished. Duration: 16.76 seconds --
+
+-- Processing Outer Fold 3/5 --
+Train set size: (2948, 63), Test set size: (699, 63)
+Test set indices range from 250 to 3147
+Using StratifiedGroupKFold for inner CV with 3 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'n_estimators': 200, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 30, 'class_weight': None}
+Best Inner CV PR-AUC score: 0.4638
+Results saved to classification_results_20250513_174921/rf/fold_3/best_params.json
+CV metrics for best model: PR-AUC=0.4638, ROC-AUC=0.9232, F1=0.0000, Balanced Acc=0.4851
+Results saved to classification_results_20250513_174921/rf/fold_3/cv_metrics.json
+Hyperparameter Tuning Duration: 16.17 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to classification_results_20250513_174921/rf/fold_3/metrics.json
+Predictions saved to classification_results_20250513_174921/rf/fold_3/predictions.csv
+Default threshold (0.5): F1=0.0000
+Optimal threshold (0.0300): F1=0.5870
+Using optimal threshold (0.0300) for better F1 score
+Prediction & Evaluation Duration: 0.30 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values for RandomForest using TreeExplainer...
+Returning SHAP values for the positive class (from 3D array).
+SHAP values saved to classification_results_20250513_174921/rf/fold_3/shap_values_fold_3.csv (shape: (699, 63))
+Test data corresponding to SHAP values saved to classification_results_20250513_174921/rf/fold_3/test_data_fold_3.csv (shape: (699, 63))
+SHAP Calculation & Saving Duration: 0.88 seconds
+-- Outer Fold 3 finished. Duration: 17.38 seconds --
+
+-- Processing Outer Fold 4/5 --
+Train set size: (2898, 63), Test set size: (749, 63)
+Test set indices range from 150 to 3646
+Using StratifiedGroupKFold for inner CV with 3 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'n_estimators': 300, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 30, 'class_weight': 'balanced_subsample'}
+Best Inner CV PR-AUC score: 0.3289
+Results saved to classification_results_20250513_174921/rf/fold_4/best_params.json
+CV metrics for best model: PR-AUC=0.3289, ROC-AUC=0.8055, F1=0.1111, Balanced Acc=0.5316
+Results saved to classification_results_20250513_174921/rf/fold_4/cv_metrics.json
+Hyperparameter Tuning Duration: 17.55 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to classification_results_20250513_174921/rf/fold_4/metrics.json
+Predictions saved to classification_results_20250513_174921/rf/fold_4/predictions.csv
+Default threshold (0.5): F1=0.0000
+Optimal threshold (0.3074): F1=0.9091
+Using optimal threshold (0.3074) for better F1 score
+Prediction & Evaluation Duration: 0.18 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values for RandomForest using TreeExplainer...
+Returning SHAP values for the positive class (from 3D array).
+SHAP values saved to classification_results_20250513_174921/rf/fold_4/shap_values_fold_4.csv (shape: (749, 63))
+Test data corresponding to SHAP values saved to classification_results_20250513_174921/rf/fold_4/test_data_fold_4.csv (shape: (749, 63))
+SHAP Calculation & Saving Duration: 2.98 seconds
+-- Outer Fold 4 finished. Duration: 20.73 seconds --
+
+-- Processing Outer Fold 5/5 --
+Train set size: (2948, 63), Test set size: (699, 63)
+Test set indices range from 50 to 3496
+Using StratifiedGroupKFold for inner CV with 3 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'n_estimators': 200, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'log2', 'max_depth': None, 'class_weight': 'balanced_subsample'}
+Best Inner CV PR-AUC score: 0.3055
+Results saved to classification_results_20250513_174921/rf/fold_5/best_params.json
+CV metrics for best model: PR-AUC=0.3055, ROC-AUC=0.8802, F1=0.0069, Balanced Acc=0.4928
+Results saved to classification_results_20250513_174921/rf/fold_5/cv_metrics.json
+Hyperparameter Tuning Duration: 17.42 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to classification_results_20250513_174921/rf/fold_5/metrics.json
+Predictions saved to classification_results_20250513_174921/rf/fold_5/predictions.csv
+Default threshold (0.5): F1=0.0000
+Optimal threshold (0.2050): F1=0.9647
+Using optimal threshold (0.2050) for better F1 score
+Prediction & Evaluation Duration: 0.22 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values for RandomForest using TreeExplainer...
+Returning SHAP values for the positive class (from 3D array).
+SHAP values saved to classification_results_20250513_174921/rf/fold_5/shap_values_fold_5.csv (shape: (699, 63))
+Test data corresponding to SHAP values saved to classification_results_20250513_174921/rf/fold_5/test_data_fold_5.csv (shape: (699, 63))
+SHAP Calculation & Saving Duration: 2.25 seconds
+-- Outer Fold 5 finished. Duration: 19.90 seconds --
+
+--- Aggregating results for: Random Forest (rf) ---
+Average Metrics across folds:
+{
+    "accuracy_mean": 0.8652480831857832,
+    "accuracy_std": 0.06590176962510469,
+    "precision_mean": 0.049019607843137254,
+    "precision_std": 0.06620369810248679,
+    "recall_mean": 0.11146752205292702,
+    "recall_std": 0.19033575672962122,
+    "f1_mean": 0.06438304109440313,
+    "f1_std": 0.09635706033540337,
+    "roc_auc_mean": 0.9121026998798973,
+    "roc_auc_std": 0.06916625050948906,
+    "pr_auc_mean": 0.4836626803321809,
+    "pr_auc_std": 0.2921218374819955,
+    "balanced_accuracy_mean": 0.5247570742251004,
+    "balanced_accuracy_std": 0.07456290025150467,
+    "mcc_mean": 0.013935487192703194,
+    "mcc_std": 0.1093664466044413,
+    "best_inner_cv_pr_auc_mean": 0.39386754597847856,
+    "best_inner_cv_pr_auc_std": 0.07811847895841119,
+    "default_threshold_mean": 0.5,
+    "default_threshold_std": 0.0,
+    "optimal_threshold_mean": 0.1426245236470286,
+    "optimal_threshold_std": 0.10047578574393654,
+    "optimal_f1_mean": 0.6879260205716637,
+    "optimal_f1_std": 0.22032387114386678,
+    "threshold_improvement_mean": 0.6235429794772606,
+    "threshold_improvement_std": 0.3028269672761389
+}
+Results saved to classification_results_20250513_174921/rf/metrics_summary.json
+Combined predictions saved to: classification_results_20250513_174921/rf/all_predictions.csv
+
+Running global SHAP analysis...
+Combined SHAP values shape: (3647, 63)
+Combined test data shape: (3647, 63)
+Global SHAP analysis completed using data from all 5 folds
+Global SHAP Analysis Duration: 1.69 seconds
+Result Aggregation & Global SHAP Duration: 1.77 seconds
+Average time per outer fold: 19.53 seconds
+--- Nested CV completed for: Random Forest (rf) ---
+Total execution time for model 'rf': 99.47 seconds
+
+--- Running Nested CV for: XGBoost (xgb) ---
+Output directory: classification_results_20250513_174921/xgb
+Using StratifiedGroupKFold for outer CV with 5 folds based on query IDs and stratified by y.
+
+-- Processing Outer Fold 1/5 --
+Train set size: (2897, 63), Test set size: (750, 63)
+Test set indices range from 400 to 3546
+Using StratifiedGroupKFold for inner CV with 3 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'subsample': 1.0, 'scale_pos_weight': 5, 'n_estimators': 100, 'max_depth': 7, 'learning_rate': 0.01, 'gamma': 0.5, 'colsample_bytree': 0.8}
+Best Inner CV PR-AUC score: 0.4320
+Results saved to classification_results_20250513_174921/xgb/fold_1/best_params.json
+CV metrics for best model: PR-AUC=0.4320, ROC-AUC=0.8712, F1=0.2941, Balanced Acc=0.6351
+Results saved to classification_results_20250513_174921/xgb/fold_1/cv_metrics.json
+Hyperparameter Tuning Duration: 6.38 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to classification_results_20250513_174921/xgb/fold_1/metrics.json
+Predictions saved to classification_results_20250513_174921/xgb/fold_1/predictions.csv
+Default threshold (0.5): F1=0.1391
+Optimal threshold (0.2383): F1=0.6125
+Using optimal threshold (0.2383) for better F1 score
+Prediction & Evaluation Duration: 0.29 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values for XGBoost using TreeExplainer...
+Returning SHAP values (expected 2D array for positive class log-odds).
+SHAP values saved to classification_results_20250513_174921/xgb/fold_1/shap_values_fold_1.csv (shape: (750, 63))
+Test data corresponding to SHAP values saved to classification_results_20250513_174921/xgb/fold_1/test_data_fold_1.csv (shape: (750, 63))
+SHAP Calculation & Saving Duration: 0.57 seconds
+-- Outer Fold 1 finished. Duration: 7.25 seconds --
+
+-- Processing Outer Fold 2/5 --
+Train set size: (2897, 63), Test set size: (750, 63)
+Test set indices range from 0 to 3596
+Using StratifiedGroupKFold for inner CV with 3 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'subsample': 1.0, 'scale_pos_weight': 5, 'n_estimators': 100, 'max_depth': 3, 'learning_rate': 0.01, 'gamma': 1, 'colsample_bytree': 1.0}
+Best Inner CV PR-AUC score: 0.5372
+Results saved to classification_results_20250513_174921/xgb/fold_2/best_params.json
+CV metrics for best model: PR-AUC=0.5372, ROC-AUC=0.8979, F1=0.5338, Balanced Acc=0.7675
+Results saved to classification_results_20250513_174921/xgb/fold_2/cv_metrics.json
+Hyperparameter Tuning Duration: 2.48 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to classification_results_20250513_174921/xgb/fold_2/metrics.json
+Predictions saved to classification_results_20250513_174921/xgb/fold_2/predictions.csv
+Default threshold (0.5): F1=0.4646
+Optimal threshold (0.5404): F1=0.4646
+Prediction & Evaluation Duration: 0.07 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values for XGBoost using TreeExplainer...
+Returning SHAP values (expected 2D array for positive class log-odds).
+SHAP values saved to classification_results_20250513_174921/xgb/fold_2/shap_values_fold_2.csv (shape: (750, 63))
+Test data corresponding to SHAP values saved to classification_results_20250513_174921/xgb/fold_2/test_data_fold_2.csv (shape: (750, 63))
+SHAP Calculation & Saving Duration: 0.38 seconds
+-- Outer Fold 2 finished. Duration: 2.95 seconds --
+
+-- Processing Outer Fold 3/5 --
+Train set size: (2948, 63), Test set size: (699, 63)
+Test set indices range from 250 to 3147
+Using StratifiedGroupKFold for inner CV with 3 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'subsample': 0.8, 'scale_pos_weight': 1, 'n_estimators': 100, 'max_depth': 10, 'learning_rate': 0.2, 'gamma': 1, 'colsample_bytree': 0.6}
+Best Inner CV PR-AUC score: 0.4216
+Results saved to classification_results_20250513_174921/xgb/fold_3/best_params.json
+CV metrics for best model: PR-AUC=0.4216, ROC-AUC=0.8931, F1=0.0755, Balanced Acc=0.5418
+Results saved to classification_results_20250513_174921/xgb/fold_3/cv_metrics.json
+Hyperparameter Tuning Duration: 2.17 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to classification_results_20250513_174921/xgb/fold_3/metrics.json
+Predictions saved to classification_results_20250513_174921/xgb/fold_3/predictions.csv
+Default threshold (0.5): F1=0.0000
+Optimal threshold (0.0009): F1=0.5449
+Using optimal threshold (0.0009) for better F1 score
+Prediction & Evaluation Duration: 0.06 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values for XGBoost using TreeExplainer...
+Returning SHAP values (expected 2D array for positive class log-odds).
+SHAP values saved to classification_results_20250513_174921/xgb/fold_3/shap_values_fold_3.csv (shape: (699, 63))
+Test data corresponding to SHAP values saved to classification_results_20250513_174921/xgb/fold_3/test_data_fold_3.csv (shape: (699, 63))
+SHAP Calculation & Saving Duration: 0.21 seconds
+-- Outer Fold 3 finished. Duration: 2.46 seconds --
+
+-- Processing Outer Fold 4/5 --
+Train set size: (2898, 63), Test set size: (749, 63)
+Test set indices range from 150 to 3646
+Using StratifiedGroupKFold for inner CV with 3 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'subsample': 0.8, 'scale_pos_weight': 1, 'n_estimators': 500, 'max_depth': 3, 'learning_rate': 0.2, 'gamma': 0, 'colsample_bytree': 0.8}
+Best Inner CV PR-AUC score: 0.3466
+Results saved to classification_results_20250513_174921/xgb/fold_4/best_params.json
+CV metrics for best model: PR-AUC=0.3466, ROC-AUC=0.8832, F1=0.0968, Balanced Acc=0.5250
+Results saved to classification_results_20250513_174921/xgb/fold_4/cv_metrics.json
+Hyperparameter Tuning Duration: 2.74 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to classification_results_20250513_174921/xgb/fold_4/metrics.json
+Predictions saved to classification_results_20250513_174921/xgb/fold_4/predictions.csv
+Default threshold (0.5): F1=0.5455
+Optimal threshold (0.6890): F1=0.5897
+Prediction & Evaluation Duration: 0.05 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values for XGBoost using TreeExplainer...
+Returning SHAP values (expected 2D array for positive class log-odds).
+SHAP values saved to classification_results_20250513_174921/xgb/fold_4/shap_values_fold_4.csv (shape: (749, 63))
+Test data corresponding to SHAP values saved to classification_results_20250513_174921/xgb/fold_4/test_data_fold_4.csv (shape: (749, 63))
+SHAP Calculation & Saving Duration: 0.30 seconds
+-- Outer Fold 4 finished. Duration: 3.10 seconds --
+
+-- Processing Outer Fold 5/5 --
+Train set size: (2948, 63), Test set size: (699, 63)
+Test set indices range from 50 to 3496
+Using StratifiedGroupKFold for inner CV with 3 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'subsample': 0.6, 'scale_pos_weight': 7, 'n_estimators': 300, 'max_depth': 10, 'learning_rate': 0.01, 'gamma': 0, 'colsample_bytree': 1.0}
+Best Inner CV PR-AUC score: 0.3182
+Results saved to classification_results_20250513_174921/xgb/fold_5/best_params.json
+CV metrics for best model: PR-AUC=0.3182, ROC-AUC=0.9062, F1=0.1828, Balanced Acc=0.5728
+Results saved to classification_results_20250513_174921/xgb/fold_5/cv_metrics.json
+Hyperparameter Tuning Duration: 3.21 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to classification_results_20250513_174921/xgb/fold_5/metrics.json
+Predictions saved to classification_results_20250513_174921/xgb/fold_5/predictions.csv
+Default threshold (0.5): F1=0.0000
+Optimal threshold (0.1099): F1=0.8889
+Using optimal threshold (0.1099) for better F1 score
+Prediction & Evaluation Duration: 0.10 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values for XGBoost using TreeExplainer...
+Returning SHAP values (expected 2D array for positive class log-odds).
+SHAP values saved to classification_results_20250513_174921/xgb/fold_5/shap_values_fold_5.csv (shape: (699, 63))
+Test data corresponding to SHAP values saved to classification_results_20250513_174921/xgb/fold_5/test_data_fold_5.csv (shape: (699, 63))
+SHAP Calculation & Saving Duration: 1.08 seconds
+-- Outer Fold 5 finished. Duration: 4.39 seconds --
+
+--- Aggregating results for: XGBoost (xgb) ---
+Average Metrics across folds:
+{
+    "accuracy_mean": 0.8951860139699857,
+    "accuracy_std": 0.042642447894661005,
+    "precision_mean": 0.1940840003233891,
+    "precision_std": 0.18756336425869982,
+    "recall_mean": 0.2905629510825982,
+    "recall_std": 0.31349367536858314,
+    "f1_mean": 0.22984628897672374,
+    "f1_std": 0.23178770173001964,
+    "roc_auc_mean": 0.9089702938518519,
+    "roc_auc_std": 0.06905770810923552,
+    "pr_auc_mean": 0.5174773285325123,
+    "pr_auc_std": 0.24658570571409638,
+    "balanced_accuracy_mean": 0.6246089890423048,
+    "balanced_accuracy_std": 0.14599669958525432,
+    "mcc_mean": 0.19734379348384384,
+    "mcc_std": 0.23715298862607906,
+    "best_inner_cv_pr_auc_mean": 0.41109161269277433,
+    "best_inner_cv_pr_auc_std": 0.07648035363039707,
+    "default_threshold_mean": 0.5,
+    "default_threshold_std": 0.0,
+    "optimal_threshold_mean": 0.31571537256240845,
+    "optimal_threshold_std": 0.2597285807132721,
+    "optimal_f1_mean": 0.6201378245839324,
+    "optimal_f1_std": 0.1435590763552462,
+    "threshold_improvement_mean": 0.39029153560720864,
+    "threshold_improvement_std": 0.3321004099820347
+}
+Results saved to classification_results_20250513_174921/xgb/metrics_summary.json
+Combined predictions saved to: classification_results_20250513_174921/xgb/all_predictions.csv
+
+Running global SHAP analysis...
+Combined SHAP values shape: (3647, 63)
+Combined test data shape: (3647, 63)
+Global SHAP analysis completed using data from all 5 folds
+Global SHAP Analysis Duration: 1.05 seconds
+Result Aggregation & Global SHAP Duration: 1.15 seconds
+Average time per outer fold: 4.03 seconds
+--- Nested CV completed for: XGBoost (xgb) ---
+Total execution time for model 'xgb': 21.34 seconds
+
+--- Running Nested CV for: LightGBM (lgb) ---
+Output directory: classification_results_20250513_174921/lgb
+Using StratifiedGroupKFold for outer CV with 5 folds based on query IDs and stratified by y.
+
+-- Processing Outer Fold 1/5 --
+Train set size: (2897, 63), Test set size: (750, 63)
+Test set indices range from 400 to 3546
+Using StratifiedGroupKFold for inner CV with 3 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'subsample': 0.8, 'reg_lambda': 0.1, 'reg_alpha': 0, 'num_leaves': 31, 'n_estimators': 300, 'max_depth': 10, 'learning_rate': 0.2, 'colsample_bytree': 1.0, 'class_weight': None}
+Best Inner CV PR-AUC score: 0.4462
+Results saved to classification_results_20250513_174921/lgb/fold_1/best_params.json
+CV metrics for best model: PR-AUC=0.4462, ROC-AUC=0.8904, F1=0.2923, Balanced Acc=0.6071
+Results saved to classification_results_20250513_174921/lgb/fold_1/cv_metrics.json
+Hyperparameter Tuning Duration: 801.14 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to classification_results_20250513_174921/lgb/fold_1/metrics.json
+Predictions saved to classification_results_20250513_174921/lgb/fold_1/predictions.csv
+Default threshold (0.5): F1=0.0808
+Optimal threshold (0.0170): F1=0.6203
+Using optimal threshold (0.0170) for better F1 score
+Prediction & Evaluation Duration: 0.29 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values for LightGBM using TreeExplainer...
+Warning: TreeExplainer returned a 2D array for LightGBM. Assuming it relates to the positive class.
+SHAP values saved to classification_results_20250513_174921/lgb/fold_1/shap_values_fold_1.csv (shape: (750, 63))
+Test data corresponding to SHAP values saved to classification_results_20250513_174921/lgb/fold_1/test_data_fold_1.csv (shape: (750, 63))
+SHAP Calculation & Saving Duration: 0.51 seconds
+-- Outer Fold 1 finished. Duration: 801.96 seconds --
+
+-- Processing Outer Fold 2/5 --
+Train set size: (2897, 63), Test set size: (750, 63)
+Test set indices range from 0 to 3596
+Using StratifiedGroupKFold for inner CV with 3 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'subsample': 0.8, 'reg_lambda': 5, 'reg_alpha': 0.01, 'num_leaves': 40, 'n_estimators': 200, 'max_depth': 30, 'learning_rate': 0.01, 'colsample_bytree': 1.0, 'class_weight': None}
+Best Inner CV PR-AUC score: 0.5174
+Results saved to classification_results_20250513_174921/lgb/fold_2/best_params.json
+CV metrics for best model: PR-AUC=0.5174, ROC-AUC=0.9229, F1=0.4536, Balanced Acc=0.6963
+Results saved to classification_results_20250513_174921/lgb/fold_2/cv_metrics.json
+Hyperparameter Tuning Duration: 1389.45 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to classification_results_20250513_174921/lgb/fold_2/metrics.json
+Predictions saved to classification_results_20250513_174921/lgb/fold_2/predictions.csv
+Default threshold (0.5): F1=0.3704
+Optimal threshold (0.0448): F1=0.3947
+Prediction & Evaluation Duration: 0.79 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values for LightGBM using TreeExplainer...
+Warning: TreeExplainer returned a 2D array for LightGBM. Assuming it relates to the positive class.
+SHAP values saved to classification_results_20250513_174921/lgb/fold_2/shap_values_fold_2.csv (shape: (750, 63))
+Test data corresponding to SHAP values saved to classification_results_20250513_174921/lgb/fold_2/test_data_fold_2.csv (shape: (750, 63))
+SHAP Calculation & Saving Duration: 1.63 seconds
+-- Outer Fold 2 finished. Duration: 1391.90 seconds --
+
+-- Processing Outer Fold 3/5 --
+Train set size: (2948, 63), Test set size: (699, 63)
+Test set indices range from 250 to 3147
+Using StratifiedGroupKFold for inner CV with 3 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'subsample': 0.8, 'reg_lambda': 0.1, 'reg_alpha': 0.5, 'num_leaves': 60, 'n_estimators': 300, 'max_depth': 30, 'learning_rate': 0.2, 'colsample_bytree': 0.8, 'class_weight': None}
+Best Inner CV PR-AUC score: 0.4170
+Results saved to classification_results_20250513_174921/lgb/fold_3/best_params.json
+CV metrics for best model: PR-AUC=0.4170, ROC-AUC=0.8964, F1=0.1310, Balanced Acc=0.5828
+Results saved to classification_results_20250513_174921/lgb/fold_3/cv_metrics.json
+Hyperparameter Tuning Duration: 1277.45 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to classification_results_20250513_174921/lgb/fold_3/metrics.json
+Predictions saved to classification_results_20250513_174921/lgb/fold_3/predictions.csv
+Default threshold (0.5): F1=0.0769
+Optimal threshold (0.0004): F1=0.5196
+Using optimal threshold (0.0004) for better F1 score
+Prediction & Evaluation Duration: 0.58 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values for LightGBM using TreeExplainer...
+Warning: TreeExplainer returned a 2D array for LightGBM. Assuming it relates to the positive class.
+SHAP values saved to classification_results_20250513_174921/lgb/fold_3/shap_values_fold_3.csv (shape: (699, 63))
+Test data corresponding to SHAP values saved to classification_results_20250513_174921/lgb/fold_3/test_data_fold_3.csv (shape: (699, 63))
+SHAP Calculation & Saving Duration: 0.71 seconds
+-- Outer Fold 3 finished. Duration: 1278.88 seconds --
+
+-- Processing Outer Fold 4/5 --
+Train set size: (2898, 63), Test set size: (749, 63)
+Test set indices range from 150 to 3646
+Using StratifiedGroupKFold for inner CV with 3 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'subsample': 1.0, 'reg_lambda': 1, 'reg_alpha': 0, 'num_leaves': 31, 'n_estimators': 100, 'max_depth': 10, 'learning_rate': 0.01, 'colsample_bytree': 0.6, 'class_weight': 'balanced'}
+Best Inner CV PR-AUC score: 0.4006
+Results saved to classification_results_20250513_174921/lgb/fold_4/best_params.json
+CV metrics for best model: PR-AUC=0.4006, ROC-AUC=0.8363, F1=0.3580, Balanced Acc=0.7557
+Results saved to classification_results_20250513_174921/lgb/fold_4/cv_metrics.json
+Hyperparameter Tuning Duration: 1726.34 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to classification_results_20250513_174921/lgb/fold_4/metrics.json
+Predictions saved to classification_results_20250513_174921/lgb/fold_4/predictions.csv
+Default threshold (0.5): F1=0.5128
+Optimal threshold (0.6650): F1=0.6906
+Using optimal threshold (0.6650) for better F1 score
+Prediction & Evaluation Duration: 0.18 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values for LightGBM using TreeExplainer...
+Warning: TreeExplainer returned a 2D array for LightGBM. Assuming it relates to the positive class.
+SHAP values saved to classification_results_20250513_174921/lgb/fold_4/shap_values_fold_4.csv (shape: (749, 63))
+Test data corresponding to SHAP values saved to classification_results_20250513_174921/lgb/fold_4/test_data_fold_4.csv (shape: (749, 63))
+SHAP Calculation & Saving Duration: 0.77 seconds
+-- Outer Fold 4 finished. Duration: 1727.35 seconds --
+
+-- Processing Outer Fold 5/5 --
+Train set size: (2948, 63), Test set size: (699, 63)
+Test set indices range from 50 to 3496
+Using StratifiedGroupKFold for inner CV with 3 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'subsample': 1.0, 'reg_lambda': 0, 'reg_alpha': 0.01, 'num_leaves': 20, 'n_estimators': 100, 'max_depth': -1, 'learning_rate': 0.2, 'colsample_bytree': 0.6, 'class_weight': 'balanced'}
+Best Inner CV PR-AUC score: 0.3282
+Results saved to classification_results_20250513_174921/lgb/fold_5/best_params.json
+CV metrics for best model: PR-AUC=0.3282, ROC-AUC=0.8738, F1=0.1792, Balanced Acc=0.5510
+Results saved to classification_results_20250513_174921/lgb/fold_5/cv_metrics.json
+Hyperparameter Tuning Duration: 1570.65 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to classification_results_20250513_174921/lgb/fold_5/metrics.json
+Predictions saved to classification_results_20250513_174921/lgb/fold_5/predictions.csv
+Default threshold (0.5): F1=0.6452
+Optimal threshold (0.0556): F1=0.9756
+Using optimal threshold (0.0556) for better F1 score
+Prediction & Evaluation Duration: 5.00 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values for LightGBM using TreeExplainer...
+Warning: TreeExplainer returned a 2D array for LightGBM. Assuming it relates to the positive class.
+SHAP values saved to classification_results_20250513_174921/lgb/fold_5/shap_values_fold_5.csv (shape: (699, 63))
+Test data corresponding to SHAP values saved to classification_results_20250513_174921/lgb/fold_5/test_data_fold_5.csv (shape: (699, 63))
+SHAP Calculation & Saving Duration: 4.79 seconds
+-- Outer Fold 5 finished. Duration: 1580.47 seconds --
+
+--- Aggregating results for: LightGBM (lgb) ---
+Average Metrics across folds:
+{
+    "accuracy_mean": 0.8961367064526666,
+    "accuracy_std": 0.04890328843979869,
+    "precision_mean": 0.4340917474510498,
+    "precision_std": 0.30105622988804553,
+    "recall_mean": 0.3874942927207493,
+    "recall_std": 0.3476585208186882,
+    "f1_mean": 0.3372166662489243,
+    "f1_std": 0.22815077727480268,
+    "roc_auc_mean": 0.9051194194117705,
+    "roc_auc_std": 0.08477163755747083,
+    "pr_auc_mean": 0.4714870317154265,
+    "pr_auc_std": 0.25874311960847135,
+    "balanced_accuracy_mean": 0.6698439702599523,
+    "balanced_accuracy_std": 0.15771112127945847,
+    "mcc_mean": 0.3291161705408089,
+    "mcc_std": 0.25862466820203533,
+    "best_inner_cv_pr_auc_mean": 0.42190274341655165,
+    "best_inner_cv_pr_auc_std": 0.06160137538206364,
+    "default_threshold_mean": 0.5,
+    "default_threshold_std": 0.0,
+    "optimal_threshold_mean": 0.15654944489493455,
+    "optimal_threshold_std": 0.2549874614078809,
+    "optimal_f1_mean": 0.6401600634799746,
+    "optimal_f1_std": 0.19506427872119356,
+    "threshold_improvement_mean": 0.30294339723105035,
+    "threshold_improvement_std": 0.18409842275131838
+}
+Results saved to classification_results_20250513_174921/lgb/metrics_summary.json
+Combined predictions saved to: classification_results_20250513_174921/lgb/all_predictions.csv
+
+Running global SHAP analysis...
+Combined SHAP values shape: (3647, 63)
+Combined test data shape: (3647, 63)
+Global SHAP analysis completed using data from all 5 folds
+Global SHAP Analysis Duration: 11.06 seconds
+Result Aggregation & Global SHAP Duration: 14.26 seconds
+Average time per outer fold: 1356.11 seconds
+--- Nested CV completed for: LightGBM (lgb) ---
+Total execution time for model 'lgb': 6794.84 seconds
+
+--- Running Nested CV for: Logistic Regression (logistic) ---
+Output directory: classification_results_20250513_174921/logistic
+Using StratifiedGroupKFold for outer CV with 5 folds based on query IDs and stratified by y.
+
+-- Processing Outer Fold 1/5 --
+Train set size: (2897, 63), Test set size: (750, 63)
+Test set indices range from 400 to 3546
+Using StratifiedGroupKFold for inner CV with 3 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'model__solver': 'liblinear', 'model__penalty': 'l2', 'model__class_weight': None, 'model__C': 0.000774263682681127}
+Best Inner CV PR-AUC score: 0.4896
+Results saved to classification_results_20250513_174921/logistic/fold_1/best_params.json
+CV metrics for best model: PR-AUC=0.4896, ROC-AUC=0.9200, F1=0.5279, Balanced Acc=0.9066
+Results saved to classification_results_20250513_174921/logistic/fold_1/cv_metrics.json
+Hyperparameter Tuning Duration: 90.35 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to classification_results_20250513_174921/logistic/fold_1/metrics.json
+Predictions saved to classification_results_20250513_174921/logistic/fold_1/predictions.csv
+Default threshold (0.5): F1=0.5859
+Optimal threshold (0.6037): F1=0.6329
+Prediction & Evaluation Duration: 0.59 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values using shap.Explainer with predict_proba for Pipeline...
+Warning: Background data (X_background) not provided. Using 100 samples from X_test.
+Returning 2D SHAP values array from shap.Explainer (predict_proba).
+SHAP values saved to classification_results_20250513_174921/logistic/fold_1/shap_values_fold_1.csv (shape: (750, 63))
+Test data corresponding to SHAP values saved to classification_results_20250513_174921/logistic/fold_1/test_data_fold_1.csv (shape: (750, 63))
+SHAP Calculation & Saving Duration: 22.08 seconds
+-- Outer Fold 1 finished. Duration: 114.47 seconds --
+
+-- Processing Outer Fold 2/5 --
+Train set size: (2897, 63), Test set size: (750, 63)
+Test set indices range from 0 to 3596
+Using StratifiedGroupKFold for inner CV with 3 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'model__solver': 'saga', 'model__penalty': 'l2', 'model__max_iter': 1000, 'model__class_weight': 'balanced', 'model__C': 0.0001}
+Best Inner CV PR-AUC score: 0.6412
+Results saved to classification_results_20250513_174921/logistic/fold_2/best_params.json
+CV metrics for best model: PR-AUC=0.6412, ROC-AUC=0.9569, F1=0.5528, Balanced Acc=0.9047
+Results saved to classification_results_20250513_174921/logistic/fold_2/cv_metrics.json
+Hyperparameter Tuning Duration: 9.00 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to classification_results_20250513_174921/logistic/fold_2/metrics.json
+Predictions saved to classification_results_20250513_174921/logistic/fold_2/predictions.csv
+Default threshold (0.5): F1=0.3707
+Optimal threshold (0.5779): F1=0.3871
+Prediction & Evaluation Duration: 0.20 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values using shap.Explainer with predict_proba for Pipeline...
+Warning: Background data (X_background) not provided. Using 100 samples from X_test.
+Returning 2D SHAP values array from shap.Explainer (predict_proba).
+SHAP values saved to classification_results_20250513_174921/logistic/fold_2/shap_values_fold_2.csv (shape: (750, 63))
+Test data corresponding to SHAP values saved to classification_results_20250513_174921/logistic/fold_2/test_data_fold_2.csv (shape: (750, 63))
+SHAP Calculation & Saving Duration: 12.87 seconds
+-- Outer Fold 2 finished. Duration: 22.09 seconds --
+
+-- Processing Outer Fold 3/5 --
+Train set size: (2948, 63), Test set size: (699, 63)
+Test set indices range from 250 to 3147
+Using StratifiedGroupKFold for inner CV with 3 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'model__solver': 'saga', 'model__penalty': 'l2', 'model__max_iter': 1000, 'model__class_weight': 'balanced', 'model__C': 0.0001}
+Best Inner CV PR-AUC score: 0.5619
+Results saved to classification_results_20250513_174921/logistic/fold_3/best_params.json
+CV metrics for best model: PR-AUC=0.5619, ROC-AUC=0.9525, F1=0.5111, Balanced Acc=0.9187
+Results saved to classification_results_20250513_174921/logistic/fold_3/cv_metrics.json
+Hyperparameter Tuning Duration: 9.30 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to classification_results_20250513_174921/logistic/fold_3/metrics.json
+Predictions saved to classification_results_20250513_174921/logistic/fold_3/predictions.csv
+Default threshold (0.5): F1=0.5510
+Optimal threshold (0.6396): F1=0.6481
+Using optimal threshold (0.6396) for better F1 score
+Prediction & Evaluation Duration: 0.25 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values using shap.Explainer with predict_proba for Pipeline...
+Warning: Background data (X_background) not provided. Using 100 samples from X_test.
+Returning 2D SHAP values array from shap.Explainer (predict_proba).
+SHAP values saved to classification_results_20250513_174921/logistic/fold_3/shap_values_fold_3.csv (shape: (699, 63))
+Test data corresponding to SHAP values saved to classification_results_20250513_174921/logistic/fold_3/test_data_fold_3.csv (shape: (699, 63))
+SHAP Calculation & Saving Duration: 13.75 seconds
+-- Outer Fold 3 finished. Duration: 23.40 seconds --
+
+-- Processing Outer Fold 4/5 --
+Train set size: (2898, 63), Test set size: (749, 63)
+Test set indices range from 150 to 3646
+Using StratifiedGroupKFold for inner CV with 3 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'model__solver': 'saga', 'model__penalty': 'l2', 'model__max_iter': 1000, 'model__class_weight': 'balanced', 'model__C': 0.000774263682681127}
+Best Inner CV PR-AUC score: 0.4413
+Results saved to classification_results_20250513_174921/logistic/fold_4/best_params.json
+CV metrics for best model: PR-AUC=0.4413, ROC-AUC=0.9260, F1=0.3682, Balanced Acc=0.8278
+Results saved to classification_results_20250513_174921/logistic/fold_4/cv_metrics.json
+Hyperparameter Tuning Duration: 9.61 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to classification_results_20250513_174921/logistic/fold_4/metrics.json
+Predictions saved to classification_results_20250513_174921/logistic/fold_4/predictions.csv
+Default threshold (0.5): F1=0.4000
+Optimal threshold (0.8327): F1=0.9804
+Using optimal threshold (0.8327) for better F1 score
+Prediction & Evaluation Duration: 2.07 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values using shap.Explainer with predict_proba for Pipeline...
+Warning: Background data (X_background) not provided. Using 100 samples from X_test.
+Returning 2D SHAP values array from shap.Explainer (predict_proba).
+SHAP values saved to classification_results_20250513_174921/logistic/fold_4/shap_values_fold_4.csv (shape: (749, 63))
+Test data corresponding to SHAP values saved to classification_results_20250513_174921/logistic/fold_4/test_data_fold_4.csv (shape: (749, 63))
+SHAP Calculation & Saving Duration: 14.43 seconds
+-- Outer Fold 4 finished. Duration: 26.21 seconds --
+
+-- Processing Outer Fold 5/5 --
+Train set size: (2948, 63), Test set size: (699, 63)
+Test set indices range from 50 to 3496
+Using StratifiedGroupKFold for inner CV with 3 folds.
+Starting hyperparameter tuning (RandomizedSearchCV)...
+Best Params found: {'model__solver': 'liblinear', 'model__penalty': 'l2', 'model__class_weight': 'balanced', 'model__C': 0.0001}
+Best Inner CV PR-AUC score: 0.3844
+Results saved to classification_results_20250513_174921/logistic/fold_5/best_params.json
+CV metrics for best model: PR-AUC=0.3844, ROC-AUC=0.9197, F1=0.3935, Balanced Acc=0.8696
+Results saved to classification_results_20250513_174921/logistic/fold_5/cv_metrics.json
+Hyperparameter Tuning Duration: 9.05 seconds
+Predicting on outer test set...
+Calculating performance metrics...
+Results saved to classification_results_20250513_174921/logistic/fold_5/metrics.json
+Predictions saved to classification_results_20250513_174921/logistic/fold_5/predictions.csv
+Default threshold (0.5): F1=0.4516
+Optimal threshold (0.8502): F1=0.9756
+Using optimal threshold (0.8502) for better F1 score
+Prediction & Evaluation Duration: 0.30 seconds
+Calculating and saving SHAP values...
+Calculating SHAP values using shap.Explainer with predict_proba for Pipeline...
+Warning: Background data (X_background) not provided. Using 100 samples from X_test.
+Returning 2D SHAP values array from shap.Explainer (predict_proba).
+SHAP values saved to classification_results_20250513_174921/logistic/fold_5/shap_values_fold_5.csv (shape: (699, 63))
+Test data corresponding to SHAP values saved to classification_results_20250513_174921/logistic/fold_5/test_data_fold_5.csv (shape: (699, 63))
+SHAP Calculation & Saving Duration: 11.66 seconds
+-- Outer Fold 5 finished. Duration: 21.06 seconds --
+
+--- Aggregating results for: Logistic Regression (logistic) ---
+Average Metrics across folds:
+{
+    "accuracy_mean": 0.8196043923132608,
+    "accuracy_std": 0.048854218481663464,
+    "precision_mean": 0.31467146104330224,
+    "precision_std": 0.07468501779985064,
+    "recall_mean": 0.9878260869565217,
+    "recall_std": 0.024347826086956518,
+    "f1_mean": 0.4718363104840143,
+    "f1_std": 0.0837511649980853,
+    "roc_auc_mean": 0.9281061462295653,
+    "roc_auc_std": 0.06296788385143952,
+    "pr_auc_mean": 0.5749689083351918,
+    "pr_auc_std": 0.348378236819052,
+    "balanced_accuracy_mean": 0.8954899982159354,
+    "balanced_accuracy_std": 0.03941424140680963,
+    "mcc_mean": 0.4922372702843198,
+    "mcc_std": 0.06249293604854156,
+    "best_inner_cv_pr_auc_mean": 0.5036700789709353,
+    "best_inner_cv_pr_auc_std": 0.09013058345638461,
+    "default_threshold_mean": 0.5,
+    "default_threshold_std": 0.0,
+    "optimal_threshold_mean": 0.7008073387720902,
+    "optimal_threshold_std": 0.11661082982013733,
+    "optimal_f1_mean": 0.7248187406504595,
+    "optimal_f1_std": 0.22654150611614052,
+    "threshold_improvement_mean": 0.2529824301664452,
+    "threshold_improvement_std": 0.24630535344170254,
+    "threshold_used_mean": 0.5,
+    "threshold_used_std": 0.0
+}
+Results saved to classification_results_20250513_174921/logistic/metrics_summary.json
+Combined predictions saved to: classification_results_20250513_174921/logistic/all_predictions.csv
+
+Running global SHAP analysis...
+Combined SHAP values shape: (3647, 63)
+Combined test data shape: (3647, 63)
+Global SHAP analysis completed using data from all 5 folds
+Global SHAP Analysis Duration: 1.33 seconds
+Result Aggregation & Global SHAP Duration: 1.69 seconds
+Average time per outer fold: 41.45 seconds
+--- Nested CV completed for: Logistic Regression (logistic) ---
+Total execution time for model 'logistic': 210.00 seconds
+
+--- Overall Training Summary ---
+Model comparison summary saved to: classification_results_20250513_174921/model_comparison_summary.csv
+  model_name  accuracy_mean  ...  threshold_used_mean  threshold_used_std
+0         rf       0.865248  ...                  NaN                 NaN
+1        xgb       0.895186  ...                  NaN                 NaN
+2        lgb       0.896137  ...                  NaN                 NaN
+3   logistic       0.819604  ...                  0.5                 0.0
+
+[4 rows x 29 columns]
+Final Summary Saving Duration: 0.46 seconds
+
+--- Framework Execution Finished ---
+Total script execution time: 7126.20 seconds
+작업 완료
+[INFO] Job completed at: Tue May 13 19:48:11 KST 2025

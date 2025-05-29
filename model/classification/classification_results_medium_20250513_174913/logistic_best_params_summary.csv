@@ -1,0 +1,6 @@
+,model__solver,model__penalty,model__max_iter,model__l1_ratio,model__class_weight,model__C
+fold_1,saga,elasticnet,1000,0.9,balanced,0.005994842503189409
+fold_2,saga,elasticnet,2000,0.1,,0.005994842503189409
+fold_3,saga,elasticnet,1000,0.5,balanced,0.005994842503189409
+fold_4,saga,l2,1000,,balanced,0.0001
+fold_5,saga,elasticnet,2000,0.1,,0.005994842503189409

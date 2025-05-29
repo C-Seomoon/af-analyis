@@ -1,0 +1,10 @@
+{
+    "n_estimators": 198,
+    "min_samples_split": 5,
+    "min_samples_leaf": 1,
+    "max_features": "sqrt",
+    "max_depth": 39,
+    "class_weight": null,
+    "n_jobs": -1,
+    "random_state": 42
+}

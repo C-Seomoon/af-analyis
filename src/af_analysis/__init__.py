@@ -16,6 +16,7 @@ __status__ = "Beta"
 from .data import Data
 import logging
 import sys
+from .binding_energy import initialize_pyrosetta
 
 # Logging
 logger = logging.getLogger()

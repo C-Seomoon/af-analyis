@@ -1,0 +1,992 @@
+2025-05-27 13:34:33,383 [INFO] Successfully imported model classes using relative paths.
+2025-05-27 13:34:33,744 [INFO] Successfully imported utils using relative paths.
+2025-05-27 13:34:33,752 [INFO] Using 48 CPU cores (75% of available 64).
+2025-05-27 13:34:33,754 [INFO] Results will be saved to: comprehensive_regression_results_20250527_133433
+2025-05-27 13:34:33,785 [INFO] 
+--- Loading Data ---
+2025-05-27 13:34:33,876 [INFO] Loading separate test set from: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/data/test/pipeline_ABAG_native_data.csv
+2025-05-27 13:34:33,917 [INFO] Test set loaded: (1648, 71)
+2025-05-27 13:34:33,917 [INFO] Data Loading Duration: 0.13 seconds
+2025-05-27 13:34:33,917 [INFO] 
+--- Starting Comprehensive Model Evaluation ---
+2025-05-27 13:34:33,920 [INFO] 
+============================================================
+2025-05-27 13:34:33,920 [INFO] Processing model: Random Forest (rf)
+2025-05-27 13:34:33,920 [INFO] ============================================================
+2025-05-27 13:34:33,920 [INFO] === Step 1: Nested CV Performance Estimation ===
+2025-05-27 13:34:33,922 [INFO] 
+--- Running Nested CV Evaluation for: Random Forest (rf) ---
+2025-05-27 13:34:33,922 [INFO] Output directory: comprehensive_regression_results_20250527_133433/rf
+2025-05-27 13:34:33,922 [INFO] Hyperparameter tuning scoring metric: neg_mean_squared_error
+2025-05-27 13:34:33,922 [INFO] Using GroupKFold for outer CV with 5 folds based on query IDs.
+2025-05-27 13:34:33,924 [INFO] 
+-- Processing Outer Fold 1/5 --
+2025-05-27 13:34:33,926 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:34:33,926 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:34:33,926 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:35:22,696 [INFO] Best Params found: {'bootstrap': False, 'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 3, 'n_estimators': 297}
+2025-05-27 13:35:22,697 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0184
+2025-05-27 13:35:22,747 [INFO] Hyperparameter Tuning Duration: 48.82 seconds
+2025-05-27 13:35:22,747 [INFO] Predicting on outer test set...
+2025-05-27 13:35:22,882 [INFO] Calculating performance metrics...
+2025-05-27 13:35:22,938 [INFO] Generating diagnostic plots...
+2025-05-27 13:35:23,917 [INFO] Prediction & Evaluation Duration: 1.17 seconds
+2025-05-27 13:35:23,918 [INFO] -- Outer Fold 1 finished. Duration: 49.99 seconds --
+2025-05-27 13:35:23,918 [INFO] 
+-- Processing Outer Fold 2/5 --
+2025-05-27 13:35:23,920 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:35:23,921 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:35:23,921 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:36:07,430 [INFO] Best Params found: {'bootstrap': True, 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 10, 'min_samples_split': 3, 'n_estimators': 301}
+2025-05-27 13:36:07,431 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0200
+2025-05-27 13:36:07,489 [INFO] Hyperparameter Tuning Duration: 43.57 seconds
+2025-05-27 13:36:07,489 [INFO] Predicting on outer test set...
+2025-05-27 13:36:07,623 [INFO] Calculating performance metrics...
+2025-05-27 13:36:07,678 [INFO] Generating diagnostic plots...
+2025-05-27 13:36:08,354 [INFO] Prediction & Evaluation Duration: 0.87 seconds
+2025-05-27 13:36:08,354 [INFO] -- Outer Fold 2 finished. Duration: 44.44 seconds --
+2025-05-27 13:36:08,355 [INFO] 
+-- Processing Outer Fold 3/5 --
+2025-05-27 13:36:08,357 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:36:08,357 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:36:08,357 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:36:53,336 [INFO] Best Params found: {'bootstrap': False, 'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 10, 'min_samples_split': 7, 'n_estimators': 352}
+2025-05-27 13:36:53,336 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0249
+2025-05-27 13:36:53,357 [INFO] Hyperparameter Tuning Duration: 45.00 seconds
+2025-05-27 13:36:53,357 [INFO] Predicting on outer test set...
+2025-05-27 13:36:53,512 [INFO] Calculating performance metrics...
+2025-05-27 13:36:53,576 [INFO] Generating diagnostic plots...
+2025-05-27 13:36:54,290 [INFO] Prediction & Evaluation Duration: 0.93 seconds
+2025-05-27 13:36:54,290 [INFO] -- Outer Fold 3 finished. Duration: 45.94 seconds --
+2025-05-27 13:36:54,290 [INFO] 
+-- Processing Outer Fold 4/5 --
+2025-05-27 13:36:54,293 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 13:36:54,293 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:36:54,293 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:37:38,966 [INFO] Best Params found: {'bootstrap': False, 'max_depth': 30, 'max_features': 'log2', 'min_samples_leaf': 6, 'min_samples_split': 3, 'n_estimators': 291}
+2025-05-27 13:37:38,966 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0246
+2025-05-27 13:37:39,036 [INFO] Hyperparameter Tuning Duration: 44.74 seconds
+2025-05-27 13:37:39,036 [INFO] Predicting on outer test set...
+2025-05-27 13:37:39,169 [INFO] Calculating performance metrics...
+2025-05-27 13:37:39,215 [INFO] Generating diagnostic plots...
+2025-05-27 13:37:40,088 [INFO] Prediction & Evaluation Duration: 1.05 seconds
+2025-05-27 13:37:40,088 [INFO] -- Outer Fold 4 finished. Duration: 45.80 seconds --
+2025-05-27 13:37:40,088 [INFO] 
+-- Processing Outer Fold 5/5 --
+2025-05-27 13:37:40,110 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 13:37:40,111 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:37:40,111 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:38:24,633 [INFO] Best Params found: {'bootstrap': True, 'max_depth': None, 'max_features': 'log2', 'min_samples_leaf': 7, 'min_samples_split': 10, 'n_estimators': 127}
+2025-05-27 13:38:24,634 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0273
+2025-05-27 13:38:24,670 [INFO] Hyperparameter Tuning Duration: 44.56 seconds
+2025-05-27 13:38:24,670 [INFO] Predicting on outer test set...
+2025-05-27 13:38:24,881 [INFO] Calculating performance metrics...
+2025-05-27 13:38:24,962 [INFO] Generating diagnostic plots...
+2025-05-27 13:38:25,728 [INFO] Prediction & Evaluation Duration: 1.06 seconds
+2025-05-27 13:38:25,728 [INFO] -- Outer Fold 5 finished. Duration: 45.64 seconds --
+2025-05-27 13:38:25,728 [INFO] 
+--- Aggregating results for: Random Forest (rf) ---
+2025-05-27 13:38:25,728 [INFO] Average Metrics across folds:
+2025-05-27 13:38:25,728 [INFO] {
+    "r2_mean": 0.6690301920429099,
+    "r2_std": 0.18669991622489443,
+    "mse_mean": 0.026450474398610636,
+    "mse_std": 0.011013879602088768,
+    "rmse_mean": 0.15920929907218695,
+    "rmse_std": 0.033209539104804946,
+    "mae_mean": 0.0977144670729296,
+    "mae_std": 0.016329783546755627,
+    "best_inner_cv_score_mean": -0.023035140599502072,
+    "best_inner_cv_score_std": 0.0033032715313179627,
+    "scoring_metric_used": "neg_mean_squared_error"
+}
+2025-05-27 13:38:25,994 [INFO] Combined predictions saved to: comprehensive_regression_results_20250527_133433/rf/all_folds_predictions.csv
+2025-05-27 13:38:25,994 [INFO] Average time per outer fold: 46.36 seconds
+2025-05-27 13:38:25,994 [INFO] --- Nested CV completed for: Random Forest (rf) ---
+2025-05-27 13:38:25,994 [INFO] === Step 2: Hyperparameter Tuning ===
+2025-05-27 13:38:25,994 [INFO] Finding optimal hyperparameters using separate cross-validation...
+2025-05-27 13:39:19,579 [INFO] Best parameters: {'bootstrap': True, 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 10, 'min_samples_split': 3, 'n_estimators': 301}
+2025-05-27 13:39:19,580 [INFO] Best CV score: -0.0256
+2025-05-27 13:39:19,580 [INFO] === Step 3: Final Model Training ===
+2025-05-27 13:39:19,580 [INFO] 
+--- Training Final Regression Model: Random Forest ---
+2025-05-27 13:39:19,580 [INFO] Using parameters: {'bootstrap': True, 'max_depth': 20, 'max_features': 'log2', 'min_samples_leaf': 10, 'min_samples_split': 3, 'n_estimators': 301}
+2025-05-27 13:39:19,580 [INFO] Training final model on entire dataset...
+2025-05-27 13:39:20,171 [INFO] Final model training completed in 0.59 seconds
+2025-05-27 13:39:20,171 [INFO] Evaluating final model on training data...
+2025-05-27 13:39:20,336 [INFO] Final model R²: 0.9701, MSE: 0.0028
+2025-05-27 13:39:20,384 [INFO] Generating final model diagnostic plots...
+2025-05-27 13:39:21,437 [INFO] Final model diagnostic plots saved.
+2025-05-27 13:39:21,437 [INFO] Calculating SHAP values for final model...
+2025-05-27 13:39:21,437 [INFO] Sampling 100 instances from X for SHAP background data.
+2025-05-27 13:40:50,287 [INFO] SHAP analysis completed successfully
+2025-05-27 13:40:50,287 [INFO] SHAP calculation completed in 88.85 seconds
+2025-05-27 13:40:50,287 [INFO] === Step 4: Test Set Evaluation ===
+2025-05-27 13:40:50,657 [INFO] === Step 5: Performance Comparison ===
+2025-05-27 13:40:50,658 [INFO] R2 Comparison:
+2025-05-27 13:40:50,658 [INFO]   Nested CV: 0.6690 ± 0.1867 (95% CI: [0.3031, 1.0350])
+2025-05-27 13:40:50,658 [INFO]   Test Set:  0.7737
+2025-05-27 13:40:50,658 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 13:40:50,658 [INFO] MSE Comparison:
+2025-05-27 13:40:50,658 [INFO]   Nested CV: 0.0265 ± 0.0110 (95% CI: [0.0049, 0.0480])
+2025-05-27 13:40:50,658 [INFO]   Test Set:  0.0315
+2025-05-27 13:40:50,658 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 13:40:50,658 [INFO] MAE Comparison:
+2025-05-27 13:40:50,658 [INFO]   Nested CV: 0.0977 ± 0.0163 (95% CI: [0.0657, 0.1297])
+2025-05-27 13:40:50,658 [INFO]   Test Set:  0.1021
+2025-05-27 13:40:50,658 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 13:40:50,684 [INFO] Total time for model 'rf': 376.76 seconds
+2025-05-27 13:40:50,684 [INFO] 
+============================================================
+2025-05-27 13:40:50,684 [INFO] Processing model: LightGBM (lgbm)
+2025-05-27 13:40:50,684 [INFO] ============================================================
+2025-05-27 13:40:50,684 [INFO] === Step 1: Nested CV Performance Estimation ===
+2025-05-27 13:40:50,685 [INFO] 
+--- Running Nested CV Evaluation for: LightGBM (lgbm) ---
+2025-05-27 13:40:50,685 [INFO] Output directory: comprehensive_regression_results_20250527_133433/lgbm
+2025-05-27 13:40:50,685 [INFO] Hyperparameter tuning scoring metric: neg_mean_squared_error
+2025-05-27 13:40:50,685 [INFO] Using GroupKFold for outer CV with 5 folds based on query IDs.
+2025-05-27 13:40:50,689 [INFO] 
+-- Processing Outer Fold 1/5 --
+2025-05-27 13:40:50,692 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:40:50,692 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:40:50,692 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 14:03:35,225 [INFO] Best Params found: {'colsample_bytree': 0.6053059844639466, 'learning_rate': 0.19844035113697056, 'max_depth': 10, 'min_child_samples': 27, 'n_estimators': 876, 'num_leaves': 45, 'reg_alpha': 0.09767211400638387, 'reg_lambda': 0.6842330265121569, 'subsample': 0.7760609974958406}
+2025-05-27 14:03:35,226 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0167
+2025-05-27 14:03:35,318 [INFO] Hyperparameter Tuning Duration: 1364.63 seconds
+2025-05-27 14:03:35,318 [INFO] Predicting on outer test set...
+2025-05-27 14:03:35,324 [INFO] Calculating performance metrics...
+2025-05-27 14:03:35,433 [INFO] Generating diagnostic plots...
+2025-05-27 14:03:36,460 [INFO] Prediction & Evaluation Duration: 1.14 seconds
+2025-05-27 14:03:36,460 [INFO] -- Outer Fold 1 finished. Duration: 1365.77 seconds --
+2025-05-27 14:03:36,460 [INFO] 
+-- Processing Outer Fold 2/5 --
+2025-05-27 14:03:36,464 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 14:03:36,464 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 14:03:36,464 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 14:23:10,112 [INFO] Best Params found: {'colsample_bytree': 0.8675365010654429, 'learning_rate': 0.14318447132349935, 'max_depth': 30, 'min_child_samples': 17, 'n_estimators': 825, 'num_leaves': 46, 'reg_alpha': 0.5612434258477011, 'reg_lambda': 0.38292687475378984, 'subsample': 0.9886848381556415}
+2025-05-27 14:23:10,113 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0199
+2025-05-27 14:23:10,137 [INFO] Hyperparameter Tuning Duration: 1173.67 seconds
+2025-05-27 14:23:10,137 [INFO] Predicting on outer test set...
+2025-05-27 14:23:10,150 [INFO] Calculating performance metrics...
+2025-05-27 14:23:10,174 [INFO] Generating diagnostic plots...
+2025-05-27 14:23:10,871 [INFO] Prediction & Evaluation Duration: 0.73 seconds
+2025-05-27 14:23:10,872 [INFO] -- Outer Fold 2 finished. Duration: 1174.41 seconds --
+2025-05-27 14:23:10,872 [INFO] 
+-- Processing Outer Fold 3/5 --
+2025-05-27 14:23:10,875 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 14:23:10,875 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 14:23:10,875 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 14:40:59,193 [INFO] Best Params found: {'colsample_bytree': 0.713936197750987, 'learning_rate': 0.01737738947090656, 'max_depth': -1, 'min_child_samples': 11, 'n_estimators': 741, 'num_leaves': 47, 'reg_alpha': 0.05147875124998935, 'reg_lambda': 0.27864646423661144, 'subsample': 0.9633063543866615}
+2025-05-27 14:40:59,194 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0260
+2025-05-27 14:40:59,237 [INFO] Hyperparameter Tuning Duration: 1068.36 seconds
+2025-05-27 14:40:59,237 [INFO] Predicting on outer test set...
+2025-05-27 14:40:59,242 [INFO] Calculating performance metrics...
+2025-05-27 14:40:59,328 [INFO] Generating diagnostic plots...
+2025-05-27 14:41:00,048 [INFO] Prediction & Evaluation Duration: 0.81 seconds
+2025-05-27 14:41:00,049 [INFO] -- Outer Fold 3 finished. Duration: 1069.18 seconds --
+2025-05-27 14:41:00,049 [INFO] 
+-- Processing Outer Fold 4/5 --
+2025-05-27 14:41:00,051 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 14:41:00,051 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 14:41:00,051 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 14:59:39,024 [INFO] Best Params found: {'colsample_bytree': 0.8048372233197124, 'learning_rate': 0.05529915503958759, 'max_depth': 30, 'min_child_samples': 16, 'n_estimators': 919, 'num_leaves': 52, 'reg_alpha': 0.3975720210875223, 'reg_lambda': 0.5177513505274801, 'subsample': 0.9350840423629312}
+2025-05-27 14:59:39,025 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0242
+2025-05-27 14:59:39,061 [INFO] Hyperparameter Tuning Duration: 1119.01 seconds
+2025-05-27 14:59:39,061 [INFO] Predicting on outer test set...
+2025-05-27 14:59:39,067 [INFO] Calculating performance metrics...
+2025-05-27 14:59:39,193 [INFO] Generating diagnostic plots...
+2025-05-27 14:59:39,970 [INFO] Prediction & Evaluation Duration: 0.91 seconds
+2025-05-27 14:59:39,971 [INFO] -- Outer Fold 4 finished. Duration: 1119.92 seconds --
+2025-05-27 14:59:39,971 [INFO] 
+-- Processing Outer Fold 5/5 --
+2025-05-27 14:59:39,983 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 14:59:39,983 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 14:59:39,983 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 15:23:46,286 [INFO] Best Params found: {'colsample_bytree': 0.8012545034320351, 'learning_rate': 0.18129796823766448, 'max_depth': -1, 'min_child_samples': 22, 'n_estimators': 615, 'num_leaves': 35, 'reg_alpha': 0.07056874740042984, 'reg_lambda': 0.6424192782063156, 'subsample': 0.6106045242166487}
+2025-05-27 15:23:46,286 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0276
+2025-05-27 15:23:46,314 [INFO] Hyperparameter Tuning Duration: 1446.33 seconds
+2025-05-27 15:23:46,314 [INFO] Predicting on outer test set...
+2025-05-27 15:23:46,321 [INFO] Calculating performance metrics...
+2025-05-27 15:23:46,376 [INFO] Generating diagnostic plots...
+2025-05-27 15:23:47,118 [INFO] Prediction & Evaluation Duration: 0.80 seconds
+2025-05-27 15:23:47,118 [INFO] -- Outer Fold 5 finished. Duration: 1447.15 seconds --
+2025-05-27 15:23:47,118 [INFO] 
+--- Aggregating results for: LightGBM (lgbm) ---
+2025-05-27 15:23:47,119 [INFO] Average Metrics across folds:
+2025-05-27 15:23:47,119 [INFO] {
+    "r2_mean": 0.594829193512686,
+    "r2_std": 0.2465214103819137,
+    "mse_mean": 0.032008131684981726,
+    "mse_std": 0.01281328866993639,
+    "rmse_mean": 0.17544630096870642,
+    "rmse_std": 0.03502466504307813,
+    "mae_mean": 0.10613563604744577,
+    "mae_std": 0.017565077869613144,
+    "best_inner_cv_score_mean": -0.022851766450996406,
+    "best_inner_cv_score_std": 0.00403022045152475,
+    "scoring_metric_used": "neg_mean_squared_error"
+}
+2025-05-27 15:23:47,233 [INFO] Combined predictions saved to: comprehensive_regression_results_20250527_133433/lgbm/all_folds_predictions.csv
+2025-05-27 15:23:47,233 [INFO] Average time per outer fold: 1235.29 seconds
+2025-05-27 15:23:47,233 [INFO] --- Nested CV completed for: LightGBM (lgbm) ---
+2025-05-27 15:23:47,236 [INFO] === Step 2: Hyperparameter Tuning ===
+2025-05-27 15:23:47,237 [INFO] Finding optimal hyperparameters using separate cross-validation...
+2025-05-27 15:48:36,678 [INFO] Best parameters: {'colsample_bytree': 0.6763644124601385, 'learning_rate': 0.06369497137803136, 'max_depth': 20, 'min_child_samples': 27, 'n_estimators': 892, 'num_leaves': 50, 'reg_alpha': 0.8442131407263114, 'reg_lambda': 0.9300168348108319, 'subsample': 0.6281664523398175}
+2025-05-27 15:48:36,687 [INFO] Best CV score: -0.0271
+2025-05-27 15:48:36,689 [INFO] === Step 3: Final Model Training ===
+2025-05-27 15:48:36,690 [INFO] 
+--- Training Final Regression Model: LightGBM ---
+2025-05-27 15:48:36,690 [INFO] Using parameters: {'colsample_bytree': 0.6763644124601385, 'learning_rate': 0.06369497137803136, 'max_depth': 20, 'min_child_samples': 27, 'n_estimators': 892, 'num_leaves': 50, 'reg_alpha': 0.8442131407263114, 'reg_lambda': 0.9300168348108319, 'subsample': 0.6281664523398175}
+2025-05-27 15:48:36,690 [INFO] Training final model on entire dataset...
+2025-05-27 15:48:38,780 [INFO] Final model training completed in 2.09 seconds
+2025-05-27 15:48:38,780 [INFO] Evaluating final model on training data...
+2025-05-27 15:48:38,838 [INFO] Final model R²: 0.9754, MSE: 0.0023
+2025-05-27 15:48:38,899 [INFO] Generating final model diagnostic plots...
+2025-05-27 15:48:48,916 [INFO] Final model diagnostic plots saved.
+2025-05-27 15:48:48,919 [INFO] Calculating SHAP values for final model...
+2025-05-27 15:48:48,919 [INFO] Sampling 100 instances from X for SHAP background data.
+2025-05-27 15:48:54,333 [INFO] SHAP analysis completed successfully
+2025-05-27 15:48:54,336 [INFO] SHAP calculation completed in 5.42 seconds
+2025-05-27 15:48:54,336 [INFO] === Step 4: Test Set Evaluation ===
+2025-05-27 15:48:54,522 [INFO] === Step 5: Performance Comparison ===
+2025-05-27 15:48:54,522 [INFO] R2 Comparison:
+2025-05-27 15:48:54,522 [INFO]   Nested CV: 0.5948 ± 0.2465 (95% CI: [0.1116, 1.0780])
+2025-05-27 15:48:54,522 [INFO]   Test Set:  0.7895
+2025-05-27 15:48:54,522 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 15:48:54,523 [INFO] MSE Comparison:
+2025-05-27 15:48:54,523 [INFO]   Nested CV: 0.0320 ± 0.0128 (95% CI: [0.0069, 0.0571])
+2025-05-27 15:48:54,523 [INFO]   Test Set:  0.0293
+2025-05-27 15:48:54,523 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 15:48:54,523 [INFO] MAE Comparison:
+2025-05-27 15:48:54,523 [INFO]   Nested CV: 0.1061 ± 0.0176 (95% CI: [0.0717, 0.1406])
+2025-05-27 15:48:54,523 [INFO]   Test Set:  0.0890
+2025-05-27 15:48:54,523 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 15:48:54,543 [INFO] Total time for model 'lgbm': 7683.86 seconds
+2025-05-27 15:48:54,543 [INFO] 
+============================================================
+2025-05-27 15:48:54,543 [INFO] Processing model: XGBoost (xgb)
+2025-05-27 15:48:54,543 [INFO] ============================================================
+2025-05-27 15:48:54,543 [INFO] === Step 1: Nested CV Performance Estimation ===
+2025-05-27 15:48:54,546 [INFO] 
+--- Running Nested CV Evaluation for: XGBoost (xgb) ---
+2025-05-27 15:48:54,546 [INFO] Output directory: comprehensive_regression_results_20250527_133433/xgb
+2025-05-27 15:48:54,546 [INFO] Hyperparameter tuning scoring metric: neg_mean_squared_error
+2025-05-27 15:48:54,546 [INFO] Using GroupKFold for outer CV with 5 folds based on query IDs.
+2025-05-27 15:48:54,550 [INFO] 
+-- Processing Outer Fold 1/5 --
+2025-05-27 15:48:54,557 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 15:48:54,558 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 15:48:54,558 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 15:50:43,732 [INFO] Best Params found: {'colsample_bytree': 0.9268888800804863, 'gamma': 0.27760040579973116, 'learning_rate': 0.1159301156712013, 'max_depth': 4, 'n_estimators': 996, 'reg_alpha': 0.09310276780589921, 'reg_lambda': 1.7944315159066535, 'subsample': 0.9601672228653322}
+2025-05-27 15:50:43,769 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0181
+2025-05-27 15:50:43,904 [INFO] Hyperparameter Tuning Duration: 109.35 seconds
+2025-05-27 15:50:43,904 [INFO] Predicting on outer test set...
+2025-05-27 15:50:43,912 [INFO] Calculating performance metrics...
+2025-05-27 15:50:44,045 [INFO] Generating diagnostic plots...
+2025-05-27 15:50:45,189 [INFO] Prediction & Evaluation Duration: 1.29 seconds
+2025-05-27 15:50:45,190 [INFO] -- Outer Fold 1 finished. Duration: 110.64 seconds --
+2025-05-27 15:50:45,190 [INFO] 
+-- Processing Outer Fold 2/5 --
+2025-05-27 15:50:45,214 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 15:50:45,214 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 15:50:45,214 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 15:52:21,522 [INFO] Best Params found: {'colsample_bytree': 0.6693458614031088, 'gamma': 0.1955303037866204, 'learning_rate': 0.04644721755761247, 'max_depth': 6, 'n_estimators': 101, 'reg_alpha': 0.4251558744912447, 'reg_lambda': 0.41588332573637765, 'subsample': 0.8270801311279966}
+2025-05-27 15:52:21,525 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0261
+2025-05-27 15:52:21,565 [INFO] Hyperparameter Tuning Duration: 96.35 seconds
+2025-05-27 15:52:21,565 [INFO] Predicting on outer test set...
+2025-05-27 15:52:21,574 [INFO] Calculating performance metrics...
+2025-05-27 15:52:21,650 [INFO] Generating diagnostic plots...
+2025-05-27 15:52:22,395 [INFO] Prediction & Evaluation Duration: 0.83 seconds
+2025-05-27 15:52:22,395 [INFO] -- Outer Fold 2 finished. Duration: 97.21 seconds --
+2025-05-27 15:52:22,395 [INFO] 
+-- Processing Outer Fold 3/5 --
+2025-05-27 15:52:22,455 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 15:52:22,455 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 15:52:22,455 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 15:53:59,165 [INFO] Best Params found: {'colsample_bytree': 0.9074216057225236, 'gamma': 0.021801885877216876, 'learning_rate': 0.20891010215946823, 'max_depth': 8, 'n_estimators': 576, 'reg_alpha': 0.2795603417967586, 'reg_lambda': 1.766988044532518, 'subsample': 0.8990875095589655}
+2025-05-27 15:53:59,169 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0245
+2025-05-27 15:53:59,255 [INFO] Hyperparameter Tuning Duration: 96.80 seconds
+2025-05-27 15:53:59,255 [INFO] Predicting on outer test set...
+2025-05-27 15:53:59,264 [INFO] Calculating performance metrics...
+2025-05-27 15:53:59,464 [INFO] Generating diagnostic plots...
+2025-05-27 15:54:00,491 [INFO] Prediction & Evaluation Duration: 1.24 seconds
+2025-05-27 15:54:00,491 [INFO] -- Outer Fold 3 finished. Duration: 98.10 seconds --
+2025-05-27 15:54:00,491 [INFO] 
+-- Processing Outer Fold 4/5 --
+2025-05-27 15:54:00,563 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 15:54:00,563 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 15:54:00,563 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 15:55:27,808 [INFO] Best Params found: {'colsample_bytree': 0.6125716742746937, 'gamma': 0.3182052056318902, 'learning_rate': 0.07287119621526533, 'max_depth': 6, 'n_estimators': 833, 'reg_alpha': 0.1393314544058757, 'reg_lambda': 1.2088347585556345, 'subsample': 0.8159364365206693}
+2025-05-27 15:55:27,814 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0262
+2025-05-27 15:55:27,840 [INFO] Hyperparameter Tuning Duration: 87.28 seconds
+2025-05-27 15:55:27,840 [INFO] Predicting on outer test set...
+2025-05-27 15:55:27,848 [INFO] Calculating performance metrics...
+2025-05-27 15:55:27,878 [INFO] Generating diagnostic plots...
+2025-05-27 15:55:28,625 [INFO] Prediction & Evaluation Duration: 0.79 seconds
+2025-05-27 15:55:28,625 [INFO] -- Outer Fold 4 finished. Duration: 88.13 seconds --
+2025-05-27 15:55:28,626 [INFO] 
+-- Processing Outer Fold 5/5 --
+2025-05-27 15:55:28,633 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 15:55:28,633 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 15:55:28,633 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 15:57:09,374 [INFO] Best Params found: {'colsample_bytree': 0.7735406596951893, 'gamma': 0.19925236719868672, 'learning_rate': 0.1331700196104433, 'max_depth': 7, 'n_estimators': 199, 'reg_alpha': 0.04530400977204452, 'reg_lambda': 0.7492252292529424, 'subsample': 0.8503439662856945}
+2025-05-27 15:57:09,392 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0287
+2025-05-27 15:57:09,474 [INFO] Hyperparameter Tuning Duration: 100.84 seconds
+2025-05-27 15:57:09,474 [INFO] Predicting on outer test set...
+2025-05-27 15:57:09,482 [INFO] Calculating performance metrics...
+2025-05-27 15:57:09,609 [INFO] Generating diagnostic plots...
+2025-05-27 15:57:10,336 [INFO] Prediction & Evaluation Duration: 0.86 seconds
+2025-05-27 15:57:10,336 [INFO] -- Outer Fold 5 finished. Duration: 101.71 seconds --
+2025-05-27 15:57:10,336 [INFO] 
+--- Aggregating results for: XGBoost (xgb) ---
+2025-05-27 15:57:10,336 [INFO] Average Metrics across folds:
+2025-05-27 15:57:10,336 [INFO] {
+    "r2_mean": 0.5867092728869984,
+    "r2_std": 0.21491079562022994,
+    "mse_mean": 0.03325296795975266,
+    "mse_std": 0.011092899459156522,
+    "rmse_mean": 0.17987139067638427,
+    "rmse_std": 0.02998751033173973,
+    "mae_mean": 0.10952251532958457,
+    "mae_std": 0.012121660666947457,
+    "best_inner_cv_score_mean": -0.024743921125041292,
+    "best_inner_cv_score_std": 0.0035869107795679046,
+    "scoring_metric_used": "neg_mean_squared_error"
+}
+2025-05-27 15:57:10,444 [INFO] Combined predictions saved to: comprehensive_regression_results_20250527_133433/xgb/all_folds_predictions.csv
+2025-05-27 15:57:10,444 [INFO] Average time per outer fold: 99.16 seconds
+2025-05-27 15:57:10,444 [INFO] --- Nested CV completed for: XGBoost (xgb) ---
+2025-05-27 15:57:10,446 [INFO] === Step 2: Hyperparameter Tuning ===
+2025-05-27 15:57:10,446 [INFO] Finding optimal hyperparameters using separate cross-validation...
+2025-05-27 15:58:49,820 [INFO] Best parameters: {'colsample_bytree': 0.749816047538945, 'gamma': 0.4753571532049581, 'learning_rate': 0.15639878836228102, 'max_depth': 7, 'n_estimators': 120, 'reg_alpha': 0.15601864044243652, 'reg_lambda': 0.3119890406724053, 'subsample': 0.6232334448672797}
+2025-05-27 15:58:49,821 [INFO] Best CV score: -0.0297
+2025-05-27 15:58:49,821 [INFO] === Step 3: Final Model Training ===
+2025-05-27 15:58:49,821 [INFO] 
+--- Training Final Regression Model: XGBoost ---
+2025-05-27 15:58:49,821 [INFO] Using parameters: {'colsample_bytree': 0.749816047538945, 'gamma': 0.4753571532049581, 'learning_rate': 0.15639878836228102, 'max_depth': 7, 'n_estimators': 120, 'reg_alpha': 0.15601864044243652, 'reg_lambda': 0.3119890406724053, 'subsample': 0.6232334448672797}
+2025-05-27 15:58:49,821 [INFO] Training final model on entire dataset...
+2025-05-27 15:58:49,984 [INFO] Final model training completed in 0.16 seconds
+2025-05-27 15:58:49,984 [INFO] Evaluating final model on training data...
+2025-05-27 15:58:50,005 [INFO] Final model R²: 0.9370, MSE: 0.0058
+2025-05-27 15:58:50,092 [INFO] Generating final model diagnostic plots...
+2025-05-27 15:58:51,024 [INFO] Final model diagnostic plots saved.
+2025-05-27 15:58:51,024 [INFO] Calculating SHAP values for final model...
+2025-05-27 15:58:51,024 [INFO] Sampling 100 instances from X for SHAP background data.
+2025-05-27 15:58:53,652 [INFO] SHAP analysis completed successfully
+2025-05-27 15:58:53,652 [INFO] SHAP calculation completed in 2.63 seconds
+2025-05-27 15:58:53,652 [INFO] === Step 4: Test Set Evaluation ===
+2025-05-27 15:58:53,719 [INFO] === Step 5: Performance Comparison ===
+2025-05-27 15:58:53,719 [INFO] R2 Comparison:
+2025-05-27 15:58:53,719 [INFO]   Nested CV: 0.5867 ± 0.2149 (95% CI: [0.1655, 1.0079])
+2025-05-27 15:58:53,719 [INFO]   Test Set:  0.7971
+2025-05-27 15:58:53,719 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 15:58:53,719 [INFO] MSE Comparison:
+2025-05-27 15:58:53,719 [INFO]   Nested CV: 0.0333 ± 0.0111 (95% CI: [0.0115, 0.0550])
+2025-05-27 15:58:53,719 [INFO]   Test Set:  0.0283
+2025-05-27 15:58:53,719 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 15:58:53,720 [INFO] MAE Comparison:
+2025-05-27 15:58:53,720 [INFO]   Nested CV: 0.1095 ± 0.0121 (95% CI: [0.0858, 0.1333])
+2025-05-27 15:58:53,720 [INFO]   Test Set:  0.0991
+2025-05-27 15:58:53,720 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 15:58:53,760 [INFO] Total time for model 'xgb': 599.22 seconds
+2025-05-27 15:58:53,760 [INFO] 
+============================================================
+2025-05-27 15:58:53,760 [INFO] Processing model: Linear Regression (lr)
+2025-05-27 15:58:53,760 [INFO] ============================================================
+2025-05-27 15:58:53,760 [INFO] === Step 1: Nested CV Performance Estimation ===
+2025-05-27 15:58:53,761 [INFO] 
+--- Running Nested CV Evaluation for: Linear Regression (lr) ---
+2025-05-27 15:58:53,761 [INFO] Output directory: comprehensive_regression_results_20250527_133433/lr
+2025-05-27 15:58:53,761 [INFO] Hyperparameter tuning scoring metric: neg_mean_squared_error
+2025-05-27 15:58:53,761 [INFO] Using GroupKFold for outer CV with 5 folds based on query IDs.
+2025-05-27 15:58:53,762 [INFO] 
+-- Processing Outer Fold 1/5 --
+2025-05-27 15:58:53,765 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 15:58:53,765 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 15:58:53,765 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 15:58:53,978 [INFO] Best Params found: {'reg__fit_intercept': True}
+2025-05-27 15:58:53,978 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0292
+2025-05-27 15:58:53,999 [INFO] Hyperparameter Tuning Duration: 0.23 seconds
+2025-05-27 15:58:53,999 [INFO] Predicting on outer test set...
+2025-05-27 15:58:54,002 [INFO] Calculating performance metrics...
+2025-05-27 15:58:54,029 [INFO] Generating diagnostic plots...
+2025-05-27 15:58:55,107 [INFO] Prediction & Evaluation Duration: 1.11 seconds
+2025-05-27 15:58:55,107 [INFO] -- Outer Fold 1 finished. Duration: 1.35 seconds --
+2025-05-27 15:58:55,108 [INFO] 
+-- Processing Outer Fold 2/5 --
+2025-05-27 15:58:55,193 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 15:58:55,194 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 15:58:55,194 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 15:58:55,295 [INFO] Best Params found: {'reg__fit_intercept': True}
+2025-05-27 15:58:55,295 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0393
+2025-05-27 15:58:55,447 [INFO] Hyperparameter Tuning Duration: 0.25 seconds
+2025-05-27 15:58:55,447 [INFO] Predicting on outer test set...
+2025-05-27 15:58:55,450 [INFO] Calculating performance metrics...
+2025-05-27 15:58:55,514 [INFO] Generating diagnostic plots...
+2025-05-27 15:58:56,500 [INFO] Prediction & Evaluation Duration: 1.05 seconds
+2025-05-27 15:58:56,500 [INFO] -- Outer Fold 2 finished. Duration: 1.39 seconds --
+2025-05-27 15:58:56,500 [INFO] 
+-- Processing Outer Fold 3/5 --
+2025-05-27 15:58:56,537 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 15:58:56,538 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 15:58:56,538 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 15:58:56,636 [INFO] Best Params found: {'reg__fit_intercept': True}
+2025-05-27 15:58:56,636 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0437
+2025-05-27 15:58:56,769 [INFO] Hyperparameter Tuning Duration: 0.23 seconds
+2025-05-27 15:58:56,769 [INFO] Predicting on outer test set...
+2025-05-27 15:58:56,772 [INFO] Calculating performance metrics...
+2025-05-27 15:58:56,852 [INFO] Generating diagnostic plots...
+2025-05-27 15:58:57,847 [INFO] Prediction & Evaluation Duration: 1.08 seconds
+2025-05-27 15:58:57,847 [INFO] -- Outer Fold 3 finished. Duration: 1.35 seconds --
+2025-05-27 15:58:57,847 [INFO] 
+-- Processing Outer Fold 4/5 --
+2025-05-27 15:58:57,871 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 15:58:57,871 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 15:58:57,871 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 15:58:57,965 [INFO] Best Params found: {'reg__fit_intercept': True}
+2025-05-27 15:58:57,965 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0309
+2025-05-27 15:58:57,998 [INFO] Hyperparameter Tuning Duration: 0.13 seconds
+2025-05-27 15:58:57,998 [INFO] Predicting on outer test set...
+2025-05-27 15:58:58,001 [INFO] Calculating performance metrics...
+2025-05-27 15:58:58,174 [INFO] Generating diagnostic plots...
+2025-05-27 15:58:59,042 [INFO] Prediction & Evaluation Duration: 1.04 seconds
+2025-05-27 15:58:59,042 [INFO] -- Outer Fold 4 finished. Duration: 1.20 seconds --
+2025-05-27 15:58:59,043 [INFO] 
+-- Processing Outer Fold 5/5 --
+2025-05-27 15:58:59,051 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 15:58:59,051 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 15:58:59,051 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 15:58:59,147 [INFO] Best Params found: {'reg__fit_intercept': True}
+2025-05-27 15:58:59,147 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0442
+2025-05-27 15:58:59,236 [INFO] Hyperparameter Tuning Duration: 0.18 seconds
+2025-05-27 15:58:59,236 [INFO] Predicting on outer test set...
+2025-05-27 15:58:59,239 [INFO] Calculating performance metrics...
+2025-05-27 15:58:59,322 [INFO] Generating diagnostic plots...
+2025-05-27 15:59:01,144 [INFO] Prediction & Evaluation Duration: 1.91 seconds
+2025-05-27 15:59:01,194 [INFO] -- Outer Fold 5 finished. Duration: 2.15 seconds --
+2025-05-27 15:59:01,194 [INFO] 
+--- Aggregating results for: Linear Regression (lr) ---
+2025-05-27 15:59:01,195 [INFO] Average Metrics across folds:
+2025-05-27 15:59:01,195 [INFO] {
+    "r2_mean": 0.5995812293879667,
+    "r2_std": 0.2314499437804961,
+    "mse_mean": 0.031910200827690784,
+    "mse_std": 0.011627218478216706,
+    "rmse_mean": 0.1756230458315179,
+    "rmse_std": 0.03266108694687528,
+    "mae_mean": 0.1282858144814113,
+    "mae_std": 0.024075509128355797,
+    "best_inner_cv_score_mean": -0.03745703878701896,
+    "best_inner_cv_score_std": 0.006305465901729094,
+    "scoring_metric_used": "neg_mean_squared_error"
+}
+2025-05-27 15:59:01,415 [INFO] Combined predictions saved to: comprehensive_regression_results_20250527_133433/lr/all_folds_predictions.csv
+2025-05-27 15:59:01,416 [INFO] Average time per outer fold: 1.49 seconds
+2025-05-27 15:59:01,416 [INFO] --- Nested CV completed for: Linear Regression (lr) ---
+2025-05-27 15:59:01,416 [INFO] === Step 2: Hyperparameter Tuning ===
+2025-05-27 15:59:01,416 [INFO] Finding optimal hyperparameters using separate cross-validation...
+2025-05-27 15:59:01,529 [INFO] Best parameters: {'reg__fit_intercept': True}
+2025-05-27 15:59:01,529 [INFO] Best CV score: -0.0489
+2025-05-27 15:59:01,529 [INFO] === Step 3: Final Model Training ===
+2025-05-27 15:59:01,529 [INFO] 
+--- Training Final Regression Model: Linear Regression ---
+2025-05-27 15:59:01,529 [INFO] Using parameters: {'reg__fit_intercept': True}
+2025-05-27 15:59:01,529 [INFO] Training final model on entire dataset...
+2025-05-27 15:59:01,544 [INFO] Final model training completed in 0.02 seconds
+2025-05-27 15:59:01,544 [INFO] Evaluating final model on training data...
+2025-05-27 15:59:01,665 [INFO] Final model R²: 0.8595, MSE: 0.0130
+2025-05-27 15:59:01,734 [INFO] Generating final model diagnostic plots...
+2025-05-27 15:59:02,865 [INFO] Final model diagnostic plots saved.
+2025-05-27 15:59:02,866 [INFO] Calculating SHAP values for final model...
+2025-05-27 15:59:02,866 [INFO] Sampling 100 instances from X for SHAP background data.
+2025-05-27 15:59:05,312 [INFO] SHAP analysis completed successfully
+2025-05-27 15:59:05,312 [INFO] SHAP calculation completed in 2.45 seconds
+2025-05-27 15:59:05,312 [INFO] === Step 4: Test Set Evaluation ===
+2025-05-27 15:59:05,395 [INFO] === Step 5: Performance Comparison ===
+2025-05-27 15:59:05,395 [INFO] R2 Comparison:
+2025-05-27 15:59:05,395 [INFO]   Nested CV: 0.5996 ± 0.2314 (95% CI: [0.1459, 1.0532])
+2025-05-27 15:59:05,395 [INFO]   Test Set:  0.6836
+2025-05-27 15:59:05,395 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 15:59:05,395 [INFO] MSE Comparison:
+2025-05-27 15:59:05,395 [INFO]   Nested CV: 0.0319 ± 0.0116 (95% CI: [0.0091, 0.0547])
+2025-05-27 15:59:05,395 [INFO]   Test Set:  0.0441
+2025-05-27 15:59:05,395 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 15:59:05,395 [INFO] MAE Comparison:
+2025-05-27 15:59:05,396 [INFO]   Nested CV: 0.1283 ± 0.0241 (95% CI: [0.0811, 0.1755])
+2025-05-27 15:59:05,396 [INFO]   Test Set:  0.1377
+2025-05-27 15:59:05,396 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 15:59:05,461 [INFO] Total time for model 'lr': 11.70 seconds
+2025-05-27 15:59:05,461 [INFO] 
+============================================================
+2025-05-27 15:59:05,462 [INFO] Processing model: Ridge Regression (ridge)
+2025-05-27 15:59:05,462 [INFO] ============================================================
+2025-05-27 15:59:05,462 [INFO] === Step 1: Nested CV Performance Estimation ===
+2025-05-27 15:59:05,464 [INFO] 
+--- Running Nested CV Evaluation for: Ridge Regression (ridge) ---
+2025-05-27 15:59:05,464 [INFO] Output directory: comprehensive_regression_results_20250527_133433/ridge
+2025-05-27 15:59:05,464 [INFO] Hyperparameter tuning scoring metric: neg_mean_squared_error
+2025-05-27 15:59:05,464 [INFO] Using GroupKFold for outer CV with 5 folds based on query IDs.
+2025-05-27 15:59:05,468 [INFO] 
+-- Processing Outer Fold 1/5 --
+2025-05-27 15:59:05,473 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 15:59:05,473 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 15:59:05,473 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 15:59:08,192 [INFO] Best Params found: {'reg__alpha': 676.5074324464838, 'reg__fit_intercept': True, 'reg__solver': 'auto'}
+2025-05-27 15:59:08,192 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0182
+2025-05-27 15:59:08,260 [INFO] Hyperparameter Tuning Duration: 2.79 seconds
+2025-05-27 15:59:08,260 [INFO] Predicting on outer test set...
+2025-05-27 15:59:08,263 [INFO] Calculating performance metrics...
+2025-05-27 15:59:08,438 [INFO] Generating diagnostic plots...
+2025-05-27 15:59:09,421 [INFO] Prediction & Evaluation Duration: 1.16 seconds
+2025-05-27 15:59:09,421 [INFO] -- Outer Fold 1 finished. Duration: 3.95 seconds --
+2025-05-27 15:59:09,421 [INFO] 
+-- Processing Outer Fold 2/5 --
+2025-05-27 15:59:09,425 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 15:59:09,426 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 15:59:09,426 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 15:59:10,960 [INFO] Best Params found: {'reg__alpha': 676.5074324464838, 'reg__fit_intercept': True, 'reg__solver': 'auto'}
+2025-05-27 15:59:10,960 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0214
+2025-05-27 15:59:11,011 [INFO] Hyperparameter Tuning Duration: 1.58 seconds
+2025-05-27 15:59:11,011 [INFO] Predicting on outer test set...
+2025-05-27 15:59:11,013 [INFO] Calculating performance metrics...
+2025-05-27 15:59:11,107 [INFO] Generating diagnostic plots...
+2025-05-27 15:59:12,664 [INFO] Prediction & Evaluation Duration: 1.65 seconds
+2025-05-27 15:59:12,664 [INFO] -- Outer Fold 2 finished. Duration: 3.24 seconds --
+2025-05-27 15:59:12,664 [INFO] 
+-- Processing Outer Fold 3/5 --
+2025-05-27 15:59:12,726 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 15:59:12,726 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 15:59:12,726 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 15:59:14,212 [INFO] Best Params found: {'reg__alpha': 676.5074324464838, 'reg__fit_intercept': True, 'reg__solver': 'auto'}
+2025-05-27 15:59:14,214 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0221
+2025-05-27 15:59:14,310 [INFO] Hyperparameter Tuning Duration: 1.58 seconds
+2025-05-27 15:59:14,310 [INFO] Predicting on outer test set...
+2025-05-27 15:59:14,313 [INFO] Calculating performance metrics...
+2025-05-27 15:59:14,368 [INFO] Generating diagnostic plots...
+2025-05-27 15:59:15,322 [INFO] Prediction & Evaluation Duration: 1.01 seconds
+2025-05-27 15:59:15,322 [INFO] -- Outer Fold 3 finished. Duration: 2.66 seconds --
+2025-05-27 15:59:15,322 [INFO] 
+-- Processing Outer Fold 4/5 --
+2025-05-27 15:59:15,325 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 15:59:15,325 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 15:59:15,325 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 15:59:16,875 [INFO] Best Params found: {'reg__alpha': 47.6591180868084, 'reg__fit_intercept': True, 'reg__solver': 'svd'}
+2025-05-27 15:59:16,875 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0206
+2025-05-27 15:59:16,910 [INFO] Hyperparameter Tuning Duration: 1.58 seconds
+2025-05-27 15:59:16,910 [INFO] Predicting on outer test set...
+2025-05-27 15:59:16,911 [INFO] Calculating performance metrics...
+2025-05-27 15:59:16,964 [INFO] Generating diagnostic plots...
+2025-05-27 15:59:17,981 [INFO] Prediction & Evaluation Duration: 1.07 seconds
+2025-05-27 15:59:17,981 [INFO] -- Outer Fold 4 finished. Duration: 2.66 seconds --
+2025-05-27 15:59:17,982 [INFO] 
+-- Processing Outer Fold 5/5 --
+2025-05-27 15:59:18,008 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 15:59:18,008 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 15:59:18,008 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 15:59:19,569 [INFO] Best Params found: {'reg__alpha': 676.5074324464838, 'reg__fit_intercept': True, 'reg__solver': 'auto'}
+2025-05-27 15:59:19,569 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0290
+2025-05-27 15:59:19,614 [INFO] Hyperparameter Tuning Duration: 1.61 seconds
+2025-05-27 15:59:19,614 [INFO] Predicting on outer test set...
+2025-05-27 15:59:19,617 [INFO] Calculating performance metrics...
+2025-05-27 15:59:19,672 [INFO] Generating diagnostic plots...
+2025-05-27 15:59:20,444 [INFO] Prediction & Evaluation Duration: 0.83 seconds
+2025-05-27 15:59:20,444 [INFO] -- Outer Fold 5 finished. Duration: 2.46 seconds --
+2025-05-27 15:59:20,444 [INFO] 
+--- Aggregating results for: Ridge Regression (ridge) ---
+2025-05-27 15:59:20,445 [INFO] Average Metrics across folds:
+2025-05-27 15:59:20,445 [INFO] {
+    "r2_mean": 0.6909556934217054,
+    "r2_std": 0.19428921292338375,
+    "mse_mean": 0.024274735936688708,
+    "mse_std": 0.00955030052487722,
+    "rmse_mean": 0.1529039474604674,
+    "rmse_std": 0.029918535854806326,
+    "mae_mean": 0.10401503383470115,
+    "mae_std": 0.022085312051712103,
+    "best_inner_cv_score_mean": -0.0222608204093148,
+    "best_inner_cv_score_std": 0.0035956726848214078,
+    "scoring_metric_used": "neg_mean_squared_error"
+}
+2025-05-27 15:59:20,574 [INFO] Combined predictions saved to: comprehensive_regression_results_20250527_133433/ridge/all_folds_predictions.csv
+2025-05-27 15:59:20,574 [INFO] Average time per outer fold: 3.00 seconds
+2025-05-27 15:59:20,574 [INFO] --- Nested CV completed for: Ridge Regression (ridge) ---
+2025-05-27 15:59:20,574 [INFO] === Step 2: Hyperparameter Tuning ===
+2025-05-27 15:59:20,574 [INFO] Finding optimal hyperparameters using separate cross-validation...
+2025-05-27 15:59:22,210 [INFO] Best parameters: {'reg__alpha': 676.5074324464838, 'reg__fit_intercept': True, 'reg__solver': 'auto'}
+2025-05-27 15:59:22,210 [INFO] Best CV score: -0.0247
+2025-05-27 15:59:22,210 [INFO] === Step 3: Final Model Training ===
+2025-05-27 15:59:22,210 [INFO] 
+--- Training Final Regression Model: Ridge Regression ---
+2025-05-27 15:59:22,210 [INFO] Using parameters: {'reg__alpha': 676.5074324464838, 'reg__fit_intercept': True, 'reg__solver': 'auto'}
+2025-05-27 15:59:22,210 [INFO] Training final model on entire dataset...
+2025-05-27 15:59:22,216 [INFO] Final model training completed in 0.01 seconds
+2025-05-27 15:59:22,216 [INFO] Evaluating final model on training data...
+2025-05-27 15:59:22,358 [INFO] Final model R²: 0.8330, MSE: 0.0154
+2025-05-27 15:59:22,487 [INFO] Generating final model diagnostic plots...
+2025-05-27 15:59:23,558 [INFO] Final model diagnostic plots saved.
+2025-05-27 15:59:23,558 [INFO] Calculating SHAP values for final model...
+2025-05-27 15:59:23,558 [INFO] Sampling 100 instances from X for SHAP background data.
+2025-05-27 15:59:25,896 [INFO] SHAP analysis completed successfully
+2025-05-27 15:59:25,896 [INFO] SHAP calculation completed in 2.34 seconds
+2025-05-27 15:59:25,896 [INFO] === Step 4: Test Set Evaluation ===
+2025-05-27 15:59:25,963 [INFO] === Step 5: Performance Comparison ===
+2025-05-27 15:59:25,963 [INFO] R2 Comparison:
+2025-05-27 15:59:25,963 [INFO]   Nested CV: 0.6910 ± 0.1943 (95% CI: [0.3101, 1.0718])
+2025-05-27 15:59:25,963 [INFO]   Test Set:  0.7559
+2025-05-27 15:59:25,963 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 15:59:25,963 [INFO] MSE Comparison:
+2025-05-27 15:59:25,963 [INFO]   Nested CV: 0.0243 ± 0.0096 (95% CI: [0.0056, 0.0430])
+2025-05-27 15:59:25,963 [INFO]   Test Set:  0.0340
+2025-05-27 15:59:25,963 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 15:59:25,963 [INFO] MAE Comparison:
+2025-05-27 15:59:25,963 [INFO]   Nested CV: 0.1040 ± 0.0221 (95% CI: [0.0607, 0.1473])
+2025-05-27 15:59:25,963 [INFO]   Test Set:  0.1216
+2025-05-27 15:59:25,963 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 15:59:25,977 [INFO] Total time for model 'ridge': 20.52 seconds
+2025-05-27 15:59:25,977 [INFO] 
+============================================================
+2025-05-27 15:59:25,977 [INFO] Processing model: Lasso Regression (lasso)
+2025-05-27 15:59:25,977 [INFO] ============================================================
+2025-05-27 15:59:25,977 [INFO] === Step 1: Nested CV Performance Estimation ===
+2025-05-27 15:59:25,979 [INFO] 
+--- Running Nested CV Evaluation for: Lasso Regression (lasso) ---
+2025-05-27 15:59:25,979 [INFO] Output directory: comprehensive_regression_results_20250527_133433/lasso
+2025-05-27 15:59:25,979 [INFO] Hyperparameter tuning scoring metric: neg_mean_squared_error
+2025-05-27 15:59:25,979 [INFO] Using GroupKFold for outer CV with 5 folds based on query IDs.
+2025-05-27 15:59:25,982 [INFO] 
+-- Processing Outer Fold 1/5 --
+2025-05-27 15:59:26,003 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 15:59:26,003 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 15:59:26,003 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 15:59:27,971 [INFO] Best Params found: {'reg__alpha': 0.009962513222055111, 'reg__fit_intercept': True, 'reg__max_iter': 3000}
+2025-05-27 15:59:27,971 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0176
+2025-05-27 15:59:28,212 [INFO] Hyperparameter Tuning Duration: 2.21 seconds
+2025-05-27 15:59:28,212 [INFO] Predicting on outer test set...
+2025-05-27 15:59:28,215 [INFO] Calculating performance metrics...
+2025-05-27 15:59:28,869 [INFO] Generating diagnostic plots...
+2025-05-27 15:59:29,953 [INFO] Prediction & Evaluation Duration: 1.74 seconds
+2025-05-27 15:59:29,953 [INFO] -- Outer Fold 1 finished. Duration: 3.97 seconds --
+2025-05-27 15:59:29,953 [INFO] 
+-- Processing Outer Fold 2/5 --
+2025-05-27 15:59:29,976 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 15:59:29,976 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 15:59:29,976 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.405e-02, tolerance: 1.462e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.074e-02, tolerance: 1.736e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-27 15:59:31,851 [INFO] Best Params found: {'reg__alpha': 0.03334792728637585, 'reg__fit_intercept': True, 'reg__max_iter': 3000}
+2025-05-27 15:59:31,851 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0201
+2025-05-27 15:59:31,891 [INFO] Hyperparameter Tuning Duration: 1.92 seconds
+2025-05-27 15:59:31,891 [INFO] Predicting on outer test set...
+2025-05-27 15:59:31,894 [INFO] Calculating performance metrics...
+2025-05-27 15:59:31,917 [INFO] Generating diagnostic plots...
+2025-05-27 15:59:32,611 [INFO] Prediction & Evaluation Duration: 0.72 seconds
+2025-05-27 15:59:32,612 [INFO] -- Outer Fold 2 finished. Duration: 2.66 seconds --
+2025-05-27 15:59:32,612 [INFO] 
+-- Processing Outer Fold 3/5 --
+2025-05-27 15:59:32,616 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 15:59:32,616 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 15:59:32,616 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.054e-02, tolerance: 1.786e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.401e-02, tolerance: 1.869e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-27 15:59:34,906 [INFO] Best Params found: {'reg__alpha': 0.008111941985431923, 'reg__fit_intercept': True, 'reg__max_iter': 1000}
+2025-05-27 15:59:34,906 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0236
+2025-05-27 15:59:34,975 [INFO] Hyperparameter Tuning Duration: 2.36 seconds
+2025-05-27 15:59:34,975 [INFO] Predicting on outer test set...
+2025-05-27 15:59:34,978 [INFO] Calculating performance metrics...
+2025-05-27 15:59:35,032 [INFO] Generating diagnostic plots...
+2025-05-27 15:59:35,763 [INFO] Prediction & Evaluation Duration: 0.79 seconds
+2025-05-27 15:59:35,763 [INFO] -- Outer Fold 3 finished. Duration: 3.15 seconds --
+2025-05-27 15:59:35,763 [INFO] 
+-- Processing Outer Fold 4/5 --
+2025-05-27 15:59:35,776 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 15:59:35,777 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 15:59:35,777 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 5.293e-02, tolerance: 3.264e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 4.617e-02, tolerance: 3.264e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.731e-02, tolerance: 3.264e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 4.826e-02, tolerance: 3.264e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.458e-02, tolerance: 2.021e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-27 15:59:37,878 [INFO] Best Params found: {'reg__alpha': 0.0010656401760606447, 'reg__fit_intercept': True, 'reg__max_iter': 1000}
+2025-05-27 15:59:37,879 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0216
+2025-05-27 15:59:37,972 [INFO] Hyperparameter Tuning Duration: 2.20 seconds
+2025-05-27 15:59:37,972 [INFO] Predicting on outer test set...
+2025-05-27 15:59:37,975 [INFO] Calculating performance metrics...
+2025-05-27 15:59:38,120 [INFO] Generating diagnostic plots...
+2025-05-27 15:59:39,289 [INFO] Prediction & Evaluation Duration: 1.32 seconds
+2025-05-27 15:59:39,289 [INFO] -- Outer Fold 4 finished. Duration: 3.53 seconds --
+2025-05-27 15:59:39,289 [INFO] 
+-- Processing Outer Fold 5/5 --
+2025-05-27 15:59:39,311 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 15:59:39,311 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 15:59:39,311 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.469e-02, tolerance: 1.557e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-27 15:59:41,278 [INFO] Best Params found: {'reg__alpha': 0.03334792728637585, 'reg__fit_intercept': True, 'reg__max_iter': 3000}
+2025-05-27 15:59:41,278 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0270
+2025-05-27 15:59:41,313 [INFO] Hyperparameter Tuning Duration: 2.00 seconds
+2025-05-27 15:59:41,313 [INFO] Predicting on outer test set...
+2025-05-27 15:59:41,316 [INFO] Calculating performance metrics...
+2025-05-27 15:59:41,337 [INFO] Generating diagnostic plots...
+2025-05-27 15:59:42,090 [INFO] Prediction & Evaluation Duration: 0.78 seconds
+2025-05-27 15:59:42,090 [INFO] -- Outer Fold 5 finished. Duration: 2.80 seconds --
+2025-05-27 15:59:42,090 [INFO] 
+--- Aggregating results for: Lasso Regression (lasso) ---
+2025-05-27 15:59:42,090 [INFO] Average Metrics across folds:
+2025-05-27 15:59:42,090 [INFO] {
+    "r2_mean": 0.6954662641479435,
+    "r2_std": 0.17306725722209026,
+    "mse_mean": 0.024347057238720986,
+    "mse_std": 0.00872792409010595,
+    "rmse_mean": 0.15337780153654515,
+    "rmse_std": 0.028675899890624947,
+    "mae_mean": 0.10407284594357942,
+    "mae_std": 0.0196077540435555,
+    "best_inner_cv_score_mean": -0.021960864502046703,
+    "best_inner_cv_score_std": 0.0031745509985202304,
+    "scoring_metric_used": "neg_mean_squared_error"
+}
+2025-05-27 15:59:42,251 [INFO] Combined predictions saved to: comprehensive_regression_results_20250527_133433/lasso/all_folds_predictions.csv
+2025-05-27 15:59:42,252 [INFO] Average time per outer fold: 3.22 seconds
+2025-05-27 15:59:42,252 [INFO] --- Nested CV completed for: Lasso Regression (lasso) ---
+2025-05-27 15:59:42,252 [INFO] === Step 2: Hyperparameter Tuning ===
+2025-05-27 15:59:42,252 [INFO] Finding optimal hyperparameters using separate cross-validation...
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.728e-02, tolerance: 2.587e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.914e-02, tolerance: 2.587e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.275e-02, tolerance: 2.222e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-27 15:59:45,916 [INFO] Best parameters: {'reg__alpha': 0.009962513222055111, 'reg__fit_intercept': True, 'reg__max_iter': 3000}
+2025-05-27 15:59:45,916 [INFO] Best CV score: -0.0255
+2025-05-27 15:59:45,916 [INFO] === Step 3: Final Model Training ===
+2025-05-27 15:59:45,916 [INFO] 
+--- Training Final Regression Model: Lasso Regression ---
+2025-05-27 15:59:45,916 [INFO] Using parameters: {'reg__alpha': 0.009962513222055111, 'reg__fit_intercept': True, 'reg__max_iter': 3000}
+2025-05-27 15:59:45,916 [INFO] Training final model on entire dataset...
+2025-05-27 15:59:46,052 [INFO] Final model training completed in 0.14 seconds
+2025-05-27 15:59:46,052 [INFO] Evaluating final model on training data...
+2025-05-27 15:59:46,063 [INFO] Final model R²: 0.8170, MSE: 0.0169
+2025-05-27 15:59:46,109 [INFO] Generating final model diagnostic plots...
+2025-05-27 15:59:47,014 [INFO] Final model diagnostic plots saved.
+2025-05-27 15:59:47,015 [INFO] Calculating SHAP values for final model...
+2025-05-27 15:59:47,015 [INFO] Sampling 100 instances from X for SHAP background data.
+2025-05-27 15:59:50,706 [INFO] SHAP analysis completed successfully
+2025-05-27 15:59:50,706 [INFO] SHAP calculation completed in 3.69 seconds
+2025-05-27 15:59:50,706 [INFO] === Step 4: Test Set Evaluation ===
+2025-05-27 15:59:50,750 [INFO] === Step 5: Performance Comparison ===
+2025-05-27 15:59:50,750 [INFO] R2 Comparison:
+2025-05-27 15:59:50,750 [INFO]   Nested CV: 0.6955 ± 0.1731 (95% CI: [0.3563, 1.0347])
+2025-05-27 15:59:50,750 [INFO]   Test Set:  0.7835
+2025-05-27 15:59:50,750 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 15:59:50,750 [INFO] MSE Comparison:
+2025-05-27 15:59:50,750 [INFO]   Nested CV: 0.0243 ± 0.0087 (95% CI: [0.0072, 0.0415])
+2025-05-27 15:59:50,750 [INFO]   Test Set:  0.0301
+2025-05-27 15:59:50,750 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 15:59:50,751 [INFO] MAE Comparison:
+2025-05-27 15:59:50,751 [INFO]   Nested CV: 0.1041 ± 0.0196 (95% CI: [0.0656, 0.1425])
+2025-05-27 15:59:50,751 [INFO]   Test Set:  0.1112
+2025-05-27 15:59:50,751 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 15:59:50,779 [INFO] Total time for model 'lasso': 24.80 seconds
+2025-05-27 15:59:50,779 [INFO] 
+============================================================
+2025-05-27 15:59:50,779 [INFO] Processing model: Elastic Net (en)
+2025-05-27 15:59:50,779 [INFO] ============================================================
+2025-05-27 15:59:50,779 [INFO] === Step 1: Nested CV Performance Estimation ===
+2025-05-27 15:59:50,783 [INFO] 
+--- Running Nested CV Evaluation for: Elastic Net (en) ---
+2025-05-27 15:59:50,783 [INFO] Output directory: comprehensive_regression_results_20250527_133433/en
+2025-05-27 15:59:50,783 [INFO] Hyperparameter tuning scoring metric: neg_mean_squared_error
+2025-05-27 15:59:50,783 [INFO] Using GroupKFold for outer CV with 5 folds based on query IDs.
+2025-05-27 15:59:50,787 [INFO] 
+-- Processing Outer Fold 1/5 --
+2025-05-27 15:59:50,795 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 15:59:50,795 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 15:59:50,795 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 7.567e-01, tolerance: 3.424e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-27 15:59:53,954 [INFO] Best Params found: {'reg__alpha': 0.02933870049164395, 'reg__fit_intercept': True, 'reg__l1_ratio': 0.5, 'reg__max_iter': 1000}
+2025-05-27 15:59:53,955 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0175
+2025-05-27 15:59:54,037 [INFO] Hyperparameter Tuning Duration: 3.24 seconds
+2025-05-27 15:59:54,037 [INFO] Predicting on outer test set...
+2025-05-27 15:59:54,039 [INFO] Calculating performance metrics...
+2025-05-27 15:59:54,204 [INFO] Generating diagnostic plots...
+2025-05-27 15:59:55,153 [INFO] Prediction & Evaluation Duration: 1.12 seconds
+2025-05-27 15:59:55,154 [INFO] -- Outer Fold 1 finished. Duration: 4.37 seconds --
+2025-05-27 15:59:55,154 [INFO] 
+-- Processing Outer Fold 2/5 --
+2025-05-27 15:59:55,163 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 15:59:55,163 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 15:59:55,163 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 6.208e-02, tolerance: 2.122e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.859e-01, tolerance: 2.798e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 4.274e-01, tolerance: 2.122e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.455e+00, tolerance: 2.798e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-27 15:59:58,524 [INFO] Best Params found: {'reg__alpha': 0.030072423528674893, 'reg__fit_intercept': True, 'reg__l1_ratio': 0.7, 'reg__max_iter': 3000}
+2025-05-27 15:59:58,524 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0196
+2025-05-27 15:59:58,575 [INFO] Hyperparameter Tuning Duration: 3.41 seconds
+2025-05-27 15:59:58,575 [INFO] Predicting on outer test set...
+2025-05-27 15:59:58,578 [INFO] Calculating performance metrics...
+2025-05-27 15:59:59,435 [INFO] Generating diagnostic plots...
+2025-05-27 16:00:00,469 [INFO] Prediction & Evaluation Duration: 1.89 seconds
+2025-05-27 16:00:00,469 [INFO] -- Outer Fold 2 finished. Duration: 5.32 seconds --
+2025-05-27 16:00:00,469 [INFO] 
+-- Processing Outer Fold 3/5 --
+2025-05-27 16:00:00,473 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 16:00:00,473 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 16:00:00,473 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.476e-01, tolerance: 2.852e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.300e-01, tolerance: 3.083e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.574e-01, tolerance: 3.059e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.297e+00, tolerance: 2.852e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.564e+00, tolerance: 3.083e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-27 16:00:03,934 [INFO] Best Params found: {'reg__alpha': 0.06578820119123178, 'reg__fit_intercept': True, 'reg__l1_ratio': 0.3, 'reg__max_iter': 3000}
+2025-05-27 16:00:03,935 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0226
+2025-05-27 16:00:04,094 [INFO] Hyperparameter Tuning Duration: 3.62 seconds
+2025-05-27 16:00:04,094 [INFO] Predicting on outer test set...
+2025-05-27 16:00:04,097 [INFO] Calculating performance metrics...
+2025-05-27 16:00:04,218 [INFO] Generating diagnostic plots...
+2025-05-27 16:00:05,104 [INFO] Prediction & Evaluation Duration: 1.01 seconds
+2025-05-27 16:00:05,104 [INFO] -- Outer Fold 3 finished. Duration: 4.63 seconds --
+2025-05-27 16:00:05,104 [INFO] 
+-- Processing Outer Fold 4/5 --
+2025-05-27 16:00:05,129 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 16:00:05,129 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 16:00:05,129 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.048e-01, tolerance: 3.629e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 4.067e-02, tolerance: 2.165e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.513e+00, tolerance: 3.629e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.055e-01, tolerance: 2.165e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 4.825e-01, tolerance: 3.264e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-27 16:00:08,384 [INFO] Best Params found: {'reg__alpha': 0.06578820119123178, 'reg__fit_intercept': True, 'reg__l1_ratio': 0.3, 'reg__max_iter': 3000}
+2025-05-27 16:00:08,384 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0211
+2025-05-27 16:00:08,413 [INFO] Hyperparameter Tuning Duration: 3.28 seconds
+2025-05-27 16:00:08,413 [INFO] Predicting on outer test set...
+2025-05-27 16:00:08,416 [INFO] Calculating performance metrics...
+2025-05-27 16:00:08,460 [INFO] Generating diagnostic plots...
+2025-05-27 16:00:09,502 [INFO] Prediction & Evaluation Duration: 1.09 seconds
+2025-05-27 16:00:09,502 [INFO] -- Outer Fold 4 finished. Duration: 4.40 seconds --
+2025-05-27 16:00:09,503 [INFO] 
+-- Processing Outer Fold 5/5 --
+2025-05-27 16:00:09,505 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 16:00:09,505 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 16:00:09,505 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.232e-02, tolerance: 2.315e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 5.155e-02, tolerance: 2.966e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-27 16:00:12,690 [INFO] Best Params found: {'reg__alpha': 0.06578820119123178, 'reg__fit_intercept': True, 'reg__l1_ratio': 0.3, 'reg__max_iter': 3000}
+2025-05-27 16:00:12,690 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0266
+2025-05-27 16:00:12,756 [INFO] Hyperparameter Tuning Duration: 3.25 seconds
+2025-05-27 16:00:12,756 [INFO] Predicting on outer test set...
+2025-05-27 16:00:12,759 [INFO] Calculating performance metrics...
+2025-05-27 16:00:12,931 [INFO] Generating diagnostic plots...
+2025-05-27 16:00:13,916 [INFO] Prediction & Evaluation Duration: 1.16 seconds
+2025-05-27 16:00:13,916 [INFO] -- Outer Fold 5 finished. Duration: 4.41 seconds --
+2025-05-27 16:00:13,916 [INFO] 
+--- Aggregating results for: Elastic Net (en) ---
+2025-05-27 16:00:13,916 [INFO] Average Metrics across folds:
+2025-05-27 16:00:13,917 [INFO] {
+    "r2_mean": 0.7366448462276184,
+    "r2_std": 0.10849766479032473,
+    "mse_mean": 0.02160502524494557,
+    "mse_std": 0.005791498106660046,
+    "rmse_mean": 0.14556545742273636,
+    "rmse_std": 0.02038928273027529,
+    "mae_mean": 0.09694296084317813,
+    "mae_std": 0.012621690114904579,
+    "best_inner_cv_score_mean": -0.021478680189460427,
+    "best_inner_cv_score_std": 0.0030607305127196517,
+    "scoring_metric_used": "neg_mean_squared_error"
+}
+2025-05-27 16:00:14,109 [INFO] Combined predictions saved to: comprehensive_regression_results_20250527_133433/en/all_folds_predictions.csv
+2025-05-27 16:00:14,109 [INFO] Average time per outer fold: 4.63 seconds
+2025-05-27 16:00:14,109 [INFO] --- Nested CV completed for: Elastic Net (en) ---
+2025-05-27 16:00:14,109 [INFO] === Step 2: Hyperparameter Tuning ===
+2025-05-27 16:00:14,109 [INFO] Finding optimal hyperparameters using separate cross-validation...
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.034e+00, tolerance: 4.401e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.692e-01, tolerance: 3.392e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 8.178e-02, tolerance: 2.493e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 4.516e+00, tolerance: 4.401e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.089e+00, tolerance: 3.392e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 7.196e-02, tolerance: 3.392e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.299e-02, tolerance: 2.587e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-27 16:00:19,606 [INFO] Best parameters: {'reg__alpha': 0.06578820119123178, 'reg__fit_intercept': True, 'reg__l1_ratio': 0.3, 'reg__max_iter': 3000}
+2025-05-27 16:00:19,606 [INFO] Best CV score: -0.0245
+2025-05-27 16:00:19,607 [INFO] === Step 3: Final Model Training ===
+2025-05-27 16:00:19,607 [INFO] 
+--- Training Final Regression Model: Elastic Net ---
+2025-05-27 16:00:19,607 [INFO] Using parameters: {'reg__alpha': 0.06578820119123178, 'reg__fit_intercept': True, 'reg__l1_ratio': 0.3, 'reg__max_iter': 3000}
+2025-05-27 16:00:19,607 [INFO] Training final model on entire dataset...
+2025-05-27 16:00:19,626 [INFO] Final model training completed in 0.02 seconds
+2025-05-27 16:00:19,626 [INFO] Evaluating final model on training data...
+2025-05-27 16:00:19,673 [INFO] Final model R²: 0.8076, MSE: 0.0178
+2025-05-27 16:00:19,734 [INFO] Generating final model diagnostic plots...
+2025-05-27 16:00:20,868 [INFO] Final model diagnostic plots saved.
+2025-05-27 16:00:20,868 [INFO] Calculating SHAP values for final model...
+2025-05-27 16:00:20,868 [INFO] Sampling 100 instances from X for SHAP background data.
+2025-05-27 16:00:23,211 [INFO] SHAP analysis completed successfully
+2025-05-27 16:00:23,212 [INFO] SHAP calculation completed in 2.34 seconds
+2025-05-27 16:00:23,212 [INFO] === Step 4: Test Set Evaluation ===
+2025-05-27 16:00:23,260 [INFO] === Step 5: Performance Comparison ===
+2025-05-27 16:00:23,260 [INFO] R2 Comparison:
+2025-05-27 16:00:23,260 [INFO]   Nested CV: 0.7366 ± 0.1085 (95% CI: [0.5240, 0.9493])
+2025-05-27 16:00:23,260 [INFO]   Test Set:  0.7729
+2025-05-27 16:00:23,260 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 16:00:23,260 [INFO] MSE Comparison:
+2025-05-27 16:00:23,260 [INFO]   Nested CV: 0.0216 ± 0.0058 (95% CI: [0.0103, 0.0330])
+2025-05-27 16:00:23,260 [INFO]   Test Set:  0.0316
+2025-05-27 16:00:23,260 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 16:00:23,260 [INFO] MAE Comparison:
+2025-05-27 16:00:23,260 [INFO]   Nested CV: 0.0969 ± 0.0126 (95% CI: [0.0722, 0.1217])
+2025-05-27 16:00:23,260 [INFO]   Test Set:  0.1147
+2025-05-27 16:00:23,260 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 16:00:23,292 [INFO] Total time for model 'en': 32.51 seconds
+2025-05-27 16:00:23,292 [INFO] 
+--- Overall Summary ---
+2025-05-27 16:00:23,321 [INFO] Model comparison summary saved to: comprehensive_regression_results_20250527_133433/model_comparison_summary.csv
+2025-05-27 16:00:23,321 [INFO] Successful Models Summary:
+2025-05-27 16:00:23,468 [INFO]   model_name     status   r2_mean    r2_std  mse_mean   mse_std  rmse_mean  rmse_std  mae_mean   mae_std  best_inner_cv_score_mean  best_inner_cv_score_std     scoring_metric_used   test_r2  test_mse  test_rmse  test_mae
+0         rf  completed  0.669030  0.186700  0.026450  0.011014   0.159209  0.033210  0.097714  0.016330                 -0.023035                 0.003303  neg_mean_squared_error  0.773744  0.031497   0.177474  0.102123
+1       lgbm  completed  0.594829  0.246521  0.032008  0.012813   0.175446  0.035025  0.106136  0.017565                 -0.022852                 0.004030  neg_mean_squared_error  0.789508  0.029302   0.171179  0.088960
+2        xgb  completed  0.586709  0.214911  0.033253  0.011093   0.179871  0.029988  0.109523  0.012122                 -0.024744                 0.003587  neg_mean_squared_error  0.797060  0.028251   0.168081  0.099111
+3         lr  completed  0.599581  0.231450  0.031910  0.011627   0.175623  0.032661  0.128286  0.024076                 -0.037457                 0.006305  neg_mean_squared_error  0.683552  0.044052   0.209887  0.137705
+4      ridge  completed  0.690956  0.194289  0.024275  0.009550   0.152904  0.029919  0.104015  0.022085                 -0.022261                 0.003596  neg_mean_squared_error  0.755900  0.033981   0.184339  0.121642
+5      lasso  completed  0.695466  0.173067  0.024347  0.008728   0.153378  0.028676  0.104073  0.019608                 -0.021961                 0.003175  neg_mean_squared_error  0.783496  0.030139   0.173607  0.111156
+6         en  completed  0.736645  0.108498  0.021605  0.005791   0.145565  0.020389  0.096943  0.012622                 -0.021479                 0.003061  neg_mean_squared_error  0.772915  0.031612   0.177799  0.114723
+2025-05-27 16:00:23,546 [INFO] Final models info saved to: comprehensive_regression_results_20250527_133433/final_models_info.json
+2025-05-27 16:00:23,546 [INFO] Summary Duration: 0.25 seconds
+2025-05-27 16:00:23,546 [INFO] 
+--- Framework Execution Finished ---
+2025-05-27 16:00:23,546 [INFO] Total execution time: 8749.80 seconds
+/var/spool/slurmd/job205794/slurm_script: line 50: --n_jobs: command not found

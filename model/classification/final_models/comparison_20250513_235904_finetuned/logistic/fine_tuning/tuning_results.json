@@ -1,0 +1,17 @@
+{
+  "baseline_score": 0.9786495397330849,
+  "best_score": 0.9700625558534405,
+  "improvement": -0.008586983879644405,
+  "improvement_percent": -0.8774319642541705,
+  "best_params": {
+    "model__C": 0.041834796184430575,
+    "model__class_weight": "balanced",
+    "model__max_iter": 2000,
+    "model__penalty": "l2",
+    "model__random_state": 42,
+    "model__solver": "liblinear"
+  },
+  "scoring": "roc_auc",
+  "cv_splits": 3,
+  "n_iterations": 20
+}

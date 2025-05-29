@@ -1,0 +1,10 @@
+{
+    "roc_auc": {
+        "nested_cv_mean": 0.921088758538823,
+        "nested_cv_std": 0.053577901753263,
+        "nested_cv_95ci": [
+            0.8160760711024275,
+            1.0261014459752185
+        ],
+        "test_performance": 0.9570422755089296,
+        "within_confidence_interval": 

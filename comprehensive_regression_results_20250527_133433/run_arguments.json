@@ -1,0 +1,16 @@
+{
+    "input_file": "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/data/train/pipeline_AbNb_native_data.csv",
+    "output_dir": "comprehensive_regression_results_20250527_133433",
+    "target_column": "DockQ",
+    "query_id_column": "query",
+    "drop_features": null,
+    "test_file": "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/data/test/pipeline_ABAG_native_data.csv",
+    "models": "rf,lgbm,xgb,lr,ridge,lasso,en",
+    "outer_folds": 5,
+    "inner_folds": 3,
+    "random_iter": 50,
+    "random_state": 42,
+    "scoring": "neg_mean_squared_error",
+    "n_jobs": 48,
+    "shap_background_samples": 100
+}

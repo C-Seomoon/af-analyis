@@ -1,0 +1,14 @@
+{
+    "best_params": {
+        "n_estimators": 500,
+        "min_samples_split": 2,
+        "min_samples_leaf": 2,
+        "max_features": "log2",
+        "max_depth": 10,
+        "class_weight": null
+    },
+    "pr_auc": 0.9574655879703236,
+    "roc_auc": 0.9756487846000165,
+    "f1": 0.8813977695167287,
+    "balanced_acc": 0.9184386903579624
+}

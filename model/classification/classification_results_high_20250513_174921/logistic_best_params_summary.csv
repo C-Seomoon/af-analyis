@@ -1,0 +1,6 @@
+,model__solver,model__penalty,model__class_weight,model__C,model__max_iter
+fold_1,liblinear,l2,,0.000774263682681127,
+fold_2,saga,l2,balanced,0.0001,1000.0
+fold_3,saga,l2,balanced,0.0001,1000.0
+fold_4,saga,l2,balanced,0.000774263682681127,1000.0
+fold_5,liblinear,l2,balanced,0.0001,

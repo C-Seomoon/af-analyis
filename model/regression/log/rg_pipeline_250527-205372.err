@@ -1,0 +1,1059 @@
+2025-05-27 13:03:29,185 [INFO] Successfully imported model classes using relative paths.
+2025-05-27 13:03:30,249 [INFO] Successfully imported utils using relative paths.
+2025-05-27 13:03:30,257 [INFO] Using 48 CPU cores (75% of available 64).
+2025-05-27 13:03:30,275 [INFO] Results will be saved to: comprehensive_regression_results_20250527_130330
+2025-05-27 13:03:30,305 [INFO] 
+--- Loading Data ---
+2025-05-27 13:03:30,402 [INFO] Loading separate test set from: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/data/test/pipeline_ABAG_native_data.csv
+2025-05-27 13:03:30,444 [INFO] Test set loaded: (1648, 71)
+2025-05-27 13:03:30,444 [INFO] Data Loading Duration: 0.14 seconds
+2025-05-27 13:03:30,444 [INFO] 
+--- Starting Comprehensive Model Evaluation ---
+2025-05-27 13:03:30,447 [INFO] 
+============================================================
+2025-05-27 13:03:30,447 [INFO] Processing model: Random Forest (rf)
+2025-05-27 13:03:30,447 [INFO] ============================================================
+2025-05-27 13:03:30,447 [INFO] === Step 1: Nested CV Performance Estimation ===
+2025-05-27 13:03:30,448 [INFO] 
+--- Running Nested CV Evaluation for: Random Forest (rf) ---
+2025-05-27 13:03:30,448 [INFO] Output directory: comprehensive_regression_results_20250527_130330/rf
+2025-05-27 13:03:30,448 [INFO] Hyperparameter tuning scoring metric: neg_mean_squared_error
+2025-05-27 13:03:30,448 [INFO] Using GroupKFold for outer CV with 5 folds based on query IDs.
+2025-05-27 13:03:30,450 [INFO] 
+-- Processing Outer Fold 1/5 --
+2025-05-27 13:03:30,452 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:03:30,452 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:03:30,452 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:03:30,455 [ERROR] Error during RandomizedSearchCV in fold 1: n_jobs == 0 in Parallel has no meaning
+2025-05-27 13:03:30,514 [ERROR] Traceback (most recent call last):
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/regression_nested_cv.py", line 162, in run_nested_cv_regression_evaluation_only
+    search.fit(X_train, y_train, groups=inner_cv_groups)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/model_selection/_search.py", line 952, in fit
+    with parallel:
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1347, in __enter__
+    self._initialize_backend()
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1359, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 533, in configure
+    n_jobs = self.effective_n_jobs(n_jobs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 548, in effective_n_jobs
+    raise ValueError('n_jobs == 0 in Parallel has no meaning')
+ValueError: n_jobs == 0 in Parallel has no meaning
+
+2025-05-27 13:03:30,514 [INFO] 
+-- Processing Outer Fold 2/5 --
+2025-05-27 13:03:30,517 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:03:30,518 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:03:30,518 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:03:30,522 [ERROR] Error during RandomizedSearchCV in fold 2: n_jobs == 0 in Parallel has no meaning
+2025-05-27 13:03:30,524 [ERROR] Traceback (most recent call last):
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/regression_nested_cv.py", line 162, in run_nested_cv_regression_evaluation_only
+    search.fit(X_train, y_train, groups=inner_cv_groups)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/model_selection/_search.py", line 952, in fit
+    with parallel:
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1347, in __enter__
+    self._initialize_backend()
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1359, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 533, in configure
+    n_jobs = self.effective_n_jobs(n_jobs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 548, in effective_n_jobs
+    raise ValueError('n_jobs == 0 in Parallel has no meaning')
+ValueError: n_jobs == 0 in Parallel has no meaning
+
+2025-05-27 13:03:30,524 [INFO] 
+-- Processing Outer Fold 3/5 --
+2025-05-27 13:03:30,526 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:03:30,527 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:03:30,527 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:03:30,529 [ERROR] Error during RandomizedSearchCV in fold 3: n_jobs == 0 in Parallel has no meaning
+2025-05-27 13:03:30,529 [ERROR] Traceback (most recent call last):
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/regression_nested_cv.py", line 162, in run_nested_cv_regression_evaluation_only
+    search.fit(X_train, y_train, groups=inner_cv_groups)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/model_selection/_search.py", line 952, in fit
+    with parallel:
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1347, in __enter__
+    self._initialize_backend()
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1359, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 533, in configure
+    n_jobs = self.effective_n_jobs(n_jobs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 548, in effective_n_jobs
+    raise ValueError('n_jobs == 0 in Parallel has no meaning')
+ValueError: n_jobs == 0 in Parallel has no meaning
+
+2025-05-27 13:03:30,529 [INFO] 
+-- Processing Outer Fold 4/5 --
+2025-05-27 13:03:30,532 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 13:03:30,532 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:03:30,532 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:03:30,535 [ERROR] Error during RandomizedSearchCV in fold 4: n_jobs == 0 in Parallel has no meaning
+2025-05-27 13:03:30,535 [ERROR] Traceback (most recent call last):
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/regression_nested_cv.py", line 162, in run_nested_cv_regression_evaluation_only
+    search.fit(X_train, y_train, groups=inner_cv_groups)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/model_selection/_search.py", line 952, in fit
+    with parallel:
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1347, in __enter__
+    self._initialize_backend()
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1359, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 533, in configure
+    n_jobs = self.effective_n_jobs(n_jobs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 548, in effective_n_jobs
+    raise ValueError('n_jobs == 0 in Parallel has no meaning')
+ValueError: n_jobs == 0 in Parallel has no meaning
+
+2025-05-27 13:03:30,535 [INFO] 
+-- Processing Outer Fold 5/5 --
+2025-05-27 13:03:30,538 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 13:03:30,538 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:03:30,538 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:03:30,541 [ERROR] Error during RandomizedSearchCV in fold 5: n_jobs == 0 in Parallel has no meaning
+2025-05-27 13:03:30,541 [ERROR] Traceback (most recent call last):
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/regression_nested_cv.py", line 162, in run_nested_cv_regression_evaluation_only
+    search.fit(X_train, y_train, groups=inner_cv_groups)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/model_selection/_search.py", line 952, in fit
+    with parallel:
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1347, in __enter__
+    self._initialize_backend()
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1359, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 533, in configure
+    n_jobs = self.effective_n_jobs(n_jobs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 548, in effective_n_jobs
+    raise ValueError('n_jobs == 0 in Parallel has no meaning')
+ValueError: n_jobs == 0 in Parallel has no meaning
+
+2025-05-27 13:03:30,541 [ERROR] Error: No metrics were collected for model rf.
+2025-05-27 13:03:30,541 [INFO] === Step 2: Hyperparameter Tuning ===
+2025-05-27 13:03:30,541 [INFO] Finding optimal hyperparameters using separate cross-validation...
+2025-05-27 13:03:30,543 [ERROR] CRITICAL ERROR for model rf: n_jobs == 0 in Parallel has no meaning
+2025-05-27 13:03:30,543 [ERROR] Traceback (most recent call last):
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/regression_nested_cv.py", line 717, in main
+    results, final_model = comprehensive_model_evaluation(
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/regression_nested_cv.py", line 532, in comprehensive_model_evaluation
+    best_params, best_cv_score = get_best_hyperparameters_separate_cv(
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/regression_nested_cv.py", line 353, in get_best_hyperparameters_separate_cv
+    search.fit(X, y, groups=query_ids)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/model_selection/_search.py", line 952, in fit
+    with parallel:
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1347, in __enter__
+    self._initialize_backend()
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1359, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 533, in configure
+    n_jobs = self.effective_n_jobs(n_jobs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 548, in effective_n_jobs
+    raise ValueError('n_jobs == 0 in Parallel has no meaning')
+ValueError: n_jobs == 0 in Parallel has no meaning
+
+2025-05-27 13:03:30,544 [INFO] 
+============================================================
+2025-05-27 13:03:30,544 [INFO] Processing model: LightGBM (lgbm)
+2025-05-27 13:03:30,544 [INFO] ============================================================
+2025-05-27 13:03:30,544 [INFO] === Step 1: Nested CV Performance Estimation ===
+2025-05-27 13:03:30,545 [INFO] 
+--- Running Nested CV Evaluation for: LightGBM (lgbm) ---
+2025-05-27 13:03:30,545 [INFO] Output directory: comprehensive_regression_results_20250527_130330/lgbm
+2025-05-27 13:03:30,545 [INFO] Hyperparameter tuning scoring metric: neg_mean_squared_error
+2025-05-27 13:03:30,545 [INFO] Using GroupKFold for outer CV with 5 folds based on query IDs.
+2025-05-27 13:03:30,548 [INFO] 
+-- Processing Outer Fold 1/5 --
+2025-05-27 13:03:30,550 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:03:30,550 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:03:30,550 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:03:30,556 [ERROR] Error during RandomizedSearchCV in fold 1: n_jobs == 0 in Parallel has no meaning
+2025-05-27 13:03:30,556 [ERROR] Traceback (most recent call last):
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/regression_nested_cv.py", line 162, in run_nested_cv_regression_evaluation_only
+    search.fit(X_train, y_train, groups=inner_cv_groups)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/model_selection/_search.py", line 952, in fit
+    with parallel:
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1347, in __enter__
+    self._initialize_backend()
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1359, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 533, in configure
+    n_jobs = self.effective_n_jobs(n_jobs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 548, in effective_n_jobs
+    raise ValueError('n_jobs == 0 in Parallel has no meaning')
+ValueError: n_jobs == 0 in Parallel has no meaning
+
+2025-05-27 13:03:30,556 [INFO] 
+-- Processing Outer Fold 2/5 --
+2025-05-27 13:03:30,559 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:03:30,559 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:03:30,559 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:03:30,565 [ERROR] Error during RandomizedSearchCV in fold 2: n_jobs == 0 in Parallel has no meaning
+2025-05-27 13:03:30,565 [ERROR] Traceback (most recent call last):
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/regression_nested_cv.py", line 162, in run_nested_cv_regression_evaluation_only
+    search.fit(X_train, y_train, groups=inner_cv_groups)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/model_selection/_search.py", line 952, in fit
+    with parallel:
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1347, in __enter__
+    self._initialize_backend()
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1359, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 533, in configure
+    n_jobs = self.effective_n_jobs(n_jobs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 548, in effective_n_jobs
+    raise ValueError('n_jobs == 0 in Parallel has no meaning')
+ValueError: n_jobs == 0 in Parallel has no meaning
+
+2025-05-27 13:03:30,565 [INFO] 
+-- Processing Outer Fold 3/5 --
+2025-05-27 13:03:30,568 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:03:30,568 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:03:30,568 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:03:30,574 [ERROR] Error during RandomizedSearchCV in fold 3: n_jobs == 0 in Parallel has no meaning
+2025-05-27 13:03:30,574 [ERROR] Traceback (most recent call last):
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/regression_nested_cv.py", line 162, in run_nested_cv_regression_evaluation_only
+    search.fit(X_train, y_train, groups=inner_cv_groups)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/model_selection/_search.py", line 952, in fit
+    with parallel:
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1347, in __enter__
+    self._initialize_backend()
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1359, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 533, in configure
+    n_jobs = self.effective_n_jobs(n_jobs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 548, in effective_n_jobs
+    raise ValueError('n_jobs == 0 in Parallel has no meaning')
+ValueError: n_jobs == 0 in Parallel has no meaning
+
+2025-05-27 13:03:30,574 [INFO] 
+-- Processing Outer Fold 4/5 --
+2025-05-27 13:03:30,577 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 13:03:30,577 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:03:30,577 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:03:30,583 [ERROR] Error during RandomizedSearchCV in fold 4: n_jobs == 0 in Parallel has no meaning
+2025-05-27 13:03:30,583 [ERROR] Traceback (most recent call last):
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/regression_nested_cv.py", line 162, in run_nested_cv_regression_evaluation_only
+    search.fit(X_train, y_train, groups=inner_cv_groups)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/model_selection/_search.py", line 952, in fit
+    with parallel:
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1347, in __enter__
+    self._initialize_backend()
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1359, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 533, in configure
+    n_jobs = self.effective_n_jobs(n_jobs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 548, in effective_n_jobs
+    raise ValueError('n_jobs == 0 in Parallel has no meaning')
+ValueError: n_jobs == 0 in Parallel has no meaning
+
+2025-05-27 13:03:30,583 [INFO] 
+-- Processing Outer Fold 5/5 --
+2025-05-27 13:03:30,586 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 13:03:30,586 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:03:30,586 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:03:30,590 [ERROR] Error during RandomizedSearchCV in fold 5: n_jobs == 0 in Parallel has no meaning
+2025-05-27 13:03:30,590 [ERROR] Traceback (most recent call last):
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/regression_nested_cv.py", line 162, in run_nested_cv_regression_evaluation_only
+    search.fit(X_train, y_train, groups=inner_cv_groups)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/model_selection/_search.py", line 952, in fit
+    with parallel:
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1347, in __enter__
+    self._initialize_backend()
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1359, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 533, in configure
+    n_jobs = self.effective_n_jobs(n_jobs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 548, in effective_n_jobs
+    raise ValueError('n_jobs == 0 in Parallel has no meaning')
+ValueError: n_jobs == 0 in Parallel has no meaning
+
+2025-05-27 13:03:30,590 [ERROR] Error: No metrics were collected for model lgbm.
+2025-05-27 13:03:30,590 [INFO] === Step 2: Hyperparameter Tuning ===
+2025-05-27 13:03:30,590 [INFO] Finding optimal hyperparameters using separate cross-validation...
+2025-05-27 13:03:30,594 [ERROR] CRITICAL ERROR for model lgbm: n_jobs == 0 in Parallel has no meaning
+2025-05-27 13:03:30,594 [ERROR] Traceback (most recent call last):
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/regression_nested_cv.py", line 717, in main
+    results, final_model = comprehensive_model_evaluation(
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/regression_nested_cv.py", line 532, in comprehensive_model_evaluation
+    best_params, best_cv_score = get_best_hyperparameters_separate_cv(
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/regression_nested_cv.py", line 353, in get_best_hyperparameters_separate_cv
+    search.fit(X, y, groups=query_ids)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/model_selection/_search.py", line 952, in fit
+    with parallel:
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1347, in __enter__
+    self._initialize_backend()
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1359, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 533, in configure
+    n_jobs = self.effective_n_jobs(n_jobs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 548, in effective_n_jobs
+    raise ValueError('n_jobs == 0 in Parallel has no meaning')
+ValueError: n_jobs == 0 in Parallel has no meaning
+
+2025-05-27 13:03:30,594 [INFO] 
+============================================================
+2025-05-27 13:03:30,594 [INFO] Processing model: XGBoost (xgb)
+2025-05-27 13:03:30,594 [INFO] ============================================================
+2025-05-27 13:03:30,594 [INFO] === Step 1: Nested CV Performance Estimation ===
+2025-05-27 13:03:30,596 [INFO] 
+--- Running Nested CV Evaluation for: XGBoost (xgb) ---
+2025-05-27 13:03:30,596 [INFO] Output directory: comprehensive_regression_results_20250527_130330/xgb
+2025-05-27 13:03:30,596 [INFO] Hyperparameter tuning scoring metric: neg_mean_squared_error
+2025-05-27 13:03:30,596 [INFO] Using GroupKFold for outer CV with 5 folds based on query IDs.
+2025-05-27 13:03:30,598 [INFO] 
+-- Processing Outer Fold 1/5 --
+2025-05-27 13:03:30,601 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:03:30,601 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:03:30,601 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:03:30,609 [ERROR] Error during RandomizedSearchCV in fold 1: n_jobs == 0 in Parallel has no meaning
+2025-05-27 13:03:30,610 [ERROR] Traceback (most recent call last):
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/regression_nested_cv.py", line 162, in run_nested_cv_regression_evaluation_only
+    search.fit(X_train, y_train, groups=inner_cv_groups)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/model_selection/_search.py", line 952, in fit
+    with parallel:
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1347, in __enter__
+    self._initialize_backend()
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1359, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 533, in configure
+    n_jobs = self.effective_n_jobs(n_jobs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 548, in effective_n_jobs
+    raise ValueError('n_jobs == 0 in Parallel has no meaning')
+ValueError: n_jobs == 0 in Parallel has no meaning
+
+2025-05-27 13:03:30,610 [INFO] 
+-- Processing Outer Fold 2/5 --
+2025-05-27 13:03:30,612 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:03:30,612 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:03:30,612 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:03:30,616 [ERROR] Error during RandomizedSearchCV in fold 2: n_jobs == 0 in Parallel has no meaning
+2025-05-27 13:03:30,616 [ERROR] Traceback (most recent call last):
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/regression_nested_cv.py", line 162, in run_nested_cv_regression_evaluation_only
+    search.fit(X_train, y_train, groups=inner_cv_groups)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/model_selection/_search.py", line 952, in fit
+    with parallel:
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1347, in __enter__
+    self._initialize_backend()
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1359, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 533, in configure
+    n_jobs = self.effective_n_jobs(n_jobs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 548, in effective_n_jobs
+    raise ValueError('n_jobs == 0 in Parallel has no meaning')
+ValueError: n_jobs == 0 in Parallel has no meaning
+
+2025-05-27 13:03:30,617 [INFO] 
+-- Processing Outer Fold 3/5 --
+2025-05-27 13:03:30,619 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:03:30,619 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:03:30,620 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:03:30,625 [ERROR] Error during RandomizedSearchCV in fold 3: n_jobs == 0 in Parallel has no meaning
+2025-05-27 13:03:30,625 [ERROR] Traceback (most recent call last):
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/regression_nested_cv.py", line 162, in run_nested_cv_regression_evaluation_only
+    search.fit(X_train, y_train, groups=inner_cv_groups)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/model_selection/_search.py", line 952, in fit
+    with parallel:
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1347, in __enter__
+    self._initialize_backend()
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1359, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 533, in configure
+    n_jobs = self.effective_n_jobs(n_jobs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 548, in effective_n_jobs
+    raise ValueError('n_jobs == 0 in Parallel has no meaning')
+ValueError: n_jobs == 0 in Parallel has no meaning
+
+2025-05-27 13:03:30,626 [INFO] 
+-- Processing Outer Fold 4/5 --
+2025-05-27 13:03:30,628 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 13:03:30,628 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:03:30,628 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:03:30,634 [ERROR] Error during RandomizedSearchCV in fold 4: n_jobs == 0 in Parallel has no meaning
+2025-05-27 13:03:30,634 [ERROR] Traceback (most recent call last):
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/regression_nested_cv.py", line 162, in run_nested_cv_regression_evaluation_only
+    search.fit(X_train, y_train, groups=inner_cv_groups)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/model_selection/_search.py", line 952, in fit
+    with parallel:
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1347, in __enter__
+    self._initialize_backend()
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1359, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 533, in configure
+    n_jobs = self.effective_n_jobs(n_jobs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 548, in effective_n_jobs
+    raise ValueError('n_jobs == 0 in Parallel has no meaning')
+ValueError: n_jobs == 0 in Parallel has no meaning
+
+2025-05-27 13:03:30,634 [INFO] 
+-- Processing Outer Fold 5/5 --
+2025-05-27 13:03:30,637 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 13:03:30,638 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:03:30,638 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:03:30,643 [ERROR] Error during RandomizedSearchCV in fold 5: n_jobs == 0 in Parallel has no meaning
+2025-05-27 13:03:30,644 [ERROR] Traceback (most recent call last):
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/regression_nested_cv.py", line 162, in run_nested_cv_regression_evaluation_only
+    search.fit(X_train, y_train, groups=inner_cv_groups)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/model_selection/_search.py", line 952, in fit
+    with parallel:
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1347, in __enter__
+    self._initialize_backend()
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1359, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 533, in configure
+    n_jobs = self.effective_n_jobs(n_jobs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 548, in effective_n_jobs
+    raise ValueError('n_jobs == 0 in Parallel has no meaning')
+ValueError: n_jobs == 0 in Parallel has no meaning
+
+2025-05-27 13:03:30,644 [ERROR] Error: No metrics were collected for model xgb.
+2025-05-27 13:03:30,644 [INFO] === Step 2: Hyperparameter Tuning ===
+2025-05-27 13:03:30,644 [INFO] Finding optimal hyperparameters using separate cross-validation...
+2025-05-27 13:03:30,648 [ERROR] CRITICAL ERROR for model xgb: n_jobs == 0 in Parallel has no meaning
+2025-05-27 13:03:30,648 [ERROR] Traceback (most recent call last):
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/regression_nested_cv.py", line 717, in main
+    results, final_model = comprehensive_model_evaluation(
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/regression_nested_cv.py", line 532, in comprehensive_model_evaluation
+    best_params, best_cv_score = get_best_hyperparameters_separate_cv(
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/regression_nested_cv.py", line 353, in get_best_hyperparameters_separate_cv
+    search.fit(X, y, groups=query_ids)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/base.py", line 1389, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/model_selection/_search.py", line 952, in fit
+    with parallel:
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1347, in __enter__
+    self._initialize_backend()
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/parallel.py", line 1359, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 533, in configure
+    n_jobs = self.effective_n_jobs(n_jobs)
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/joblib/_parallel_backends.py", line 548, in effective_n_jobs
+    raise ValueError('n_jobs == 0 in Parallel has no meaning')
+ValueError: n_jobs == 0 in Parallel has no meaning
+
+2025-05-27 13:03:30,649 [INFO] 
+============================================================
+2025-05-27 13:03:30,649 [INFO] Processing model: Linear Regression (lr)
+2025-05-27 13:03:30,649 [INFO] ============================================================
+2025-05-27 13:03:30,649 [INFO] === Step 1: Nested CV Performance Estimation ===
+2025-05-27 13:03:30,650 [INFO] 
+--- Running Nested CV Evaluation for: Linear Regression (lr) ---
+2025-05-27 13:03:30,650 [INFO] Output directory: comprehensive_regression_results_20250527_130330/lr
+2025-05-27 13:03:30,650 [INFO] Hyperparameter tuning scoring metric: neg_mean_squared_error
+2025-05-27 13:03:30,650 [INFO] Using GroupKFold for outer CV with 5 folds based on query IDs.
+2025-05-27 13:03:30,652 [INFO] 
+-- Processing Outer Fold 1/5 --
+2025-05-27 13:03:30,654 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:03:30,654 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:03:30,654 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:03:30,876 [INFO] Best Params found: {'reg__fit_intercept': True}
+2025-05-27 13:03:30,876 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0292
+2025-05-27 13:03:30,906 [INFO] Hyperparameter Tuning Duration: 0.25 seconds
+2025-05-27 13:03:30,906 [INFO] Predicting on outer test set...
+2025-05-27 13:03:30,909 [INFO] Calculating performance metrics...
+2025-05-27 13:03:30,944 [INFO] Generating diagnostic plots...
+2025-05-27 13:03:32,105 [INFO] Prediction & Evaluation Duration: 1.20 seconds
+2025-05-27 13:03:32,105 [INFO] -- Outer Fold 1 finished. Duration: 1.45 seconds --
+2025-05-27 13:03:32,105 [INFO] 
+-- Processing Outer Fold 2/5 --
+2025-05-27 13:03:32,107 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:03:32,108 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:03:32,108 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:03:32,205 [INFO] Best Params found: {'reg__fit_intercept': True}
+2025-05-27 13:03:32,205 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0393
+2025-05-27 13:03:32,222 [INFO] Hyperparameter Tuning Duration: 0.11 seconds
+2025-05-27 13:03:32,222 [INFO] Predicting on outer test set...
+2025-05-27 13:03:32,225 [INFO] Calculating performance metrics...
+2025-05-27 13:03:32,296 [INFO] Generating diagnostic plots...
+2025-05-27 13:03:32,994 [INFO] Prediction & Evaluation Duration: 0.77 seconds
+2025-05-27 13:03:32,994 [INFO] -- Outer Fold 2 finished. Duration: 0.89 seconds --
+2025-05-27 13:03:32,994 [INFO] 
+-- Processing Outer Fold 3/5 --
+2025-05-27 13:03:32,997 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:03:32,997 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:03:32,997 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:03:33,117 [INFO] Best Params found: {'reg__fit_intercept': True}
+2025-05-27 13:03:33,117 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0437
+2025-05-27 13:03:33,148 [INFO] Hyperparameter Tuning Duration: 0.15 seconds
+2025-05-27 13:03:33,148 [INFO] Predicting on outer test set...
+2025-05-27 13:03:33,151 [INFO] Calculating performance metrics...
+2025-05-27 13:03:33,166 [INFO] Generating diagnostic plots...
+2025-05-27 13:03:33,919 [INFO] Prediction & Evaluation Duration: 0.77 seconds
+2025-05-27 13:03:33,919 [INFO] -- Outer Fold 3 finished. Duration: 0.93 seconds --
+2025-05-27 13:03:33,919 [INFO] 
+-- Processing Outer Fold 4/5 --
+2025-05-27 13:03:33,934 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 13:03:33,934 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:03:33,934 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:03:34,041 [INFO] Best Params found: {'reg__fit_intercept': True}
+2025-05-27 13:03:34,041 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0309
+2025-05-27 13:03:34,046 [INFO] Hyperparameter Tuning Duration: 0.11 seconds
+2025-05-27 13:03:34,046 [INFO] Predicting on outer test set...
+2025-05-27 13:03:34,048 [INFO] Calculating performance metrics...
+2025-05-27 13:03:34,119 [INFO] Generating diagnostic plots...
+2025-05-27 13:03:34,861 [INFO] Prediction & Evaluation Duration: 0.81 seconds
+2025-05-27 13:03:34,861 [INFO] -- Outer Fold 4 finished. Duration: 0.94 seconds --
+2025-05-27 13:03:34,861 [INFO] 
+-- Processing Outer Fold 5/5 --
+2025-05-27 13:03:34,863 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 13:03:34,863 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:03:34,864 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:03:34,958 [INFO] Best Params found: {'reg__fit_intercept': True}
+2025-05-27 13:03:34,958 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0442
+2025-05-27 13:03:34,990 [INFO] Hyperparameter Tuning Duration: 0.13 seconds
+2025-05-27 13:03:34,990 [INFO] Predicting on outer test set...
+2025-05-27 13:03:34,991 [INFO] Calculating performance metrics...
+2025-05-27 13:03:35,005 [INFO] Generating diagnostic plots...
+2025-05-27 13:03:35,632 [INFO] Prediction & Evaluation Duration: 0.64 seconds
+2025-05-27 13:03:35,632 [INFO] -- Outer Fold 5 finished. Duration: 0.77 seconds --
+2025-05-27 13:03:35,632 [INFO] 
+--- Aggregating results for: Linear Regression (lr) ---
+2025-05-27 13:03:35,632 [INFO] Average Metrics across folds:
+2025-05-27 13:03:35,632 [INFO] {
+    "r2_mean": 0.5995812293879667,
+    "r2_std": 0.2314499437804961,
+    "mse_mean": 0.031910200827690784,
+    "mse_std": 0.011627218478216706,
+    "rmse_mean": 0.1756230458315179,
+    "rmse_std": 0.03266108694687528,
+    "mae_mean": 0.1282858144814113,
+    "mae_std": 0.024075509128355797,
+    "best_inner_cv_score_mean": -0.03745703878701896,
+    "best_inner_cv_score_std": 0.006305465901729094,
+    "scoring_metric_used": "neg_mean_squared_error"
+}
+2025-05-27 13:03:35,738 [INFO] Combined predictions saved to: comprehensive_regression_results_20250527_130330/lr/all_folds_predictions.csv
+2025-05-27 13:03:35,738 [INFO] Average time per outer fold: 1.00 seconds
+2025-05-27 13:03:35,738 [INFO] --- Nested CV completed for: Linear Regression (lr) ---
+2025-05-27 13:03:35,739 [INFO] === Step 2: Hyperparameter Tuning ===
+2025-05-27 13:03:35,739 [INFO] Finding optimal hyperparameters using separate cross-validation...
+2025-05-27 13:03:35,852 [INFO] Best parameters: {'reg__fit_intercept': True}
+2025-05-27 13:03:35,852 [INFO] Best CV score: -0.0489
+2025-05-27 13:03:35,852 [INFO] === Step 3: Final Model Training ===
+2025-05-27 13:03:35,852 [INFO] 
+--- Training Final Regression Model: Linear Regression ---
+2025-05-27 13:03:35,852 [INFO] Using parameters: {'reg__fit_intercept': True}
+2025-05-27 13:03:35,852 [INFO] Training final model on entire dataset...
+2025-05-27 13:03:35,868 [INFO] Final model training completed in 0.02 seconds
+2025-05-27 13:03:35,868 [INFO] Evaluating final model on training data...
+2025-05-27 13:03:35,875 [INFO] Final model R²: 0.8595, MSE: 0.0130
+2025-05-27 13:03:35,923 [INFO] Generating final model diagnostic plots...
+2025-05-27 13:03:36,693 [INFO] Final model diagnostic plots saved.
+2025-05-27 13:03:36,693 [INFO] Calculating SHAP values for final model...
+2025-05-27 13:03:36,693 [INFO] Sampling 100 instances from X for SHAP background data.
+2025-05-27 13:03:38,931 [INFO] SHAP analysis completed successfully
+2025-05-27 13:03:38,932 [INFO] SHAP calculation completed in 2.24 seconds
+2025-05-27 13:03:38,932 [INFO] === Step 4: Test Set Evaluation ===
+2025-05-27 13:03:38,968 [INFO] === Step 5: Performance Comparison ===
+2025-05-27 13:03:38,968 [INFO] R2 Comparison:
+2025-05-27 13:03:38,968 [INFO]   Nested CV: 0.5996 ± 0.2314 (95% CI: [0.1459, 1.0532])
+2025-05-27 13:03:38,968 [INFO]   Test Set:  0.6836
+2025-05-27 13:03:38,968 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 13:03:38,968 [INFO] MSE Comparison:
+2025-05-27 13:03:38,968 [INFO]   Nested CV: 0.0319 ± 0.0116 (95% CI: [0.0091, 0.0547])
+2025-05-27 13:03:38,968 [INFO]   Test Set:  0.0441
+2025-05-27 13:03:38,968 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 13:03:38,968 [INFO] MAE Comparison:
+2025-05-27 13:03:38,968 [INFO]   Nested CV: 0.1283 ± 0.0241 (95% CI: [0.0811, 0.1755])
+2025-05-27 13:03:38,968 [INFO]   Test Set:  0.1377
+2025-05-27 13:03:38,968 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 13:03:38,973 [INFO] Total time for model 'lr': 8.32 seconds
+2025-05-27 13:03:38,973 [INFO] 
+============================================================
+2025-05-27 13:03:38,973 [INFO] Processing model: Ridge Regression (ridge)
+2025-05-27 13:03:38,973 [INFO] ============================================================
+2025-05-27 13:03:38,973 [INFO] === Step 1: Nested CV Performance Estimation ===
+2025-05-27 13:03:38,974 [INFO] 
+--- Running Nested CV Evaluation for: Ridge Regression (ridge) ---
+2025-05-27 13:03:38,974 [INFO] Output directory: comprehensive_regression_results_20250527_130330/ridge
+2025-05-27 13:03:38,974 [INFO] Hyperparameter tuning scoring metric: neg_mean_squared_error
+2025-05-27 13:03:38,974 [INFO] Using GroupKFold for outer CV with 5 folds based on query IDs.
+2025-05-27 13:03:38,976 [INFO] 
+-- Processing Outer Fold 1/5 --
+2025-05-27 13:03:38,979 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:03:38,979 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:03:38,979 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:03:41,055 [INFO] Best Params found: {'reg__alpha': 676.5074324464838, 'reg__fit_intercept': True, 'reg__solver': 'auto'}
+2025-05-27 13:03:41,091 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0182
+2025-05-27 13:03:41,128 [INFO] Hyperparameter Tuning Duration: 2.15 seconds
+2025-05-27 13:03:41,128 [INFO] Predicting on outer test set...
+2025-05-27 13:03:41,135 [INFO] Calculating performance metrics...
+2025-05-27 13:03:41,225 [INFO] Generating diagnostic plots...
+2025-05-27 13:03:42,061 [INFO] Prediction & Evaluation Duration: 0.93 seconds
+2025-05-27 13:03:42,061 [INFO] -- Outer Fold 1 finished. Duration: 3.08 seconds --
+2025-05-27 13:03:42,063 [INFO] 
+-- Processing Outer Fold 2/5 --
+2025-05-27 13:03:42,081 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:03:42,082 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:03:42,083 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:03:43,618 [INFO] Best Params found: {'reg__alpha': 676.5074324464838, 'reg__fit_intercept': True, 'reg__solver': 'auto'}
+2025-05-27 13:03:43,621 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0214
+2025-05-27 13:03:43,670 [INFO] Hyperparameter Tuning Duration: 1.59 seconds
+2025-05-27 13:03:43,670 [INFO] Predicting on outer test set...
+2025-05-27 13:03:43,673 [INFO] Calculating performance metrics...
+2025-05-27 13:03:43,748 [INFO] Generating diagnostic plots...
+2025-05-27 13:03:44,434 [INFO] Prediction & Evaluation Duration: 0.76 seconds
+2025-05-27 13:03:44,435 [INFO] -- Outer Fold 2 finished. Duration: 2.37 seconds --
+2025-05-27 13:03:44,435 [INFO] 
+-- Processing Outer Fold 3/5 --
+2025-05-27 13:03:44,437 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:03:44,437 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:03:44,437 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:03:45,924 [INFO] Best Params found: {'reg__alpha': 676.5074324464838, 'reg__fit_intercept': True, 'reg__solver': 'auto'}
+2025-05-27 13:03:45,924 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0221
+2025-05-27 13:03:45,952 [INFO] Hyperparameter Tuning Duration: 1.52 seconds
+2025-05-27 13:03:45,952 [INFO] Predicting on outer test set...
+2025-05-27 13:03:45,955 [INFO] Calculating performance metrics...
+2025-05-27 13:03:45,990 [INFO] Generating diagnostic plots...
+2025-05-27 13:03:47,278 [INFO] Prediction & Evaluation Duration: 1.33 seconds
+2025-05-27 13:03:47,278 [INFO] -- Outer Fold 3 finished. Duration: 2.84 seconds --
+2025-05-27 13:03:47,279 [INFO] 
+-- Processing Outer Fold 4/5 --
+2025-05-27 13:03:47,291 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 13:03:47,291 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:03:47,291 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:03:48,869 [INFO] Best Params found: {'reg__alpha': 47.6591180868084, 'reg__fit_intercept': True, 'reg__solver': 'svd'}
+2025-05-27 13:03:48,869 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0206
+2025-05-27 13:03:48,904 [INFO] Hyperparameter Tuning Duration: 1.61 seconds
+2025-05-27 13:03:48,904 [INFO] Predicting on outer test set...
+2025-05-27 13:03:48,907 [INFO] Calculating performance metrics...
+2025-05-27 13:03:48,983 [INFO] Generating diagnostic plots...
+2025-05-27 13:03:49,734 [INFO] Prediction & Evaluation Duration: 0.83 seconds
+2025-05-27 13:03:49,734 [INFO] -- Outer Fold 4 finished. Duration: 2.46 seconds --
+2025-05-27 13:03:49,734 [INFO] 
+-- Processing Outer Fold 5/5 --
+2025-05-27 13:03:49,737 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 13:03:49,737 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:03:49,737 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:03:51,265 [INFO] Best Params found: {'reg__alpha': 676.5074324464838, 'reg__fit_intercept': True, 'reg__solver': 'auto'}
+2025-05-27 13:03:51,265 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0290
+2025-05-27 13:03:51,289 [INFO] Hyperparameter Tuning Duration: 1.55 seconds
+2025-05-27 13:03:51,289 [INFO] Predicting on outer test set...
+2025-05-27 13:03:51,292 [INFO] Calculating performance metrics...
+2025-05-27 13:03:51,328 [INFO] Generating diagnostic plots...
+2025-05-27 13:03:52,074 [INFO] Prediction & Evaluation Duration: 0.78 seconds
+2025-05-27 13:03:52,074 [INFO] -- Outer Fold 5 finished. Duration: 2.34 seconds --
+2025-05-27 13:03:52,074 [INFO] 
+--- Aggregating results for: Ridge Regression (ridge) ---
+2025-05-27 13:03:52,075 [INFO] Average Metrics across folds:
+2025-05-27 13:03:52,075 [INFO] {
+    "r2_mean": 0.6909556934217054,
+    "r2_std": 0.19428921292338375,
+    "mse_mean": 0.024274735936688708,
+    "mse_std": 0.00955030052487722,
+    "rmse_mean": 0.1529039474604674,
+    "rmse_std": 0.029918535854806326,
+    "mae_mean": 0.10401503383470115,
+    "mae_std": 0.022085312051712103,
+    "best_inner_cv_score_mean": -0.0222608204093148,
+    "best_inner_cv_score_std": 0.0035956726848214078,
+    "scoring_metric_used": "neg_mean_squared_error"
+}
+2025-05-27 13:03:53,913 [INFO] Combined predictions saved to: comprehensive_regression_results_20250527_130330/ridge/all_folds_predictions.csv
+2025-05-27 13:03:53,913 [INFO] Average time per outer fold: 2.62 seconds
+2025-05-27 13:03:53,913 [INFO] --- Nested CV completed for: Ridge Regression (ridge) ---
+2025-05-27 13:03:53,914 [INFO] === Step 2: Hyperparameter Tuning ===
+2025-05-27 13:03:53,914 [INFO] Finding optimal hyperparameters using separate cross-validation...
+2025-05-27 13:03:55,603 [INFO] Best parameters: {'reg__alpha': 676.5074324464838, 'reg__fit_intercept': True, 'reg__solver': 'auto'}
+2025-05-27 13:03:55,603 [INFO] Best CV score: -0.0247
+2025-05-27 13:03:55,603 [INFO] === Step 3: Final Model Training ===
+2025-05-27 13:03:55,604 [INFO] 
+--- Training Final Regression Model: Ridge Regression ---
+2025-05-27 13:03:55,604 [INFO] Using parameters: {'reg__alpha': 676.5074324464838, 'reg__fit_intercept': True, 'reg__solver': 'auto'}
+2025-05-27 13:03:55,604 [INFO] Training final model on entire dataset...
+2025-05-27 13:03:55,609 [INFO] Final model training completed in 0.01 seconds
+2025-05-27 13:03:55,609 [INFO] Evaluating final model on training data...
+2025-05-27 13:03:55,629 [INFO] Final model R²: 0.8330, MSE: 0.0154
+2025-05-27 13:03:55,677 [INFO] Generating final model diagnostic plots...
+2025-05-27 13:03:56,897 [INFO] Final model diagnostic plots saved.
+2025-05-27 13:03:56,898 [INFO] Calculating SHAP values for final model...
+2025-05-27 13:03:56,898 [INFO] Sampling 100 instances from X for SHAP background data.
+2025-05-27 13:03:59,013 [INFO] SHAP analysis completed successfully
+2025-05-27 13:03:59,013 [INFO] SHAP calculation completed in 2.12 seconds
+2025-05-27 13:03:59,013 [INFO] === Step 4: Test Set Evaluation ===
+2025-05-27 13:03:59,059 [INFO] === Step 5: Performance Comparison ===
+2025-05-27 13:03:59,060 [INFO] R2 Comparison:
+2025-05-27 13:03:59,060 [INFO]   Nested CV: 0.6910 ± 0.1943 (95% CI: [0.3101, 1.0718])
+2025-05-27 13:03:59,060 [INFO]   Test Set:  0.7559
+2025-05-27 13:03:59,060 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 13:03:59,060 [INFO] MSE Comparison:
+2025-05-27 13:03:59,060 [INFO]   Nested CV: 0.0243 ± 0.0096 (95% CI: [0.0056, 0.0430])
+2025-05-27 13:03:59,060 [INFO]   Test Set:  0.0340
+2025-05-27 13:03:59,060 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 13:03:59,060 [INFO] MAE Comparison:
+2025-05-27 13:03:59,060 [INFO]   Nested CV: 0.1040 ± 0.0221 (95% CI: [0.0607, 0.1473])
+2025-05-27 13:03:59,060 [INFO]   Test Set:  0.1216
+2025-05-27 13:03:59,060 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 13:03:59,084 [INFO] Total time for model 'ridge': 20.11 seconds
+2025-05-27 13:03:59,084 [INFO] 
+============================================================
+2025-05-27 13:03:59,084 [INFO] Processing model: Lasso Regression (lasso)
+2025-05-27 13:03:59,084 [INFO] ============================================================
+2025-05-27 13:03:59,084 [INFO] === Step 1: Nested CV Performance Estimation ===
+2025-05-27 13:03:59,086 [INFO] 
+--- Running Nested CV Evaluation for: Lasso Regression (lasso) ---
+2025-05-27 13:03:59,086 [INFO] Output directory: comprehensive_regression_results_20250527_130330/lasso
+2025-05-27 13:03:59,086 [INFO] Hyperparameter tuning scoring metric: neg_mean_squared_error
+2025-05-27 13:03:59,086 [INFO] Using GroupKFold for outer CV with 5 folds based on query IDs.
+2025-05-27 13:03:59,089 [INFO] 
+-- Processing Outer Fold 1/5 --
+2025-05-27 13:03:59,094 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:03:59,094 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:03:59,095 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-27 13:04:01,259 [INFO] Best Params found: {'reg__alpha': 0.009962513222055111, 'reg__fit_intercept': True, 'reg__max_iter': 3000}
+2025-05-27 13:04:01,260 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0176
+2025-05-27 13:04:01,289 [INFO] Hyperparameter Tuning Duration: 2.19 seconds
+2025-05-27 13:04:01,289 [INFO] Predicting on outer test set...
+2025-05-27 13:04:01,292 [INFO] Calculating performance metrics...
+2025-05-27 13:04:01,351 [INFO] Generating diagnostic plots...
+2025-05-27 13:04:02,094 [INFO] Prediction & Evaluation Duration: 0.80 seconds
+2025-05-27 13:04:02,094 [INFO] -- Outer Fold 1 finished. Duration: 3.00 seconds --
+2025-05-27 13:04:02,094 [INFO] 
+-- Processing Outer Fold 2/5 --
+2025-05-27 13:04:02,098 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:04:02,098 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:04:02,098 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.405e-02, tolerance: 1.462e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.074e-02, tolerance: 1.736e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-27 13:04:03,922 [INFO] Best Params found: {'reg__alpha': 0.03334792728637585, 'reg__fit_intercept': True, 'reg__max_iter': 3000}
+2025-05-27 13:04:03,922 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0201
+2025-05-27 13:04:03,961 [INFO] Hyperparameter Tuning Duration: 1.86 seconds
+2025-05-27 13:04:03,961 [INFO] Predicting on outer test set...
+2025-05-27 13:04:03,964 [INFO] Calculating performance metrics...
+2025-05-27 13:04:04,021 [INFO] Generating diagnostic plots...
+2025-05-27 13:04:04,787 [INFO] Prediction & Evaluation Duration: 0.83 seconds
+2025-05-27 13:04:04,787 [INFO] -- Outer Fold 2 finished. Duration: 2.69 seconds --
+2025-05-27 13:04:04,788 [INFO] 
+-- Processing Outer Fold 3/5 --
+2025-05-27 13:04:04,791 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:04:04,791 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:04:04,791 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.054e-02, tolerance: 1.786e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.401e-02, tolerance: 1.869e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-27 13:04:06,899 [INFO] Best Params found: {'reg__alpha': 0.008111941985431923, 'reg__fit_intercept': True, 'reg__max_iter': 1000}
+2025-05-27 13:04:06,899 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0236
+2025-05-27 13:04:06,919 [INFO] Hyperparameter Tuning Duration: 2.13 seconds
+2025-05-27 13:04:06,919 [INFO] Predicting on outer test set...
+2025-05-27 13:04:06,922 [INFO] Calculating performance metrics...
+2025-05-27 13:04:07,024 [INFO] Generating diagnostic plots...
+2025-05-27 13:04:08,083 [INFO] Prediction & Evaluation Duration: 1.16 seconds
+2025-05-27 13:04:08,083 [INFO] -- Outer Fold 3 finished. Duration: 3.30 seconds --
+2025-05-27 13:04:08,084 [INFO] 
+-- Processing Outer Fold 4/5 --
+2025-05-27 13:04:08,086 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 13:04:08,087 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:04:08,087 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 5.293e-02, tolerance: 3.264e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 4.617e-02, tolerance: 3.264e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.731e-02, tolerance: 3.264e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 4.826e-02, tolerance: 3.264e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.458e-02, tolerance: 2.021e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-27 13:04:10,114 [INFO] Best Params found: {'reg__alpha': 0.0010656401760606447, 'reg__fit_intercept': True, 'reg__max_iter': 1000}
+2025-05-27 13:04:10,114 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0216
+2025-05-27 13:04:10,130 [INFO] Hyperparameter Tuning Duration: 2.04 seconds
+2025-05-27 13:04:10,130 [INFO] Predicting on outer test set...
+2025-05-27 13:04:10,132 [INFO] Calculating performance metrics...
+2025-05-27 13:04:10,164 [INFO] Generating diagnostic plots...
+2025-05-27 13:04:10,890 [INFO] Prediction & Evaluation Duration: 0.76 seconds
+2025-05-27 13:04:10,890 [INFO] -- Outer Fold 4 finished. Duration: 2.81 seconds --
+2025-05-27 13:04:10,891 [INFO] 
+-- Processing Outer Fold 5/5 --
+2025-05-27 13:04:10,903 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 13:04:10,904 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:04:10,904 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.469e-02, tolerance: 1.557e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-27 13:04:12,923 [INFO] Best Params found: {'reg__alpha': 0.03334792728637585, 'reg__fit_intercept': True, 'reg__max_iter': 3000}
+2025-05-27 13:04:12,923 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0270
+2025-05-27 13:04:12,929 [INFO] Hyperparameter Tuning Duration: 2.03 seconds
+2025-05-27 13:04:12,929 [INFO] Predicting on outer test set...
+2025-05-27 13:04:12,931 [INFO] Calculating performance metrics...
+2025-05-27 13:04:12,982 [INFO] Generating diagnostic plots...
+2025-05-27 13:04:13,750 [INFO] Prediction & Evaluation Duration: 0.82 seconds
+2025-05-27 13:04:13,750 [INFO] -- Outer Fold 5 finished. Duration: 2.86 seconds --
+2025-05-27 13:04:13,750 [INFO] 
+--- Aggregating results for: Lasso Regression (lasso) ---
+2025-05-27 13:04:13,750 [INFO] Average Metrics across folds:
+2025-05-27 13:04:13,750 [INFO] {
+    "r2_mean": 0.6954662641479435,
+    "r2_std": 0.17306725722209026,
+    "mse_mean": 0.024347057238720986,
+    "mse_std": 0.00872792409010595,
+    "rmse_mean": 0.15337780153654515,
+    "rmse_std": 0.028675899890624947,
+    "mae_mean": 0.10407284594357942,
+    "mae_std": 0.0196077540435555,
+    "best_inner_cv_score_mean": -0.021960864502046703,
+    "best_inner_cv_score_std": 0.0031745509985202304,
+    "scoring_metric_used": "neg_mean_squared_error"
+}
+2025-05-27 13:04:13,841 [INFO] Combined predictions saved to: comprehensive_regression_results_20250527_130330/lasso/all_folds_predictions.csv
+2025-05-27 13:04:13,841 [INFO] Average time per outer fold: 2.93 seconds
+2025-05-27 13:04:13,841 [INFO] --- Nested CV completed for: Lasso Regression (lasso) ---
+2025-05-27 13:04:13,842 [INFO] === Step 2: Hyperparameter Tuning ===
+2025-05-27 13:04:13,842 [INFO] Finding optimal hyperparameters using separate cross-validation...
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.728e-02, tolerance: 2.587e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.914e-02, tolerance: 2.587e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.275e-02, tolerance: 2.222e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-27 13:04:17,488 [INFO] Best parameters: {'reg__alpha': 0.009962513222055111, 'reg__fit_intercept': True, 'reg__max_iter': 3000}
+2025-05-27 13:04:17,488 [INFO] Best CV score: -0.0255
+2025-05-27 13:04:17,488 [INFO] === Step 3: Final Model Training ===
+2025-05-27 13:04:17,488 [INFO] 
+--- Training Final Regression Model: Lasso Regression ---
+2025-05-27 13:04:17,488 [INFO] Using parameters: {'reg__alpha': 0.009962513222055111, 'reg__fit_intercept': True, 'reg__max_iter': 3000}
+2025-05-27 13:04:17,488 [INFO] Training final model on entire dataset...
+2025-05-27 13:04:17,630 [INFO] Final model training completed in 0.14 seconds
+2025-05-27 13:04:17,630 [INFO] Evaluating final model on training data...
+2025-05-27 13:04:17,640 [INFO] Final model R²: 0.8170, MSE: 0.0169
+2025-05-27 13:04:17,678 [INFO] Generating final model diagnostic plots...
+2025-05-27 13:04:18,571 [INFO] Final model diagnostic plots saved.
+2025-05-27 13:04:18,571 [INFO] Calculating SHAP values for final model...
+2025-05-27 13:04:18,571 [INFO] Sampling 100 instances from X for SHAP background data.
+2025-05-27 13:04:20,707 [INFO] SHAP analysis completed successfully
+2025-05-27 13:04:20,707 [INFO] SHAP calculation completed in 2.14 seconds
+2025-05-27 13:04:20,707 [INFO] === Step 4: Test Set Evaluation ===
+2025-05-27 13:04:20,753 [INFO] === Step 5: Performance Comparison ===
+2025-05-27 13:04:20,753 [INFO] R2 Comparison:
+2025-05-27 13:04:20,753 [INFO]   Nested CV: 0.6955 ± 0.1731 (95% CI: [0.3563, 1.0347])
+2025-05-27 13:04:20,753 [INFO]   Test Set:  0.7835
+2025-05-27 13:04:20,753 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 13:04:20,753 [INFO] MSE Comparison:
+2025-05-27 13:04:20,753 [INFO]   Nested CV: 0.0243 ± 0.0087 (95% CI: [0.0072, 0.0415])
+2025-05-27 13:04:20,753 [INFO]   Test Set:  0.0301
+2025-05-27 13:04:20,753 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 13:04:20,753 [INFO] MAE Comparison:
+2025-05-27 13:04:20,753 [INFO]   Nested CV: 0.1041 ± 0.0196 (95% CI: [0.0656, 0.1425])
+2025-05-27 13:04:20,753 [INFO]   Test Set:  0.1112
+2025-05-27 13:04:20,753 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 13:04:20,779 [INFO] Total time for model 'lasso': 21.69 seconds
+2025-05-27 13:04:20,779 [INFO] 
+============================================================
+2025-05-27 13:04:20,779 [INFO] Processing model: Elastic Net (en)
+2025-05-27 13:04:20,779 [INFO] ============================================================
+2025-05-27 13:04:20,780 [INFO] === Step 1: Nested CV Performance Estimation ===
+2025-05-27 13:04:20,781 [INFO] 
+--- Running Nested CV Evaluation for: Elastic Net (en) ---
+2025-05-27 13:04:20,781 [INFO] Output directory: comprehensive_regression_results_20250527_130330/en
+2025-05-27 13:04:20,781 [INFO] Hyperparameter tuning scoring metric: neg_mean_squared_error
+2025-05-27 13:04:20,781 [INFO] Using GroupKFold for outer CV with 5 folds based on query IDs.
+2025-05-27 13:04:20,785 [INFO] 
+-- Processing Outer Fold 1/5 --
+2025-05-27 13:04:20,789 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:04:20,789 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:04:20,789 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 7.567e-01, tolerance: 3.424e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-27 13:04:24,253 [INFO] Best Params found: {'reg__alpha': 0.02933870049164395, 'reg__fit_intercept': True, 'reg__l1_ratio': 0.5, 'reg__max_iter': 1000}
+2025-05-27 13:04:24,254 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0175
+2025-05-27 13:04:24,302 [INFO] Hyperparameter Tuning Duration: 3.51 seconds
+2025-05-27 13:04:24,302 [INFO] Predicting on outer test set...
+2025-05-27 13:04:24,304 [INFO] Calculating performance metrics...
+2025-05-27 13:04:24,375 [INFO] Generating diagnostic plots...
+2025-05-27 13:04:25,433 [INFO] Prediction & Evaluation Duration: 1.13 seconds
+2025-05-27 13:04:25,433 [INFO] -- Outer Fold 1 finished. Duration: 4.65 seconds --
+2025-05-27 13:04:25,434 [INFO] 
+-- Processing Outer Fold 2/5 --
+2025-05-27 13:04:25,437 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:04:25,437 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:04:25,437 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 6.208e-02, tolerance: 2.122e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.859e-01, tolerance: 2.798e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 4.274e-01, tolerance: 2.122e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.455e+00, tolerance: 2.798e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-27 13:04:29,018 [INFO] Best Params found: {'reg__alpha': 0.030072423528674893, 'reg__fit_intercept': True, 'reg__l1_ratio': 0.7, 'reg__max_iter': 3000}
+2025-05-27 13:04:29,019 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0196
+2025-05-27 13:04:29,056 [INFO] Hyperparameter Tuning Duration: 3.62 seconds
+2025-05-27 13:04:29,056 [INFO] Predicting on outer test set...
+2025-05-27 13:04:29,059 [INFO] Calculating performance metrics...
+2025-05-27 13:04:29,094 [INFO] Generating diagnostic plots...
+2025-05-27 13:04:29,854 [INFO] Prediction & Evaluation Duration: 0.80 seconds
+2025-05-27 13:04:29,854 [INFO] -- Outer Fold 2 finished. Duration: 4.42 seconds --
+2025-05-27 13:04:29,854 [INFO] 
+-- Processing Outer Fold 3/5 --
+2025-05-27 13:04:29,857 [INFO] Train set size: (2898, 71), Test set size: (749, 71)
+2025-05-27 13:04:29,857 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:04:29,857 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.476e-01, tolerance: 2.852e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.300e-01, tolerance: 3.083e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.574e-01, tolerance: 3.059e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.297e+00, tolerance: 2.852e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.564e+00, tolerance: 3.083e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-27 13:04:33,595 [INFO] Best Params found: {'reg__alpha': 0.06578820119123178, 'reg__fit_intercept': True, 'reg__l1_ratio': 0.3, 'reg__max_iter': 3000}
+2025-05-27 13:04:33,595 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0226
+2025-05-27 13:04:33,633 [INFO] Hyperparameter Tuning Duration: 3.78 seconds
+2025-05-27 13:04:33,633 [INFO] Predicting on outer test set...
+2025-05-27 13:04:33,635 [INFO] Calculating performance metrics...
+2025-05-27 13:04:33,651 [INFO] Generating diagnostic plots...
+2025-05-27 13:04:34,363 [INFO] Prediction & Evaluation Duration: 0.73 seconds
+2025-05-27 13:04:34,363 [INFO] -- Outer Fold 3 finished. Duration: 4.51 seconds --
+2025-05-27 13:04:34,363 [INFO] 
+-- Processing Outer Fold 4/5 --
+2025-05-27 13:04:34,366 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 13:04:34,366 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:04:34,366 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.048e-01, tolerance: 3.629e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 4.067e-02, tolerance: 2.165e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.513e+00, tolerance: 3.629e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.055e-01, tolerance: 2.165e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 4.825e-01, tolerance: 3.264e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-27 13:04:37,436 [INFO] Best Params found: {'reg__alpha': 0.06578820119123178, 'reg__fit_intercept': True, 'reg__l1_ratio': 0.3, 'reg__max_iter': 3000}
+2025-05-27 13:04:37,436 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0211
+2025-05-27 13:04:37,475 [INFO] Hyperparameter Tuning Duration: 3.11 seconds
+2025-05-27 13:04:37,475 [INFO] Predicting on outer test set...
+2025-05-27 13:04:37,478 [INFO] Calculating performance metrics...
+2025-05-27 13:04:37,524 [INFO] Generating diagnostic plots...
+2025-05-27 13:04:38,317 [INFO] Prediction & Evaluation Duration: 0.84 seconds
+2025-05-27 13:04:38,317 [INFO] -- Outer Fold 4 finished. Duration: 3.95 seconds --
+2025-05-27 13:04:38,317 [INFO] 
+-- Processing Outer Fold 5/5 --
+2025-05-27 13:04:38,320 [INFO] Train set size: (2947, 71), Test set size: (700, 71)
+2025-05-27 13:04:38,320 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-27 13:04:38,321 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.232e-02, tolerance: 2.315e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 5.155e-02, tolerance: 2.966e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-27 13:04:41,606 [INFO] Best Params found: {'reg__alpha': 0.06578820119123178, 'reg__fit_intercept': True, 'reg__l1_ratio': 0.3, 'reg__max_iter': 3000}
+2025-05-27 13:04:41,607 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0266
+2025-05-27 13:04:41,630 [INFO] Hyperparameter Tuning Duration: 3.31 seconds
+2025-05-27 13:04:41,630 [INFO] Predicting on outer test set...
+2025-05-27 13:04:41,632 [INFO] Calculating performance metrics...
+2025-05-27 13:04:41,707 [INFO] Generating diagnostic plots...
+2025-05-27 13:04:42,623 [INFO] Prediction & Evaluation Duration: 0.99 seconds
+2025-05-27 13:04:42,624 [INFO] -- Outer Fold 5 finished. Duration: 4.31 seconds --
+2025-05-27 13:04:42,624 [INFO] 
+--- Aggregating results for: Elastic Net (en) ---
+2025-05-27 13:04:42,624 [INFO] Average Metrics across folds:
+2025-05-27 13:04:42,624 [INFO] {
+    "r2_mean": 0.7366448462276184,
+    "r2_std": 0.10849766479032473,
+    "mse_mean": 0.02160502524494557,
+    "mse_std": 0.005791498106660046,
+    "rmse_mean": 0.14556545742273636,
+    "rmse_std": 0.02038928273027529,
+    "mae_mean": 0.09694296084317813,
+    "mae_std": 0.012621690114904579,
+    "best_inner_cv_score_mean": -0.021478680189460427,
+    "best_inner_cv_score_std": 0.0030607305127196517,
+    "scoring_metric_used": "neg_mean_squared_error"
+}
+2025-05-27 13:04:42,721 [INFO] Combined predictions saved to: comprehensive_regression_results_20250527_130330/en/all_folds_predictions.csv
+2025-05-27 13:04:42,721 [INFO] Average time per outer fold: 4.37 seconds
+2025-05-27 13:04:42,721 [INFO] --- Nested CV completed for: Elastic Net (en) ---
+2025-05-27 13:04:42,721 [INFO] === Step 2: Hyperparameter Tuning ===
+2025-05-27 13:04:42,722 [INFO] Finding optimal hyperparameters using separate cross-validation...
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.034e+00, tolerance: 4.401e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.692e-01, tolerance: 3.392e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 8.178e-02, tolerance: 2.493e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 4.516e+00, tolerance: 4.401e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.089e+00, tolerance: 3.392e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 7.196e-02, tolerance: 3.392e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.299e-02, tolerance: 2.587e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-27 13:04:47,803 [INFO] Best parameters: {'reg__alpha': 0.06578820119123178, 'reg__fit_intercept': True, 'reg__l1_ratio': 0.3, 'reg__max_iter': 3000}
+2025-05-27 13:04:47,803 [INFO] Best CV score: -0.0245
+2025-05-27 13:04:47,803 [INFO] === Step 3: Final Model Training ===
+2025-05-27 13:04:47,803 [INFO] 
+--- Training Final Regression Model: Elastic Net ---
+2025-05-27 13:04:47,803 [INFO] Using parameters: {'reg__alpha': 0.06578820119123178, 'reg__fit_intercept': True, 'reg__l1_ratio': 0.3, 'reg__max_iter': 3000}
+2025-05-27 13:04:47,803 [INFO] Training final model on entire dataset...
+2025-05-27 13:04:47,823 [INFO] Final model training completed in 0.02 seconds
+2025-05-27 13:04:47,823 [INFO] Evaluating final model on training data...
+2025-05-27 13:04:47,834 [INFO] Final model R²: 0.8076, MSE: 0.0178
+2025-05-27 13:04:47,868 [INFO] Generating final model diagnostic plots...
+2025-05-27 13:04:49,037 [INFO] Final model diagnostic plots saved.
+2025-05-27 13:04:49,037 [INFO] Calculating SHAP values for final model...
+2025-05-27 13:04:49,037 [INFO] Sampling 100 instances from X for SHAP background data.
+2025-05-27 13:04:51,221 [INFO] SHAP analysis completed successfully
+2025-05-27 13:04:51,222 [INFO] SHAP calculation completed in 2.18 seconds
+2025-05-27 13:04:51,222 [INFO] === Step 4: Test Set Evaluation ===
+2025-05-27 13:04:51,282 [INFO] === Step 5: Performance Comparison ===
+2025-05-27 13:04:51,283 [INFO] R2 Comparison:
+2025-05-27 13:04:51,283 [INFO]   Nested CV: 0.7366 ± 0.1085 (95% CI: [0.5240, 0.9493])
+2025-05-27 13:04:51,283 [INFO]   Test Set:  0.7729
+2025-05-27 13:04:51,283 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 13:04:51,283 [INFO] MSE Comparison:
+2025-05-27 13:04:51,283 [INFO]   Nested CV: 0.0216 ± 0.0058 (95% CI: [0.0103, 0.0330])
+2025-05-27 13:04:51,283 [INFO]   Test Set:  0.0316
+2025-05-27 13:04:51,283 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 13:04:51,283 [INFO] MAE Comparison:
+2025-05-27 13:04:51,283 [INFO]   Nested CV: 0.0969 ± 0.0126 (95% CI: [0.0722, 0.1217])
+2025-05-27 13:04:51,283 [INFO]   Test Set:  0.1147
+2025-05-27 13:04:51,283 [INFO]   ✅ Good: Test performance within expected range
+2025-05-27 13:04:51,308 [INFO] Total time for model 'en': 30.53 seconds
+2025-05-27 13:04:51,308 [INFO] 
+--- Overall Summary ---
+2025-05-27 13:04:51,336 [INFO] Model comparison summary saved to: comprehensive_regression_results_20250527_130330/model_comparison_summary.csv
+2025-05-27 13:04:51,337 [INFO] Successful Models Summary:
+2025-05-27 13:04:51,359 [INFO]   model_name     status   r2_mean    r2_std  mse_mean   mse_std  rmse_mean  rmse_std  mae_mean   mae_std  best_inner_cv_score_mean  best_inner_cv_score_std     scoring_metric_used   test_r2  test_mse  test_rmse  test_mae
+0         lr  completed  0.599581  0.231450  0.031910  0.011627   0.175623  0.032661  0.128286  0.024076                 -0.037457                 0.006305  neg_mean_squared_error  0.683552  0.044052   0.209887  0.137705
+1      ridge  completed  0.690956  0.194289  0.024275  0.009550   0.152904  0.029919  0.104015  0.022085                 -0.022261                 0.003596  neg_mean_squared_error  0.755900  0.033981   0.184339  0.121642
+2      lasso  completed  0.695466  0.173067  0.024347  0.008728   0.153378  0.028676  0.104073  0.019608                 -0.021961                 0.003175  neg_mean_squared_error  0.783496  0.030139   0.173607  0.111156
+3         en  completed  0.736645  0.108498  0.021605  0.005791   0.145565  0.020389  0.096943  0.012622                 -0.021479                 0.003061  neg_mean_squared_error  0.772915  0.031612   0.177799  0.114723
+2025-05-27 13:04:51,366 [INFO] Model errors summary saved to: comprehensive_regression_results_20250527_130330/model_errors_summary.csv
+2025-05-27 13:04:51,372 [INFO] Final models info saved to: comprehensive_regression_results_20250527_130330/final_models_info.json
+2025-05-27 13:04:51,372 [INFO] Summary Duration: 0.06 seconds
+2025-05-27 13:04:51,372 [INFO] 
+--- Framework Execution Finished ---
+2025-05-27 13:04:51,372 [INFO] Total execution time: 81.12 seconds
+/var/spool/slurmd/job205372/slurm_script: line 50: --n_jobs: command not found

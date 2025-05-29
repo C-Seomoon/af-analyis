@@ -1,8 +1,0 @@
-{
-    "bootstrap": false,
-    "max_depth": 30,
-    "max_features": "log2",
-    "min_samples_leaf": 6,
-    "min_samples_split": 3,
-    "n_estimators": 291
-}

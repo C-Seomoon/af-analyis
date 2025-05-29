@@ -1,0 +1,6 @@
+,subsample,scale_pos_weight,n_estimators,max_depth,learning_rate,gamma,colsample_bytree
+fold_1,1.0,5,100,7,0.01,0.5,0.8
+fold_2,1.0,5,100,3,0.01,1.0,1.0
+fold_3,0.8,1,100,10,0.2,1.0,0.6
+fold_4,0.8,1,500,3,0.2,0.0,0.8
+fold_5,0.6,7,300,10,0.01,0.0,1.0

@@ -56,7 +56,7 @@ def read_dir(directory):
         
         # Extract query name from directory path
         parent_dir = os.path.basename(os.path.normpath(directory))
-        query = parent_dir if "_" in parent_dir else "query"
+        query = parent_dir  # 언더스코어 유무와 관계없이 디렉토리 이름을 query로 사용
         
         # Read summary confidences
         with open(summary_path, "r") as f_in:

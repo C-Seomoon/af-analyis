@@ -1,0 +1,9 @@
+usage: train_models.py [-h] --input_file INPUT_FILE [--output_dir OUTPUT_DIR]
+                       [--target_column TARGET_COLUMN] [--threshold THRESHOLD]
+                       [--query_id_column QUERY_ID_COLUMN]
+                       [--drop_features [DROP_FEATURES ...]] [--models MODELS]
+                       [--outer_folds OUTER_FOLDS] [--inner_folds INNER_FOLDS]
+                       [--random_iter RANDOM_ITER]
+                       [--random_state RANDOM_STATE] [--n_jobs N_JOBS]
+train_models.py: error: unrecognized arguments:  
+/var/spool/slurmd/job201265/slurm_script: line 44: --outer_folds: command not found

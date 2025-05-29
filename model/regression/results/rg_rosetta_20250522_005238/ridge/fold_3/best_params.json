@@ -1,0 +1,5 @@
+{
+    "reg__alpha": 9.443515687962675,
+    "reg__fit_intercept": false,
+    "reg__solver": "svd"
+}

@@ -1,0 +1,18 @@
+{
+  "baseline_score": 0.9914429381891449,
+  "best_score": 0.991848436991337,
+  "improvement": 0.00040549880219209467,
+  "improvement_percent": 0.04089986287387673,
+  "best_params": {
+    "class_weight": null,
+    "max_depth": 39,
+    "max_features": "sqrt",
+    "min_samples_leaf": 1,
+    "min_samples_split": 5,
+    "n_estimators": 198,
+    "random_state": 42
+  },
+  "scoring": "roc_auc",
+  "cv_splits": 3,
+  "n_iterations": 20
+}

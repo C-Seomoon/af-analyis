@@ -1,0 +1,693 @@
+=============================================
+[INFO] Job Information
+---------------------------------------------
+[INFO] Job Name       : rg_with_rosetta
+[INFO] Job ID         : 201266
+[INFO] Submit Dir     : /home/cseomoon/appl/af_analysis-0.1.4/model/regression/scripts
+[INFO] Partition      : rome_short
+[INFO] Node List      : cpu6
+[INFO] Nodes          : 1
+[INFO] CPUs per Task  : 48
+[INFO] Memory (MB)    : 
+[INFO] User           : cseomoon
+[INFO] Work Dir       : /home/cseomoon/appl/af_analysis-0.1.4/model/regression/scripts
+[INFO] Tasks per Node : 1
+[INFO] Dependency     : 
+[INFO] GPU(s)         : 
+=============================================
+
+[INFO] Job started at : Thu May 22 13:34:52 KST 2025
+[INFO] Job allocated on node(s): cpu6
+[INFO] Job running on: cpu6
+[INFO] Saving results to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452
+Initialized Random Forest (rf) with params: {'bootstrap': True, 'ccp_alpha': 0.0, 'criterion': 'squared_error', 'max_depth': None, 'max_features': 1.0, 'max_leaf_nodes': None, 'max_samples': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 'n_estimators': 100, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Initialized LightGBM (lgbm) with params: {'boosting_type': 'gbdt', 'class_weight': None, 'colsample_bytree': 0.8, 'importance_type': 'split', 'learning_rate': 0.1, 'max_depth': -1, 'min_child_samples': 20, 'min_child_weight': 0.001, 'min_split_gain': 0.0, 'n_estimators': 100, 'n_jobs': -1, 'num_leaves': 31, 'objective': 'regression_l1', 'random_state': 42, 'reg_alpha': 0.0, 'reg_lambda': 0.0, 'subsample': 0.8, 'subsample_for_bin': 200000, 'subsample_freq': 0, 'metric': 'mae', 'verbose': -1}
+Initialized XGBoost (xgb) with params: {'objective': 'reg:squarederror', 'base_score': None, 'booster': None, 'callbacks': None, 'colsample_bylevel': None, 'colsample_bynode': None, 'colsample_bytree': 0.8, 'device': None, 'early_stopping_rounds': None, 'enable_categorical': False, 'eval_metric': 'rmse', 'feature_types': None, 'feature_weights': None, 'gamma': 0, 'grow_policy': None, 'importance_type': None, 'interaction_constraints': None, 'learning_rate': 0.1, 'max_bin': None, 'max_cat_threshold': None, 'max_cat_to_onehot': None, 'max_delta_step': None, 'max_depth': 3, 'max_leaves': None, 'min_child_weight': None, 'missing': nan, 'monotone_constraints': None, 'multi_strategy': None, 'n_estimators': 100, 'n_jobs': -1, 'num_parallel_tree': None, 'random_state': 42, 'reg_alpha': 0, 'reg_lambda': 1, 'sampling_method': None, 'scale_pos_weight': None, 'subsample': 0.8, 'tree_method': 'hist', 'validate_parameters': None, 'verbosity': None}
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/run_arguments.json
+Original data shape: (1650, 84)
+Using 'DockQ' as the continuous target variable.
+Identified 61 potential feature columns.
+Checking for NaN values in potential feature columns...
+Dropped 2 rows containing NaN values in one or more feature columns.
+Generated 10 stratification bins from target for regression.
+Processed Features (X) shape after NaN drop: (1648, 61)
+Processed Target (y) shape after NaN drop: (1648,)
+Processed Query IDs shape after NaN drop: (1648,)
+Initialized Random Forest (rf) with params: {'bootstrap': True, 'ccp_alpha': 0.0, 'criterion': 'squared_error', 'max_depth': None, 'max_features': 1.0, 'max_leaf_nodes': None, 'max_samples': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 'n_estimators': 100, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Initialized LightGBM (lgbm) with params: {'boosting_type': 'gbdt', 'class_weight': None, 'colsample_bytree': 0.8, 'importance_type': 'split', 'learning_rate': 0.1, 'max_depth': -1, 'min_child_samples': 20, 'min_child_weight': 0.001, 'min_split_gain': 0.0, 'n_estimators': 100, 'n_jobs': -1, 'num_leaves': 31, 'objective': 'regression_l1', 'random_state': 42, 'reg_alpha': 0.0, 'reg_lambda': 0.0, 'subsample': 0.8, 'subsample_for_bin': 200000, 'subsample_freq': 0, 'metric': 'mae', 'verbose': -1}
+Initialized XGBoost (xgb) with params: {'objective': 'reg:squarederror', 'base_score': None, 'booster': None, 'callbacks': None, 'colsample_bylevel': None, 'colsample_bynode': None, 'colsample_bytree': 0.8, 'device': None, 'early_stopping_rounds': None, 'enable_categorical': False, 'eval_metric': 'rmse', 'feature_types': None, 'feature_weights': None, 'gamma': 0, 'grow_policy': None, 'importance_type': None, 'interaction_constraints': None, 'learning_rate': 0.1, 'max_bin': None, 'max_cat_threshold': None, 'max_cat_to_onehot': None, 'max_delta_step': None, 'max_depth': 3, 'max_leaves': None, 'min_child_weight': None, 'missing': nan, 'monotone_constraints': None, 'multi_strategy': None, 'n_estimators': 100, 'n_jobs': -1, 'num_parallel_tree': None, 'random_state': 42, 'reg_alpha': 0, 'reg_lambda': 1, 'sampling_method': None, 'scale_pos_weight': None, 'subsample': 0.8, 'tree_method': 'hist', 'validate_parameters': None, 'verbosity': None}
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_1/best_params.json
+Calculated Metrics: R2=0.8702, RMSE=0.1354, MAE=0.1055
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_1/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_1/predictions.csv (shape: (350, 2))
+Calculating SHAP values for Random Forest using SHAP Explainer...
+SHAP calculation took 1.35 seconds.
+--- Saving SHAP results for Fold 1 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_1/shap_values_fold_1.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_1/X_explain_fold_1.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_1/shap_expected_value_fold_1.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_1/shap_summary_dot_fold_1.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_1/shap_summary_bar_fold_1.png
+--- SHAP saving completed for Fold 1 ---
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_2/best_params.json
+Calculated Metrics: R2=0.5562, RMSE=0.2606, MAE=0.1610
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_2/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_2/predictions.csv (shape: (349, 2))
+Calculating SHAP values for Random Forest using SHAP Explainer...
+SHAP calculation took 86.29 seconds.
+--- Saving SHAP results for Fold 2 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_2/shap_values_fold_2.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_2/X_explain_fold_2.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_2/shap_expected_value_fold_2.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_2/shap_summary_dot_fold_2.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_2/shap_summary_bar_fold_2.png
+--- SHAP saving completed for Fold 2 ---
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_3/best_params.json
+Calculated Metrics: R2=0.9756, RMSE=0.0529, MAE=0.0374
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_3/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_3/predictions.csv (shape: (349, 2))
+Calculating SHAP values for Random Forest using SHAP Explainer...
+SHAP calculation took 3.82 seconds.
+--- Saving SHAP results for Fold 3 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_3/shap_values_fold_3.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_3/X_explain_fold_3.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_3/shap_expected_value_fold_3.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_3/shap_summary_dot_fold_3.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_3/shap_summary_bar_fold_3.png
+--- SHAP saving completed for Fold 3 ---
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_4/best_params.json
+Calculated Metrics: R2=0.4374, RMSE=0.2624, MAE=0.1699
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_4/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_4/predictions.csv (shape: (300, 2))
+Calculating SHAP values for Random Forest using SHAP Explainer...
+SHAP calculation took 5.17 seconds.
+--- Saving SHAP results for Fold 4 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_4/shap_values_fold_4.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_4/X_explain_fold_4.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_4/shap_expected_value_fold_4.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_4/shap_summary_dot_fold_4.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_4/shap_summary_bar_fold_4.png
+--- SHAP saving completed for Fold 4 ---
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_5/best_params.json
+Calculated Metrics: R2=0.6901, RMSE=0.1451, MAE=0.1078
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_5/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_5/predictions.csv (shape: (300, 2))
+Calculating SHAP values for Random Forest using SHAP Explainer...
+SHAP calculation took 1.68 seconds.
+--- Saving SHAP results for Fold 5 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_5/shap_values_fold_5.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_5/X_explain_fold_5.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_5/shap_expected_value_fold_5.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_5/shap_summary_dot_fold_5.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/fold_5/shap_summary_bar_fold_5.png
+--- SHAP saving completed for Fold 5 ---
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/metrics_summary.json
+
+--- Analyzing Global SHAP for Model: rf ---
+Loading data from fold_1...
+Loading data from fold_2...
+Loading data from fold_3...
+Loading data from fold_4...
+Loading data from fold_5...
+Loaded SHAP data from 5 folds.
+Combined SHAP values shape: (1648, 61)
+Combined X_explain shape: (1648, 61)
+Combined SHAP data saved to (CSV for X_explain): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/combined_shap
+Global SHAP feature importance saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/combined_shap/global_shap_feature_importance.csv
+
+Top 10 Features by Global Mean Absolute SHAP:
+              feature  mean_abs_shap
+0        avg_pair_pae       0.032742
+1   chain_pair_pae_AL       0.031640
+2          pdockq2_AL       0.027370
+3   chain_pair_pae_AH       0.021707
+4  interface_plddt_AH       0.020736
+5              iptm_L       0.014108
+6      model_avg_RMSD       0.012832
+7              iptm_A       0.012569
+8   scaled_model_RMSD       0.011069
+9  ranking_confidence       0.010318
+Combined SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/combined_shap/combined_shap_summary_dot.png
+Combined SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/rf/combined_shap/combined_shap_summary_bar.png
+--- Global SHAP analysis completed for: rf ---
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_1/best_params.json
+Calculated Metrics: R2=0.8265, RMSE=0.1566, MAE=0.1012
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_1/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_1/predictions.csv (shape: (350, 2))
+Calculating SHAP values for LightGBM using SHAP Explainer...
+SHAP calculation took 0.80 seconds.
+--- Saving SHAP results for Fold 1 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_1/shap_values_fold_1.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_1/X_explain_fold_1.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_1/shap_expected_value_fold_1.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_1/shap_summary_dot_fold_1.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_1/shap_summary_bar_fold_1.png
+--- SHAP saving completed for Fold 1 ---
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_2/best_params.json
+Calculated Metrics: R2=0.6102, RMSE=0.2442, MAE=0.1445
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_2/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_2/predictions.csv (shape: (349, 2))
+Calculating SHAP values for LightGBM using SHAP Explainer...
+SHAP calculation took 0.63 seconds.
+--- Saving SHAP results for Fold 2 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_2/shap_values_fold_2.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_2/X_explain_fold_2.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_2/shap_expected_value_fold_2.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_2/shap_summary_dot_fold_2.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_2/shap_summary_bar_fold_2.png
+--- SHAP saving completed for Fold 2 ---
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_3/best_params.json
+Calculated Metrics: R2=0.9744, RMSE=0.0542, MAE=0.0319
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_3/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_3/predictions.csv (shape: (349, 2))
+Calculating SHAP values for LightGBM using SHAP Explainer...
+SHAP calculation took 0.48 seconds.
+--- Saving SHAP results for Fold 3 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_3/shap_values_fold_3.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_3/X_explain_fold_3.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_3/shap_expected_value_fold_3.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_3/shap_summary_dot_fold_3.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_3/shap_summary_bar_fold_3.png
+--- SHAP saving completed for Fold 3 ---
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_4/best_params.json
+Calculated Metrics: R2=0.4426, RMSE=0.2612, MAE=0.1491
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_4/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_4/predictions.csv (shape: (300, 2))
+Calculating SHAP values for LightGBM using SHAP Explainer...
+SHAP calculation took 0.30 seconds.
+--- Saving SHAP results for Fold 4 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_4/shap_values_fold_4.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_4/X_explain_fold_4.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_4/shap_expected_value_fold_4.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_4/shap_summary_dot_fold_4.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_4/shap_summary_bar_fold_4.png
+--- SHAP saving completed for Fold 4 ---
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_5/best_params.json
+Calculated Metrics: R2=0.4119, RMSE=0.1999, MAE=0.1398
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_5/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_5/predictions.csv (shape: (300, 2))
+Calculating SHAP values for LightGBM using SHAP Explainer...
+SHAP calculation took 1.16 seconds.
+--- Saving SHAP results for Fold 5 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_5/shap_values_fold_5.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_5/X_explain_fold_5.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_5/shap_expected_value_fold_5.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_5/shap_summary_dot_fold_5.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/fold_5/shap_summary_bar_fold_5.png
+--- SHAP saving completed for Fold 5 ---
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/metrics_summary.json
+
+--- Analyzing Global SHAP for Model: lgbm ---
+Loading data from fold_1...
+Loading data from fold_2...
+Loading data from fold_3...
+Loading data from fold_4...
+Loading data from fold_5...
+Loaded SHAP data from 5 folds.
+Combined SHAP values shape: (1648, 61)
+Combined X_explain shape: (1648, 61)
+Combined SHAP data saved to (CSV for X_explain): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/combined_shap
+Global SHAP feature importance saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/combined_shap/global_shap_feature_importance.csv
+
+Top 10 Features by Global Mean Absolute SHAP:
+              feature  mean_abs_shap
+0   chain_pair_pae_AL       0.090576
+1      model_avg_RMSD       0.035880
+2           pdockq_AH       0.029176
+3    interface_pae_AL       0.025238
+4      query_avg_RMSD       0.024831
+5   scaled_model_RMSD       0.021479
+6                ipTM       0.017108
+7  interface_plddt_HL       0.013719
+8              LIS_AL       0.012481
+9          pdockq2_AH       0.011910
+Combined SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/combined_shap/combined_shap_summary_dot.png
+Combined SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lgbm/combined_shap/combined_shap_summary_bar.png
+--- Global SHAP analysis completed for: lgbm ---
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_1/best_params.json
+Calculated Metrics: R2=0.8155, RMSE=0.1614, MAE=0.1236
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_1/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_1/predictions.csv (shape: (350, 2))
+Calculating SHAP values for XGBoost using SHAP Explainer...
+SHAP calculation took 0.28 seconds.
+--- Saving SHAP results for Fold 1 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_1/shap_values_fold_1.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_1/X_explain_fold_1.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_1/shap_expected_value_fold_1.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_1/shap_summary_dot_fold_1.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_1/shap_summary_bar_fold_1.png
+--- SHAP saving completed for Fold 1 ---
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_2/best_params.json
+Calculated Metrics: R2=0.5579, RMSE=0.2601, MAE=0.1432
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_2/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_2/predictions.csv (shape: (349, 2))
+Calculating SHAP values for XGBoost using SHAP Explainer...
+SHAP calculation took 0.09 seconds.
+--- Saving SHAP results for Fold 2 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_2/shap_values_fold_2.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_2/X_explain_fold_2.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_2/shap_expected_value_fold_2.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_2/shap_summary_dot_fold_2.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_2/shap_summary_bar_fold_2.png
+--- SHAP saving completed for Fold 2 ---
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_3/best_params.json
+Calculated Metrics: R2=0.9754, RMSE=0.0531, MAE=0.0385
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_3/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_3/predictions.csv (shape: (349, 2))
+Calculating SHAP values for XGBoost using SHAP Explainer...
+SHAP calculation took 0.07 seconds.
+--- Saving SHAP results for Fold 3 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_3/shap_values_fold_3.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_3/X_explain_fold_3.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_3/shap_expected_value_fold_3.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_3/shap_summary_dot_fold_3.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_3/shap_summary_bar_fold_3.png
+--- SHAP saving completed for Fold 3 ---
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_4/best_params.json
+Calculated Metrics: R2=0.3574, RMSE=0.2805, MAE=0.1591
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_4/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_4/predictions.csv (shape: (300, 2))
+Calculating SHAP values for XGBoost using SHAP Explainer...
+SHAP calculation took 0.04 seconds.
+--- Saving SHAP results for Fold 4 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_4/shap_values_fold_4.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_4/X_explain_fold_4.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_4/shap_expected_value_fold_4.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_4/shap_summary_dot_fold_4.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_4/shap_summary_bar_fold_4.png
+--- SHAP saving completed for Fold 4 ---
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_5/best_params.json
+Calculated Metrics: R2=0.5891, RMSE=0.1671, MAE=0.1173
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_5/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_5/predictions.csv (shape: (300, 2))
+Calculating SHAP values for XGBoost using SHAP Explainer...
+SHAP calculation took 0.08 seconds.
+--- Saving SHAP results for Fold 5 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_5/shap_values_fold_5.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_5/X_explain_fold_5.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_5/shap_expected_value_fold_5.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_5/shap_summary_dot_fold_5.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/fold_5/shap_summary_bar_fold_5.png
+--- SHAP saving completed for Fold 5 ---
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/metrics_summary.json
+
+--- Analyzing Global SHAP for Model: xgb ---
+Loading data from fold_1...
+Loading data from fold_2...
+Loading data from fold_3...
+Loading data from fold_4...
+Loading data from fold_5...
+Loaded SHAP data from 5 folds.
+Combined SHAP values shape: (1648, 61)
+Combined X_explain shape: (1648, 61)
+Combined SHAP data saved to (CSV for X_explain): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/combined_shap
+Global SHAP feature importance saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/combined_shap/global_shap_feature_importance.csv
+
+Top 10 Features by Global Mean Absolute SHAP:
+              feature  mean_abs_shap
+0   chain_pair_pae_AL       0.079745
+1  interface_plddt_AH       0.057919
+2      model_avg_RMSD       0.033650
+3        avg_pair_pae       0.031311
+4  interface_plddt_HL       0.030722
+5           pdockq_AH       0.022353
+6   chain_pair_pae_AH       0.016939
+7      query_avg_RMSD       0.016616
+8          pdockq2_AL       0.014501
+9               ptm_A       0.010769
+Combined SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/combined_shap/combined_shap_summary_dot.png
+Combined SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/xgb/combined_shap/combined_shap_summary_bar.png
+--- Global SHAP analysis completed for: xgb ---
+Fitting 3 folds for each of 2 candidates, totalling 6 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_1/best_params.json
+Calculated Metrics: R2=0.6086, RMSE=0.2351, MAE=0.1754
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_1/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_1/predictions.csv (shape: (350, 2))
+--- Saving SHAP results for Fold 1 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_1/shap_values_fold_1.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_1/X_explain_fold_1.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_1/shap_expected_value_fold_1.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_1/shap_summary_dot_fold_1.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_1/shap_summary_bar_fold_1.png
+--- SHAP saving completed for Fold 1 ---
+Fitting 3 folds for each of 2 candidates, totalling 6 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_2/best_params.json
+Calculated Metrics: R2=0.4031, RMSE=0.3022, MAE=0.1781
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_2/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_2/predictions.csv (shape: (349, 2))
+--- Saving SHAP results for Fold 2 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_2/shap_values_fold_2.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_2/X_explain_fold_2.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_2/shap_expected_value_fold_2.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_2/shap_summary_dot_fold_2.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_2/shap_summary_bar_fold_2.png
+--- SHAP saving completed for Fold 2 ---
+Fitting 3 folds for each of 2 candidates, totalling 6 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_3/best_params.json
+Calculated Metrics: R2=0.6819, RMSE=0.1908, MAE=0.1601
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_3/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_3/predictions.csv (shape: (349, 2))
+--- Saving SHAP results for Fold 3 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_3/shap_values_fold_3.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_3/X_explain_fold_3.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_3/shap_expected_value_fold_3.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_3/shap_summary_dot_fold_3.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_3/shap_summary_bar_fold_3.png
+--- SHAP saving completed for Fold 3 ---
+Fitting 3 folds for each of 2 candidates, totalling 6 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_4/best_params.json
+Calculated Metrics: R2=0.3540, RMSE=0.2812, MAE=0.1759
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_4/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_4/predictions.csv (shape: (300, 2))
+--- Saving SHAP results for Fold 4 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_4/shap_values_fold_4.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_4/X_explain_fold_4.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_4/shap_expected_value_fold_4.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_4/shap_summary_dot_fold_4.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_4/shap_summary_bar_fold_4.png
+--- SHAP saving completed for Fold 4 ---
+Fitting 3 folds for each of 2 candidates, totalling 6 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_5/best_params.json
+Calculated Metrics: R2=0.4412, RMSE=0.1948, MAE=0.1503
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_5/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_5/predictions.csv (shape: (300, 2))
+--- Saving SHAP results for Fold 5 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_5/shap_values_fold_5.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_5/X_explain_fold_5.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_5/shap_expected_value_fold_5.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_5/shap_summary_dot_fold_5.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/fold_5/shap_summary_bar_fold_5.png
+--- SHAP saving completed for Fold 5 ---
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/metrics_summary.json
+
+--- Analyzing Global SHAP for Model: lr ---
+Loading data from fold_1...
+Loading data from fold_2...
+Loading data from fold_3...
+Loading data from fold_4...
+Loading data from fold_5...
+Loaded SHAP data from 5 folds.
+Combined SHAP values shape: (1648, 61)
+Combined X_explain shape: (1648, 61)
+Combined SHAP data saved to (CSV for X_explain): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/combined_shap
+Global SHAP feature importance saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/combined_shap/global_shap_feature_importance.csv
+
+Top 10 Features by Global Mean Absolute SHAP:
+              feature  mean_abs_shap
+0         contacts_HL     107.606523
+1      total_contacts      95.481839
+2         contacts_AH      28.729230
+3       chain_plddt_L      22.133412
+4         contacts_AL      19.384740
+5   chain_pair_pae_AH      13.264301
+6   chain_pair_pae_AL      11.393954
+7            plddt_L3       9.395161
+8  interface_plddt_HL       6.610390
+9       chain_plddt_A       6.164095
+Combined SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/combined_shap/combined_shap_summary_dot.png
+Combined SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lr/combined_shap/combined_shap_summary_bar.png
+--- Global SHAP analysis completed for: lr ---
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_1/best_params.json
+Calculated Metrics: R2=0.8299, RMSE=0.1550, MAE=0.1122
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_1/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_1/predictions.csv (shape: (350, 2))
+--- Saving SHAP results for Fold 1 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_1/shap_values_fold_1.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_1/X_explain_fold_1.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_1/shap_expected_value_fold_1.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_1/shap_summary_dot_fold_1.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_1/shap_summary_bar_fold_1.png
+--- SHAP saving completed for Fold 1 ---
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_2/best_params.json
+Calculated Metrics: R2=0.5616, RMSE=0.2590, MAE=0.1497
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_2/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_2/predictions.csv (shape: (349, 2))
+--- Saving SHAP results for Fold 2 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_2/shap_values_fold_2.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_2/X_explain_fold_2.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_2/shap_expected_value_fold_2.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_2/shap_summary_dot_fold_2.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_2/shap_summary_bar_fold_2.png
+--- SHAP saving completed for Fold 2 ---
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_3/best_params.json
+Calculated Metrics: R2=0.9603, RMSE=0.0674, MAE=0.0501
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_3/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_3/predictions.csv (shape: (349, 2))
+--- Saving SHAP results for Fold 3 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_3/shap_values_fold_3.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_3/X_explain_fold_3.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_3/shap_expected_value_fold_3.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_3/shap_summary_dot_fold_3.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_3/shap_summary_bar_fold_3.png
+--- SHAP saving completed for Fold 3 ---
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_4/best_params.json
+Calculated Metrics: R2=0.5384, RMSE=0.2377, MAE=0.1692
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_4/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_4/predictions.csv (shape: (300, 2))
+--- Saving SHAP results for Fold 4 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_4/shap_values_fold_4.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_4/X_explain_fold_4.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_4/shap_expected_value_fold_4.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_4/shap_summary_dot_fold_4.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_4/shap_summary_bar_fold_4.png
+--- SHAP saving completed for Fold 4 ---
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_5/best_params.json
+Calculated Metrics: R2=0.7500, RMSE=0.1303, MAE=0.1000
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_5/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_5/predictions.csv (shape: (300, 2))
+--- Saving SHAP results for Fold 5 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_5/shap_values_fold_5.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_5/X_explain_fold_5.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_5/shap_expected_value_fold_5.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_5/shap_summary_dot_fold_5.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/fold_5/shap_summary_bar_fold_5.png
+--- SHAP saving completed for Fold 5 ---
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/metrics_summary.json
+
+--- Analyzing Global SHAP for Model: ridge ---
+Loading data from fold_1...
+Loading data from fold_2...
+Loading data from fold_3...
+Loading data from fold_4...
+Loading data from fold_5...
+Loaded SHAP data from 5 folds.
+Combined SHAP values shape: (1648, 61)
+Combined X_explain shape: (1648, 61)
+Combined SHAP data saved to (CSV for X_explain): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/combined_shap
+Global SHAP feature importance saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/combined_shap/global_shap_feature_importance.csv
+
+Top 10 Features by Global Mean Absolute SHAP:
+               feature  mean_abs_shap
+0       total_contacts      89.283342
+1          contacts_AH      32.036913
+2          contacts_HL      28.010852
+3          contacts_AL      12.531702
+4   interface_plddt_AL       1.304291
+5  avg_interface_plddt       1.119463
+6        chain_plddt_L       1.078049
+7   interface_plddt_AH       1.048620
+8             plddt_L3       0.683173
+9   interface_plddt_HL       0.508214
+Combined SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/combined_shap/combined_shap_summary_dot.png
+Combined SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/ridge/combined_shap/combined_shap_summary_bar.png
+--- Global SHAP analysis completed for: ridge ---
+Fitting 3 folds for each of 40 candidates, totalling 120 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_1/best_params.json
+Calculated Metrics: R2=0.8483, RMSE=0.1464, MAE=0.1162
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_1/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_1/predictions.csv (shape: (350, 2))
+--- Saving SHAP results for Fold 1 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_1/shap_values_fold_1.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_1/X_explain_fold_1.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_1/shap_expected_value_fold_1.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_1/shap_summary_dot_fold_1.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_1/shap_summary_bar_fold_1.png
+--- SHAP saving completed for Fold 1 ---
+Fitting 3 folds for each of 40 candidates, totalling 120 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_2/best_params.json
+Calculated Metrics: R2=0.5121, RMSE=0.2732, MAE=0.1631
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_2/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_2/predictions.csv (shape: (349, 2))
+--- Saving SHAP results for Fold 2 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_2/shap_values_fold_2.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_2/X_explain_fold_2.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_2/shap_expected_value_fold_2.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_2/shap_summary_dot_fold_2.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_2/shap_summary_bar_fold_2.png
+--- SHAP saving completed for Fold 2 ---
+Fitting 3 folds for each of 40 candidates, totalling 120 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_3/best_params.json
+Calculated Metrics: R2=0.9636, RMSE=0.0646, MAE=0.0502
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_3/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_3/predictions.csv (shape: (349, 2))
+--- Saving SHAP results for Fold 3 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_3/shap_values_fold_3.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_3/X_explain_fold_3.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_3/shap_expected_value_fold_3.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_3/shap_summary_dot_fold_3.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_3/shap_summary_bar_fold_3.png
+--- SHAP saving completed for Fold 3 ---
+Fitting 3 folds for each of 40 candidates, totalling 120 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_4/best_params.json
+Calculated Metrics: R2=0.5351, RMSE=0.2386, MAE=0.1669
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_4/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_4/predictions.csv (shape: (300, 2))
+--- Saving SHAP results for Fold 4 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_4/shap_values_fold_4.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_4/X_explain_fold_4.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_4/shap_expected_value_fold_4.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_4/shap_summary_dot_fold_4.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_4/shap_summary_bar_fold_4.png
+--- SHAP saving completed for Fold 4 ---
+Fitting 3 folds for each of 40 candidates, totalling 120 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_5/best_params.json
+Calculated Metrics: R2=0.7619, RMSE=0.1272, MAE=0.1061
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_5/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_5/predictions.csv (shape: (300, 2))
+--- Saving SHAP results for Fold 5 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_5/shap_values_fold_5.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_5/X_explain_fold_5.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_5/shap_expected_value_fold_5.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_5/shap_summary_dot_fold_5.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/fold_5/shap_summary_bar_fold_5.png
+--- SHAP saving completed for Fold 5 ---
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/metrics_summary.json
+
+--- Analyzing Global SHAP for Model: lasso ---
+Loading data from fold_1...
+Loading data from fold_2...
+Loading data from fold_3...
+Loading data from fold_4...
+Loading data from fold_5...
+Loaded SHAP data from 5 folds.
+Combined SHAP values shape: (1648, 61)
+Combined X_explain shape: (1648, 61)
+Combined SHAP data saved to (CSV for X_explain): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/combined_shap
+Global SHAP feature importance saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/combined_shap/global_shap_feature_importance.csv
+
+Top 10 Features by Global Mean Absolute SHAP:
+               feature  mean_abs_shap
+0       total_contacts      15.683640
+1          contacts_HL       2.627062
+2          contacts_AL       2.551223
+3          contacts_AH       2.519851
+4    chain_pair_pae_AL       1.408258
+5        chain_plddt_L       1.075534
+6  avg_interface_plddt       1.004931
+7   interface_plddt_AL       0.506397
+8   interface_plddt_AH       0.200172
+9    scaled_model_RMSD       0.084985
+Combined SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/combined_shap/combined_shap_summary_dot.png
+Combined SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/lasso/combined_shap/combined_shap_summary_bar.png
+--- Global SHAP analysis completed for: lasso ---
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_1/best_params.json
+Calculated Metrics: R2=0.8577, RMSE=0.1418, MAE=0.1134
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_1/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_1/predictions.csv (shape: (350, 2))
+--- Saving SHAP results for Fold 1 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_1/shap_values_fold_1.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_1/X_explain_fold_1.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_1/shap_expected_value_fold_1.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_1/shap_summary_dot_fold_1.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_1/shap_summary_bar_fold_1.png
+--- SHAP saving completed for Fold 1 ---
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_2/best_params.json
+Calculated Metrics: R2=0.5204, RMSE=0.2709, MAE=0.1593
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_2/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_2/predictions.csv (shape: (349, 2))
+--- Saving SHAP results for Fold 2 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_2/shap_values_fold_2.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_2/X_explain_fold_2.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_2/shap_expected_value_fold_2.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_2/shap_summary_dot_fold_2.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_2/shap_summary_bar_fold_2.png
+--- SHAP saving completed for Fold 2 ---
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_3/best_params.json
+Calculated Metrics: R2=0.9659, RMSE=0.0625, MAE=0.0484
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_3/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_3/predictions.csv (shape: (349, 2))
+--- Saving SHAP results for Fold 3 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_3/shap_values_fold_3.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_3/X_explain_fold_3.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_3/shap_expected_value_fold_3.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_3/shap_summary_dot_fold_3.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_3/shap_summary_bar_fold_3.png
+--- SHAP saving completed for Fold 3 ---
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_4/best_params.json
+Calculated Metrics: R2=0.5378, RMSE=0.2379, MAE=0.1685
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_4/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_4/predictions.csv (shape: (300, 2))
+--- Saving SHAP results for Fold 4 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_4/shap_values_fold_4.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_4/X_explain_fold_4.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_4/shap_expected_value_fold_4.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_4/shap_summary_dot_fold_4.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_4/shap_summary_bar_fold_4.png
+--- SHAP saving completed for Fold 4 ---
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_5/best_params.json
+Calculated Metrics: R2=0.7625, RMSE=0.1270, MAE=0.1073
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_5/metrics.json
+Predictions saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_5/predictions.csv (shape: (300, 2))
+--- Saving SHAP results for Fold 5 ---
+SHAP values saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_5/shap_values_fold_5.npy
+X_explain saved to (CSV): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_5/X_explain_fold_5.csv
+SHAP expected value saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_5/shap_expected_value_fold_5.joblib
+SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_5/shap_summary_dot_fold_5.png
+SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/fold_5/shap_summary_bar_fold_5.png
+--- SHAP saving completed for Fold 5 ---
+Results saved to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/metrics_summary.json
+
+--- Analyzing Global SHAP for Model: en ---
+Loading data from fold_1...
+Loading data from fold_2...
+Loading data from fold_3...
+Loading data from fold_4...
+Loading data from fold_5...
+Loaded SHAP data from 5 folds.
+Combined SHAP values shape: (1648, 61)
+Combined X_explain shape: (1648, 61)
+Combined SHAP data saved to (CSV for X_explain): /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/combined_shap
+Global SHAP feature importance saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/combined_shap/global_shap_feature_importance.csv
+
+Top 10 Features by Global Mean Absolute SHAP:
+               feature  mean_abs_shap
+0          contacts_HL       3.987874
+1          contacts_AH       2.972277
+2          contacts_AL       2.752929
+3        chain_plddt_L       0.887993
+4  avg_interface_plddt       0.769331
+5    chain_pair_pae_AL       0.735544
+6   interface_plddt_AL       0.623301
+7   interface_plddt_AH       0.432252
+8         avg_pair_pae       0.199584
+9    chain_pair_pae_AH       0.180475
+Combined SHAP dot plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/combined_shap/combined_shap_summary_dot.png
+Combined SHAP bar plot saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_133452/en/combined_shap/combined_shap_summary_bar.png
+--- Global SHAP analysis completed for: en ---
+작업 완료
+[INFO] Job completed at: Thu May 22 14:40:17 KST 2025

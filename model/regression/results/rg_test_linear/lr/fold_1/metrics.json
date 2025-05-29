@@ -1,8 +1,0 @@
-{
-    "r2": -400384662.8364728,
-    "mse": 40208101.04650301,
-    "rmse": 6340.985810306076,
-    "mae": 147.68143618988782,
-    "best_inner_cv_score": -0.0507342053243808,
-    "scoring_metric_used": "neg_mean_squared_error"
-}

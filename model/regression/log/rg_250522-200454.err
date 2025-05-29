@@ -1,0 +1,18 @@
+2025-05-22 00:48:48,347 [ERROR] Error importing models using relative paths: No module named 'utils'
+Traceback (most recent call last):
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/regression_nested_cv.py", line 27, in <module>
+    from .models.tree_models import RandomForestRegressorModel, LGBMRegressorModel, XGBoostRegressorModel
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/models/tree_models.py", line 19, in <module>
+    from utils.evaluation import calculate_regression_metrics
+ModuleNotFoundError: No module named 'utils'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/cseomoon/appl/af_analysis-0.1.4/model/regression/regression_nested_cv.py", line 32, in <module>
+    raise ImportError("Could not import model classes. Ensure script is run as a module (-m).") from e
+ImportError: Could not import model classes. Ensure script is run as a module (-m).

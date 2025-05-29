@@ -1,0 +1,24 @@
+=============================================
+[INFO] Job Information
+---------------------------------------------
+[INFO] Job Name       : cls_framework
+[INFO] Job ID         : 201265
+[INFO] Submit Dir     : /home/cseomoon/appl/af_analysis-0.1.4/model/classification/scripts
+[INFO] Partition      : rome_short
+[INFO] Node List      : cpu6
+[INFO] Nodes          : 1
+[INFO] CPUs per Task  : 48
+[INFO] Memory (MB)    : 
+[INFO] User           : cseomoon
+[INFO] Work Dir       : /home/cseomoon/appl/af_analysis-0.1.4/model/classification/scripts
+[INFO] Tasks per Node : 1
+[INFO] Dependency     : 
+[INFO] GPU(s)         : 
+=============================================
+
+[INFO] Job started at : Thu May 22 13:33:31 KST 2025
+[INFO] Job allocated on node(s): cpu6
+[INFO] Job running on: cpu6
+[INFO] Results will be saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/classification/results/cls_250522_20250522_133331
+작업 완료
+[INFO] Job completed at: Thu May 22 13:33:45 KST 2025

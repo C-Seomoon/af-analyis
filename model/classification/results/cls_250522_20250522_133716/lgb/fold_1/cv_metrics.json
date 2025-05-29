@@ -1,0 +1,17 @@
+{
+    "best_params": {
+        "subsample": 1.0,
+        "reg_lambda": 5,
+        "reg_alpha": 0.5,
+        "num_leaves": 50,
+        "n_estimators": 100,
+        "max_depth": 30,
+        "learning_rate": 0.01,
+        "colsample_bytree": 0.8,
+        "class_weight": "balanced"
+    },
+    "pr_auc": 0.9419037748795738,
+    "roc_auc": 0.9309963155701331,
+    "f1": 0.8279667941741645,
+    "balanced_acc": 0.8717679961222471
+}

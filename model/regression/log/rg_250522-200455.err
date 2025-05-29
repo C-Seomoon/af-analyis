@@ -1,0 +1,1147 @@
+2025-05-22 00:52:45,041 [INFO] Successfully imported model classes using relative paths.
+2025-05-22 00:52:45,541 [INFO] Successfully imported utils using relative paths.
+2025-05-22 00:52:45,548 [INFO] Using 48 CPU cores.
+2025-05-22 00:52:45,549 [INFO] Results will be saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_005238
+2025-05-22 00:52:45,573 [INFO] 
+--- Loading Data ---
+2025-05-22 00:52:45,682 [INFO] Data Loading & Preprocessing Duration: 0.11 seconds
+2025-05-22 00:52:45,683 [INFO] 
+--- Starting Model Training ---
+2025-05-22 00:52:45,686 [INFO] 
+=== Processing model: Random Forest (rf) ===
+2025-05-22 00:52:45,688 [INFO] 
+--- Running Nested CV for Regression: Random Forest (rf) ---
+2025-05-22 00:52:45,688 [INFO] Output directory: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_005238/rf
+2025-05-22 00:52:45,688 [INFO] Hyperparameter tuning scoring metric: neg_mean_squared_error
+2025-05-22 00:52:45,688 [INFO] Using GroupKFold for outer CV with 5 folds based on query IDs.
+2025-05-22 00:52:45,690 [INFO] 
+-- Processing Outer Fold 1/5 --
+2025-05-22 00:52:45,692 [INFO] Train set size: (2898, 69), Test set size: (749, 69)
+2025-05-22 00:52:45,692 [INFO] Test set indices range from 100 to 3496
+2025-05-22 00:52:45,693 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 00:52:45,693 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 00:52:45,695 [INFO] Tree-based model 'rf'. Setting n_jobs=4 for hyperparameter tuning.
+2025-05-22 00:52:45,695 [INFO] Fitting with groups parameter for GroupKFold
+2025-05-22 00:53:30,932 [INFO] Best Params found: {'bootstrap': False, 'max_depth': 30, 'max_features': 'sqrt', 'min_samples_leaf': 4, 'min_samples_split': 3, 'n_estimators': 297}
+2025-05-22 00:53:30,933 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0181
+2025-05-22 00:53:30,980 [INFO] Hyperparameter Tuning Duration: 45.29 seconds
+2025-05-22 00:53:30,980 [INFO] Predicting on outer test set...
+2025-05-22 00:53:31,113 [INFO] Calculating performance metrics...
+2025-05-22 00:53:31,272 [INFO] Generating diagnostic plots...
+2025-05-22 00:53:33,324 [INFO] Diagnostic plots saved.
+2025-05-22 00:53:33,324 [INFO] Prediction & Evaluation Duration: 2.34 seconds
+2025-05-22 00:53:33,324 [INFO] Calculating and saving SHAP values...
+2025-05-22 00:53:33,324 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 00:55:07,034 [INFO] SHAP Calculation & Saving Duration: 93.71 seconds
+2025-05-22 00:55:07,035 [INFO] -- Outer Fold 1 finished. Duration: 141.34 seconds --
+2025-05-22 00:55:07,035 [INFO] 
+-- Processing Outer Fold 2/5 --
+2025-05-22 00:55:07,037 [INFO] Train set size: (2898, 69), Test set size: (749, 69)
+2025-05-22 00:55:07,037 [INFO] Test set indices range from 150 to 3596
+2025-05-22 00:55:07,038 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 00:55:07,038 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 00:55:07,039 [INFO] Tree-based model 'rf'. Setting n_jobs=4 for hyperparameter tuning.
+2025-05-22 00:55:07,041 [INFO] Fitting with groups parameter for GroupKFold
+2025-05-22 00:55:48,870 [INFO] Best Params found: {'bootstrap': True, 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 9, 'min_samples_split': 10, 'n_estimators': 250}
+2025-05-22 00:55:48,871 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0201
+2025-05-22 00:55:48,902 [INFO] Hyperparameter Tuning Duration: 41.86 seconds
+2025-05-22 00:55:48,902 [INFO] Predicting on outer test set...
+2025-05-22 00:55:49,005 [INFO] Calculating performance metrics...
+2025-05-22 00:55:49,079 [INFO] Generating diagnostic plots...
+2025-05-22 00:55:49,805 [INFO] Diagnostic plots saved.
+2025-05-22 00:55:49,805 [INFO] Prediction & Evaluation Duration: 0.90 seconds
+2025-05-22 00:55:49,805 [INFO] Calculating and saving SHAP values...
+2025-05-22 00:55:49,805 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 00:55:56,961 [INFO] SHAP Calculation & Saving Duration: 7.16 seconds
+2025-05-22 00:55:56,961 [INFO] -- Outer Fold 2 finished. Duration: 49.93 seconds --
+2025-05-22 00:55:56,962 [INFO] 
+-- Processing Outer Fold 3/5 --
+2025-05-22 00:55:56,965 [INFO] Train set size: (2898, 69), Test set size: (749, 69)
+2025-05-22 00:55:56,965 [INFO] Test set indices range from 50 to 3396
+2025-05-22 00:55:56,965 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 00:55:56,965 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 00:55:56,967 [INFO] Tree-based model 'rf'. Setting n_jobs=4 for hyperparameter tuning.
+2025-05-22 00:55:56,969 [INFO] Fitting with groups parameter for GroupKFold
+2025-05-22 00:56:39,682 [INFO] Best Params found: {'bootstrap': True, 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 10, 'min_samples_split': 10, 'n_estimators': 233}
+2025-05-22 00:56:39,682 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0244
+2025-05-22 00:56:39,710 [INFO] Hyperparameter Tuning Duration: 42.74 seconds
+2025-05-22 00:56:39,710 [INFO] Predicting on outer test set...
+2025-05-22 00:56:39,806 [INFO] Calculating performance metrics...
+2025-05-22 00:56:39,891 [INFO] Generating diagnostic plots...
+2025-05-22 00:56:40,604 [INFO] Diagnostic plots saved.
+2025-05-22 00:56:40,604 [INFO] Prediction & Evaluation Duration: 0.89 seconds
+2025-05-22 00:56:40,604 [INFO] Calculating and saving SHAP values...
+2025-05-22 00:56:40,604 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 00:56:47,045 [INFO] SHAP Calculation & Saving Duration: 6.44 seconds
+2025-05-22 00:56:47,045 [INFO] -- Outer Fold 3 finished. Duration: 50.08 seconds --
+2025-05-22 00:56:47,045 [INFO] 
+-- Processing Outer Fold 4/5 --
+2025-05-22 00:56:47,049 [INFO] Train set size: (2947, 69), Test set size: (700, 69)
+2025-05-22 00:56:47,049 [INFO] Test set indices range from 300 to 3646
+2025-05-22 00:56:47,049 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 00:56:47,049 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 00:56:47,051 [INFO] Tree-based model 'rf'. Setting n_jobs=4 for hyperparameter tuning.
+2025-05-22 00:56:47,053 [INFO] Fitting with groups parameter for GroupKFold
+2025-05-22 00:57:29,278 [INFO] Best Params found: {'bootstrap': True, 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 5, 'min_samples_split': 7, 'n_estimators': 346}
+2025-05-22 00:57:29,279 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0250
+2025-05-22 00:57:29,338 [INFO] Hyperparameter Tuning Duration: 42.29 seconds
+2025-05-22 00:57:29,338 [INFO] Predicting on outer test set...
+2025-05-22 00:57:29,470 [INFO] Calculating performance metrics...
+2025-05-22 00:57:29,538 [INFO] Generating diagnostic plots...
+2025-05-22 00:57:30,400 [INFO] Diagnostic plots saved.
+2025-05-22 00:57:30,400 [INFO] Prediction & Evaluation Duration: 1.06 seconds
+2025-05-22 00:57:30,400 [INFO] Calculating and saving SHAP values...
+2025-05-22 00:57:30,400 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 00:57:43,296 [INFO] SHAP Calculation & Saving Duration: 12.90 seconds
+2025-05-22 00:57:43,296 [INFO] -- Outer Fold 4 finished. Duration: 56.25 seconds --
+2025-05-22 00:57:43,297 [INFO] 
+-- Processing Outer Fold 5/5 --
+2025-05-22 00:57:43,300 [INFO] Train set size: (2947, 69), Test set size: (700, 69)
+2025-05-22 00:57:43,300 [INFO] Test set indices range from 0 to 3446
+2025-05-22 00:57:43,301 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 00:57:43,301 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 00:57:43,303 [INFO] Tree-based model 'rf'. Setting n_jobs=4 for hyperparameter tuning.
+2025-05-22 00:57:43,305 [INFO] Fitting with groups parameter for GroupKFold
+2025-05-22 00:58:25,269 [INFO] Best Params found: {'bootstrap': True, 'max_depth': 10, 'max_features': 'log2', 'min_samples_leaf': 3, 'min_samples_split': 8, 'n_estimators': 340}
+2025-05-22 00:58:25,269 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0275
+2025-05-22 00:58:25,294 [INFO] Hyperparameter Tuning Duration: 41.99 seconds
+2025-05-22 00:58:25,294 [INFO] Predicting on outer test set...
+2025-05-22 00:58:25,429 [INFO] Calculating performance metrics...
+2025-05-22 00:58:25,464 [INFO] Generating diagnostic plots...
+2025-05-22 00:58:26,198 [INFO] Diagnostic plots saved.
+2025-05-22 00:58:26,198 [INFO] Prediction & Evaluation Duration: 0.90 seconds
+2025-05-22 00:58:26,198 [INFO] Calculating and saving SHAP values...
+2025-05-22 00:58:26,198 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 00:58:44,981 [INFO] SHAP Calculation & Saving Duration: 18.78 seconds
+2025-05-22 00:58:44,981 [INFO] -- Outer Fold 5 finished. Duration: 61.68 seconds --
+2025-05-22 00:58:44,981 [INFO] 
+--- Aggregating results for: Random Forest (rf) ---
+2025-05-22 00:58:44,982 [INFO] Average Metrics across folds:
+2025-05-22 00:58:44,982 [INFO] {
+    "r2_mean": 0.661007729493565,
+    "r2_std": 0.19189138952431375,
+    "mse_mean": 0.027098722440534323,
+    "mse_std": 0.011062853010228515,
+    "rmse_mean": 0.1612953619238155,
+    "rmse_std": 0.032901803330512146,
+    "mae_mean": 0.09906516422068465,
+    "mae_std": 0.01591346874739921,
+    "best_inner_cv_score_mean": -0.023044772304557308,
+    "best_inner_cv_score_std": 0.00343517752420192,
+    "scoring_metric_used": "neg_mean_squared_error"
+}
+2025-05-22 00:58:45,074 [INFO] Combined predictions saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_005238/rf/all_folds_predictions.csv
+2025-05-22 00:58:45,074 [INFO] 
+Running global SHAP analysis...
+2025-05-22 00:58:47,408 [INFO] Global SHAP Analysis Duration: 2.33 seconds
+2025-05-22 00:58:47,408 [INFO] Result Aggregation & Global SHAP Duration: 2.43 seconds
+2025-05-22 00:58:47,408 [INFO] Average time per outer fold: 71.86 seconds
+2025-05-22 00:58:47,408 [INFO] --- Nested CV completed for: Random Forest (rf) ---
+2025-05-22 00:58:47,410 [INFO] Total execution time for model 'rf': 361.72 seconds
+2025-05-22 00:58:47,410 [INFO] 
+=== Processing model: LightGBM (lgbm) ===
+2025-05-22 00:58:47,412 [INFO] 
+--- Running Nested CV for Regression: LightGBM (lgbm) ---
+2025-05-22 00:58:47,412 [INFO] Output directory: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_005238/lgbm
+2025-05-22 00:58:47,412 [INFO] Hyperparameter tuning scoring metric: neg_mean_squared_error
+2025-05-22 00:58:47,412 [INFO] Using GroupKFold for outer CV with 5 folds based on query IDs.
+2025-05-22 00:58:47,414 [INFO] 
+-- Processing Outer Fold 1/5 --
+2025-05-22 00:58:47,417 [INFO] Train set size: (2898, 69), Test set size: (749, 69)
+2025-05-22 00:58:47,417 [INFO] Test set indices range from 100 to 3496
+2025-05-22 00:58:47,417 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 00:58:47,417 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 00:58:47,422 [INFO] Tree-based model 'lgbm'. Setting n_jobs=4 for hyperparameter tuning.
+2025-05-22 00:58:47,422 [INFO] Fitting with groups parameter for GroupKFold
+2025-05-22 01:11:26,103 [INFO] Best Params found: {'colsample_bytree': 0.7669644012595116, 'learning_rate': 0.05442156209414605, 'max_depth': 20, 'min_child_samples': 19, 'n_estimators': 783, 'num_leaves': 43, 'reg_alpha': 0.9429097039125192, 'reg_lambda': 0.32320293202075523, 'subsample': 0.8075162486973464}
+2025-05-22 01:11:26,104 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0170
+2025-05-22 01:11:26,141 [INFO] Hyperparameter Tuning Duration: 758.72 seconds
+2025-05-22 01:11:26,142 [INFO] Predicting on outer test set...
+2025-05-22 01:11:26,150 [INFO] Calculating performance metrics...
+2025-05-22 01:11:26,189 [INFO] Generating diagnostic plots...
+2025-05-22 01:11:26,944 [INFO] Diagnostic plots saved.
+2025-05-22 01:11:26,944 [INFO] Prediction & Evaluation Duration: 0.80 seconds
+2025-05-22 01:11:26,944 [INFO] Calculating and saving SHAP values...
+2025-05-22 01:11:26,944 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 01:11:29,571 [INFO] SHAP Calculation & Saving Duration: 2.63 seconds
+2025-05-22 01:11:29,572 [INFO] -- Outer Fold 1 finished. Duration: 762.16 seconds --
+2025-05-22 01:11:29,572 [INFO] 
+-- Processing Outer Fold 2/5 --
+2025-05-22 01:11:29,577 [INFO] Train set size: (2898, 69), Test set size: (749, 69)
+2025-05-22 01:11:29,577 [INFO] Test set indices range from 150 to 3596
+2025-05-22 01:11:29,578 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 01:11:29,578 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 01:11:29,582 [INFO] Tree-based model 'lgbm'. Setting n_jobs=4 for hyperparameter tuning.
+2025-05-22 01:11:29,585 [INFO] Fitting with groups parameter for GroupKFold
+2025-05-22 01:26:51,119 [INFO] Best Params found: {'colsample_bytree': 0.7425191352307899, 'learning_rate': 0.19136568830915082, 'max_depth': -1, 'min_child_samples': 34, 'n_estimators': 382, 'num_leaves': 32, 'reg_alpha': 0.8607305832563434, 'reg_lambda': 0.006952130531190703, 'subsample': 0.8042989210310263}
+2025-05-22 01:26:51,119 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0197
+2025-05-22 01:26:51,126 [INFO] Hyperparameter Tuning Duration: 921.55 seconds
+2025-05-22 01:26:51,126 [INFO] Predicting on outer test set...
+2025-05-22 01:26:51,129 [INFO] Calculating performance metrics...
+2025-05-22 01:26:51,167 [INFO] Generating diagnostic plots...
+2025-05-22 01:26:51,970 [INFO] Diagnostic plots saved.
+2025-05-22 01:26:51,970 [INFO] Prediction & Evaluation Duration: 0.84 seconds
+2025-05-22 01:26:51,970 [INFO] Calculating and saving SHAP values...
+2025-05-22 01:26:51,970 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 01:26:53,631 [INFO] SHAP Calculation & Saving Duration: 1.66 seconds
+2025-05-22 01:26:53,631 [INFO] -- Outer Fold 2 finished. Duration: 924.06 seconds --
+2025-05-22 01:26:53,631 [INFO] 
+-- Processing Outer Fold 3/5 --
+2025-05-22 01:26:53,634 [INFO] Train set size: (2898, 69), Test set size: (749, 69)
+2025-05-22 01:26:53,634 [INFO] Test set indices range from 50 to 3396
+2025-05-22 01:26:53,634 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 01:26:53,635 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 01:26:53,639 [INFO] Tree-based model 'lgbm'. Setting n_jobs=4 for hyperparameter tuning.
+2025-05-22 01:26:53,640 [INFO] Fitting with groups parameter for GroupKFold
+2025-05-22 01:42:57,824 [INFO] Best Params found: {'colsample_bytree': 0.8675365010654429, 'learning_rate': 0.14318447132349935, 'max_depth': 30, 'min_child_samples': 17, 'n_estimators': 825, 'num_leaves': 46, 'reg_alpha': 0.5612434258477011, 'reg_lambda': 0.38292687475378984, 'subsample': 0.9886848381556415}
+2025-05-22 01:42:57,825 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0248
+2025-05-22 01:42:57,874 [INFO] Hyperparameter Tuning Duration: 964.24 seconds
+2025-05-22 01:42:57,874 [INFO] Predicting on outer test set...
+2025-05-22 01:42:57,880 [INFO] Calculating performance metrics...
+2025-05-22 01:42:57,911 [INFO] Generating diagnostic plots...
+2025-05-22 01:42:58,791 [INFO] Diagnostic plots saved.
+2025-05-22 01:42:58,791 [INFO] Prediction & Evaluation Duration: 0.92 seconds
+2025-05-22 01:42:58,791 [INFO] Calculating and saving SHAP values...
+2025-05-22 01:42:58,791 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 01:43:01,623 [INFO] SHAP Calculation & Saving Duration: 2.83 seconds
+2025-05-22 01:43:01,624 [INFO] -- Outer Fold 3 finished. Duration: 967.99 seconds --
+2025-05-22 01:43:01,624 [INFO] 
+-- Processing Outer Fold 4/5 --
+2025-05-22 01:43:01,627 [INFO] Train set size: (2947, 69), Test set size: (700, 69)
+2025-05-22 01:43:01,627 [INFO] Test set indices range from 300 to 3646
+2025-05-22 01:43:01,627 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 01:43:01,627 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 01:43:01,630 [INFO] Tree-based model 'lgbm'. Setting n_jobs=4 for hyperparameter tuning.
+2025-05-22 01:43:01,633 [INFO] Fitting with groups parameter for GroupKFold
+2025-05-22 01:57:46,217 [INFO] Best Params found: {'colsample_bytree': 0.7470863212237734, 'learning_rate': 0.06304047353634509, 'max_depth': 10, 'min_child_samples': 39, 'n_estimators': 137, 'num_leaves': 57, 'reg_alpha': 0.3930977246667604, 'reg_lambda': 0.8920465551771133, 'subsample': 0.8524554503989051}
+2025-05-22 01:57:46,222 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0241
+2025-05-22 01:57:46,258 [INFO] Hyperparameter Tuning Duration: 884.63 seconds
+2025-05-22 01:57:46,258 [INFO] Predicting on outer test set...
+2025-05-22 01:57:46,285 [INFO] Calculating performance metrics...
+2025-05-22 01:57:46,381 [INFO] Generating diagnostic plots...
+2025-05-22 01:57:47,466 [INFO] Diagnostic plots saved.
+2025-05-22 01:57:47,466 [INFO] Prediction & Evaluation Duration: 1.21 seconds
+2025-05-22 01:57:47,466 [INFO] Calculating and saving SHAP values...
+2025-05-22 01:57:47,466 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 01:57:48,917 [INFO] SHAP Calculation & Saving Duration: 1.45 seconds
+2025-05-22 01:57:48,917 [INFO] -- Outer Fold 4 finished. Duration: 887.29 seconds --
+2025-05-22 01:57:48,917 [INFO] 
+-- Processing Outer Fold 5/5 --
+2025-05-22 01:57:48,919 [INFO] Train set size: (2947, 69), Test set size: (700, 69)
+2025-05-22 01:57:48,919 [INFO] Test set indices range from 0 to 3446
+2025-05-22 01:57:48,920 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 01:57:48,920 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 01:57:48,923 [INFO] Tree-based model 'lgbm'. Setting n_jobs=4 for hyperparameter tuning.
+2025-05-22 01:57:48,924 [INFO] Fitting with groups parameter for GroupKFold
+2025-05-22 02:11:23,404 [INFO] Best Params found: {'colsample_bytree': 0.6053059844639466, 'learning_rate': 0.19844035113697056, 'max_depth': 10, 'min_child_samples': 27, 'n_estimators': 876, 'num_leaves': 45, 'reg_alpha': 0.09767211400638387, 'reg_lambda': 0.6842330265121569, 'subsample': 0.7760609974958406}
+2025-05-22 02:11:23,404 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0274
+2025-05-22 02:11:23,457 [INFO] Hyperparameter Tuning Duration: 814.54 seconds
+2025-05-22 02:11:23,457 [INFO] Predicting on outer test set...
+2025-05-22 02:11:23,464 [INFO] Calculating performance metrics...
+2025-05-22 02:11:23,504 [INFO] Generating diagnostic plots...
+2025-05-22 02:11:24,195 [INFO] Diagnostic plots saved.
+2025-05-22 02:11:24,195 [INFO] Prediction & Evaluation Duration: 0.74 seconds
+2025-05-22 02:11:24,195 [INFO] Calculating and saving SHAP values...
+2025-05-22 02:11:24,195 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 02:11:26,656 [INFO] SHAP Calculation & Saving Duration: 2.46 seconds
+2025-05-22 02:11:26,656 [INFO] -- Outer Fold 5 finished. Duration: 817.74 seconds --
+2025-05-22 02:11:26,656 [INFO] 
+--- Aggregating results for: LightGBM (lgbm) ---
+2025-05-22 02:11:26,657 [INFO] Average Metrics across folds:
+2025-05-22 02:11:26,657 [INFO] {
+    "r2_mean": 0.6100678018015546,
+    "r2_std": 0.23813221809104237,
+    "mse_mean": 0.030695132220724487,
+    "mse_std": 0.013869000185005531,
+    "rmse_mean": 0.17072738803743712,
+    "rmse_std": 0.039335622464108225,
+    "mae_mean": 0.1006013056449238,
+    "mae_std": 0.019425333930308427,
+    "best_inner_cv_score_mean": -0.02260263726438757,
+    "best_inner_cv_score_std": 0.0037376030412215743,
+    "scoring_metric_used": "neg_mean_squared_error"
+}
+2025-05-22 02:11:26,752 [INFO] Combined predictions saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_005238/lgbm/all_folds_predictions.csv
+2025-05-22 02:11:26,752 [INFO] 
+Running global SHAP analysis...
+2025-05-22 02:11:28,941 [INFO] Global SHAP Analysis Duration: 2.19 seconds
+2025-05-22 02:11:28,941 [INFO] Result Aggregation & Global SHAP Duration: 2.28 seconds
+2025-05-22 02:11:28,941 [INFO] Average time per outer fold: 871.85 seconds
+2025-05-22 02:11:28,941 [INFO] --- Nested CV completed for: LightGBM (lgbm) ---
+2025-05-22 02:11:28,945 [INFO] Total execution time for model 'lgbm': 4361.54 seconds
+2025-05-22 02:11:28,945 [INFO] 
+=== Processing model: XGBoost (xgb) ===
+2025-05-22 02:11:28,947 [INFO] 
+--- Running Nested CV for Regression: XGBoost (xgb) ---
+2025-05-22 02:11:28,947 [INFO] Output directory: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_005238/xgb
+2025-05-22 02:11:28,947 [INFO] Hyperparameter tuning scoring metric: neg_mean_squared_error
+2025-05-22 02:11:28,947 [INFO] Using GroupKFold for outer CV with 5 folds based on query IDs.
+2025-05-22 02:11:28,949 [INFO] 
+-- Processing Outer Fold 1/5 --
+2025-05-22 02:11:28,954 [INFO] Train set size: (2898, 69), Test set size: (749, 69)
+2025-05-22 02:11:28,954 [INFO] Test set indices range from 100 to 3496
+2025-05-22 02:11:28,955 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 02:11:28,955 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 02:11:28,960 [INFO] Tree-based model 'xgb'. Setting n_jobs=4 for hyperparameter tuning.
+2025-05-22 02:11:28,960 [INFO] Fitting with groups parameter for GroupKFold
+2025-05-22 02:12:32,839 [INFO] Best Params found: {'colsample_bytree': 0.6125716742746937, 'gamma': 0.3182052056318902, 'learning_rate': 0.07287119621526533, 'max_depth': 6, 'n_estimators': 833, 'reg_alpha': 0.1393314544058757, 'reg_lambda': 1.2088347585556345, 'subsample': 0.8159364365206693}
+2025-05-22 02:12:32,847 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0177
+2025-05-22 02:12:32,900 [INFO] Hyperparameter Tuning Duration: 63.95 seconds
+2025-05-22 02:12:32,900 [INFO] Predicting on outer test set...
+2025-05-22 02:12:32,908 [INFO] Calculating performance metrics...
+2025-05-22 02:12:32,957 [INFO] Generating diagnostic plots...
+2025-05-22 02:12:33,728 [INFO] Diagnostic plots saved.
+2025-05-22 02:12:33,728 [INFO] Prediction & Evaluation Duration: 0.83 seconds
+2025-05-22 02:12:33,728 [INFO] Calculating and saving SHAP values...
+2025-05-22 02:12:33,728 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 02:12:35,358 [INFO] SHAP Calculation & Saving Duration: 1.63 seconds
+2025-05-22 02:12:35,358 [INFO] -- Outer Fold 1 finished. Duration: 66.41 seconds --
+2025-05-22 02:12:35,359 [INFO] 
+-- Processing Outer Fold 2/5 --
+2025-05-22 02:12:35,363 [INFO] Train set size: (2898, 69), Test set size: (749, 69)
+2025-05-22 02:12:35,363 [INFO] Test set indices range from 150 to 3596
+2025-05-22 02:12:35,363 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 02:12:35,363 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 02:12:35,368 [INFO] Tree-based model 'xgb'. Setting n_jobs=4 for hyperparameter tuning.
+2025-05-22 02:12:35,369 [INFO] Fitting with groups parameter for GroupKFold
+2025-05-22 02:13:46,446 [INFO] Best Params found: {'colsample_bytree': 0.6508242050607539, 'gamma': 0.2611216300274022, 'learning_rate': 0.16399871061972218, 'max_depth': 6, 'n_estimators': 719, 'reg_alpha': 0.6228904758190003, 'reg_lambda': 0.170694929987536, 'subsample': 0.6206726884674431}
+2025-05-22 02:13:46,447 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0257
+2025-05-22 02:13:46,476 [INFO] Hyperparameter Tuning Duration: 71.11 seconds
+2025-05-22 02:13:46,476 [INFO] Predicting on outer test set...
+2025-05-22 02:13:46,486 [INFO] Calculating performance metrics...
+2025-05-22 02:13:46,574 [INFO] Generating diagnostic plots...
+2025-05-22 02:13:47,427 [INFO] Diagnostic plots saved.
+2025-05-22 02:13:47,427 [INFO] Prediction & Evaluation Duration: 0.95 seconds
+2025-05-22 02:13:47,427 [INFO] Calculating and saving SHAP values...
+2025-05-22 02:13:47,427 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 02:13:48,905 [INFO] SHAP Calculation & Saving Duration: 1.48 seconds
+2025-05-22 02:13:48,905 [INFO] -- Outer Fold 2 finished. Duration: 73.55 seconds --
+2025-05-22 02:13:48,905 [INFO] 
+-- Processing Outer Fold 3/5 --
+2025-05-22 02:13:48,909 [INFO] Train set size: (2898, 69), Test set size: (749, 69)
+2025-05-22 02:13:48,909 [INFO] Test set indices range from 50 to 3396
+2025-05-22 02:13:48,909 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 02:13:48,909 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 02:13:48,913 [INFO] Tree-based model 'xgb'. Setting n_jobs=4 for hyperparameter tuning.
+2025-05-22 02:13:48,914 [INFO] Fitting with groups parameter for GroupKFold
+2025-05-22 02:14:57,400 [INFO] Best Params found: {'colsample_bytree': 0.6125716742746937, 'gamma': 0.3182052056318902, 'learning_rate': 0.07287119621526533, 'max_depth': 6, 'n_estimators': 833, 'reg_alpha': 0.1393314544058757, 'reg_lambda': 1.2088347585556345, 'subsample': 0.8159364365206693}
+2025-05-22 02:14:57,401 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0249
+2025-05-22 02:14:57,451 [INFO] Hyperparameter Tuning Duration: 68.54 seconds
+2025-05-22 02:14:57,451 [INFO] Predicting on outer test set...
+2025-05-22 02:14:57,459 [INFO] Calculating performance metrics...
+2025-05-22 02:14:57,474 [INFO] Generating diagnostic plots...
+2025-05-22 02:14:58,382 [INFO] Diagnostic plots saved.
+2025-05-22 02:14:58,382 [INFO] Prediction & Evaluation Duration: 0.93 seconds
+2025-05-22 02:14:58,382 [INFO] Calculating and saving SHAP values...
+2025-05-22 02:14:58,382 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 02:15:00,088 [INFO] SHAP Calculation & Saving Duration: 1.71 seconds
+2025-05-22 02:15:00,088 [INFO] -- Outer Fold 3 finished. Duration: 71.18 seconds --
+2025-05-22 02:15:00,088 [INFO] 
+-- Processing Outer Fold 4/5 --
+2025-05-22 02:15:00,092 [INFO] Train set size: (2947, 69), Test set size: (700, 69)
+2025-05-22 02:15:00,092 [INFO] Test set indices range from 300 to 3646
+2025-05-22 02:15:00,092 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 02:15:00,092 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 02:15:00,096 [INFO] Tree-based model 'xgb'. Setting n_jobs=4 for hyperparameter tuning.
+2025-05-22 02:15:00,097 [INFO] Fitting with groups parameter for GroupKFold
+2025-05-22 02:16:18,732 [INFO] Best Params found: {'colsample_bytree': 0.699092395800463, 'gamma': 0.1779863393256308, 'learning_rate': 0.16156922209287383, 'max_depth': 3, 'n_estimators': 384, 'reg_alpha': 0.11607264050691624, 'reg_lambda': 0.0920052840435055, 'subsample': 0.616291520927588}
+2025-05-22 02:16:18,732 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0258
+2025-05-22 02:16:18,763 [INFO] Hyperparameter Tuning Duration: 78.67 seconds
+2025-05-22 02:16:18,763 [INFO] Predicting on outer test set...
+2025-05-22 02:16:18,774 [INFO] Calculating performance metrics...
+2025-05-22 02:16:18,854 [INFO] Generating diagnostic plots...
+2025-05-22 02:16:19,658 [INFO] Diagnostic plots saved.
+2025-05-22 02:16:19,658 [INFO] Prediction & Evaluation Duration: 0.89 seconds
+2025-05-22 02:16:19,658 [INFO] Calculating and saving SHAP values...
+2025-05-22 02:16:19,658 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 02:16:21,042 [INFO] SHAP Calculation & Saving Duration: 1.38 seconds
+2025-05-22 02:16:21,042 [INFO] -- Outer Fold 4 finished. Duration: 80.95 seconds --
+2025-05-22 02:16:21,042 [INFO] 
+-- Processing Outer Fold 5/5 --
+2025-05-22 02:16:21,045 [INFO] Train set size: (2947, 69), Test set size: (700, 69)
+2025-05-22 02:16:21,045 [INFO] Test set indices range from 0 to 3446
+2025-05-22 02:16:21,046 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 02:16:21,046 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 02:16:21,049 [INFO] Tree-based model 'xgb'. Setting n_jobs=4 for hyperparameter tuning.
+2025-05-22 02:16:21,050 [INFO] Fitting with groups parameter for GroupKFold
+2025-05-22 02:17:50,684 [INFO] Best Params found: {'colsample_bytree': 0.6125716742746937, 'gamma': 0.3182052056318902, 'learning_rate': 0.07287119621526533, 'max_depth': 6, 'n_estimators': 833, 'reg_alpha': 0.1393314544058757, 'reg_lambda': 1.2088347585556345, 'subsample': 0.8159364365206693}
+2025-05-22 02:17:50,689 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0294
+2025-05-22 02:17:50,755 [INFO] Hyperparameter Tuning Duration: 89.71 seconds
+2025-05-22 02:17:50,756 [INFO] Predicting on outer test set...
+2025-05-22 02:17:50,766 [INFO] Calculating performance metrics...
+2025-05-22 02:17:50,846 [INFO] Generating diagnostic plots...
+2025-05-22 02:17:51,565 [INFO] Diagnostic plots saved.
+2025-05-22 02:17:51,565 [INFO] Prediction & Evaluation Duration: 0.81 seconds
+2025-05-22 02:17:51,565 [INFO] Calculating and saving SHAP values...
+2025-05-22 02:17:51,565 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 02:17:52,937 [INFO] SHAP Calculation & Saving Duration: 1.37 seconds
+2025-05-22 02:17:52,937 [INFO] -- Outer Fold 5 finished. Duration: 91.90 seconds --
+2025-05-22 02:17:52,937 [INFO] 
+--- Aggregating results for: XGBoost (xgb) ---
+2025-05-22 02:17:52,938 [INFO] Average Metrics across folds:
+2025-05-22 02:17:52,938 [INFO] {
+    "r2_mean": 0.5997029909712293,
+    "r2_std": 0.2258268875184899,
+    "mse_mean": 0.031725647521076095,
+    "mse_std": 0.01198712529684936,
+    "rmse_mean": 0.1750266715152769,
+    "rmse_std": 0.03303500839048572,
+    "mae_mean": 0.1065043488514722,
+    "mae_std": 0.014428865395148843,
+    "best_inner_cv_score_mean": -0.02471152282141255,
+    "best_inner_cv_score_std": 0.003834811791776284,
+    "scoring_metric_used": "neg_mean_squared_error"
+}
+2025-05-22 02:17:53,078 [INFO] Combined predictions saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_005238/xgb/all_folds_predictions.csv
+2025-05-22 02:17:53,078 [INFO] 
+Running global SHAP analysis...
+2025-05-22 02:17:55,350 [INFO] Global SHAP Analysis Duration: 2.27 seconds
+2025-05-22 02:17:55,351 [INFO] Result Aggregation & Global SHAP Duration: 2.41 seconds
+2025-05-22 02:17:55,351 [INFO] Average time per outer fold: 76.80 seconds
+2025-05-22 02:17:55,351 [INFO] --- Nested CV completed for: XGBoost (xgb) ---
+2025-05-22 02:17:55,354 [INFO] Total execution time for model 'xgb': 386.41 seconds
+2025-05-22 02:17:55,354 [INFO] 
+=== Processing model: Linear Regression (lr) ===
+2025-05-22 02:17:55,356 [INFO] 
+--- Running Nested CV for Regression: Linear Regression (lr) ---
+2025-05-22 02:17:55,356 [INFO] Output directory: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_005238/lr
+2025-05-22 02:17:55,356 [INFO] Hyperparameter tuning scoring metric: neg_mean_squared_error
+2025-05-22 02:17:55,356 [INFO] Using GroupKFold for outer CV with 5 folds based on query IDs.
+2025-05-22 02:17:55,359 [INFO] 
+-- Processing Outer Fold 1/5 --
+2025-05-22 02:17:55,362 [INFO] Train set size: (2898, 69), Test set size: (749, 69)
+2025-05-22 02:17:55,362 [INFO] Test set indices range from 100 to 3496
+2025-05-22 02:17:55,362 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 02:17:55,362 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 02:17:55,362 [INFO] Linear model 'lr' detected. Setting n_jobs=1 for efficient hyperparameter tuning.
+2025-05-22 02:17:55,362 [INFO] Parameter space size (2) is smaller than requested n_iter (50). Adjusting to 2.
+2025-05-22 02:17:55,362 [INFO] Fitting with groups parameter for GroupKFold
+2025-05-22 02:17:55,569 [INFO] Best Params found: {'reg__fit_intercept': True}
+2025-05-22 02:17:55,569 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0302
+2025-05-22 02:17:55,569 [INFO] 
+[DEBUG] Linear model details:
+2025-05-22 02:17:55,569 [INFO]   - Model type: lr (Linear Regression)
+2025-05-22 02:17:55,569 [INFO]   - Best estimator type: <class 'sklearn.pipeline.Pipeline'>
+2025-05-22 02:17:55,588 [INFO]   - All params: {'memory': None, 'steps': [('scaler', StandardScaler()), ('reg', LinearRegression())], 'transform_input': None, 'verbose': False, 'scaler': StandardScaler(), 'reg': LinearRegression(), 'scaler__copy': True, 'scaler__with_mean': True, 'scaler__with_std': True, 'reg__copy_X': True, 'reg__fit_intercept': True, 'reg__n_jobs': None, 'reg__positive': False}
+2025-05-22 02:17:55,588 [INFO]   - Pipeline steps: ['scaler', 'reg']
+2025-05-22 02:17:55,589 [INFO]   - Scaler found: <class 'sklearn.preprocessing._data.StandardScaler'>
+2025-05-22 02:17:55,609 [INFO] Hyperparameter Tuning Duration: 0.25 seconds
+2025-05-22 02:17:55,609 [INFO] Predicting on outer test set...
+2025-05-22 02:17:55,612 [INFO] Calculating performance metrics...
+2025-05-22 02:17:55,614 [WARNING] Fold 1/5: 비정상적 평가 지표 detected (r2=-1.30e+08, mse=1.31e+07), 이 폴드의 추가 처리는 건너뜁니다.
+2025-05-22 02:17:55,641 [INFO] -- Outer Fold 1 partially processed (abnormal metrics). --
+2025-05-22 02:17:55,642 [INFO] 
+-- Processing Outer Fold 2/5 --
+2025-05-22 02:17:55,644 [INFO] Train set size: (2898, 69), Test set size: (749, 69)
+2025-05-22 02:17:55,644 [INFO] Test set indices range from 150 to 3596
+2025-05-22 02:17:55,645 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 02:17:55,645 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 02:17:55,645 [INFO] Linear model 'lr' detected. Setting n_jobs=1 for efficient hyperparameter tuning.
+2025-05-22 02:17:55,645 [INFO] Parameter space size (2) is smaller than requested n_iter (50). Adjusting to 2.
+2025-05-22 02:17:55,645 [INFO] Fitting with groups parameter for GroupKFold
+2025-05-22 02:17:55,752 [INFO] Best Params found: {'reg__fit_intercept': False}
+2025-05-22 02:17:55,752 [INFO] Best Inner CV Score (neg_mean_squared_error): -107396016.9755
+2025-05-22 02:17:55,752 [INFO] 
+[DEBUG] Linear model details:
+2025-05-22 02:17:55,752 [INFO]   - Model type: lr (Linear Regression)
+2025-05-22 02:17:55,752 [INFO]   - Best estimator type: <class 'sklearn.pipeline.Pipeline'>
+2025-05-22 02:17:55,753 [INFO]   - All params: {'memory': None, 'steps': [('scaler', StandardScaler()), ('reg', LinearRegression(fit_intercept=False))], 'transform_input': None, 'verbose': False, 'scaler': StandardScaler(), 'reg': LinearRegression(fit_intercept=False), 'scaler__copy': True, 'scaler__with_mean': True, 'scaler__with_std': True, 'reg__copy_X': True, 'reg__fit_intercept': False, 'reg__n_jobs': None, 'reg__positive': False}
+2025-05-22 02:17:55,753 [INFO]   - Pipeline steps: ['scaler', 'reg']
+2025-05-22 02:17:55,753 [INFO]   - Scaler found: <class 'sklearn.preprocessing._data.StandardScaler'>
+2025-05-22 02:17:55,789 [INFO] Hyperparameter Tuning Duration: 0.14 seconds
+2025-05-22 02:17:55,789 [INFO] Predicting on outer test set...
+2025-05-22 02:17:55,792 [INFO] Calculating performance metrics...
+2025-05-22 02:17:55,837 [INFO] Generating diagnostic plots...
+2025-05-22 02:17:56,689 [INFO] Diagnostic plots saved.
+2025-05-22 02:17:56,689 [INFO] Prediction & Evaluation Duration: 0.90 seconds
+2025-05-22 02:17:56,689 [INFO] Calculating and saving SHAP values...
+2025-05-22 02:17:56,689 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 02:17:57,992 [INFO] SHAP Calculation & Saving Duration: 1.30 seconds
+2025-05-22 02:17:57,992 [INFO] -- Outer Fold 2 finished. Duration: 2.35 seconds --
+2025-05-22 02:17:57,993 [INFO] 
+-- Processing Outer Fold 3/5 --
+2025-05-22 02:17:57,995 [INFO] Train set size: (2898, 69), Test set size: (749, 69)
+2025-05-22 02:17:57,995 [INFO] Test set indices range from 50 to 3396
+2025-05-22 02:17:57,996 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 02:17:57,996 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 02:17:57,996 [INFO] Linear model 'lr' detected. Setting n_jobs=1 for efficient hyperparameter tuning.
+2025-05-22 02:17:57,996 [INFO] Parameter space size (2) is smaller than requested n_iter (50). Adjusting to 2.
+2025-05-22 02:17:57,996 [INFO] Fitting with groups parameter for GroupKFold
+2025-05-22 02:17:58,095 [INFO] Best Params found: {'reg__fit_intercept': False}
+2025-05-22 02:17:58,095 [INFO] Best Inner CV Score (neg_mean_squared_error): -5456314.2446
+2025-05-22 02:17:58,095 [INFO] 
+[DEBUG] Linear model details:
+2025-05-22 02:17:58,096 [INFO]   - Model type: lr (Linear Regression)
+2025-05-22 02:17:58,096 [INFO]   - Best estimator type: <class 'sklearn.pipeline.Pipeline'>
+2025-05-22 02:17:58,096 [INFO]   - All params: {'memory': None, 'steps': [('scaler', StandardScaler()), ('reg', LinearRegression(fit_intercept=False))], 'transform_input': None, 'verbose': False, 'scaler': StandardScaler(), 'reg': LinearRegression(fit_intercept=False), 'scaler__copy': True, 'scaler__with_mean': True, 'scaler__with_std': True, 'reg__copy_X': True, 'reg__fit_intercept': False, 'reg__n_jobs': None, 'reg__positive': False}
+2025-05-22 02:17:58,096 [INFO]   - Pipeline steps: ['scaler', 'reg']
+2025-05-22 02:17:58,096 [INFO]   - Scaler found: <class 'sklearn.preprocessing._data.StandardScaler'>
+2025-05-22 02:17:58,129 [INFO] Hyperparameter Tuning Duration: 0.13 seconds
+2025-05-22 02:17:58,129 [INFO] Predicting on outer test set...
+2025-05-22 02:17:58,132 [INFO] Calculating performance metrics...
+2025-05-22 02:17:58,184 [INFO] Generating diagnostic plots...
+2025-05-22 02:17:58,968 [INFO] Diagnostic plots saved.
+2025-05-22 02:17:58,968 [INFO] Prediction & Evaluation Duration: 0.84 seconds
+2025-05-22 02:17:58,968 [INFO] Calculating and saving SHAP values...
+2025-05-22 02:17:58,968 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 02:18:00,357 [INFO] SHAP Calculation & Saving Duration: 1.39 seconds
+2025-05-22 02:18:00,357 [INFO] -- Outer Fold 3 finished. Duration: 2.36 seconds --
+2025-05-22 02:18:00,357 [INFO] 
+-- Processing Outer Fold 4/5 --
+2025-05-22 02:18:00,360 [INFO] Train set size: (2947, 69), Test set size: (700, 69)
+2025-05-22 02:18:00,360 [INFO] Test set indices range from 300 to 3646
+2025-05-22 02:18:00,360 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 02:18:00,360 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 02:18:00,360 [INFO] Linear model 'lr' detected. Setting n_jobs=1 for efficient hyperparameter tuning.
+2025-05-22 02:18:00,360 [INFO] Parameter space size (2) is smaller than requested n_iter (50). Adjusting to 2.
+2025-05-22 02:18:00,360 [INFO] Fitting with groups parameter for GroupKFold
+2025-05-22 02:18:00,472 [INFO] Best Params found: {'reg__fit_intercept': True}
+2025-05-22 02:18:00,472 [INFO] Best Inner CV Score (neg_mean_squared_error): -1886547.6378
+2025-05-22 02:18:00,472 [INFO] 
+[DEBUG] Linear model details:
+2025-05-22 02:18:00,472 [INFO]   - Model type: lr (Linear Regression)
+2025-05-22 02:18:00,472 [INFO]   - Best estimator type: <class 'sklearn.pipeline.Pipeline'>
+2025-05-22 02:18:00,472 [INFO]   - All params: {'memory': None, 'steps': [('scaler', StandardScaler()), ('reg', LinearRegression())], 'transform_input': None, 'verbose': False, 'scaler': StandardScaler(), 'reg': LinearRegression(), 'scaler__copy': True, 'scaler__with_mean': True, 'scaler__with_std': True, 'reg__copy_X': True, 'reg__fit_intercept': True, 'reg__n_jobs': None, 'reg__positive': False}
+2025-05-22 02:18:00,472 [INFO]   - Pipeline steps: ['scaler', 'reg']
+2025-05-22 02:18:00,472 [INFO]   - Scaler found: <class 'sklearn.preprocessing._data.StandardScaler'>
+2025-05-22 02:18:00,489 [INFO] Hyperparameter Tuning Duration: 0.13 seconds
+2025-05-22 02:18:00,489 [INFO] Predicting on outer test set...
+2025-05-22 02:18:00,492 [INFO] Calculating performance metrics...
+2025-05-22 02:18:00,606 [INFO] Generating diagnostic plots...
+2025-05-22 02:18:01,479 [INFO] Diagnostic plots saved.
+2025-05-22 02:18:01,479 [INFO] Prediction & Evaluation Duration: 0.99 seconds
+2025-05-22 02:18:01,479 [INFO] Calculating and saving SHAP values...
+2025-05-22 02:18:01,479 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 02:18:02,826 [INFO] SHAP Calculation & Saving Duration: 1.35 seconds
+2025-05-22 02:18:02,826 [INFO] -- Outer Fold 4 finished. Duration: 2.47 seconds --
+2025-05-22 02:18:02,826 [INFO] 
+-- Processing Outer Fold 5/5 --
+2025-05-22 02:18:02,829 [INFO] Train set size: (2947, 69), Test set size: (700, 69)
+2025-05-22 02:18:02,829 [INFO] Test set indices range from 0 to 3446
+2025-05-22 02:18:02,829 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 02:18:02,829 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 02:18:02,829 [INFO] Linear model 'lr' detected. Setting n_jobs=1 for efficient hyperparameter tuning.
+2025-05-22 02:18:02,829 [INFO] Parameter space size (2) is smaller than requested n_iter (50). Adjusting to 2.
+2025-05-22 02:18:02,829 [INFO] Fitting with groups parameter for GroupKFold
+2025-05-22 02:18:02,928 [INFO] Best Params found: {'reg__fit_intercept': True}
+2025-05-22 02:18:02,929 [INFO] Best Inner CV Score (neg_mean_squared_error): -64333.2583
+2025-05-22 02:18:02,929 [INFO] 
+[DEBUG] Linear model details:
+2025-05-22 02:18:02,929 [INFO]   - Model type: lr (Linear Regression)
+2025-05-22 02:18:02,929 [INFO]   - Best estimator type: <class 'sklearn.pipeline.Pipeline'>
+2025-05-22 02:18:02,929 [INFO]   - All params: {'memory': None, 'steps': [('scaler', StandardScaler()), ('reg', LinearRegression())], 'transform_input': None, 'verbose': False, 'scaler': StandardScaler(), 'reg': LinearRegression(), 'scaler__copy': True, 'scaler__with_mean': True, 'scaler__with_std': True, 'reg__copy_X': True, 'reg__fit_intercept': True, 'reg__n_jobs': None, 'reg__positive': False}
+2025-05-22 02:18:02,929 [INFO]   - Pipeline steps: ['scaler', 'reg']
+2025-05-22 02:18:02,929 [INFO]   - Scaler found: <class 'sklearn.preprocessing._data.StandardScaler'>
+2025-05-22 02:18:02,970 [INFO] Hyperparameter Tuning Duration: 0.14 seconds
+2025-05-22 02:18:02,970 [INFO] Predicting on outer test set...
+2025-05-22 02:18:02,973 [INFO] Calculating performance metrics...
+2025-05-22 02:18:02,987 [INFO] Generating diagnostic plots...
+2025-05-22 02:18:03,803 [INFO] Diagnostic plots saved.
+2025-05-22 02:18:03,803 [INFO] Prediction & Evaluation Duration: 0.83 seconds
+2025-05-22 02:18:03,803 [INFO] Calculating and saving SHAP values...
+2025-05-22 02:18:03,803 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 02:18:05,107 [INFO] SHAP Calculation & Saving Duration: 1.30 seconds
+2025-05-22 02:18:05,107 [INFO] -- Outer Fold 5 finished. Duration: 2.28 seconds --
+2025-05-22 02:18:05,107 [INFO] 
+--- Aggregating results for: Linear Regression (lr) ---
+2025-05-22 02:18:05,107 [INFO] Average Metrics across folds:
+2025-05-22 02:18:05,107 [INFO] {
+    "r2_mean": -25917797.434904583,
+    "r2_std": 51835594.88950367,
+    "mse_mean": 2616307.3430148913,
+    "mse_std": 5232614.520574333,
+    "rmse_mean": 723.5968268452556,
+    "rmse_std": 1446.6219185379325,
+    "mae_mean": 26.64201286401007,
+    "mae_std": 52.84262363723233,
+    "best_inner_cv_score_mean": -22960642.429282155,
+    "best_inner_cv_score_std": 42264130.23895345,
+    "scoring_metric_used": "neg_mean_squared_error",
+    "abnormal_performance_mean": 1.0,
+    "abnormal_performance_std": 0.0
+}
+2025-05-22 02:18:05,107 [WARNING] Linear model 'lr' has extremely poor metrics: R2=-2.59e+07, MSE=2.62e+06
+2025-05-22 02:18:05,107 [WARNING] Skipping further processing for this model due to poor performance
+2025-05-22 02:18:05,107 [WARNING] Model lr showed abnormal performance and was partially processed.
+2025-05-22 02:18:05,107 [INFO] 
+=== Processing model: Ridge Regression (ridge) ===
+2025-05-22 02:18:05,109 [INFO] 
+--- Running Nested CV for Regression: Ridge Regression (ridge) ---
+2025-05-22 02:18:05,109 [INFO] Output directory: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_005238/ridge
+2025-05-22 02:18:05,109 [INFO] Hyperparameter tuning scoring metric: neg_mean_squared_error
+2025-05-22 02:18:05,109 [INFO] Using GroupKFold for outer CV with 5 folds based on query IDs.
+2025-05-22 02:18:05,111 [INFO] 
+-- Processing Outer Fold 1/5 --
+2025-05-22 02:18:05,113 [INFO] Train set size: (2898, 69), Test set size: (749, 69)
+2025-05-22 02:18:05,113 [INFO] Test set indices range from 100 to 3496
+2025-05-22 02:18:05,113 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 02:18:05,113 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 02:18:05,114 [INFO] Linear model 'ridge' detected. Setting n_jobs=1 for efficient hyperparameter tuning.
+2025-05-22 02:18:05,114 [INFO] Fitting with groups parameter for GroupKFold
+2025-05-22 02:18:07,104 [INFO] Best Params found: {'reg__alpha': 676.5074324464838, 'reg__fit_intercept': True, 'reg__solver': 'auto'}
+2025-05-22 02:18:07,104 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0192
+2025-05-22 02:18:07,104 [INFO] 
+[DEBUG] Linear model details:
+2025-05-22 02:18:07,104 [INFO]   - Model type: ridge (Ridge Regression)
+2025-05-22 02:18:07,104 [INFO]   - Best estimator type: <class 'sklearn.pipeline.Pipeline'>
+2025-05-22 02:18:07,105 [INFO]   - All params: {'memory': None, 'steps': [('scaler', StandardScaler()), ('reg', Ridge(alpha=676.5074324464838))], 'transform_input': None, 'verbose': False, 'scaler': StandardScaler(), 'reg': Ridge(alpha=676.5074324464838), 'scaler__copy': True, 'scaler__with_mean': True, 'scaler__with_std': True, 'reg__alpha': 676.5074324464838, 'reg__copy_X': True, 'reg__fit_intercept': True, 'reg__max_iter': None, 'reg__positive': False, 'reg__random_state': None, 'reg__solver': 'auto', 'reg__tol': 0.0001}
+2025-05-22 02:18:07,105 [INFO]   - Pipeline steps: ['scaler', 'reg']
+2025-05-22 02:18:07,105 [INFO]   - Scaler found: <class 'sklearn.preprocessing._data.StandardScaler'>
+2025-05-22 02:18:07,105 [INFO]   - Alpha value: 676.5074324464838
+2025-05-22 02:18:07,131 [INFO] Hyperparameter Tuning Duration: 2.02 seconds
+2025-05-22 02:18:07,131 [INFO] Predicting on outer test set...
+2025-05-22 02:18:07,134 [INFO] Calculating performance metrics...
+2025-05-22 02:18:07,136 [WARNING] Fold 1/5: 비정상적 평가 지표 detected (r2=-4.35e+06, mse=4.39e+05), 이 폴드의 추가 처리는 건너뜁니다.
+2025-05-22 02:18:07,141 [INFO] -- Outer Fold 1 partially processed (abnormal metrics). --
+2025-05-22 02:18:07,142 [INFO] 
+-- Processing Outer Fold 2/5 --
+2025-05-22 02:18:07,146 [INFO] Train set size: (2898, 69), Test set size: (749, 69)
+2025-05-22 02:18:07,146 [INFO] Test set indices range from 150 to 3596
+2025-05-22 02:18:07,146 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 02:18:07,146 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 02:18:07,148 [INFO] Linear model 'ridge' detected. Setting n_jobs=1 for efficient hyperparameter tuning.
+2025-05-22 02:18:07,148 [INFO] Fitting with groups parameter for GroupKFold
+2025-05-22 02:18:08,685 [INFO] Best Params found: {'reg__alpha': 676.5074324464838, 'reg__fit_intercept': True, 'reg__solver': 'auto'}
+2025-05-22 02:18:08,685 [INFO] Best Inner CV Score (neg_mean_squared_error): -15785466.9816
+2025-05-22 02:18:08,685 [INFO] 
+[DEBUG] Linear model details:
+2025-05-22 02:18:08,685 [INFO]   - Model type: ridge (Ridge Regression)
+2025-05-22 02:18:08,685 [INFO]   - Best estimator type: <class 'sklearn.pipeline.Pipeline'>
+2025-05-22 02:18:08,685 [INFO]   - All params: {'memory': None, 'steps': [('scaler', StandardScaler()), ('reg', Ridge(alpha=676.5074324464838))], 'transform_input': None, 'verbose': False, 'scaler': StandardScaler(), 'reg': Ridge(alpha=676.5074324464838), 'scaler__copy': True, 'scaler__with_mean': True, 'scaler__with_std': True, 'reg__alpha': 676.5074324464838, 'reg__copy_X': True, 'reg__fit_intercept': True, 'reg__max_iter': None, 'reg__positive': False, 'reg__random_state': None, 'reg__solver': 'auto', 'reg__tol': 0.0001}
+2025-05-22 02:18:08,685 [INFO]   - Pipeline steps: ['scaler', 'reg']
+2025-05-22 02:18:08,685 [INFO]   - Scaler found: <class 'sklearn.preprocessing._data.StandardScaler'>
+2025-05-22 02:18:08,685 [INFO]   - Alpha value: 676.5074324464838
+2025-05-22 02:18:08,691 [INFO] Hyperparameter Tuning Duration: 1.54 seconds
+2025-05-22 02:18:08,691 [INFO] Predicting on outer test set...
+2025-05-22 02:18:08,694 [INFO] Calculating performance metrics...
+2025-05-22 02:18:08,743 [INFO] Generating diagnostic plots...
+2025-05-22 02:18:09,698 [INFO] Diagnostic plots saved.
+2025-05-22 02:18:09,699 [INFO] Prediction & Evaluation Duration: 1.01 seconds
+2025-05-22 02:18:09,699 [INFO] Calculating and saving SHAP values...
+2025-05-22 02:18:09,699 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 02:18:11,147 [INFO] SHAP Calculation & Saving Duration: 1.45 seconds
+2025-05-22 02:18:11,147 [INFO] -- Outer Fold 2 finished. Duration: 4.01 seconds --
+2025-05-22 02:18:11,147 [INFO] 
+-- Processing Outer Fold 3/5 --
+2025-05-22 02:18:11,150 [INFO] Train set size: (2898, 69), Test set size: (749, 69)
+2025-05-22 02:18:11,150 [INFO] Test set indices range from 50 to 3396
+2025-05-22 02:18:11,150 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 02:18:11,150 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 02:18:11,151 [INFO] Linear model 'ridge' detected. Setting n_jobs=1 for efficient hyperparameter tuning.
+2025-05-22 02:18:11,152 [INFO] Fitting with groups parameter for GroupKFold
+2025-05-22 02:18:12,820 [INFO] Best Params found: {'reg__alpha': 9.443515687962675, 'reg__fit_intercept': False, 'reg__solver': 'svd'}
+2025-05-22 02:18:12,820 [INFO] Best Inner CV Score (neg_mean_squared_error): -4181.1925
+2025-05-22 02:18:12,820 [INFO] 
+[DEBUG] Linear model details:
+2025-05-22 02:18:12,820 [INFO]   - Model type: ridge (Ridge Regression)
+2025-05-22 02:18:12,820 [INFO]   - Best estimator type: <class 'sklearn.pipeline.Pipeline'>
+2025-05-22 02:18:12,821 [INFO]   - All params: {'memory': None, 'steps': [('scaler', StandardScaler()), ('reg', Ridge(alpha=9.443515687962675, fit_intercept=False, solver='svd'))], 'transform_input': None, 'verbose': False, 'scaler': StandardScaler(), 'reg': Ridge(alpha=9.443515687962675, fit_intercept=False, solver='svd'), 'scaler__copy': True, 'scaler__with_mean': True, 'scaler__with_std': True, 'reg__alpha': 9.443515687962675, 'reg__copy_X': True, 'reg__fit_intercept': False, 'reg__max_iter': None, 'reg__positive': False, 'reg__random_state': None, 'reg__solver': 'svd', 'reg__tol': 0.0001}
+2025-05-22 02:18:12,821 [INFO]   - Pipeline steps: ['scaler', 'reg']
+2025-05-22 02:18:12,821 [INFO]   - Scaler found: <class 'sklearn.preprocessing._data.StandardScaler'>
+2025-05-22 02:18:12,821 [INFO]   - Alpha value: 9.443515687962675
+2025-05-22 02:18:12,849 [INFO] Hyperparameter Tuning Duration: 1.70 seconds
+2025-05-22 02:18:12,849 [INFO] Predicting on outer test set...
+2025-05-22 02:18:12,850 [INFO] Calculating performance metrics...
+2025-05-22 02:18:12,887 [INFO] Generating diagnostic plots...
+2025-05-22 02:18:13,680 [INFO] Diagnostic plots saved.
+2025-05-22 02:18:13,683 [INFO] Prediction & Evaluation Duration: 0.83 seconds
+2025-05-22 02:18:13,683 [INFO] Calculating and saving SHAP values...
+2025-05-22 02:18:13,683 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 02:18:15,112 [INFO] SHAP Calculation & Saving Duration: 1.43 seconds
+2025-05-22 02:18:15,112 [INFO] -- Outer Fold 3 finished. Duration: 3.96 seconds --
+2025-05-22 02:18:15,112 [INFO] 
+-- Processing Outer Fold 4/5 --
+2025-05-22 02:18:15,115 [INFO] Train set size: (2947, 69), Test set size: (700, 69)
+2025-05-22 02:18:15,115 [INFO] Test set indices range from 300 to 3646
+2025-05-22 02:18:15,115 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 02:18:15,115 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 02:18:15,116 [INFO] Linear model 'ridge' detected. Setting n_jobs=1 for efficient hyperparameter tuning.
+2025-05-22 02:18:15,116 [INFO] Fitting with groups parameter for GroupKFold
+2025-05-22 02:18:16,677 [INFO] Best Params found: {'reg__alpha': 0.0013289448722869186, 'reg__fit_intercept': False, 'reg__solver': 'lsqr'}
+2025-05-22 02:18:16,677 [INFO] Best Inner CV Score (neg_mean_squared_error): -1366881.0043
+2025-05-22 02:18:16,677 [INFO] 
+[DEBUG] Linear model details:
+2025-05-22 02:18:16,677 [INFO]   - Model type: ridge (Ridge Regression)
+2025-05-22 02:18:16,677 [INFO]   - Best estimator type: <class 'sklearn.pipeline.Pipeline'>
+2025-05-22 02:18:16,678 [INFO]   - All params: {'memory': None, 'steps': [('scaler', StandardScaler()), ('reg', Ridge(alpha=0.0013289448722869186, fit_intercept=False, solver='lsqr'))], 'transform_input': None, 'verbose': False, 'scaler': StandardScaler(), 'reg': Ridge(alpha=0.0013289448722869186, fit_intercept=False, solver='lsqr'), 'scaler__copy': True, 'scaler__with_mean': True, 'scaler__with_std': True, 'reg__alpha': 0.0013289448722869186, 'reg__copy_X': True, 'reg__fit_intercept': False, 'reg__max_iter': None, 'reg__positive': False, 'reg__random_state': None, 'reg__solver': 'lsqr', 'reg__tol': 0.0001}
+2025-05-22 02:18:16,678 [INFO]   - Pipeline steps: ['scaler', 'reg']
+2025-05-22 02:18:16,678 [INFO]   - Scaler found: <class 'sklearn.preprocessing._data.StandardScaler'>
+2025-05-22 02:18:16,678 [INFO]   - Alpha value: 0.0013289448722869186
+2025-05-22 02:18:16,684 [INFO] Hyperparameter Tuning Duration: 1.57 seconds
+2025-05-22 02:18:16,684 [INFO] Predicting on outer test set...
+2025-05-22 02:18:16,685 [INFO] Calculating performance metrics...
+2025-05-22 02:18:16,749 [INFO] Generating diagnostic plots...
+2025-05-22 02:18:17,485 [INFO] Diagnostic plots saved.
+2025-05-22 02:18:17,487 [INFO] Prediction & Evaluation Duration: 0.80 seconds
+2025-05-22 02:18:17,487 [INFO] Calculating and saving SHAP values...
+2025-05-22 02:18:17,487 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 02:18:19,016 [INFO] SHAP Calculation & Saving Duration: 1.53 seconds
+2025-05-22 02:18:19,016 [INFO] -- Outer Fold 4 finished. Duration: 3.90 seconds --
+2025-05-22 02:18:19,016 [INFO] 
+-- Processing Outer Fold 5/5 --
+2025-05-22 02:18:19,019 [INFO] Train set size: (2947, 69), Test set size: (700, 69)
+2025-05-22 02:18:19,019 [INFO] Test set indices range from 0 to 3446
+2025-05-22 02:18:19,019 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 02:18:19,019 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 02:18:19,020 [INFO] Linear model 'ridge' detected. Setting n_jobs=1 for efficient hyperparameter tuning.
+2025-05-22 02:18:19,020 [INFO] Fitting with groups parameter for GroupKFold
+2025-05-22 02:18:21,034 [INFO] Best Params found: {'reg__alpha': 0.0018679434894556316, 'reg__fit_intercept': False, 'reg__solver': 'sparse_cg'}
+2025-05-22 02:18:21,034 [INFO] Best Inner CV Score (neg_mean_squared_error): -25617.3569
+2025-05-22 02:18:21,035 [INFO] 
+[DEBUG] Linear model details:
+2025-05-22 02:18:21,035 [INFO]   - Model type: ridge (Ridge Regression)
+2025-05-22 02:18:21,035 [INFO]   - Best estimator type: <class 'sklearn.pipeline.Pipeline'>
+2025-05-22 02:18:21,035 [INFO]   - All params: {'memory': None, 'steps': [('scaler', StandardScaler()), ('reg', Ridge(alpha=0.0018679434894556316, fit_intercept=False, solver='sparse_cg'))], 'transform_input': None, 'verbose': False, 'scaler': StandardScaler(), 'reg': Ridge(alpha=0.0018679434894556316, fit_intercept=False, solver='sparse_cg'), 'scaler__copy': True, 'scaler__with_mean': True, 'scaler__with_std': True, 'reg__alpha': 0.0018679434894556316, 'reg__copy_X': True, 'reg__fit_intercept': False, 'reg__max_iter': None, 'reg__positive': False, 'reg__random_state': None, 'reg__solver': 'sparse_cg', 'reg__tol': 0.0001}
+2025-05-22 02:18:21,035 [INFO]   - Pipeline steps: ['scaler', 'reg']
+2025-05-22 02:18:21,035 [INFO]   - Scaler found: <class 'sklearn.preprocessing._data.StandardScaler'>
+2025-05-22 02:18:21,035 [INFO]   - Alpha value: 0.0018679434894556316
+2025-05-22 02:18:21,071 [INFO] Hyperparameter Tuning Duration: 2.05 seconds
+2025-05-22 02:18:21,071 [INFO] Predicting on outer test set...
+2025-05-22 02:18:21,075 [INFO] Calculating performance metrics...
+2025-05-22 02:18:21,115 [INFO] Generating diagnostic plots...
+2025-05-22 02:18:21,939 [INFO] Diagnostic plots saved.
+2025-05-22 02:18:21,939 [INFO] Prediction & Evaluation Duration: 0.87 seconds
+2025-05-22 02:18:21,939 [INFO] Calculating and saving SHAP values...
+2025-05-22 02:18:21,939 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 02:18:23,281 [INFO] SHAP Calculation & Saving Duration: 1.34 seconds
+2025-05-22 02:18:23,281 [INFO] -- Outer Fold 5 finished. Duration: 4.27 seconds --
+2025-05-22 02:18:23,281 [INFO] 
+--- Aggregating results for: Ridge Regression (ridge) ---
+2025-05-22 02:18:23,282 [INFO] Average Metrics across folds:
+2025-05-22 02:18:23,282 [INFO] {
+    "r2_mean": -869489.7362045851,
+    "r2_std": 1738979.7237354827,
+    "mse_mean": 87771.90776649816,
+    "mse_std": 175543.67721400424,
+    "rmse_mean": 132.69458908440572,
+    "rmse_std": 264.8849821983475,
+    "mae_mean": 5.032570845377153,
+    "mae_std": 9.64900441171532,
+    "best_inner_cv_score_mean": -3436429.31090401,
+    "best_inner_cv_score_std": 6196850.380524023,
+    "scoring_metric_used": "neg_mean_squared_error",
+    "abnormal_performance_mean": 1.0,
+    "abnormal_performance_std": 0.0
+}
+2025-05-22 02:18:23,282 [WARNING] Linear model 'ridge' has extremely poor metrics: R2=-8.69e+05, MSE=8.78e+04
+2025-05-22 02:18:23,282 [WARNING] Skipping further processing for this model due to poor performance
+2025-05-22 02:18:23,282 [WARNING] Model ridge showed abnormal performance and was partially processed.
+2025-05-22 02:18:23,282 [INFO] 
+=== Processing model: Lasso Regression (lasso) ===
+2025-05-22 02:18:23,284 [INFO] 
+--- Running Nested CV for Regression: Lasso Regression (lasso) ---
+2025-05-22 02:18:23,284 [INFO] Output directory: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_005238/lasso
+2025-05-22 02:18:23,284 [INFO] Hyperparameter tuning scoring metric: neg_mean_squared_error
+2025-05-22 02:18:23,284 [INFO] Using GroupKFold for outer CV with 5 folds based on query IDs.
+2025-05-22 02:18:23,287 [INFO] 
+-- Processing Outer Fold 1/5 --
+2025-05-22 02:18:23,290 [INFO] Train set size: (2898, 69), Test set size: (749, 69)
+2025-05-22 02:18:23,290 [INFO] Test set indices range from 100 to 3496
+2025-05-22 02:18:23,290 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 02:18:23,290 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 02:18:23,291 [INFO] Linear model 'lasso' detected. Setting n_jobs=1 for efficient hyperparameter tuning.
+2025-05-22 02:18:23,292 [INFO] Parameter space size (40) is smaller than requested n_iter (50). Adjusting to 40.
+2025-05-22 02:18:23,292 [INFO] Fitting with groups parameter for GroupKFold
+2025-05-22 02:18:25,554 [INFO] Best Params found: {'reg__alpha': 0.03334792728637585, 'reg__fit_intercept': True, 'reg__max_iter': 3000}
+2025-05-22 02:18:25,554 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0193
+2025-05-22 02:18:25,554 [INFO] 
+[DEBUG] Linear model details:
+2025-05-22 02:18:25,554 [INFO]   - Model type: lasso (Lasso Regression)
+2025-05-22 02:18:25,554 [INFO]   - Best estimator type: <class 'sklearn.pipeline.Pipeline'>
+2025-05-22 02:18:25,555 [INFO]   - All params: {'memory': None, 'steps': [('scaler', StandardScaler()), ('reg', Lasso(alpha=0.03334792728637585, max_iter=3000))], 'transform_input': None, 'verbose': False, 'scaler': StandardScaler(), 'reg': Lasso(alpha=0.03334792728637585, max_iter=3000), 'scaler__copy': True, 'scaler__with_mean': True, 'scaler__with_std': True, 'reg__alpha': 0.03334792728637585, 'reg__copy_X': True, 'reg__fit_intercept': True, 'reg__max_iter': 3000, 'reg__positive': False, 'reg__precompute': False, 'reg__random_state': None, 'reg__selection': 'cyclic', 'reg__tol': 0.0001, 'reg__warm_start': False}
+2025-05-22 02:18:25,555 [INFO]   - Pipeline steps: ['scaler', 'reg']
+2025-05-22 02:18:25,555 [INFO]   - Scaler found: <class 'sklearn.preprocessing._data.StandardScaler'>
+2025-05-22 02:18:25,555 [INFO]   - Alpha value: 0.03334792728637585
+2025-05-22 02:18:25,583 [INFO] Hyperparameter Tuning Duration: 2.29 seconds
+2025-05-22 02:18:25,583 [INFO] Predicting on outer test set...
+2025-05-22 02:18:25,586 [INFO] Calculating performance metrics...
+2025-05-22 02:18:25,619 [INFO] Generating diagnostic plots...
+2025-05-22 02:18:26,361 [INFO] Diagnostic plots saved.
+2025-05-22 02:18:26,362 [INFO] Prediction & Evaluation Duration: 0.78 seconds
+2025-05-22 02:18:26,362 [INFO] Calculating and saving SHAP values...
+2025-05-22 02:18:26,362 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 02:18:27,743 [INFO] SHAP Calculation & Saving Duration: 1.38 seconds
+2025-05-22 02:18:27,744 [INFO] -- Outer Fold 1 finished. Duration: 4.46 seconds --
+2025-05-22 02:18:27,744 [INFO] 
+-- Processing Outer Fold 2/5 --
+2025-05-22 02:18:27,746 [INFO] Train set size: (2898, 69), Test set size: (749, 69)
+2025-05-22 02:18:27,746 [INFO] Test set indices range from 150 to 3596
+2025-05-22 02:18:27,746 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 02:18:27,746 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 02:18:27,747 [INFO] Linear model 'lasso' detected. Setting n_jobs=1 for efficient hyperparameter tuning.
+2025-05-22 02:18:27,747 [INFO] Parameter space size (40) is smaller than requested n_iter (50). Adjusting to 40.
+2025-05-22 02:18:27,747 [INFO] Fitting with groups parameter for GroupKFold
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.520e-02, tolerance: 1.462e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.877e-02, tolerance: 1.736e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-22 02:18:29,922 [INFO] Best Params found: {'reg__alpha': 0.03334792728637585, 'reg__fit_intercept': True, 'reg__max_iter': 3000}
+2025-05-22 02:18:29,922 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0202
+2025-05-22 02:18:29,922 [INFO] 
+[DEBUG] Linear model details:
+2025-05-22 02:18:29,922 [INFO]   - Model type: lasso (Lasso Regression)
+2025-05-22 02:18:29,922 [INFO]   - Best estimator type: <class 'sklearn.pipeline.Pipeline'>
+2025-05-22 02:18:29,923 [INFO]   - All params: {'memory': None, 'steps': [('scaler', StandardScaler()), ('reg', Lasso(alpha=0.03334792728637585, max_iter=3000))], 'transform_input': None, 'verbose': False, 'scaler': StandardScaler(), 'reg': Lasso(alpha=0.03334792728637585, max_iter=3000), 'scaler__copy': True, 'scaler__with_mean': True, 'scaler__with_std': True, 'reg__alpha': 0.03334792728637585, 'reg__copy_X': True, 'reg__fit_intercept': True, 'reg__max_iter': 3000, 'reg__positive': False, 'reg__precompute': False, 'reg__random_state': None, 'reg__selection': 'cyclic', 'reg__tol': 0.0001, 'reg__warm_start': False}
+2025-05-22 02:18:29,923 [INFO]   - Pipeline steps: ['scaler', 'reg']
+2025-05-22 02:18:29,923 [INFO]   - Scaler found: <class 'sklearn.preprocessing._data.StandardScaler'>
+2025-05-22 02:18:29,923 [INFO]   - Alpha value: 0.03334792728637585
+2025-05-22 02:18:29,948 [INFO] Hyperparameter Tuning Duration: 2.20 seconds
+2025-05-22 02:18:29,948 [INFO] Predicting on outer test set...
+2025-05-22 02:18:29,951 [INFO] Calculating performance metrics...
+2025-05-22 02:18:29,988 [INFO] Generating diagnostic plots...
+2025-05-22 02:18:30,653 [INFO] Diagnostic plots saved.
+2025-05-22 02:18:30,653 [INFO] Prediction & Evaluation Duration: 0.71 seconds
+2025-05-22 02:18:30,653 [INFO] Calculating and saving SHAP values...
+2025-05-22 02:18:30,653 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 02:18:31,979 [INFO] SHAP Calculation & Saving Duration: 1.33 seconds
+2025-05-22 02:18:31,979 [INFO] -- Outer Fold 2 finished. Duration: 4.24 seconds --
+2025-05-22 02:18:31,979 [INFO] 
+-- Processing Outer Fold 3/5 --
+2025-05-22 02:18:31,982 [INFO] Train set size: (2898, 69), Test set size: (749, 69)
+2025-05-22 02:18:31,982 [INFO] Test set indices range from 50 to 3396
+2025-05-22 02:18:31,982 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 02:18:31,982 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 02:18:31,983 [INFO] Linear model 'lasso' detected. Setting n_jobs=1 for efficient hyperparameter tuning.
+2025-05-22 02:18:31,983 [INFO] Parameter space size (40) is smaller than requested n_iter (50). Adjusting to 40.
+2025-05-22 02:18:31,983 [INFO] Fitting with groups parameter for GroupKFold
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.948e-01, tolerance: 1.786e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-22 02:18:34,212 [INFO] Best Params found: {'reg__alpha': 0.061991000078022655, 'reg__fit_intercept': True, 'reg__max_iter': 3000}
+2025-05-22 02:18:34,212 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0270
+2025-05-22 02:18:34,212 [INFO] 
+[DEBUG] Linear model details:
+2025-05-22 02:18:34,212 [INFO]   - Model type: lasso (Lasso Regression)
+2025-05-22 02:18:34,212 [INFO]   - Best estimator type: <class 'sklearn.pipeline.Pipeline'>
+2025-05-22 02:18:34,213 [INFO]   - All params: {'memory': None, 'steps': [('scaler', StandardScaler()), ('reg', Lasso(alpha=0.061991000078022655, max_iter=3000))], 'transform_input': None, 'verbose': False, 'scaler': StandardScaler(), 'reg': Lasso(alpha=0.061991000078022655, max_iter=3000), 'scaler__copy': True, 'scaler__with_mean': True, 'scaler__with_std': True, 'reg__alpha': 0.061991000078022655, 'reg__copy_X': True, 'reg__fit_intercept': True, 'reg__max_iter': 3000, 'reg__positive': False, 'reg__precompute': False, 'reg__random_state': None, 'reg__selection': 'cyclic', 'reg__tol': 0.0001, 'reg__warm_start': False}
+2025-05-22 02:18:34,213 [INFO]   - Pipeline steps: ['scaler', 'reg']
+2025-05-22 02:18:34,213 [INFO]   - Scaler found: <class 'sklearn.preprocessing._data.StandardScaler'>
+2025-05-22 02:18:34,213 [INFO]   - Alpha value: 0.061991000078022655
+2025-05-22 02:18:34,267 [INFO] Hyperparameter Tuning Duration: 2.29 seconds
+2025-05-22 02:18:34,267 [INFO] Predicting on outer test set...
+2025-05-22 02:18:34,270 [INFO] Calculating performance metrics...
+2025-05-22 02:18:34,352 [INFO] Generating diagnostic plots...
+2025-05-22 02:18:35,041 [INFO] Diagnostic plots saved.
+2025-05-22 02:18:35,041 [INFO] Prediction & Evaluation Duration: 0.77 seconds
+2025-05-22 02:18:35,041 [INFO] Calculating and saving SHAP values...
+2025-05-22 02:18:35,041 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 02:18:36,631 [INFO] SHAP Calculation & Saving Duration: 1.59 seconds
+2025-05-22 02:18:36,631 [INFO] -- Outer Fold 3 finished. Duration: 4.65 seconds --
+2025-05-22 02:18:36,631 [INFO] 
+-- Processing Outer Fold 4/5 --
+2025-05-22 02:18:36,634 [INFO] Train set size: (2947, 69), Test set size: (700, 69)
+2025-05-22 02:18:36,634 [INFO] Test set indices range from 300 to 3646
+2025-05-22 02:18:36,634 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 02:18:36,634 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 02:18:36,636 [INFO] Linear model 'lasso' detected. Setting n_jobs=1 for efficient hyperparameter tuning.
+2025-05-22 02:18:36,636 [INFO] Parameter space size (40) is smaller than requested n_iter (50). Adjusting to 40.
+2025-05-22 02:18:36,636 [INFO] Fitting with groups parameter for GroupKFold
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 4.603e-02, tolerance: 1.524e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.507e-02, tolerance: 2.021e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-22 02:18:38,686 [INFO] Best Params found: {'reg__alpha': 0.03334792728637585, 'reg__fit_intercept': True, 'reg__max_iter': 3000}
+2025-05-22 02:18:38,686 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0218
+2025-05-22 02:18:38,686 [INFO] 
+[DEBUG] Linear model details:
+2025-05-22 02:18:38,686 [INFO]   - Model type: lasso (Lasso Regression)
+2025-05-22 02:18:38,686 [INFO]   - Best estimator type: <class 'sklearn.pipeline.Pipeline'>
+2025-05-22 02:18:38,687 [INFO]   - All params: {'memory': None, 'steps': [('scaler', StandardScaler()), ('reg', Lasso(alpha=0.03334792728637585, max_iter=3000))], 'transform_input': None, 'verbose': False, 'scaler': StandardScaler(), 'reg': Lasso(alpha=0.03334792728637585, max_iter=3000), 'scaler__copy': True, 'scaler__with_mean': True, 'scaler__with_std': True, 'reg__alpha': 0.03334792728637585, 'reg__copy_X': True, 'reg__fit_intercept': True, 'reg__max_iter': 3000, 'reg__positive': False, 'reg__precompute': False, 'reg__random_state': None, 'reg__selection': 'cyclic', 'reg__tol': 0.0001, 'reg__warm_start': False}
+2025-05-22 02:18:38,687 [INFO]   - Pipeline steps: ['scaler', 'reg']
+2025-05-22 02:18:38,687 [INFO]   - Scaler found: <class 'sklearn.preprocessing._data.StandardScaler'>
+2025-05-22 02:18:38,687 [INFO]   - Alpha value: 0.03334792728637585
+2025-05-22 02:18:38,760 [INFO] Hyperparameter Tuning Duration: 2.13 seconds
+2025-05-22 02:18:38,760 [INFO] Predicting on outer test set...
+2025-05-22 02:18:38,763 [INFO] Calculating performance metrics...
+2025-05-22 02:18:38,825 [INFO] Generating diagnostic plots...
+2025-05-22 02:18:39,655 [INFO] Diagnostic plots saved.
+2025-05-22 02:18:39,655 [INFO] Prediction & Evaluation Duration: 0.89 seconds
+2025-05-22 02:18:39,655 [INFO] Calculating and saving SHAP values...
+2025-05-22 02:18:39,655 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 02:18:40,898 [INFO] SHAP Calculation & Saving Duration: 1.24 seconds
+2025-05-22 02:18:40,898 [INFO] -- Outer Fold 4 finished. Duration: 4.27 seconds --
+2025-05-22 02:18:40,898 [INFO] 
+-- Processing Outer Fold 5/5 --
+2025-05-22 02:18:40,901 [INFO] Train set size: (2947, 69), Test set size: (700, 69)
+2025-05-22 02:18:40,901 [INFO] Test set indices range from 0 to 3446
+2025-05-22 02:18:40,901 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 02:18:40,901 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 02:18:40,902 [INFO] Linear model 'lasso' detected. Setting n_jobs=1 for efficient hyperparameter tuning.
+2025-05-22 02:18:40,902 [INFO] Parameter space size (40) is smaller than requested n_iter (50). Adjusting to 40.
+2025-05-22 02:18:40,902 [INFO] Fitting with groups parameter for GroupKFold
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 4.197e-02, tolerance: 1.676e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-22 02:18:43,029 [INFO] Best Params found: {'reg__alpha': 0.03334792728637585, 'reg__fit_intercept': True, 'reg__max_iter': 3000}
+2025-05-22 02:18:43,029 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0277
+2025-05-22 02:18:43,030 [INFO] 
+[DEBUG] Linear model details:
+2025-05-22 02:18:43,030 [INFO]   - Model type: lasso (Lasso Regression)
+2025-05-22 02:18:43,030 [INFO]   - Best estimator type: <class 'sklearn.pipeline.Pipeline'>
+2025-05-22 02:18:43,030 [INFO]   - All params: {'memory': None, 'steps': [('scaler', StandardScaler()), ('reg', Lasso(alpha=0.03334792728637585, max_iter=3000))], 'transform_input': None, 'verbose': False, 'scaler': StandardScaler(), 'reg': Lasso(alpha=0.03334792728637585, max_iter=3000), 'scaler__copy': True, 'scaler__with_mean': True, 'scaler__with_std': True, 'reg__alpha': 0.03334792728637585, 'reg__copy_X': True, 'reg__fit_intercept': True, 'reg__max_iter': 3000, 'reg__positive': False, 'reg__precompute': False, 'reg__random_state': None, 'reg__selection': 'cyclic', 'reg__tol': 0.0001, 'reg__warm_start': False}
+2025-05-22 02:18:43,030 [INFO]   - Pipeline steps: ['scaler', 'reg']
+2025-05-22 02:18:43,030 [INFO]   - Scaler found: <class 'sklearn.preprocessing._data.StandardScaler'>
+2025-05-22 02:18:43,030 [INFO]   - Alpha value: 0.03334792728637585
+2025-05-22 02:18:43,063 [INFO] Hyperparameter Tuning Duration: 2.16 seconds
+2025-05-22 02:18:43,063 [INFO] Predicting on outer test set...
+2025-05-22 02:18:43,066 [INFO] Calculating performance metrics...
+2025-05-22 02:18:43,097 [INFO] Generating diagnostic plots...
+2025-05-22 02:18:43,903 [INFO] Diagnostic plots saved.
+2025-05-22 02:18:43,903 [INFO] Prediction & Evaluation Duration: 0.84 seconds
+2025-05-22 02:18:43,903 [INFO] Calculating and saving SHAP values...
+2025-05-22 02:18:43,903 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 02:18:45,416 [INFO] SHAP Calculation & Saving Duration: 1.51 seconds
+2025-05-22 02:18:45,417 [INFO] -- Outer Fold 5 finished. Duration: 4.52 seconds --
+2025-05-22 02:18:45,417 [INFO] 
+--- Aggregating results for: Lasso Regression (lasso) ---
+2025-05-22 02:18:45,417 [INFO] Average Metrics across folds:
+2025-05-22 02:18:45,417 [INFO] {
+    "r2_mean": 0.701974658813895,
+    "r2_std": 0.0907984576160665,
+    "mse_mean": 0.02466437447393175,
+    "mse_std": 0.002644330401339824,
+    "rmse_mean": 0.15681961978826567,
+    "rmse_std": 0.008484180773388824,
+    "mae_mean": 0.10917351649630888,
+    "mae_std": 0.006513867157941335,
+    "best_inner_cv_score_mean": -0.0232164339085483,
+    "best_inner_cv_score_std": 0.003500735405233368,
+    "scoring_metric_used": "neg_mean_squared_error"
+}
+2025-05-22 02:18:45,550 [INFO] Combined predictions saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_005238/lasso/all_folds_predictions.csv
+2025-05-22 02:18:45,550 [INFO] 
+Running global SHAP analysis...
+2025-05-22 02:18:47,727 [INFO] Global SHAP Analysis Duration: 2.18 seconds
+2025-05-22 02:18:47,727 [INFO] Result Aggregation & Global SHAP Duration: 2.31 seconds
+2025-05-22 02:18:47,727 [INFO] Average time per outer fold: 4.43 seconds
+2025-05-22 02:18:47,727 [INFO] --- Nested CV completed for: Lasso Regression (lasso) ---
+2025-05-22 02:18:47,727 [INFO] Total execution time for model 'lasso': 24.44 seconds
+2025-05-22 02:18:47,727 [INFO] 
+=== Processing model: Elastic Net (en) ===
+2025-05-22 02:18:47,729 [INFO] 
+--- Running Nested CV for Regression: Elastic Net (en) ---
+2025-05-22 02:18:47,729 [INFO] Output directory: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_005238/en
+2025-05-22 02:18:47,729 [INFO] Hyperparameter tuning scoring metric: neg_mean_squared_error
+2025-05-22 02:18:47,729 [INFO] Using GroupKFold for outer CV with 5 folds based on query IDs.
+2025-05-22 02:18:47,731 [INFO] 
+-- Processing Outer Fold 1/5 --
+2025-05-22 02:18:47,734 [INFO] Train set size: (2898, 69), Test set size: (749, 69)
+2025-05-22 02:18:47,734 [INFO] Test set indices range from 100 to 3496
+2025-05-22 02:18:47,734 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 02:18:47,734 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 02:18:47,735 [INFO] Linear model 'en' detected. Setting n_jobs=1 for efficient hyperparameter tuning.
+2025-05-22 02:18:47,735 [INFO] Fitting with groups parameter for GroupKFold
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.225e-01, tolerance: 3.424e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.159e+00, tolerance: 3.424e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.182e-01, tolerance: 2.155e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-22 02:18:50,769 [INFO] Best Params found: {'reg__alpha': 0.06578820119123178, 'reg__fit_intercept': True, 'reg__l1_ratio': 0.3, 'reg__max_iter': 3000}
+2025-05-22 02:18:50,769 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0187
+2025-05-22 02:18:50,769 [INFO] 
+[DEBUG] Linear model details:
+2025-05-22 02:18:50,769 [INFO]   - Model type: en (Elastic Net)
+2025-05-22 02:18:50,769 [INFO]   - Best estimator type: <class 'sklearn.pipeline.Pipeline'>
+2025-05-22 02:18:50,770 [INFO]   - All params: {'memory': None, 'steps': [('scaler', StandardScaler()), ('reg', ElasticNet(alpha=0.06578820119123178, l1_ratio=0.3, max_iter=3000))], 'transform_input': None, 'verbose': False, 'scaler': StandardScaler(), 'reg': ElasticNet(alpha=0.06578820119123178, l1_ratio=0.3, max_iter=3000), 'scaler__copy': True, 'scaler__with_mean': True, 'scaler__with_std': True, 'reg__alpha': 0.06578820119123178, 'reg__copy_X': True, 'reg__fit_intercept': True, 'reg__l1_ratio': 0.3, 'reg__max_iter': 3000, 'reg__positive': False, 'reg__precompute': False, 'reg__random_state': None, 'reg__selection': 'cyclic', 'reg__tol': 0.0001, 'reg__warm_start': False}
+2025-05-22 02:18:50,770 [INFO]   - Pipeline steps: ['scaler', 'reg']
+2025-05-22 02:18:50,770 [INFO]   - Scaler found: <class 'sklearn.preprocessing._data.StandardScaler'>
+2025-05-22 02:18:50,770 [INFO]   - Alpha value: 0.06578820119123178
+2025-05-22 02:18:50,798 [INFO] Hyperparameter Tuning Duration: 3.06 seconds
+2025-05-22 02:18:50,798 [INFO] Predicting on outer test set...
+2025-05-22 02:18:50,800 [INFO] Calculating performance metrics...
+2025-05-22 02:18:50,904 [INFO] Generating diagnostic plots...
+2025-05-22 02:18:51,694 [INFO] Diagnostic plots saved.
+2025-05-22 02:18:51,694 [INFO] Prediction & Evaluation Duration: 0.90 seconds
+2025-05-22 02:18:51,694 [INFO] Calculating and saving SHAP values...
+2025-05-22 02:18:51,694 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 02:18:52,921 [INFO] SHAP Calculation & Saving Duration: 1.23 seconds
+2025-05-22 02:18:52,922 [INFO] -- Outer Fold 1 finished. Duration: 5.19 seconds --
+2025-05-22 02:18:52,922 [INFO] 
+-- Processing Outer Fold 2/5 --
+2025-05-22 02:18:52,924 [INFO] Train set size: (2898, 69), Test set size: (749, 69)
+2025-05-22 02:18:52,924 [INFO] Test set indices range from 150 to 3596
+2025-05-22 02:18:52,924 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 02:18:52,924 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 02:18:52,925 [INFO] Linear model 'en' detected. Setting n_jobs=1 for efficient hyperparameter tuning.
+2025-05-22 02:18:52,925 [INFO] Fitting with groups parameter for GroupKFold
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.184e-01, tolerance: 2.798e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.135e-01, tolerance: 2.122e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.155e+00, tolerance: 2.798e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.278e-02, tolerance: 1.741e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-22 02:18:56,288 [INFO] Best Params found: {'reg__alpha': 0.0487613652796118, 'reg__fit_intercept': True, 'reg__l1_ratio': 0.5, 'reg__max_iter': 3000}
+2025-05-22 02:18:56,288 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0199
+2025-05-22 02:18:56,288 [INFO] 
+[DEBUG] Linear model details:
+2025-05-22 02:18:56,288 [INFO]   - Model type: en (Elastic Net)
+2025-05-22 02:18:56,288 [INFO]   - Best estimator type: <class 'sklearn.pipeline.Pipeline'>
+2025-05-22 02:18:56,289 [INFO]   - All params: {'memory': None, 'steps': [('scaler', StandardScaler()), ('reg', ElasticNet(alpha=0.0487613652796118, max_iter=3000))], 'transform_input': None, 'verbose': False, 'scaler': StandardScaler(), 'reg': ElasticNet(alpha=0.0487613652796118, max_iter=3000), 'scaler__copy': True, 'scaler__with_mean': True, 'scaler__with_std': True, 'reg__alpha': 0.0487613652796118, 'reg__copy_X': True, 'reg__fit_intercept': True, 'reg__l1_ratio': 0.5, 'reg__max_iter': 3000, 'reg__positive': False, 'reg__precompute': False, 'reg__random_state': None, 'reg__selection': 'cyclic', 'reg__tol': 0.0001, 'reg__warm_start': False}
+2025-05-22 02:18:56,289 [INFO]   - Pipeline steps: ['scaler', 'reg']
+2025-05-22 02:18:56,289 [INFO]   - Scaler found: <class 'sklearn.preprocessing._data.StandardScaler'>
+2025-05-22 02:18:56,289 [INFO]   - Alpha value: 0.0487613652796118
+2025-05-22 02:18:56,313 [INFO] Hyperparameter Tuning Duration: 3.39 seconds
+2025-05-22 02:18:56,313 [INFO] Predicting on outer test set...
+2025-05-22 02:18:56,316 [INFO] Calculating performance metrics...
+2025-05-22 02:18:56,339 [INFO] Generating diagnostic plots...
+2025-05-22 02:18:57,073 [INFO] Diagnostic plots saved.
+2025-05-22 02:18:57,073 [INFO] Prediction & Evaluation Duration: 0.76 seconds
+2025-05-22 02:18:57,073 [INFO] Calculating and saving SHAP values...
+2025-05-22 02:18:57,073 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 02:18:58,579 [INFO] SHAP Calculation & Saving Duration: 1.51 seconds
+2025-05-22 02:18:58,579 [INFO] -- Outer Fold 2 finished. Duration: 5.66 seconds --
+2025-05-22 02:18:58,579 [INFO] 
+-- Processing Outer Fold 3/5 --
+2025-05-22 02:18:58,581 [INFO] Train set size: (2898, 69), Test set size: (749, 69)
+2025-05-22 02:18:58,581 [INFO] Test set indices range from 50 to 3396
+2025-05-22 02:18:58,582 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 02:18:58,582 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 02:18:58,582 [INFO] Linear model 'en' detected. Setting n_jobs=1 for efficient hyperparameter tuning.
+2025-05-22 02:18:58,582 [INFO] Fitting with groups parameter for GroupKFold
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 6.965e-02, tolerance: 2.852e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.219e-02, tolerance: 3.083e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.231e-01, tolerance: 3.059e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 4.847e-01, tolerance: 2.852e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 4.120e-01, tolerance: 3.083e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.166e-02, tolerance: 2.852e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-22 02:19:02,017 [INFO] Best Params found: {'reg__alpha': 0.0745934328572655, 'reg__fit_intercept': True, 'reg__l1_ratio': 0.5, 'reg__max_iter': 3000}
+2025-05-22 02:19:02,017 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0274
+2025-05-22 02:19:02,017 [INFO] 
+[DEBUG] Linear model details:
+2025-05-22 02:19:02,017 [INFO]   - Model type: en (Elastic Net)
+2025-05-22 02:19:02,017 [INFO]   - Best estimator type: <class 'sklearn.pipeline.Pipeline'>
+2025-05-22 02:19:02,018 [INFO]   - All params: {'memory': None, 'steps': [('scaler', StandardScaler()), ('reg', ElasticNet(alpha=0.0745934328572655, max_iter=3000))], 'transform_input': None, 'verbose': False, 'scaler': StandardScaler(), 'reg': ElasticNet(alpha=0.0745934328572655, max_iter=3000), 'scaler__copy': True, 'scaler__with_mean': True, 'scaler__with_std': True, 'reg__alpha': 0.0745934328572655, 'reg__copy_X': True, 'reg__fit_intercept': True, 'reg__l1_ratio': 0.5, 'reg__max_iter': 3000, 'reg__positive': False, 'reg__precompute': False, 'reg__random_state': None, 'reg__selection': 'cyclic', 'reg__tol': 0.0001, 'reg__warm_start': False}
+2025-05-22 02:19:02,018 [INFO]   - Pipeline steps: ['scaler', 'reg']
+2025-05-22 02:19:02,018 [INFO]   - Scaler found: <class 'sklearn.preprocessing._data.StandardScaler'>
+2025-05-22 02:19:02,018 [INFO]   - Alpha value: 0.0745934328572655
+2025-05-22 02:19:02,057 [INFO] Hyperparameter Tuning Duration: 3.48 seconds
+2025-05-22 02:19:02,057 [INFO] Predicting on outer test set...
+2025-05-22 02:19:02,060 [INFO] Calculating performance metrics...
+2025-05-22 02:19:02,103 [INFO] Generating diagnostic plots...
+2025-05-22 02:19:02,840 [INFO] Diagnostic plots saved.
+2025-05-22 02:19:02,840 [INFO] Prediction & Evaluation Duration: 0.78 seconds
+2025-05-22 02:19:02,840 [INFO] Calculating and saving SHAP values...
+2025-05-22 02:19:02,840 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 02:19:04,194 [INFO] SHAP Calculation & Saving Duration: 1.35 seconds
+2025-05-22 02:19:04,195 [INFO] -- Outer Fold 3 finished. Duration: 5.62 seconds --
+2025-05-22 02:19:04,195 [INFO] 
+-- Processing Outer Fold 4/5 --
+2025-05-22 02:19:04,198 [INFO] Train set size: (2947, 69), Test set size: (700, 69)
+2025-05-22 02:19:04,199 [INFO] Test set indices range from 300 to 3646
+2025-05-22 02:19:04,199 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 02:19:04,199 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 02:19:04,200 [INFO] Linear model 'en' detected. Setting n_jobs=1 for efficient hyperparameter tuning.
+2025-05-22 02:19:04,200 [INFO] Fitting with groups parameter for GroupKFold
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 6.670e-01, tolerance: 3.629e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 5.519e-02, tolerance: 2.165e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.777e+00, tolerance: 3.629e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 4.636e-02, tolerance: 2.165e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 2.900e-01, tolerance: 3.264e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.815e-02, tolerance: 1.524e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-22 02:19:07,510 [INFO] Best Params found: {'reg__alpha': 0.0745934328572655, 'reg__fit_intercept': True, 'reg__l1_ratio': 0.5, 'reg__max_iter': 3000}
+2025-05-22 02:19:07,510 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0221
+2025-05-22 02:19:07,510 [INFO] 
+[DEBUG] Linear model details:
+2025-05-22 02:19:07,510 [INFO]   - Model type: en (Elastic Net)
+2025-05-22 02:19:07,510 [INFO]   - Best estimator type: <class 'sklearn.pipeline.Pipeline'>
+2025-05-22 02:19:07,511 [INFO]   - All params: {'memory': None, 'steps': [('scaler', StandardScaler()), ('reg', ElasticNet(alpha=0.0745934328572655, max_iter=3000))], 'transform_input': None, 'verbose': False, 'scaler': StandardScaler(), 'reg': ElasticNet(alpha=0.0745934328572655, max_iter=3000), 'scaler__copy': True, 'scaler__with_mean': True, 'scaler__with_std': True, 'reg__alpha': 0.0745934328572655, 'reg__copy_X': True, 'reg__fit_intercept': True, 'reg__l1_ratio': 0.5, 'reg__max_iter': 3000, 'reg__positive': False, 'reg__precompute': False, 'reg__random_state': None, 'reg__selection': 'cyclic', 'reg__tol': 0.0001, 'reg__warm_start': False}
+2025-05-22 02:19:07,511 [INFO]   - Pipeline steps: ['scaler', 'reg']
+2025-05-22 02:19:07,511 [INFO]   - Scaler found: <class 'sklearn.preprocessing._data.StandardScaler'>
+2025-05-22 02:19:07,511 [INFO]   - Alpha value: 0.0745934328572655
+2025-05-22 02:19:07,542 [INFO] Hyperparameter Tuning Duration: 3.34 seconds
+2025-05-22 02:19:07,542 [INFO] Predicting on outer test set...
+2025-05-22 02:19:07,545 [INFO] Calculating performance metrics...
+2025-05-22 02:19:07,634 [INFO] Generating diagnostic plots...
+2025-05-22 02:19:08,425 [INFO] Diagnostic plots saved.
+2025-05-22 02:19:08,425 [INFO] Prediction & Evaluation Duration: 0.88 seconds
+2025-05-22 02:19:08,425 [INFO] Calculating and saving SHAP values...
+2025-05-22 02:19:08,425 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 02:19:10,092 [INFO] SHAP Calculation & Saving Duration: 1.67 seconds
+2025-05-22 02:19:10,092 [INFO] -- Outer Fold 4 finished. Duration: 5.90 seconds --
+2025-05-22 02:19:10,092 [INFO] 
+-- Processing Outer Fold 5/5 --
+2025-05-22 02:19:10,095 [INFO] Train set size: (2947, 69), Test set size: (700, 69)
+2025-05-22 02:19:10,095 [INFO] Test set indices range from 0 to 3446
+2025-05-22 02:19:10,096 [INFO] Using GroupKFold for inner CV with 3 folds.
+2025-05-22 02:19:10,096 [INFO] Starting hyperparameter tuning (RandomizedSearchCV)...
+2025-05-22 02:19:10,097 [INFO] Linear model 'en' detected. Setting n_jobs=1 for efficient hyperparameter tuning.
+2025-05-22 02:19:10,097 [INFO] Fitting with groups parameter for GroupKFold
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 6.185e-02, tolerance: 2.465e-02
+  model = cd_fast.enet_coordinate_descent(
+/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_coordinate_descent.py:695: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 1.338e-01, tolerance: 2.966e-02
+  model = cd_fast.enet_coordinate_descent(
+2025-05-22 02:19:13,682 [INFO] Best Params found: {'reg__alpha': 0.06578820119123178, 'reg__fit_intercept': True, 'reg__l1_ratio': 0.3, 'reg__max_iter': 3000}
+2025-05-22 02:19:13,682 [INFO] Best Inner CV Score (neg_mean_squared_error): -0.0274
+2025-05-22 02:19:13,682 [INFO] 
+[DEBUG] Linear model details:
+2025-05-22 02:19:13,682 [INFO]   - Model type: en (Elastic Net)
+2025-05-22 02:19:13,682 [INFO]   - Best estimator type: <class 'sklearn.pipeline.Pipeline'>
+2025-05-22 02:19:13,683 [INFO]   - All params: {'memory': None, 'steps': [('scaler', StandardScaler()), ('reg', ElasticNet(alpha=0.06578820119123178, l1_ratio=0.3, max_iter=3000))], 'transform_input': None, 'verbose': False, 'scaler': StandardScaler(), 'reg': ElasticNet(alpha=0.06578820119123178, l1_ratio=0.3, max_iter=3000), 'scaler__copy': True, 'scaler__with_mean': True, 'scaler__with_std': True, 'reg__alpha': 0.06578820119123178, 'reg__copy_X': True, 'reg__fit_intercept': True, 'reg__l1_ratio': 0.3, 'reg__max_iter': 3000, 'reg__positive': False, 'reg__precompute': False, 'reg__random_state': None, 'reg__selection': 'cyclic', 'reg__tol': 0.0001, 'reg__warm_start': False}
+2025-05-22 02:19:13,683 [INFO]   - Pipeline steps: ['scaler', 'reg']
+2025-05-22 02:19:13,683 [INFO]   - Scaler found: <class 'sklearn.preprocessing._data.StandardScaler'>
+2025-05-22 02:19:13,683 [INFO]   - Alpha value: 0.06578820119123178
+2025-05-22 02:19:13,706 [INFO] Hyperparameter Tuning Duration: 3.61 seconds
+2025-05-22 02:19:13,706 [INFO] Predicting on outer test set...
+2025-05-22 02:19:13,710 [INFO] Calculating performance metrics...
+2025-05-22 02:19:13,765 [INFO] Generating diagnostic plots...
+2025-05-22 02:19:14,622 [INFO] Diagnostic plots saved.
+2025-05-22 02:19:14,623 [INFO] Prediction & Evaluation Duration: 0.92 seconds
+2025-05-22 02:19:14,623 [INFO] Calculating and saving SHAP values...
+2025-05-22 02:19:14,623 [INFO] Sampling 100 instances from X_train for SHAP background data.
+2025-05-22 02:19:16,069 [INFO] SHAP Calculation & Saving Duration: 1.45 seconds
+2025-05-22 02:19:16,069 [INFO] -- Outer Fold 5 finished. Duration: 5.98 seconds --
+2025-05-22 02:19:16,070 [INFO] 
+--- Aggregating results for: Elastic Net (en) ---
+2025-05-22 02:19:16,070 [INFO] Average Metrics across folds:
+2025-05-22 02:19:16,070 [INFO] {
+    "r2_mean": 0.7135593780411904,
+    "r2_std": 0.07826934186003506,
+    "mse_mean": 0.024026419631035342,
+    "mse_std": 0.0030480872129781643,
+    "rmse_mean": 0.15468888931032979,
+    "rmse_std": 0.009887727492800471,
+    "mae_mean": 0.1046320058521188,
+    "mae_std": 0.004977071747972854,
+    "best_inner_cv_score_mean": -0.023114494263602438,
+    "best_inner_cv_score_std": 0.0036871330628038125,
+    "scoring_metric_used": "neg_mean_squared_error"
+}
+2025-05-22 02:19:16,152 [INFO] Combined predictions saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_005238/en/all_folds_predictions.csv
+2025-05-22 02:19:16,152 [INFO] 
+Running global SHAP analysis...
+2025-05-22 02:19:18,375 [INFO] Global SHAP Analysis Duration: 2.22 seconds
+2025-05-22 02:19:18,375 [INFO] Result Aggregation & Global SHAP Duration: 2.31 seconds
+2025-05-22 02:19:18,375 [INFO] Average time per outer fold: 5.67 seconds
+2025-05-22 02:19:18,375 [INFO] --- Nested CV completed for: Elastic Net (en) ---
+2025-05-22 02:19:18,376 [INFO] Total execution time for model 'en': 30.65 seconds
+2025-05-22 02:19:18,376 [INFO] 
+--- Overall Training Summary ---
+2025-05-22 02:19:18,421 [INFO] Model comparison summary saved to: /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_rosetta_20250522_005238/model_comparison_summary.csv
+2025-05-22 02:19:18,421 [INFO] Successful Model Summary:
+2025-05-22 02:19:18,421 [INFO]   model_name       r2_mean  ...  abnormal_performance  processing_skipped
+0         rf  6.610077e-01  ...                   NaN                 NaN
+1       lgbm  6.100678e-01  ...                   NaN                 NaN
+2        xgb  5.997030e-01  ...                   NaN                 NaN
+3         lr -2.591780e+07  ...                  True                True
+4      ridge -8.694897e+05  ...                  True                True
+5      lasso  7.019747e-01  ...                   NaN                 NaN
+6         en  7.135594e-01  ...                   NaN                 NaN
+
+[7 rows x 16 columns]
+2025-05-22 02:19:18,433 [INFO] Final Summary Saving Duration: 0.06 seconds
+2025-05-22 02:19:18,433 [INFO] 
+--- Framework Execution Finished ---
+2025-05-22 02:19:18,433 [INFO] Total script execution time: 5192.89 seconds

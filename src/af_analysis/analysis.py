@@ -624,24 +624,40 @@ def LIS_matrix(data, pae_cutoff=12.0, verbose=True):
             # 전체 행렬 저장
             data.df.at[idx, "LIS"] = LIS_matrix
             
-            # 체인 쌍별 LIS 값 계산 및 저장
+            # 체인 쌍 LIS 값을 저장할 딕셔너리
+            pair_lis_values = {}
+            
+            # 모든 체인 쌍 조합 생성
             for i in range(len(chains)):
                 for j in range(len(chains)):
-                    if i != j:  # 서로 다른 체인 간의 LIS만 저장
+                    if i != j:  # 서로 다른 체인 간의 LIS만 처리
                         chain_i = chains[i]
                         chain_j = chains[j]
-                        pair_id = f"{chain_i}{chain_j}"
                         
-                        # LIS 값 저장
+                        # 알파벳 순서로 정렬하여 키 생성
+                        sorted_chains = sorted([chain_i, chain_j])
+                        pair_id = f"{sorted_chains[0]}{sorted_chains[1]}"
+                        
+                        # 해당 쌍의 LIS 값 가져오기
                         lis_value = float(LIS_matrix[i][j])
-                        data.df.at[idx, f"LIS_{pair_id}"] = lis_value
                         
-            # 평균 LIS 값 계산 (대각선 제외)
+                        # 딕셔너리에 값 추가 또는 업데이트
+                        if pair_id in pair_lis_values:
+                            # 이미 있는 경우 값을 더함 (나중에 평균 계산)
+                            pair_lis_values[pair_id].append(lis_value)
+                        else:
+                            # 새로운 키인 경우 리스트 시작
+                            pair_lis_values[pair_id] = [lis_value]
+            
+            # 각 쌍의 평균 LIS 계산 및 저장
+            for pair_id, values in pair_lis_values.items():
+                avg_pair_lis = float(np.mean(values))
+                data.df.at[idx, f"LIS_{pair_id}"] = avg_pair_lis
+            
+            # 모든 쌍의 평균 LIS 계산
             all_lis_values = []
-            for i in range(len(chains)):
-                for j in range(len(chains)):
-                    if i != j:  # 자기 자신과의 LIS는 제외
-                        all_lis_values.append(LIS_matrix[i][j])
+            for values in pair_lis_values.values():
+                all_lis_values.extend(values)
             
             if all_lis_values:
                 avg_lis = float(np.mean(all_lis_values))
@@ -1029,8 +1045,7 @@ def verify_atom_order_matching(model, json_data, verbose=True):
 
 def add_interface_metrics(data_obj, distance_threshold=8.0, verbose=True):
     """
-    AlphaFold3 모델의 인터페이스 pLDDT와 PAE 값을 계산하여 데이터프레임에 추가합니다.
-    JSON 파일에서 직접 atom_plddts 데이터를 가져와서 사용합니다.
+    [DEPRECATED] 이 함수는 향후 삭제될 예정입니다. Data 클래스의 analyze_interfaces 메서드를 사용하세요.
     
     Parameters
     ----------
@@ -1046,221 +1061,16 @@ def add_interface_metrics(data_obj, distance_threshold=8.0, verbose=True):
     pandas.DataFrame
         인터페이스 메트릭이 추가된 데이터프레임
     """
-    from af_analysis.analysis import get_pae
-    import pdb_numpy
-    import numpy as np
-    import pandas as pd
-    import json
-    from scipy.spatial.distance import pdist, squareform
-    from collections import Counter
+    import warnings
+    warnings.warn(
+        "add_interface_metrics 함수는 deprecated되었으며 향후 버전에서 제거될 예정입니다. "
+        "대신 Data 클래스의 analyze_interfaces 메서드를 사용하세요.",
+        DeprecationWarning, 
+        stacklevel=2
+    )
     
-    # 결과 저장 리스트
-    interface_data = []
-    
-    # 각 모델 분석
-    for i in range(len(data_obj.df)):
-        try:
-            # 모델 및 신뢰도 데이터 로드
-            row = data_obj.df.iloc[i]
-            model_path = row["pdb"]
-            json_path = row["data_file"]
-            
-            if verbose:
-                print(f"Analyzing model {i}: {model_path}")
-                print(f"JSON file: {json_path}")
-            
-            # JSON 파일에서 신뢰도 데이터 로드
-            with open(json_path, 'r') as f:
-                json_data = json.load(f)
-            
-            # atom pLDDT 및 체인 정보 추출
-            atom_plddts = np.array(json_data['atom_plddts'])
-            atom_plddts = np.nan_to_num(atom_plddts)  # NaN 값 처리
-            
-            atom_chain_ids = json_data['atom_chain_ids']  # 각 원자의 체인 ID
-            unique_chains = sorted(list(set(atom_chain_ids)))
-            
-            # PAE 데이터 추출
-            pae_matrix = np.array(json_data['pae'])
-            pae_matrix = np.nan_to_num(pae_matrix)
-            
-            if verbose:
-                print(f"Loaded pLDDT data for {len(atom_plddts)} atoms")
-                print(f"Chains identified: {unique_chains}")
-                print(f"PAE matrix shape: {pae_matrix.shape}")
-            
-            # 체인별 원자 수 계산
-            chain_atom_counts = Counter(atom_chain_ids)
-            if verbose:
-                print(f"Atoms per chain: {dict(chain_atom_counts)}")
-            
-            # CIF 파일 파싱하여 원자 정보 추출
-            model = pdb_numpy.Coor(model_path)
-            atoms = model.models[0]
-            
-            # 원자 순서 검증
-            order_matches = verify_atom_order_matching(model, json_data, verbose)
-            if not order_matches and verbose:
-                print("WARNING: Atom order mismatch detected. Results may be inaccurate!")
-            
-            # Heavy atom 선택 (수소 제외)
-            atom_mask = np.array([not name.startswith('H') for name in atoms.name])
-            heavy_atoms = np.where(atom_mask)[0]
-            
-            if verbose:
-                print(f"Selected {len(heavy_atoms)} heavy atoms out of {len(atoms.name)} total atoms")
-            
-            # 원자 좌표 및 정보
-            atom_chains = np.array(atoms.chain)[heavy_atoms]
-            atom_resids = np.array(atoms.resid)[heavy_atoms]
-            atom_coords = np.column_stack((
-                np.array(atoms.x)[heavy_atoms],
-                np.array(atoms.y)[heavy_atoms], 
-                np.array(atoms.z)[heavy_atoms]
-            ))
-            
-            # 모델의 유니크한 체인 식별 (CIF 파일 기준)
-            model_chains = np.unique(atom_chains)
-            if verbose:
-                print(f"Model chains: {model_chains}")
-            
-            # 원자 간 거리 계산
-            if verbose:
-                print("Calculating atom distances...")
-            distances = squareform(pdist(atom_coords))
-            
-            # 인터페이스 분석을 위한 딕셔너리
-            model_results = {}
-            
-            # 체인 쌍 분석
-            for idx1, chain1 in enumerate(model_chains):
-                for chain2 in model_chains[idx1+1:]:
-                    pair_id = f"{chain1}{chain2}"
-                    if verbose:
-                        print(f"Analyzing chain pair {pair_id}")
-                    
-                    # 체인별 원자 마스크 및 인덱스
-                    chain1_mask = atom_chains == chain1
-                    chain2_mask = atom_chains == chain2
-                    chain1_indices = np.where(chain1_mask)[0]
-                    chain2_indices = np.where(chain2_mask)[0]
-                    
-                    if verbose:
-                        print(f"Chain {chain1}: {len(chain1_indices)} atoms, Chain {chain2}: {len(chain2_indices)} atoms")
-                    
-                    # 인터페이스 원자 및 잔기 식별
-                    interface_atoms1 = []  # 체인1의 인터페이스 원자
-                    interface_atoms2 = []  # 체인2의 인터페이스 원자
-                    interface_residues = set()  # 인터페이스 잔기 (체인, 잔기번호)
-                    contacts = 0
-                    
-                    # 체인 간 거리 계산 및 접촉 확인
-                    for idx1 in chain1_indices:
-                        for idx2 in chain2_indices:
-                            if distances[idx1, idx2] < distance_threshold:
-                                contacts += 1
-                                # 원자 인덱스 (CIF 파일 내)
-                                atom1_idx = heavy_atoms[idx1]
-                                atom2_idx = heavy_atoms[idx2]
-                                
-                                interface_atoms1.append(atom1_idx)
-                                interface_atoms2.append(atom2_idx)
-                                
-                                # 인터페이스 잔기 추가
-                                interface_residues.add((atom_chains[idx1], atom_resids[idx1]))
-                                interface_residues.add((atom_chains[idx2], atom_resids[idx2]))
-                    
-                    if verbose:
-                        print(f"Found {contacts} atom contacts between chains {chain1} and {chain2}")
-                        print(f"Interface atoms: {len(interface_atoms1) + len(interface_atoms2)}, Interface residues: {len(interface_residues)}")
-                    
-                    # 접촉이 있는 경우만 처리
-                    if contacts > 0:
-                        model_results[f"contacts_{pair_id}"] = contacts
-                        
-                        # pLDDT 계산
-                        interface_plddt_values = []
-                        for atom_idx in interface_atoms1 + interface_atoms2:
-                            if atom_idx < len(atom_plddts):
-                                interface_plddt_values.append(atom_plddts[atom_idx])
-                        
-                        if interface_plddt_values:
-                            avg_plddt = float(np.mean(interface_plddt_values))
-                            model_results[f"interface_plddt_{pair_id}"] = avg_plddt
-                            if verbose:
-                                print(f"Interface pLDDT for {pair_id}: {avg_plddt:.2f}")
-                        elif verbose:
-                            print(f"No pLDDT values found for interface atoms in {pair_id}")
-                        
-                        # PAE 계산
-                        try:
-                            # 체인별 잔기 매핑 생성
-                            chain_residue_map = {}
-                            for chain in model_chains:
-                                chain_residue_map[chain] = sorted(np.unique(atom_resids[atom_chains == chain]))
-                            
-                            # PAE 매트릭스 인덱스 계산을 위한 정보
-                            residue_positions = {}
-                            position = 0
-                            for chain in sorted(model_chains):
-                                residue_positions[chain] = {}
-                                for res in chain_residue_map[chain]:
-                                    residue_positions[chain][res] = position
-                                    position += 1
-                            
-                            # 인터페이스 잔기 쌍의 PAE 값 추출
-                            interface_pae_values = []
-                            
-                            chain1_residues = [r[1] for r in interface_residues if r[0] == chain1]
-                            chain2_residues = [r[1] for r in interface_residues if r[0] == chain2]
-                            
-                            for res1 in chain1_residues:
-                                for res2 in chain2_residues:
-                                    if res1 in residue_positions[chain1] and res2 in residue_positions[chain2]:
-                                        idx1 = residue_positions[chain1][res1]
-                                        idx2 = residue_positions[chain2][res2]
-                                        
-                                        if idx1 < pae_matrix.shape[0] and idx2 < pae_matrix.shape[1]:
-                                            interface_pae_values.append(pae_matrix[idx1, idx2])
-                            
-                            if interface_pae_values:
-                                avg_pae = float(np.mean(interface_pae_values))
-                                model_results[f"interface_pae_{pair_id}"] = avg_pae
-                                if verbose:
-                                    print(f"Interface PAE for {pair_id}: {avg_pae:.2f}")
-                            elif verbose:
-                                print(f"No PAE values found for interface in {pair_id}")
-                        except Exception as e:
-                            if verbose:
-                                print(f"Error calculating PAE for {pair_id}: {e}")
-            
-            # 전체 인터페이스 평균값 계산
-            if model_results:
-                plddt_values = [v for k, v in model_results.items() if 'plddt' in k]
-                pae_values = [v for k, v in model_results.items() if 'pae' in k]
-                
-                if plddt_values:
-                    model_results['avg_interface_plddt'] = float(np.mean(plddt_values))
-                    if verbose:
-                        print(f"Average interface pLDDT: {model_results['avg_interface_plddt']:.2f}")
-                if pae_values:
-                    model_results['avg_interface_pae'] = float(np.mean(pae_values))
-                    if verbose:
-                        print(f"Average interface PAE: {model_results['avg_interface_pae']:.2f}")
-            
-            interface_data.append(model_results)
-            
-        except Exception as e:
-            if verbose:
-                print(f"Error analyzing model {i}: {str(e)}")
-            interface_data.append({})
-    
-    
-    # 인터페이스 데이터 추가
-    for i, data in enumerate(interface_data):
-        for key, value in data.items():
-            data_obj.df.at[i, key] = value
-    
+    # 내부적으로 analyze_interfaces 호출
+    data_obj.analyze_interfaces(distance_threshold=distance_threshold, verbose=verbose)
     return data_obj.df
 
 def distance_matrix(coords1, coords2):
@@ -1333,8 +1143,8 @@ def pdockq_pairs(data, verbose=True):
     
     return data  # 메소드 체이닝 지원
 
-def calculate_dockQ(data_obj, model_idx=None, native_path=None, rec_chains=None, lig_chains=None, 
-                   native_rec_chains=None, native_lig_chains=None, verbose=True):
+def calculate_dockq(data_obj, model_idx=None, native_path=None, rec_chains=None, lig_chains=None, 
+                   native_rec_chains=None, native_lig_chains=None, verbose=True, skip_existing=True):
     """
     AlphaFold 모델과 기준 구조(native) 사이의 dockQ 점수를 계산합니다.
 
@@ -1360,6 +1170,8 @@ def calculate_dockQ(data_obj, model_idx=None, native_path=None, rec_chains=None,
         기준 구조의 ligand 체인. None이면 자동 감지
     verbose : bool, optional
         진행 상태를 출력할지 여부, 기본값은 True
+    skip_existing : bool, optional
+        이미 DockQ 값이 있는 모델을 건너뛸지 여부, 기본값은 True
         
     Returns
     -------
@@ -1369,6 +1181,7 @@ def calculate_dockQ(data_obj, model_idx=None, native_path=None, rec_chains=None,
     import pdb_numpy
     import numpy as np
     import logging
+    import pandas as pd
     from pdb_numpy.analysis import native_contact, interface_rmsd
     from pdb_numpy.alignement import coor_align, align_seq_based, rmsd_seq_based
     from pdb_numpy.select import remove_incomplete_backbone_residues
@@ -1387,6 +1200,23 @@ def calculate_dockQ(data_obj, model_idx=None, native_path=None, rec_chains=None,
         model_indices = [model_idx]
     else:
         model_indices = model_idx
+    
+    # DockQ 컬럼이 존재하는지 확인하고, 값이 있는 모델 건너뛰기 (skip_existing=True일 때)
+    if skip_existing and 'DockQ' in data_obj.df.columns:
+        # 이미 DockQ 값이 있는 인덱스 제외
+        existing_dockq_indices = [i for i in model_indices if not pd.isna(data_obj.df.iloc[i].get('DockQ'))]
+        if existing_dockq_indices:
+            if verbose:
+                print(f"Skipping {len(existing_dockq_indices)} models that already have DockQ values")
+                
+            # 건너뛸 인덱스 제외
+            model_indices = [i for i in model_indices if i not in existing_dockq_indices or pd.isna(data_obj.df.iloc[i].get('DockQ'))]
+            
+            # 모든 모델을 건너뛰는 경우 조기 종료
+            if not model_indices:
+                if verbose:
+                    print("All specified models already have DockQ values. Nothing to calculate.")
+                return data_obj.df
     
     # native_path 컬럼 확인
     if native_path is None and 'native_path' not in data_obj.df.columns:
@@ -1681,3 +1511,142 @@ def calculate_dockQ(data_obj, model_idx=None, native_path=None, rec_chains=None,
         print("\nDockQ analysis completed successfully")
     
     return data_obj.df
+
+def compute_piTM_pIS(coor, pae_array, cutoff=8.0):
+    """
+    AlphaFold2 PAE (Predicted Aligned Error)를 사용하여 
+    복합체의 piTM (predicted interface TM-score) 및 
+    pIS (partner interface score)를 계산합니다.
+
+    piTM은 상호작용 인터페이스의 전반적인 품질을 평가하고,
+    pIS는 각 체인이 인터페이스 형성에 기여하는 정도를 나타냅니다.
+
+    Args:
+        coor: 원자 좌표 정보를 담고 있는 Coor 객체 (pdb_numpy 라이브러리).
+              CA 원자 ('name CA')를 선택할 수 있어야 합니다.
+        pae_array (np.ndarray): (N, N) 형태의 PAE 행렬. N은 CA 원자 수.
+        cutoff (float, optional): 인터페이스 잔기를 정의하기 위한 거리 임계값(Å). 
+                                   기본값은 8.0Å.
+
+    Returns:
+        tuple: 다음 세 가지 리스트를 포함하는 튜플:
+            - piTM_list (list[float]): 모델별 복합체 전역 piTM 점수.
+            - per_chain_scores (list[list[float]]): 체인별 piTMₚ 점수.
+                                                    [n_chain][n_model] 형태.
+            - pIS_list (list[float]): 모델별 pIS 점수 (체인별 점수의 합).
+    
+    References:
+        Gao, M., Nakajima An, D., Parks, J.M. & Skolnick, J. 
+        AF2Complex predicts direct physical interactions in multimeric proteins 
+        with deep learning. Nat Commun 13, 1744 (2022). 
+        https://doi.org/10.1038/s41467-022-29394-2
+        
+        Feldman, J., & Skolnick, J. (2025). 
+        AF3Complex yields improved structural predictions of protein complexes. 
+        BioRxiv, 2025.02.27.640585. 
+        https://doi.org/10.1101/2025.02.27.640585
+        
+        
+    """
+    models_CA     = coor.select_atoms("name CA")
+    chains        = np.unique(models_CA.chain)
+    
+    # 입력 PAE 배열의 차원과 CA 원자 수가 일치하는지 확인
+    if pae_array.shape != (models_CA.len, models_CA.len):
+        raise ValueError(
+            f"PAE array shape {pae_array.shape} mismatch "
+            f"with CA atoms number ({models_CA.len}, {models_CA.len})"
+        )
+
+    piTM_list        = []
+    per_chain_scores = [ [] for _ in chains ]
+    pIS_list         = []
+
+    # 각 모델에 대해 반복 (일반적으로 하나의 모델만 있음)
+    for model_idx, model in enumerate(models_CA.models):
+        # 1) 인터페이스 잔기 집합 𝓘 (Interface residues)
+        iface_idx = set()
+        for ch_A in chains:
+            # chain ch_A에 속하면서 다른 체인(not ch_A)과 cutoff 이내에 있는 잔기
+            # 또는 chain ch_A에 속하지 않으면서 chain ch_A와 cutoff 이내에 있는 잔기
+            # 즉, 두 체인 간의 인터페이스에 있는 모든 잔기를 찾음
+            within = model.get_index_select  # 원자 인덱스를 가져오는 함수
+            
+            # ch_A에 속하고, 다른 체인과 상호작용하는 잔기
+            iface_idx.update(
+                within(f"(chain {ch_A} and within {cutoff} of not chain {ch_A})")
+            )
+            # ch_A에 속하지 않고, ch_A와 상호작용하는 잔기 (대칭적 인터페이스 정의)
+            # 이 부분은 위의 정의에 이미 포함될 수 있지만, 명확성을 위해 추가
+            # 실제로는 첫 번째 update만으로도 충분할 수 있음
+            # (A and within B) or (B and within A)와 유사
+            iface_idx.update(
+                within(f"(not chain {ch_A} and within {cutoff} of chain {ch_A})")
+            )
+            
+        I = len(iface_idx) # 인터페이스 잔기의 총 개수
+        
+        # 인터페이스 잔기가 없으면 모든 점수를 0으로 처리
+        if I == 0:
+            piTM_list.append(0.0)
+            for lst in per_chain_scores: lst.append(0.0)
+            pIS_list.append(0.0)
+            continue
+
+        # d0: 인터페이스 크기 I에 따라 스케일링되는 거리 임계값
+        d0 = 1.24 * (I - 15) ** (1/3) - 1.8 if I >= 22 else 0.02 * I
+
+        # 2) 전체 πiTM 계산 (Global piTM)
+        # 인터페이스 잔기 i에 대해, 다른 모든 인터페이스 잔기 j와의 PAE 기반 점수 합의 최대값을 찾음
+        best_global_score = 0.0
+        for i in iface_idx:
+            # i번째 잔기와 다른 모든 인터페이스 잔기 j 사이의 점수 합
+            current_sum_score = sum( 1 / (1 + (pae_array[i, j] / d0) ** 2) for j in iface_idx if i != j)
+            # Gao et al. 2022 수식에서는 sum over j in I 이지만, i=j 경우는 pae_array[i,i]는 보통 0이고, 1/(1+0)=1이 됨
+            # 원본 pdb_numpy 구현은 i!=j 조건을 명시. 여기서는 i=j일 때 pae_array[i,i]가 0이면 1을 더하게 됨.
+            # 논문 수식을 더 정확히 따르려면 if i != j 조건 제거 또는 pae_array[i,i]를 어떻게 처리할지 명확히 해야함
+            # 여기서는 원본 아이디어를 따라 모든 j에 대해 합산 (i=j 포함 시 pae_array[i,i]는 보통 0이므로 기여도 1)
+            current_sum_score = sum( 1 / (1 + (pae_array[i, j] / d0) ** 2) for j in iface_idx )
+
+            if current_sum_score > best_global_score: 
+                best_global_score = current_sum_score
+        
+        piTM_val = best_global_score / I # 최대 점수를 인터페이스 크기로 정규화
+        piTM_list.append(piTM_val)
+
+        # 3) 체인별 πiTMₚ 계산 (Per-chain piTM)
+        current_model_chain_scores = [] # 현재 모델의 각 체인별 점수 저장
+        for chain_idx, ch_P in enumerate(chains): # 각 파트너 체인 P에 대해
+            # I_p: 체인 P에 속하는 인터페이스 잔기 집합
+            I_p = set(model.get_index_select(
+                f"(chain {ch_P} and within {cutoff} of not chain {ch_P})"
+            ))
+            
+            if not I_p: # 해당 체인이 인터페이스를 형성하지 않으면 점수는 0
+                per_chain_scores[chain_idx].append(0.0)
+                current_model_chain_scores.append(0.0)
+                continue
+            
+            # Anchors: 체인 P에 속하지 *않는* 인터페이스 잔기 집합 (상대방 체인의 인터페이스 잔기들)
+            anchors = iface_idx - I_p # 전체 인터페이스 잔기에서 체인 P의 인터페이스 잔기를 제외
+            
+            if not anchors: # 상대방 체인이 인터페이스를 형성하지 않으면 점수는 0
+                per_chain_scores[chain_idx].append(0.0)
+                current_model_chain_scores.append(0.0)
+                continue
+
+            best_per_chain_score = 0.0
+            # 앵커 잔기 i (체인 P 바깥) 와 체인 P의 인터페이스 잔기 j (I_p 내부) 사이의 점수 합의 최대값
+            for i in anchors:
+                current_sum_score_p = sum( 1 / (1 + (pae_array[i, j] / d0) ** 2) for j in I_p )
+                if current_sum_score_p > best_per_chain_score: 
+                    best_per_chain_score = current_sum_score_p
+            
+            score_p = best_per_chain_score / I # 전체 인터페이스 크기 I로 정규화
+            per_chain_scores[chain_idx].append(score_p)
+            current_model_chain_scores.append(score_p)
+
+        # 4) pIS 계산 = 현재 모델의 모든 체인별 점수의 합
+        pIS_list.append(sum(current_model_chain_scores))
+
+    return piTM_list, per_chain_scores, pIS_list

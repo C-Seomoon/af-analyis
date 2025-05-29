@@ -1,0 +1,41 @@
+{
+    "r2": {
+        "nested_cv_mean": 0.7366448462276184,
+        "nested_cv_std": 0.10849766479032473,
+        "nested_cv_95ci": [
+            0.5239894232385819,
+            0.9493002692166549
+        ],
+        "test_performance": 0.7729150904767428,
+        "within_confidence_interval": true,
+        "difference": 0.036270244249124395,
+        "relative_difference_pct": 4.923708410486474,
+        "interpretation": "\u2705 Good: Test performance within expected range"
+    },
+    "mse": {
+        "nested_cv_mean": 0.02160502524494557,
+        "nested_cv_std": 0.005791498106660046,
+        "nested_cv_95ci": [
+            0.01025368895589188,
+            0.032956361533999265
+        ],
+        "test_performance": 0.03161231207437949,
+        "within_confidence_interval": true,
+        "difference": 0.010007286829433922,
+        "relative_difference_pct": 46.31925543236797,
+        "interpretation": "\u2705 Good: Test performance within expected range"
+    },
+    "mae": {
+        "nested_cv_mean": 0.09694296084317813,
+        "nested_cv_std": 0.012621690114904579,
+        "nested_cv_95ci": [
+            0.07220444821796516,
+            0.1216814734683911
+        ],
+        "test_performance": 0.11472346694987437,
+        "within_confidence_interval": true,
+        "difference": 0.017780506106696237,
+        "relative_difference_pct": 18.341203891491674,
+        "interpretation": "\u2705 Good: Test performance within expected range"
+    }
+}

@@ -1,0 +1,392 @@
+=============================================
+[INFO] Job Information
+---------------------------------------------
+[INFO] Job Name       : rg_pipeline
+[INFO] Job ID         : 205794
+[INFO] Submit Dir     : /home/cseomoon/appl/af_analysis-0.1.4/model/regression/scripts
+[INFO] Partition      : rome_short
+[INFO] Node List      : cpu5
+[INFO] Nodes          : 1
+[INFO] CPUs per Task  : 48
+[INFO] Memory (MB)    : 
+[INFO] User           : cseomoon
+[INFO] Work Dir       : /home/cseomoon/appl/af_analysis-0.1.4/model/regression/scripts
+[INFO] Tasks per Node : 1
+[INFO] Dependency     : 
+[INFO] GPU(s)         : 
+=============================================
+
+[INFO] Job started at : Tue May 27 13:34:25 KST 2025
+[INFO] Job allocated on node(s): cpu5
+[INFO] Job running on: cpu5
+[INFO] Saving results to /home/cseomoon/appl/af_analysis-0.1.4/model/regression/results/rg_pipeline_20250527_133425
+Initialized Random Forest (rf) with params: {'bootstrap': True, 'ccp_alpha': 0.0, 'criterion': 'squared_error', 'max_depth': None, 'max_features': 1.0, 'max_leaf_nodes': None, 'max_samples': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 'n_estimators': 100, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Initialized LightGBM (lgbm) with params: {'boosting_type': 'gbdt', 'class_weight': None, 'colsample_bytree': 0.8, 'importance_type': 'split', 'learning_rate': 0.1, 'max_depth': -1, 'min_child_samples': 20, 'min_child_weight': 0.001, 'min_split_gain': 0.0, 'n_estimators': 100, 'n_jobs': -1, 'num_leaves': 31, 'objective': 'regression_l1', 'random_state': 42, 'reg_alpha': 0.0, 'reg_lambda': 0.0, 'subsample': 0.8, 'subsample_for_bin': 200000, 'subsample_freq': 0, 'metric': 'mae', 'verbose': -1}
+Initialized XGBoost (xgb) with params: {'objective': 'reg:squarederror', 'base_score': None, 'booster': None, 'callbacks': None, 'colsample_bylevel': None, 'colsample_bynode': None, 'colsample_bytree': 0.8, 'device': None, 'early_stopping_rounds': None, 'enable_categorical': False, 'eval_metric': 'rmse', 'feature_types': None, 'feature_weights': None, 'gamma': 0, 'grow_policy': None, 'importance_type': None, 'interaction_constraints': None, 'learning_rate': 0.1, 'max_bin': None, 'max_cat_threshold': None, 'max_cat_to_onehot': None, 'max_delta_step': None, 'max_depth': 3, 'max_leaves': None, 'min_child_weight': None, 'missing': nan, 'monotone_constraints': None, 'multi_strategy': None, 'n_estimators': 100, 'n_jobs': -1, 'num_parallel_tree': None, 'random_state': 42, 'reg_alpha': 0, 'reg_lambda': 1, 'sampling_method': None, 'scale_pos_weight': None, 'subsample': 0.8, 'tree_method': 'hist', 'validate_parameters': None, 'verbosity': None}
+Results saved to comprehensive_regression_results_20250527_133433/run_arguments.json
+Original data shape: (3650, 90)
+Using 'DockQ' as the continuous target variable.
+Identified 71 potential feature columns.
+Checking for NaN values in potential feature columns...
+Dropped 3 rows containing NaN values in one or more feature columns.
+Generated 10 stratification bins from target for regression.
+Processed Features (X) shape after NaN drop: (3647, 71)
+Processed Target (y) shape after NaN drop: (3647,)
+Processed Query IDs shape after NaN drop: (3647,)
+Original data shape: (1650, 90)
+Using 'DockQ' as the continuous target variable.
+Identified 71 potential feature columns.
+Checking for NaN values in potential feature columns...
+Dropped 2 rows containing NaN values in one or more feature columns.
+Generated 10 stratification bins from target for regression.
+Processed Features (X) shape after NaN drop: (1648, 71)
+Processed Target (y) shape after NaN drop: (1648,)
+Processed Query IDs shape after NaN drop: (1648,)
+Initialized Random Forest (rf) with params: {'bootstrap': True, 'ccp_alpha': 0.0, 'criterion': 'squared_error', 'max_depth': None, 'max_features': 1.0, 'max_leaf_nodes': None, 'max_samples': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 'n_estimators': 100, 'n_jobs': -1, 'oob_score': False, 'random_state': 42, 'verbose': 0, 'warm_start': False}
+Initialized LightGBM (lgbm) with params: {'boosting_type': 'gbdt', 'class_weight': None, 'colsample_bytree': 0.8, 'importance_type': 'split', 'learning_rate': 0.1, 'max_depth': -1, 'min_child_samples': 20, 'min_child_weight': 0.001, 'min_split_gain': 0.0, 'n_estimators': 100, 'n_jobs': -1, 'num_leaves': 31, 'objective': 'regression_l1', 'random_state': 42, 'reg_alpha': 0.0, 'reg_lambda': 0.0, 'subsample': 0.8, 'subsample_for_bin': 200000, 'subsample_freq': 0, 'metric': 'mae', 'verbose': -1}
+Initialized XGBoost (xgb) with params: {'objective': 'reg:squarederror', 'base_score': None, 'booster': None, 'callbacks': None, 'colsample_bylevel': None, 'colsample_bynode': None, 'colsample_bytree': 0.8, 'device': None, 'early_stopping_rounds': None, 'enable_categorical': False, 'eval_metric': 'rmse', 'feature_types': None, 'feature_weights': None, 'gamma': 0, 'grow_policy': None, 'importance_type': None, 'interaction_constraints': None, 'learning_rate': 0.1, 'max_bin': None, 'max_cat_threshold': None, 'max_cat_to_onehot': None, 'max_delta_step': None, 'max_depth': 3, 'max_leaves': None, 'min_child_weight': None, 'missing': nan, 'monotone_constraints': None, 'multi_strategy': None, 'n_estimators': 100, 'n_jobs': -1, 'num_parallel_tree': None, 'random_state': 42, 'reg_alpha': 0, 'reg_lambda': 1, 'sampling_method': None, 'scale_pos_weight': None, 'subsample': 0.8, 'tree_method': 'hist', 'validate_parameters': None, 'verbosity': None}
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to comprehensive_regression_results_20250527_133433/rf/fold_1/best_params.json
+Calculated Metrics: R2=0.5871, RMSE=0.2042, MAE=0.1213
+Results saved to comprehensive_regression_results_20250527_133433/rf/fold_1/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/rf/fold_1/predictions.csv (shape: (749, 2))
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to comprehensive_regression_results_20250527_133433/rf/fold_2/best_params.json
+Calculated Metrics: R2=0.8432, RMSE=0.1350, MAE=0.0889
+Results saved to comprehensive_regression_results_20250527_133433/rf/fold_2/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/rf/fold_2/predictions.csv (shape: (749, 2))
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to comprehensive_regression_results_20250527_133433/rf/fold_3/best_params.json
+Calculated Metrics: R2=0.7119, RMSE=0.1364, MAE=0.0935
+Results saved to comprehensive_regression_results_20250527_133433/rf/fold_3/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/rf/fold_3/predictions.csv (shape: (749, 2))
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to comprehensive_regression_results_20250527_133433/rf/fold_4/best_params.json
+Calculated Metrics: R2=0.3502, RMSE=0.1948, MAE=0.1102
+Results saved to comprehensive_regression_results_20250527_133433/rf/fold_4/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/rf/fold_4/predictions.csv (shape: (700, 2))
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to comprehensive_regression_results_20250527_133433/rf/fold_5/best_params.json
+Calculated Metrics: R2=0.8527, RMSE=0.1257, MAE=0.0747
+Results saved to comprehensive_regression_results_20250527_133433/rf/fold_5/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/rf/fold_5/predictions.csv (shape: (700, 2))
+Results saved to comprehensive_regression_results_20250527_133433/rf/metrics_summary.json
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Calculated Metrics: R2=0.9701, RMSE=0.0525, MAE=0.0283
+Results saved to comprehensive_regression_results_20250527_133433/rf/final_model_metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/rf/final_model_predictions.csv (shape: (3647, 2))
+Calculating SHAP values for Random Forest using SHAP Explainer...
+SHAP calculation took 86.78 seconds.
+--- Saving SHAP results for Fold N/A ---
+SHAP values saved to: comprehensive_regression_results_20250527_133433/rf/shap_values.npy
+X_explain saved to (CSV): comprehensive_regression_results_20250527_133433/rf/X_explain.csv
+SHAP expected value saved to: comprehensive_regression_results_20250527_133433/rf/shap_expected_value.joblib
+SHAP dot plot saved to: comprehensive_regression_results_20250527_133433/rf/shap_summary_dot.png
+SHAP bar plot saved to: comprehensive_regression_results_20250527_133433/rf/shap_summary_bar.png
+--- SHAP saving completed for Fold N/A ---
+
+--- Analyzing Global SHAP for Model: rf ---
+SHAP values or X_explain file missing in fold_1. Skipping.
+SHAP values or X_explain file missing in fold_2. Skipping.
+SHAP values or X_explain file missing in fold_3. Skipping.
+SHAP values or X_explain file missing in fold_4. Skipping.
+SHAP values or X_explain file missing in fold_5. Skipping.
+Error: No valid SHAP data found across folds. Cannot perform global analysis.
+Calculated Metrics: R2=0.7737, RMSE=0.1775, MAE=0.1021
+Predictions saved to comprehensive_regression_results_20250527_133433/rf/test_predictions.csv (shape: (1648, 2))
+Results saved to comprehensive_regression_results_20250527_133433/rf/performance_comparison.json
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to comprehensive_regression_results_20250527_133433/lgbm/fold_1/best_params.json
+Calculated Metrics: R2=0.5579, RMSE=0.2112, MAE=0.1246
+Results saved to comprehensive_regression_results_20250527_133433/lgbm/fold_1/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/lgbm/fold_1/predictions.csv (shape: (749, 2))
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to comprehensive_regression_results_20250527_133433/lgbm/fold_2/best_params.json
+Calculated Metrics: R2=0.8237, RMSE=0.1432, MAE=0.0899
+Results saved to comprehensive_regression_results_20250527_133433/lgbm/fold_2/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/lgbm/fold_2/predictions.csv (shape: (749, 2))
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to comprehensive_regression_results_20250527_133433/lgbm/fold_3/best_params.json
+Calculated Metrics: R2=0.6746, RMSE=0.1449, MAE=0.0892
+Results saved to comprehensive_regression_results_20250527_133433/lgbm/fold_3/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/lgbm/fold_3/predictions.csv (shape: (749, 2))
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to comprehensive_regression_results_20250527_133433/lgbm/fold_4/best_params.json
+Calculated Metrics: R2=0.1374, RMSE=0.2244, MAE=0.1300
+Results saved to comprehensive_regression_results_20250527_133433/lgbm/fold_4/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/lgbm/fold_4/predictions.csv (shape: (700, 2))
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to comprehensive_regression_results_20250527_133433/lgbm/fold_5/best_params.json
+Calculated Metrics: R2=0.7805, RMSE=0.1534, MAE=0.0970
+Results saved to comprehensive_regression_results_20250527_133433/lgbm/fold_5/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/lgbm/fold_5/predictions.csv (shape: (700, 2))
+Results saved to comprehensive_regression_results_20250527_133433/lgbm/metrics_summary.json
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Calculated Metrics: R2=0.9754, RMSE=0.0476, MAE=0.0129
+Results saved to comprehensive_regression_results_20250527_133433/lgbm/final_model_metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/lgbm/final_model_predictions.csv (shape: (3647, 2))
+Calculating SHAP values for LightGBM using SHAP Explainer...
+SHAP calculation took 2.75 seconds.
+--- Saving SHAP results for Fold N/A ---
+SHAP values saved to: comprehensive_regression_results_20250527_133433/lgbm/shap_values.npy
+X_explain saved to (CSV): comprehensive_regression_results_20250527_133433/lgbm/X_explain.csv
+SHAP expected value saved to: comprehensive_regression_results_20250527_133433/lgbm/shap_expected_value.joblib
+SHAP dot plot saved to: comprehensive_regression_results_20250527_133433/lgbm/shap_summary_dot.png
+SHAP bar plot saved to: comprehensive_regression_results_20250527_133433/lgbm/shap_summary_bar.png
+--- SHAP saving completed for Fold N/A ---
+
+--- Analyzing Global SHAP for Model: lgbm ---
+SHAP values or X_explain file missing in fold_1. Skipping.
+SHAP values or X_explain file missing in fold_2. Skipping.
+SHAP values or X_explain file missing in fold_3. Skipping.
+SHAP values or X_explain file missing in fold_4. Skipping.
+SHAP values or X_explain file missing in fold_5. Skipping.
+Error: No valid SHAP data found across folds. Cannot perform global analysis.
+Calculated Metrics: R2=0.7895, RMSE=0.1712, MAE=0.0890
+Predictions saved to comprehensive_regression_results_20250527_133433/lgbm/test_predictions.csv (shape: (1648, 2))
+Results saved to comprehensive_regression_results_20250527_133433/lgbm/performance_comparison.json
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to comprehensive_regression_results_20250527_133433/xgb/fold_1/best_params.json
+Calculated Metrics: R2=0.5397, RMSE=0.2156, MAE=0.1278
+Results saved to comprehensive_regression_results_20250527_133433/xgb/fold_1/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/xgb/fold_1/predictions.csv (shape: (749, 2))
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to comprehensive_regression_results_20250527_133433/xgb/fold_2/best_params.json
+Calculated Metrics: R2=0.8005, RMSE=0.1523, MAE=0.0993
+Results saved to comprehensive_regression_results_20250527_133433/xgb/fold_2/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/xgb/fold_2/predictions.csv (shape: (749, 2))
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to comprehensive_regression_results_20250527_133433/xgb/fold_3/best_params.json
+Calculated Metrics: R2=0.6495, RMSE=0.1504, MAE=0.0987
+Results saved to comprehensive_regression_results_20250527_133433/xgb/fold_3/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/xgb/fold_3/predictions.csv (shape: (749, 2))
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to comprehensive_regression_results_20250527_133433/xgb/fold_4/best_params.json
+Calculated Metrics: R2=0.1956, RMSE=0.2167, MAE=0.1202
+Results saved to comprehensive_regression_results_20250527_133433/xgb/fold_4/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/xgb/fold_4/predictions.csv (shape: (700, 2))
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to comprehensive_regression_results_20250527_133433/xgb/fold_5/best_params.json
+Calculated Metrics: R2=0.7483, RMSE=0.1643, MAE=0.1016
+Results saved to comprehensive_regression_results_20250527_133433/xgb/fold_5/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/xgb/fold_5/predictions.csv (shape: (700, 2))
+Results saved to comprehensive_regression_results_20250527_133433/xgb/metrics_summary.json
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Calculated Metrics: R2=0.9370, RMSE=0.0763, MAE=0.0509
+Results saved to comprehensive_regression_results_20250527_133433/xgb/final_model_metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/xgb/final_model_predictions.csv (shape: (3647, 2))
+Calculating SHAP values for XGBoost using SHAP Explainer...
+SHAP calculation took 0.22 seconds.
+--- Saving SHAP results for Fold N/A ---
+SHAP values saved to: comprehensive_regression_results_20250527_133433/xgb/shap_values.npy
+X_explain saved to (CSV): comprehensive_regression_results_20250527_133433/xgb/X_explain.csv
+SHAP expected value saved to: comprehensive_regression_results_20250527_133433/xgb/shap_expected_value.joblib
+SHAP dot plot saved to: comprehensive_regression_results_20250527_133433/xgb/shap_summary_dot.png
+SHAP bar plot saved to: comprehensive_regression_results_20250527_133433/xgb/shap_summary_bar.png
+--- SHAP saving completed for Fold N/A ---
+
+--- Analyzing Global SHAP for Model: xgb ---
+SHAP values or X_explain file missing in fold_1. Skipping.
+SHAP values or X_explain file missing in fold_2. Skipping.
+SHAP values or X_explain file missing in fold_3. Skipping.
+SHAP values or X_explain file missing in fold_4. Skipping.
+SHAP values or X_explain file missing in fold_5. Skipping.
+Error: No valid SHAP data found across folds. Cannot perform global analysis.
+Calculated Metrics: R2=0.7971, RMSE=0.1681, MAE=0.0991
+Predictions saved to comprehensive_regression_results_20250527_133433/xgb/test_predictions.csv (shape: (1648, 2))
+Results saved to comprehensive_regression_results_20250527_133433/xgb/performance_comparison.json
+Fitting 3 folds for each of 2 candidates, totalling 6 fits
+Results saved to comprehensive_regression_results_20250527_133433/lr/fold_1/best_params.json
+Calculated Metrics: R2=0.5901, RMSE=0.2034, MAE=0.1515
+Results saved to comprehensive_regression_results_20250527_133433/lr/fold_1/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/lr/fold_1/predictions.csv (shape: (749, 2))
+Fitting 3 folds for each of 2 candidates, totalling 6 fits
+Results saved to comprehensive_regression_results_20250527_133433/lr/fold_2/best_params.json
+Calculated Metrics: R2=0.7438, RMSE=0.1726, MAE=0.1236
+Results saved to comprehensive_regression_results_20250527_133433/lr/fold_2/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/lr/fold_2/predictions.csv (shape: (749, 2))
+Fitting 3 folds for each of 2 candidates, totalling 6 fits
+Results saved to comprehensive_regression_results_20250527_133433/lr/fold_3/best_params.json
+Calculated Metrics: R2=0.6698, RMSE=0.1460, MAE=0.1060
+Results saved to comprehensive_regression_results_20250527_133433/lr/fold_3/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/lr/fold_3/predictions.csv (shape: (749, 2))
+Fitting 3 folds for each of 2 candidates, totalling 6 fits
+Results saved to comprehensive_regression_results_20250527_133433/lr/fold_4/best_params.json
+Calculated Metrics: R2=0.1647, RMSE=0.2208, MAE=0.1604
+Results saved to comprehensive_regression_results_20250527_133433/lr/fold_4/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/lr/fold_4/predictions.csv (shape: (700, 2))
+Fitting 3 folds for each of 2 candidates, totalling 6 fits
+Results saved to comprehensive_regression_results_20250527_133433/lr/fold_5/best_params.json
+Calculated Metrics: R2=0.8295, RMSE=0.1352, MAE=0.0999
+Results saved to comprehensive_regression_results_20250527_133433/lr/fold_5/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/lr/fold_5/predictions.csv (shape: (700, 2))
+Results saved to comprehensive_regression_results_20250527_133433/lr/metrics_summary.json
+Fitting 3 folds for each of 2 candidates, totalling 6 fits
+Calculated Metrics: R2=0.8595, RMSE=0.1139, MAE=0.0801
+Results saved to comprehensive_regression_results_20250527_133433/lr/final_model_metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/lr/final_model_predictions.csv (shape: (3647, 2))
+--- Saving SHAP results for Fold N/A ---
+SHAP values saved to: comprehensive_regression_results_20250527_133433/lr/shap_values.npy
+X_explain saved to (CSV): comprehensive_regression_results_20250527_133433/lr/X_explain.csv
+SHAP expected value saved to: comprehensive_regression_results_20250527_133433/lr/shap_expected_value.joblib
+SHAP dot plot saved to: comprehensive_regression_results_20250527_133433/lr/shap_summary_dot.png
+SHAP bar plot saved to: comprehensive_regression_results_20250527_133433/lr/shap_summary_bar.png
+--- SHAP saving completed for Fold N/A ---
+
+--- Analyzing Global SHAP for Model: lr ---
+SHAP values or X_explain file missing in fold_1. Skipping.
+SHAP values or X_explain file missing in fold_2. Skipping.
+SHAP values or X_explain file missing in fold_3. Skipping.
+SHAP values or X_explain file missing in fold_4. Skipping.
+SHAP values or X_explain file missing in fold_5. Skipping.
+Error: No valid SHAP data found across folds. Cannot perform global analysis.
+Calculated Metrics: R2=0.6836, RMSE=0.2099, MAE=0.1377
+Predictions saved to comprehensive_regression_results_20250527_133433/lr/test_predictions.csv (shape: (1648, 2))
+Results saved to comprehensive_regression_results_20250527_133433/lr/performance_comparison.json
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to comprehensive_regression_results_20250527_133433/ridge/fold_1/best_params.json
+Calculated Metrics: R2=0.6943, RMSE=0.1757, MAE=0.1194
+Results saved to comprehensive_regression_results_20250527_133433/ridge/fold_1/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/ridge/fold_1/predictions.csv (shape: (749, 2))
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to comprehensive_regression_results_20250527_133433/ridge/fold_2/best_params.json
+Calculated Metrics: R2=0.8270, RMSE=0.1419, MAE=0.0999
+Results saved to comprehensive_regression_results_20250527_133433/ridge/fold_2/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/ridge/fold_2/predictions.csv (shape: (749, 2))
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to comprehensive_regression_results_20250527_133433/ridge/fold_3/best_params.json
+Calculated Metrics: R2=0.7462, RMSE=0.1280, MAE=0.0881
+Results saved to comprehensive_regression_results_20250527_133433/ridge/fold_3/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/ridge/fold_3/predictions.csv (shape: (749, 2))
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to comprehensive_regression_results_20250527_133433/ridge/fold_4/best_params.json
+Calculated Metrics: R2=0.3214, RMSE=0.1990, MAE=0.1373
+Results saved to comprehensive_regression_results_20250527_133433/ridge/fold_4/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/ridge/fold_4/predictions.csv (shape: (700, 2))
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to comprehensive_regression_results_20250527_133433/ridge/fold_5/best_params.json
+Calculated Metrics: R2=0.8659, RMSE=0.1199, MAE=0.0753
+Results saved to comprehensive_regression_results_20250527_133433/ridge/fold_5/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/ridge/fold_5/predictions.csv (shape: (700, 2))
+Results saved to comprehensive_regression_results_20250527_133433/ridge/metrics_summary.json
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Calculated Metrics: R2=0.8330, RMSE=0.1241, MAE=0.0817
+Results saved to comprehensive_regression_results_20250527_133433/ridge/final_model_metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/ridge/final_model_predictions.csv (shape: (3647, 2))
+--- Saving SHAP results for Fold N/A ---
+SHAP values saved to: comprehensive_regression_results_20250527_133433/ridge/shap_values.npy
+X_explain saved to (CSV): comprehensive_regression_results_20250527_133433/ridge/X_explain.csv
+SHAP expected value saved to: comprehensive_regression_results_20250527_133433/ridge/shap_expected_value.joblib
+SHAP dot plot saved to: comprehensive_regression_results_20250527_133433/ridge/shap_summary_dot.png
+SHAP bar plot saved to: comprehensive_regression_results_20250527_133433/ridge/shap_summary_bar.png
+--- SHAP saving completed for Fold N/A ---
+
+--- Analyzing Global SHAP for Model: ridge ---
+SHAP values or X_explain file missing in fold_1. Skipping.
+SHAP values or X_explain file missing in fold_2. Skipping.
+SHAP values or X_explain file missing in fold_3. Skipping.
+SHAP values or X_explain file missing in fold_4. Skipping.
+SHAP values or X_explain file missing in fold_5. Skipping.
+Error: No valid SHAP data found across folds. Cannot perform global analysis.
+Calculated Metrics: R2=0.7559, RMSE=0.1843, MAE=0.1216
+Predictions saved to comprehensive_regression_results_20250527_133433/ridge/test_predictions.csv (shape: (1648, 2))
+Results saved to comprehensive_regression_results_20250527_133433/ridge/performance_comparison.json
+Fitting 3 folds for each of 40 candidates, totalling 120 fits
+Results saved to comprehensive_regression_results_20250527_133433/lasso/fold_1/best_params.json
+Calculated Metrics: R2=0.7025, RMSE=0.1733, MAE=0.1144
+Results saved to comprehensive_regression_results_20250527_133433/lasso/fold_1/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/lasso/fold_1/predictions.csv (shape: (749, 2))
+Fitting 3 folds for each of 40 candidates, totalling 120 fits
+Results saved to comprehensive_regression_results_20250527_133433/lasso/fold_2/best_params.json
+Calculated Metrics: R2=0.7809, RMSE=0.1597, MAE=0.1146
+Results saved to comprehensive_regression_results_20250527_133433/lasso/fold_2/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/lasso/fold_2/predictions.csv (shape: (749, 2))
+Fitting 3 folds for each of 40 candidates, totalling 120 fits
+Results saved to comprehensive_regression_results_20250527_133433/lasso/fold_3/best_params.json
+Calculated Metrics: R2=0.7451, RMSE=0.1283, MAE=0.0872
+Results saved to comprehensive_regression_results_20250527_133433/lasso/fold_3/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/lasso/fold_3/predictions.csv (shape: (749, 2))
+Fitting 3 folds for each of 40 candidates, totalling 120 fits
+Results saved to comprehensive_regression_results_20250527_133433/lasso/fold_4/best_params.json
+Calculated Metrics: R2=0.3696, RMSE=0.1918, MAE=0.1286
+Results saved to comprehensive_regression_results_20250527_133433/lasso/fold_4/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/lasso/fold_4/predictions.csv (shape: (700, 2))
+Fitting 3 folds for each of 40 candidates, totalling 120 fits
+Results saved to comprehensive_regression_results_20250527_133433/lasso/fold_5/best_params.json
+Calculated Metrics: R2=0.8793, RMSE=0.1138, MAE=0.0755
+Results saved to comprehensive_regression_results_20250527_133433/lasso/fold_5/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/lasso/fold_5/predictions.csv (shape: (700, 2))
+Results saved to comprehensive_regression_results_20250527_133433/lasso/metrics_summary.json
+Fitting 3 folds for each of 40 candidates, totalling 120 fits
+Calculated Metrics: R2=0.8170, RMSE=0.1300, MAE=0.0851
+Results saved to comprehensive_regression_results_20250527_133433/lasso/final_model_metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/lasso/final_model_predictions.csv (shape: (3647, 2))
+--- Saving SHAP results for Fold N/A ---
+SHAP values saved to: comprehensive_regression_results_20250527_133433/lasso/shap_values.npy
+X_explain saved to (CSV): comprehensive_regression_results_20250527_133433/lasso/X_explain.csv
+SHAP expected value saved to: comprehensive_regression_results_20250527_133433/lasso/shap_expected_value.joblib
+SHAP dot plot saved to: comprehensive_regression_results_20250527_133433/lasso/shap_summary_dot.png
+SHAP bar plot saved to: comprehensive_regression_results_20250527_133433/lasso/shap_summary_bar.png
+--- SHAP saving completed for Fold N/A ---
+
+--- Analyzing Global SHAP for Model: lasso ---
+SHAP values or X_explain file missing in fold_1. Skipping.
+SHAP values or X_explain file missing in fold_2. Skipping.
+SHAP values or X_explain file missing in fold_3. Skipping.
+SHAP values or X_explain file missing in fold_4. Skipping.
+SHAP values or X_explain file missing in fold_5. Skipping.
+Error: No valid SHAP data found across folds. Cannot perform global analysis.
+Calculated Metrics: R2=0.7835, RMSE=0.1736, MAE=0.1112
+Predictions saved to comprehensive_regression_results_20250527_133433/lasso/test_predictions.csv (shape: (1648, 2))
+Results saved to comprehensive_regression_results_20250527_133433/lasso/performance_comparison.json
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to comprehensive_regression_results_20250527_133433/en/fold_1/best_params.json
+Calculated Metrics: R2=0.7143, RMSE=0.1698, MAE=0.1108
+Results saved to comprehensive_regression_results_20250527_133433/en/fold_1/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/en/fold_1/predictions.csv (shape: (749, 2))
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to comprehensive_regression_results_20250527_133433/en/fold_2/best_params.json
+Calculated Metrics: R2=0.8031, RMSE=0.1513, MAE=0.1064
+Results saved to comprehensive_regression_results_20250527_133433/en/fold_2/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/en/fold_2/predictions.csv (shape: (749, 2))
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to comprehensive_regression_results_20250527_133433/en/fold_3/best_params.json
+Calculated Metrics: R2=0.7346, RMSE=0.1309, MAE=0.0925
+Results saved to comprehensive_regression_results_20250527_133433/en/fold_3/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/en/fold_3/predictions.csv (shape: (749, 2))
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to comprehensive_regression_results_20250527_133433/en/fold_4/best_params.json
+Calculated Metrics: R2=0.5527, RMSE=0.1616, MAE=0.1001
+Results saved to comprehensive_regression_results_20250527_133433/en/fold_4/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/en/fold_4/predictions.csv (shape: (700, 2))
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Results saved to comprehensive_regression_results_20250527_133433/en/fold_5/best_params.json
+Calculated Metrics: R2=0.8785, RMSE=0.1142, MAE=0.0749
+Results saved to comprehensive_regression_results_20250527_133433/en/fold_5/metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/en/fold_5/predictions.csv (shape: (700, 2))
+Results saved to comprehensive_regression_results_20250527_133433/en/metrics_summary.json
+Fitting 3 folds for each of 50 candidates, totalling 150 fits
+Calculated Metrics: R2=0.8076, RMSE=0.1332, MAE=0.0882
+Results saved to comprehensive_regression_results_20250527_133433/en/final_model_metrics.json
+Predictions saved to comprehensive_regression_results_20250527_133433/en/final_model_predictions.csv (shape: (3647, 2))
+--- Saving SHAP results for Fold N/A ---
+SHAP values saved to: comprehensive_regression_results_20250527_133433/en/shap_values.npy
+X_explain saved to (CSV): comprehensive_regression_results_20250527_133433/en/X_explain.csv
+SHAP expected value saved to: comprehensive_regression_results_20250527_133433/en/shap_expected_value.joblib
+SHAP dot plot saved to: comprehensive_regression_results_20250527_133433/en/shap_summary_dot.png
+SHAP bar plot saved to: comprehensive_regression_results_20250527_133433/en/shap_summary_bar.png
+--- SHAP saving completed for Fold N/A ---
+
+--- Analyzing Global SHAP for Model: en ---
+SHAP values or X_explain file missing in fold_1. Skipping.
+SHAP values or X_explain file missing in fold_2. Skipping.
+SHAP values or X_explain file missing in fold_3. Skipping.
+SHAP values or X_explain file missing in fold_4. Skipping.
+SHAP values or X_explain file missing in fold_5. Skipping.
+Error: No valid SHAP data found across folds. Cannot perform global analysis.
+Calculated Metrics: R2=0.7729, RMSE=0.1778, MAE=0.1147
+Predictions saved to comprehensive_regression_results_20250527_133433/en/test_predictions.csv (shape: (1648, 2))
+Results saved to comprehensive_regression_results_20250527_133433/en/performance_comparison.json
+Results saved to comprehensive_regression_results_20250527_133433/final_models_info.json
+작업 완료
+[INFO] Job completed at: Tue May 27 16:00:29 KST 2025

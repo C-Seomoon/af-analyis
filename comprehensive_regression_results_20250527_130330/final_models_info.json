@@ -1,0 +1,105 @@
+{
+    "lr": {
+        "best_params": {
+            "reg__fit_intercept": true
+        },
+        "nested_cv_metrics": {
+            "r2_mean": 0.5995812293879667,
+            "r2_std": 0.2314499437804961,
+            "mse_mean": 0.031910200827690784,
+            "mse_std": 0.011627218478216706,
+            "rmse_mean": 0.1756230458315179,
+            "rmse_std": 0.03266108694687528,
+            "mae_mean": 0.1282858144814113,
+            "mae_std": 0.024075509128355797,
+            "best_inner_cv_score_mean": -0.03745703878701896,
+            "best_inner_cv_score_std": 0.006305465901729094,
+            "scoring_metric_used": "neg_mean_squared_error"
+        },
+        "test_metrics": {
+            "r2": 0.6835521498447852,
+            "mse": 0.044052456921839594,
+            "rmse": 0.20988677166948752,
+            "mae": 0.13770533456429435
+        }
+    },
+    "ridge": {
+        "best_params": {
+            "reg__alpha": 676.5074324464838,
+            "reg__fit_intercept": true,
+            "reg__solver": "auto"
+        },
+        "nested_cv_metrics": {
+            "r2_mean": 0.6909556934217054,
+            "r2_std": 0.19428921292338375,
+            "mse_mean": 0.024274735936688708,
+            "mse_std": 0.00955030052487722,
+            "rmse_mean": 0.1529039474604674,
+            "rmse_std": 0.029918535854806326,
+            "mae_mean": 0.10401503383470115,
+            "mae_std": 0.022085312051712103,
+            "best_inner_cv_score_mean": -0.0222608204093148,
+            "best_inner_cv_score_std": 0.0035956726848214078,
+            "scoring_metric_used": "neg_mean_squared_error"
+        },
+        "test_metrics": {
+            "r2": 0.755899877085251,
+            "mse": 0.03398098657975832,
+            "rmse": 0.18433932456141397,
+            "mae": 0.12164155351330068
+        }
+    },
+    "lasso": {
+        "best_params": {
+            "reg__alpha": 0.009962513222055111,
+            "reg__fit_intercept": true,
+            "reg__max_iter": 3000
+        },
+        "nested_cv_metrics": {
+            "r2_mean": 0.6954662641479435,
+            "r2_std": 0.17306725722209026,
+            "mse_mean": 0.024347057238720986,
+            "mse_std": 0.00872792409010595,
+            "rmse_mean": 0.15337780153654515,
+            "rmse_std": 0.028675899890624947,
+            "mae_mean": 0.10407284594357942,
+            "mae_std": 0.0196077540435555,
+            "best_inner_cv_score_mean": -0.021960864502046703,
+            "best_inner_cv_score_std": 0.0031745509985202304,
+            "scoring_metric_used": "neg_mean_squared_error"
+        },
+        "test_metrics": {
+            "r2": 0.7834956484870614,
+            "mse": 0.03013940089571303,
+            "rmse": 0.17360703008724337,
+            "mae": 0.11115573018284843
+        }
+    },
+    "en": {
+        "best_params": {
+            "reg__alpha": 0.06578820119123178,
+            "reg__fit_intercept": true,
+            "reg__l1_ratio": 0.3,
+            "reg__max_iter": 3000
+        },
+        "nested_cv_metrics": {
+            "r2_mean": 0.7366448462276184,
+            "r2_std": 0.10849766479032473,
+            "mse_mean": 0.02160502524494557,
+            "mse_std": 0.005791498106660046,
+            "rmse_mean": 0.14556545742273636,
+            "rmse_std": 0.02038928273027529,
+            "mae_mean": 0.09694296084317813,
+            "mae_std": 0.012621690114904579,
+            "best_inner_cv_score_mean": -0.021478680189460427,
+            "best_inner_cv_score_std": 0.0030607305127196517,
+            "scoring_metric_used": "neg_mean_squared_error"
+        },
+        "test_metrics": {
+            "r2": 0.7729150904767428,
+            "mse": 0.03161231207437949,
+            "rmse": 0.1777985153885698,
+            "mae": 0.11472346694987437
+        }
+    }
+}

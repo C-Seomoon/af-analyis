@@ -1,0 +1,18 @@
+\begin{tabular}{llrrrrrrrr}
+\toprule
+name & type & roc_auc & pr_ap & accuracy & precision & recall & f1 & balanced_accuracy & mcc \\
+\midrule
+logistic & model & 0.980 & 0.970 & 0.924 & 0.976 & 0.800 & 0.879 & 0.895 & 0.834 \\
+rf & model & 0.981 & 0.978 & 0.965 & 1.000 & 0.900 & 0.947 & 0.950 & 0.925 \\
+iptm_H & feature & 0.984 & 0.973 & 0.938 & 0.889 & 0.937 & 0.912 & 0.937 & 0.864 \\
+iptm_L & feature & 0.985 & 0.975 & 0.953 & 0.938 & 0.925 & 0.931 & 0.946 & 0.895 \\
+model_avg_RMSD & feature & 0.044 & 0.199 & 0.345 & 0.345 & 1.000 & 0.514 & 0.500 & 0.000 \\
+scaled_model_RMSD & feature & 0.956 & 0.937 & 0.908 & 0.907 & 0.818 & 0.860 & 0.887 & 0.794 \\
+del_G_B & feature & 0.067 & 0.201 & 0.345 & 0.345 & 1.000 & 0.514 & 0.500 & 0.000 \\
+pdockq_AH & feature & 0.964 & 0.924 & 0.907 & 0.825 & 0.928 & 0.874 & 0.912 & 0.804 \\
+pdockq2_AH & feature & 0.976 & 0.965 & 0.922 & 0.849 & 0.944 & 0.894 & 0.927 & 0.836 \\
+LIS_AH & feature & 0.972 & 0.956 & 0.920 & 0.838 & 0.953 & 0.892 & 0.928 & 0.833 \\
+chain_pair_iptm_AH & feature & 0.982 & 0.971 & 0.933 & 0.877 & 0.937 & 0.906 & 0.934 & 0.855 \\
+chain_pair_iptm_AL & feature & 0.983 & 0.974 & 0.952 & 0.934 & 0.925 & 0.929 & 0.945 & 0.893 \\
+\bottomrule
+\end{tabular}

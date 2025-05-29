@@ -1,0 +1,6 @@
+,subsample,reg_lambda,reg_alpha,num_leaves,n_estimators,max_depth,learning_rate,colsample_bytree,class_weight
+fold_1,0.8,0.1,0.0,31,300,10,0.2,1.0,
+fold_2,0.8,5.0,0.01,40,200,30,0.01,1.0,
+fold_3,0.8,0.1,0.5,60,300,30,0.2,0.8,
+fold_4,1.0,1.0,0.0,31,100,10,0.01,0.6,balanced
+fold_5,1.0,0.0,0.01,20,100,-1,0.2,0.6,balanced

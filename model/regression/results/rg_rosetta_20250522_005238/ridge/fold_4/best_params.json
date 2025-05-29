@@ -1,0 +1,5 @@
+{
+    "reg__alpha": 0.0013289448722869186,
+    "reg__fit_intercept": false,
+    "reg__solver": "lsqr"
+}

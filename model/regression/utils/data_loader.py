@@ -62,7 +62,7 @@ def load_and_preprocess_data(file_path,
          default_features_to_drop = [
               'pdb', 'seed', 'sample', 'data_file', 'chain_iptm', 'chain_pair_iptm',
               'chain_pair_pae_min', 'chain_ptm', 'format', 'model_path', 'native_path',
-              'Fnat', 'Fnonnat', 'rRMS', 'iRMS', 'LRMS',
+              'Fnat', 'Fnonnat', 'rRMS', 'iRMS', 'LRMS', 'LIS', 'mpdockq_AH', 'mpdockq_AL', 'mpdockq_HL', 'mpdockq'
               # Add other classification-specific or less relevant columns here if needed
          ]
          # IMPORTANT: Unlike classification, DO NOT automatically add target_column to cols_to_drop here.
@@ -132,4 +132,4 @@ def load_and_preprocess_data(file_path,
         print("Error: Final feature set X still contains NaN values after dropping rows!")
         print(X.isnull().sum()[X.isnull().sum() > 0])
 
-    return X, y, query_ids, y_strat
+    return X, y, query_ids

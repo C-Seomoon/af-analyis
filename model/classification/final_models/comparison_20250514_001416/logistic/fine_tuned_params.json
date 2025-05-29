@@ -1,0 +1,8 @@
+{
+    "C": 0.005995,
+    "penalty": "l1",
+    "solver": "liblinear",
+    "max_iter": 2000,
+    "class_weight": null,
+    "n_jobs": -1
+}
