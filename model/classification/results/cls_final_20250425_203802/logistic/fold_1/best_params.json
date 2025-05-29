@@ -1,8 +1,0 @@
-{
-    "model__solver": "saga",
-    "model__penalty": "elasticnet",
-    "model__max_iter": 1000,
-    "model__l1_ratio": 0.30000000000000004,
-    "model__class_weight": "balanced",
-    "model__C": 0.000774263682681127
-}

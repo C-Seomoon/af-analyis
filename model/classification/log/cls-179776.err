@@ -1,582 +1,0 @@
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:05] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:06] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:07] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:07] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:07] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:07] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:07] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:07] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:07] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:23:08] WARNING: /workspace/src/learner.cc:738: 
-Parameters: { "use_label_encoder" } are not used.
-
-  bst.update(dtrain, iteration=i, fobj=obj)
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/shap/explainers/_tree.py:583: UserWarning: LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/shap/explainers/_tree.py:583: UserWarning: LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1271: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 32.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1271: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 32.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1271: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 32.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1271: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 32.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/shap/explainers/_linear.py:99: FutureWarning: The feature_perturbation option is now deprecated in favor of using the appropriate masker (maskers.Independent, maskers.Partition or maskers.Impute).
-  warnings.warn(wmsg, FutureWarning)
-Estimating transforms:   0%|          | 0/1000 [00:00<?, ?it/s]Estimating transforms:   0%|          | 5/1000 [00:00<00:20, 49.67it/s]Estimating transforms:   1%|          | 12/1000 [00:00<00:17, 57.81it/s]Estimating transforms:   2%|▏         | 19/1000 [00:00<00:16, 60.71it/s]Estimating transforms:   3%|▎         | 30/1000 [00:00<00:12, 77.81it/s]Estimating transforms:   4%|▍         | 39/1000 [00:00<00:12, 78.91it/s]Estimating transforms:   5%|▍         | 47/1000 [00:00<00:12, 79.12it/s]Estimating transforms:   6%|▌         | 55/1000 [00:00<00:12, 78.24it/s]Estimating transforms:   6%|▋         | 63/1000 [00:00<00:12, 73.92it/s]Estimating transforms:   7%|▋         | 71/1000 [00:00<00:13, 71.28it/s]Estimating transforms:   8%|▊         | 79/1000 [00:01<00:13, 67.13it/s]Estimating transforms:   9%|▊         | 86/1000 [00:01<00:14, 63.86it/s]Estimating transforms:   9%|▉         | 93/1000 [00:01<00:14, 64.53it/s]Estimating transforms:  10%|█         | 100/1000 [00:01<00:13, 64.98it/s]Estimating transforms:  11%|█         | 107/1000 [00:01<00:13, 65.31it/s]Estimating transforms:  11%|█▏        | 114/1000 [00:01<00:13, 65.52it/s]Estimating transforms:  12%|█▏        | 121/1000 [00:01<00:13, 65.72it/s]Estimating transforms:  13%|█▎        | 128/1000 [00:01<00:13, 65.92it/s]Estimating transforms:  14%|█▎        | 135/1000 [00:01<00:13, 66.02it/s]Estimating transforms:  14%|█▍        | 142/1000 [00:02<00:12, 66.09it/s]Estimating transforms:  15%|█▍        | 149/1000 [00:02<00:12, 65.59it/s]Estimating transforms:  16%|█▌        | 156/1000 [00:02<00:12, 66.74it/s]Estimating transforms:  17%|█▋        | 166/1000 [00:02<00:10, 75.93it/s]Estimating transforms:  18%|█▊        | 179/1000 [00:02<00:09, 90.16it/s]Estimating transforms:  19%|█▉        | 192/1000 [00:02<00:08, 100.08it/s]Estimating transforms:  20%|██        | 205/1000 [00:02<00:07, 106.94it/s]Estimating transforms:  22%|██▏       | 218/1000 [00:02<00:06, 111.79it/s]Estimating transforms:  23%|██▎       | 231/1000 [00:02<00:06, 115.08it/s]Estimating transforms:  24%|██▍       | 244/1000 [00:03<00:06, 117.34it/s]Estimating transforms:  26%|██▌       | 257/1000 [00:03<00:06, 119.02it/s]Estimating transforms:  27%|██▋       | 270/1000 [00:03<00:06, 120.08it/s]Estimating transforms:  28%|██▊       | 283/1000 [00:03<00:05, 120.83it/s]Estimating transforms:  30%|██▉       | 296/1000 [00:03<00:05, 121.42it/s]Estimating transforms:  31%|███       | 309/1000 [00:03<00:05, 121.77it/s]Estimating transforms:  32%|███▏      | 322/1000 [00:03<00:05, 121.96it/s]Estimating transforms:  34%|███▎      | 335/1000 [00:03<00:05, 122.11it/s]Estimating transforms:  35%|███▍      | 348/1000 [00:03<00:05, 122.25it/s]Estimating transforms:  36%|███▌      | 361/1000 [00:03<00:05, 122.37it/s]Estimating transforms:  37%|███▋      | 374/1000 [00:04<00:05, 122.38it/s]Estimating transforms:  39%|███▊      | 387/1000 [00:04<00:05, 116.96it/s]Estimating transforms:  40%|████      | 400/1000 [00:04<00:05, 118.61it/s]Estimating transforms:  41%|████▏     | 413/1000 [00:04<00:04, 119.80it/s]Estimating transforms:  43%|████▎     | 426/1000 [00:04<00:04, 119.58it/s]Estimating transforms:  44%|████▍     | 438/1000 [00:04<00:04, 118.27it/s]Estimating transforms:  45%|████▌     | 450/1000 [00:04<00:04, 117.04it/s]Estimating transforms:  46%|████▌     | 462/1000 [00:04<00:04, 116.10it/s]Estimating transforms:  47%|████▋     | 474/1000 [00:04<00:04, 115.38it/s]Estimating transforms:  49%|████▊     | 486/1000 [00:05<00:04, 114.87it/s]Estimating transforms:  50%|████▉     | 498/1000 [00:05<00:04, 112.34it/s]Estimating transforms:  51%|█████     | 510/1000 [00:05<00:04, 110.49it/s]Estimating transforms:  52%|█████▏    | 522/1000 [00:05<00:04, 109.32it/s]Estimating transforms:  53%|█████▎    | 533/1000 [00:05<00:04, 108.51it/s]Estimating transforms:  54%|█████▍    | 544/1000 [00:05<00:04, 107.95it/s]Estimating transforms:  56%|█████▌    | 555/1000 [00:05<00:04, 107.50it/s]Estimating transforms:  57%|█████▋    | 566/1000 [00:05<00:04, 107.27it/s]Estimating transforms:  58%|█████▊    | 577/1000 [00:05<00:03, 107.07it/s]Estimating transforms:  59%|█████▉    | 588/1000 [00:06<00:03, 106.82it/s]Estimating transforms:  60%|█████▉    | 599/1000 [00:06<00:07, 57.26it/s] Estimating transforms:  62%|██████▏   | 616/1000 [00:06<00:04, 77.04it/s]Estimating transforms:  63%|██████▎   | 633/1000 [00:06<00:03, 95.20it/s]Estimating transforms:  65%|██████▌   | 650/1000 [00:06<00:03, 110.67it/s]Estimating transforms:  67%|██████▋   | 667/1000 [00:06<00:02, 124.51it/s]Estimating transforms:  68%|██████▊   | 684/1000 [00:06<00:02, 135.52it/s]Estimating transforms:  70%|███████   | 701/1000 [00:07<00:02, 144.15it/s]Estimating transforms:  72%|███████▏  | 718/1000 [00:07<00:01, 150.82it/s]Estimating transforms:  74%|███████▎  | 735/1000 [00:07<00:01, 155.28it/s]Estimating transforms:  75%|███████▌  | 752/1000 [00:07<00:01, 158.93it/s]Estimating transforms:  77%|███████▋  | 769/1000 [00:07<00:01, 161.27it/s]Estimating transforms:  79%|███████▊  | 786/1000 [00:07<00:01, 162.93it/s]Estimating transforms:  80%|████████  | 803/1000 [00:07<00:01, 163.96it/s]Estimating transforms:  82%|████████▏ | 820/1000 [00:07<00:01, 165.11it/s]Estimating transforms:  84%|████████▎ | 837/1000 [00:07<00:00, 165.47it/s]Estimating transforms:  85%|████████▌ | 854/1000 [00:07<00:00, 166.11it/s]Estimating transforms:  87%|████████▋ | 871/1000 [00:08<00:00, 166.36it/s]Estimating transforms:  89%|████████▉ | 888/1000 [00:08<00:00, 166.37it/s]Estimating transforms:  90%|█████████ | 905/1000 [00:08<00:00, 166.69it/s]Estimating transforms:  92%|█████████▏| 922/1000 [00:08<00:00, 166.67it/s]Estimating transforms:  94%|█████████▍| 939/1000 [00:08<00:00, 167.04it/s]Estimating transforms:  96%|█████████▌| 956/1000 [00:08<00:00, 166.95it/s]Estimating transforms:  97%|█████████▋| 973/1000 [00:08<00:00, 166.81it/s]Estimating transforms:  99%|█████████▉| 990/1000 [00:08<00:00, 167.03it/s]Estimating transforms: 100%|██████████| 1000/1000 [00:08<00:00, 113.20it/s]
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1271: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 32.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1271: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 32.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1271: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 32.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1271: UserWarning: 'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'. Got 'n_jobs' = 32.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/sklearn/linear_model/_logistic.py:1256: FutureWarning: 'multi_class' was deprecated in version 1.5 and will be removed in 1.7. Use OneVsRestClassifier(LogisticRegression(..)) instead. Leave it to its default value to avoid this warning.
-  warnings.warn(
-/home/cseomoon/miniconda3/envs/Abnb/lib/python3.10/site-packages/shap/explainers/_linear.py:99: FutureWarning: The feature_perturbation option is now deprecated in favor of using the appropriate masker (maskers.Independent, maskers.Partition or maskers.Impute).
-  warnings.warn(wmsg, FutureWarning)
-Estimating transforms:   0%|          | 0/1000 [00:00<?, ?it/s]Estimating transforms:   2%|▏         | 17/1000 [00:00<00:05, 163.95it/s]Estimating transforms:   4%|▎         | 35/1000 [00:00<00:05, 169.74it/s]Estimating transforms:   5%|▌         | 53/1000 [00:00<00:05, 171.21it/s]Estimating transforms:   7%|▋         | 71/1000 [00:00<00:05, 154.94it/s]Estimating transforms:   9%|▊         | 87/1000 [00:00<00:06, 139.58it/s]Estimating transforms:  10%|█         | 102/1000 [00:00<00:06, 131.67it/s]Estimating transforms:  12%|█▏        | 116/1000 [00:00<00:06, 126.74it/s]Estimating transforms:  13%|█▎        | 129/1000 [00:00<00:07, 123.80it/s]Estimating transforms:  14%|█▍        | 142/1000 [00:01<00:07, 121.70it/s]Estimating transforms:  16%|█▌        | 155/1000 [00:01<00:07, 120.14it/s]Estimating transforms:  17%|█▋        | 168/1000 [00:01<00:06, 119.11it/s]Estimating transforms:  18%|█▊        | 180/1000 [00:01<00:06, 118.36it/s]Estimating transforms:  19%|█▉        | 192/1000 [00:01<00:06, 117.54it/s]Estimating transforms:  20%|██        | 204/1000 [00:01<00:06, 116.87it/s]Estimating transforms:  22%|██▏       | 216/1000 [00:01<00:06, 116.54it/s]Estimating transforms:  23%|██▎       | 228/1000 [00:01<00:06, 116.65it/s]Estimating transforms:  24%|██▍       | 240/1000 [00:01<00:06, 116.61it/s]Estimating transforms:  25%|██▌       | 252/1000 [00:01<00:06, 116.66it/s]Estimating transforms:  26%|██▋       | 264/1000 [00:02<00:06, 116.65it/s]Estimating transforms:  28%|██▊       | 276/1000 [00:02<00:06, 116.72it/s]Estimating transforms:  29%|██▉       | 288/1000 [00:02<00:06, 116.60it/s]Estimating transforms:  30%|███       | 300/1000 [00:02<00:06, 116.15it/s]Estimating transforms:  31%|███       | 312/1000 [00:02<00:05, 115.92it/s]Estimating transforms:  32%|███▏      | 324/1000 [00:02<00:05, 115.98it/s]Estimating transforms:  34%|███▎      | 336/1000 [00:02<00:05, 115.99it/s]Estimating transforms:  35%|███▍      | 348/1000 [00:02<00:05, 116.05it/s]Estimating transforms:  36%|███▌      | 360/1000 [00:02<00:05, 116.32it/s]Estimating transforms:  37%|███▋      | 372/1000 [00:03<00:05, 116.49it/s]Estimating transforms:  38%|███▊      | 384/1000 [00:03<00:05, 116.39it/s]Estimating transforms:  40%|███▉      | 396/1000 [00:03<00:05, 116.14it/s]Estimating transforms:  41%|████      | 408/1000 [00:03<00:05, 115.88it/s]Estimating transforms:  42%|████▏     | 420/1000 [00:03<00:05, 115.78it/s]Estimating transforms:  43%|████▎     | 432/1000 [00:03<00:04, 115.86it/s]Estimating transforms:  44%|████▍     | 444/1000 [00:03<00:04, 115.89it/s]Estimating transforms:  46%|████▌     | 456/1000 [00:03<00:04, 115.85it/s]Estimating transforms:  47%|████▋     | 468/1000 [00:03<00:04, 116.00it/s]Estimating transforms:  48%|████▊     | 480/1000 [00:03<00:04, 116.25it/s]Estimating transforms:  49%|████▉     | 492/1000 [00:04<00:04, 116.44it/s]Estimating transforms:  50%|█████     | 504/1000 [00:04<00:04, 116.63it/s]Estimating transforms:  52%|█████▏    | 516/1000 [00:04<00:04, 116.67it/s]Estimating transforms:  53%|█████▎    | 528/1000 [00:04<00:04, 116.78it/s]Estimating transforms:  54%|█████▍    | 540/1000 [00:04<00:03, 116.73it/s]Estimating transforms:  55%|█████▌    | 552/1000 [00:04<00:03, 116.91it/s]Estimating transforms:  56%|█████▋    | 564/1000 [00:04<00:03, 116.25it/s]Estimating transforms:  58%|█████▊    | 576/1000 [00:04<00:03, 116.29it/s]Estimating transforms:  59%|█████▉    | 588/1000 [00:04<00:03, 116.35it/s]Estimating transforms:  60%|██████    | 600/1000 [00:04<00:03, 116.39it/s]Estimating transforms:  61%|██████    | 612/1000 [00:05<00:03, 116.47it/s]Estimating transforms:  62%|██████▏   | 624/1000 [00:05<00:03, 116.58it/s]Estimating transforms:  64%|██████▎   | 636/1000 [00:05<00:03, 116.62it/s]Estimating transforms:  65%|██████▍   | 648/1000 [00:05<00:03, 116.53it/s]Estimating transforms:  66%|██████▌   | 660/1000 [00:05<00:02, 116.51it/s]Estimating transforms:  67%|██████▋   | 672/1000 [00:05<00:02, 116.49it/s]Estimating transforms:  68%|██████▊   | 684/1000 [00:05<00:02, 116.53it/s]Estimating transforms:  70%|██████▉   | 696/1000 [00:05<00:02, 116.55it/s]Estimating transforms:  71%|███████   | 708/1000 [00:05<00:02, 116.51it/s]Estimating transforms:  72%|███████▏  | 720/1000 [00:06<00:02, 116.56it/s]Estimating transforms:  73%|███████▎  | 732/1000 [00:06<00:02, 91.81it/s] Estimating transforms:  74%|███████▍  | 744/1000 [00:06<00:02, 98.03it/s]Estimating transforms:  76%|███████▌  | 756/1000 [00:06<00:02, 102.87it/s]Estimating transforms:  77%|███████▋  | 768/1000 [00:06<00:02, 106.68it/s]Estimating transforms:  78%|███████▊  | 780/1000 [00:06<00:02, 109.57it/s]Estimating transforms:  79%|███████▉  | 792/1000 [00:06<00:01, 111.58it/s]Estimating transforms:  80%|████████  | 804/1000 [00:06<00:01, 112.08it/s]Estimating transforms:  82%|████████▏ | 816/1000 [00:06<00:01, 113.20it/s]Estimating transforms:  83%|████████▎ | 828/1000 [00:07<00:01, 114.01it/s]Estimating transforms:  84%|████████▍ | 840/1000 [00:07<00:01, 114.73it/s]Estimating transforms:  85%|████████▌ | 852/1000 [00:07<00:01, 115.45it/s]Estimating transforms:  86%|████████▋ | 864/1000 [00:07<00:01, 115.81it/s]Estimating transforms:  88%|████████▊ | 876/1000 [00:07<00:01, 115.87it/s]Estimating transforms:  89%|████████▉ | 888/1000 [00:07<00:00, 116.17it/s]Estimating transforms:  90%|█████████ | 900/1000 [00:07<00:00, 116.36it/s]Estimating transforms:  91%|█████████ | 912/1000 [00:07<00:00, 116.39it/s]Estimating transforms:  92%|█████████▏| 924/1000 [00:07<00:00, 116.47it/s]Estimating transforms:  94%|█████████▎| 936/1000 [00:07<00:00, 116.37it/s]Estimating transforms:  95%|█████████▍| 948/1000 [00:08<00:00, 116.29it/s]Estimating transforms:  96%|█████████▌| 960/1000 [00:08<00:00, 116.40it/s]Estimating transforms:  97%|█████████▋| 972/1000 [00:08<00:00, 116.35it/s]Estimating transforms:  98%|█████████▊| 984/1000 [00:08<00:00, 116.29it/s]Estimating transforms: 100%|█████████▉| 996/1000 [00:08<00:00, 116.37it/s]Estimating transforms: 100%|██████████| 1000/1000 [00:08<00:00, 117.36it/s]
